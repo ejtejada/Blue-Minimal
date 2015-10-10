@@ -1,0 +1,21 @@
+### v2.1
+
+- themed dialer
+- themed contacts
+- themed SMS
+- added icon (Textfee)
+- added resources in license.md
+
+### v2.0
+
+- changed app-icon
+- changed de.baumann.thema.wallpaper
+- added a few icons
+- themed calculator
+- themed settings
+- themed keyboard
+- themed same elements in framework and system ui
+
+### v1.3
+
+First public release

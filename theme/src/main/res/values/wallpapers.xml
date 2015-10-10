@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 XenonHD
+
+     Licensed under the GNU GPLv2 license
+
+     The text of the license can be found in the LICENSE file
+     or at https://www.gnu.org/licenses/gpl-2.0.txt
+-->
+
+<resources>
+    <string-array name="wallpapers" translatable="false">
+    <item>wp_standard</item>
+    <item>wp_blue700</item>
+    <item>wp_amber700</item>
+    <item>wp_red700</item>
+    <item>wp_green700</item>
+    <item>wp_gray700</item>
+    <item>wp_icon_25</item>
+    <item>wallpaper_7</item>
+    <item>wallpaper_8</item>
+	<item>wallpaper_9</item>
+	<item>wallpaper_10</item>
+	<item>wallpaper_11</item>
+	<item>wallpaper_12</item>
+	<item>wallpaper_13</item>
+	<item>wallpaper_14</item>
+	<item>wallpaper_15</item>
+	<item>wallpaper_16</item>
+	<item>wallpaper_17</item>
+	<item>wallpaper_18</item>
+	<item>wallpaper_19</item>
+	<item>wallpaper_20</item>
+	<item>wallpaper_21</item>
+	<item>wallpaper_22</item>
+	<item>wallpaper_23</item>
+	<item>wallpaper_24</item>
+	<item>wallpaper_25</item>
+	<item>wallpaper_26</item>
+	<item>wallpaper_27</item>
+    <item>wallpaper_28</item>
+    </string-array>
+
+    <string-array name="info" translatable="false">
+		<item>Standard</item>
+		<item>Blue Circle Portrait</item>
+		<item>Amber Circle Portrait</item>
+		<item>Red Circle Portrait</item>
+		<item>Green Circle Portrait</item>
+		<item>Gray Circle Portrait</item>
+		<item>Logo Portrait</item>
+		<item>XeHD Light :: iceandfire</item>
+		<item>XenonHD :: RickerBilly</item>
+		<item>XenonHD Blue :: RickerBilly</item>
+		<item>Xe :: RickerBilly</item>
+		<item>Element Xenon :: RickerBilly</item>
+		<item>Dark Xenon :: Dominik Horvath</item>
+		<item>Gradient :: Dominik Horvath</item>
+		<item>Xenon :: wad3g</item>
+		<item>Xenon :: wad3g</item>
+		<item>Gold XenonHD :: wad3g</item>
+		<item>XenonHD :: Dominik Horvath</item>
+		<item>Solar :: Adam80460</item>
+		<item>Android Rush :: Adam80460</item>
+		<item>Android Green :: Adam80460</item>
+		<item>XenonHD :: Vicino</item>
+		<item>XenonHD :: Vicino</item>
+		<item>XenonHD :: Vicino</item>
+		<item>XenonHD :: Vicino</item>
+		<item>XenonHD :: Vicino</item>
+		<item>XenonHD :: Vicino</item>
+		<item>Proto :: Pr0xyMan1ac</item>
+
+    </string-array>
+</resources>
