@@ -95,7 +95,7 @@
     <item component="ComponentInfo{org.birthdayadapter/org.birthdayadapter.ui.BaseActivity}" drawable="a000" />
     <item component="ComponentInfo{org.numixproject.iconsubmit/org.numixproject.iconsubmit.MainActivity}" drawable="a049" />
     <item component="ComponentInfo{de.apenschi.androclass.main/de.apenschi.androclass.main.Main}" drawable="a037" />
-    <item component="ComponentInfo{com.catchingnow.tinyclipboardmanager/com.catchingnow.tinyclipboardmanager.ActivityMain}" drawable="a064" />
+    <item component="ComponentInfo{com.catchingnow.tinyclipboardmanager/com.catchingnow.tinyclipboardmanager.activity.ActivityMain}" drawable="a064" />
     <item component="ComponentInfo{com.hamzah.immersiveforcer/com.hamzah.immersiveforcer.MainActivity}" drawable="a040" />
     <item component="ComponentInfo{com.woalk.apps.xposed.ttsb/com.woalk.apps.xposed.ttsb.MainActivity}" drawable="a040" />
     <item component="ComponentInfo{de.hu_berlin.informatik.spws2014.mapever/de.hu_berlin.informatik.spws2014.mapever.Start}" drawable="a057" />

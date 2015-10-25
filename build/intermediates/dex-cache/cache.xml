@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/home/juergen/Programme/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/19.0.1/support-v4-19.0.1.jar"
+        jar="/home/juergen/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/19.0.1/support-v4-19.0.1.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="587da9a481ffd341d2fa091704489b89845ddacd">
-        <dex dex="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/pre-dexed/debug/support-v4-19.0.1-c86183e76624c6e88596f06cb5debc5f7e8938f8.jar" />
+        <dex dex="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/pre-dexed/debug/support-v4-19.0.1-d54044e259f69431c40e486a25f58532c40875a2.jar" />
     </item>
 
 </items>
