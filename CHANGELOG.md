@@ -1,3 +1,9 @@
+### v3.0
+
+- added icon request feature
+- added wallpaper chooser
+- updatet some icons
+
 ### v2.1
 
 - themed dialer
