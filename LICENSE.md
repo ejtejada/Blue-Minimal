@@ -47,3 +47,10 @@ Download: <http://www.oringz.com/oringz-uploads/sounds-767-arpeggio.mp3>
 
 found on
 <http://www.flaticon.com/>
+
+
+### Other resources
+
+[android_packages_apps_XenonWallpapers](https://github.com/TeamHorizon/android_packages_apps_XenonWallpapers)
+
+[numix-application-icon-requests](https://github.com/numixproject/numix-application-icon-requests)
