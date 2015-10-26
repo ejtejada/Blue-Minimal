@@ -11,3 +11,5 @@
 ![11](https://github.com/scoute-dich/Baumann_Theme/blob/master/Screenshots/Screenshot_2015-08-03-15-38-36.png?raw=true)
 ![12](https://github.com/scoute-dich/Baumann_Theme/blob/master/Screenshots/Screenshot_2015-08-03-15-39-21.png?raw=true)
 ![13](https://github.com/scoute-dich/Baumann_Theme/blob/master/Screenshots/Screenshot_2015-08-03-15-42-53.png?raw=true)
+![14](https://github.com/scoute-dich/Baumann_Theme/blob/master/Screenshots/Screenshot_2015-10-26-19-58-20.png?raw=true)
+![15](https://github.com/scoute-dich/Baumann_Theme/blob/master/Screenshots/Screenshot_2015-10-26-19-58-35.png?raw=true)
