@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+	<!-- Material Dark colors -->
+    <color name="highlight_color_lxx_dark">#ff03A9F4</color>
+    <color name="gesture_trail_color_lxx_dark">#ff03A9F4</color>
+
+</resources>
