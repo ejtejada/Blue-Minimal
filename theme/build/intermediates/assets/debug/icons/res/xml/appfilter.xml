@@ -122,7 +122,7 @@
     <item component="ComponentInfo{io.github.mthli.Ninja/io.github.mthli.Ninja.Activity.BrowserActivity}" drawable="a020" />
     <item component="ComponentInfo{com.blanyal.remindly/com.blanyal.remindme.MainActivity}" drawable="a006" />
     <item component="ComponentInfo{org.thoughtcrime.securesms/org.thoughtcrime.securesms.RoutingActivity}" drawable="a016" />
-    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{org.smssecure.smssecure/org.smssecure.smssecure.RoutingActivity}" drawable="a036" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
