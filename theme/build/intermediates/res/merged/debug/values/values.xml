@@ -129,11 +129,11 @@
     <string name="teal">Teal</string>
     <string name="theme_author">Baumann Produktion</string>
     <string name="theme_email">baumann.juergen@posteo.de</string>
-    <string name="theme_name">Baumann Thema</string>
-    <string name="title_app">Baumann Thema</string>
-    <string name="title_iconrequest">BT Icon Request</string>
-    <string name="title_solidcolor">BT Solid Color</string>
-    <string name="title_wallpaper">BT Wallpaper</string>
+    <string name="theme_name">Blue Minimal</string>
+    <string name="title_app">Blue Minimal</string>
+    <string name="title_iconrequest">BM Icon Request</string>
+    <string name="title_solidcolor">BM Solid Color</string>
+    <string name="title_wallpaper">Blue Minimal</string>
     <string name="white">White</string>
     <!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/styles.xml -->
     <eat-comment/>

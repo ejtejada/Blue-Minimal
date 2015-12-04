@@ -123,6 +123,14 @@
     <item component="ComponentInfo{com.blanyal.remindly/com.blanyal.remindme.MainActivity}" drawable="a006" />
     <item component="ComponentInfo{org.thoughtcrime.securesms/org.thoughtcrime.securesms.RoutingActivity}" drawable="a016" />
     <item component="ComponentInfo{org.smssecure.smssecure/org.smssecure.smssecure.RoutingActivity}" drawable="a036" />
+    <item component="ComponentInfo{com.xda.labs/com.xda.labs.MainActivity}" drawable="a043" />
+    <item component="ComponentInfo{com.xda.labs/com.xda.labs.ForumLauncher}" drawable="a043" />
+    <item component="ComponentInfo{de.azapps.mirakelandroid/de.azapps.mirakel.new_ui.activities.SplashScreenActivity}" drawable="a006" />
+    <item component="ComponentInfo{org.tasks/com.todoroo.astrid.activity.TaskListActivity}" drawable="a006" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />

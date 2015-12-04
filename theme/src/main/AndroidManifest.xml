@@ -29,7 +29,7 @@
 
     <meta-data
         android:name="org.cyanogenmod.theme.name"
-        android:value="Baumann Thema" />
+        android:value="Blue Minimal" />
     <meta-data
         android:name="org.cyanogenmod.theme.author"
         android:value="Baumann Produktion" />
@@ -46,7 +46,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="Baumann Thema"
+        android:label="@string/title_app"
         android:theme="@style/AppTheme" >
 
         <!-- Add this activity to your manifest. Change the path to where the RequestActivity.java file is. -->

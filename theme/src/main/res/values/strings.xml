@@ -19,14 +19,14 @@
 
 <resources>
 
-    <string name="theme_name">Baumann Thema</string>
+    <string name="theme_name">Blue Minimal</string>
     <string name="theme_author">Baumann Produktion</string>
     <string name="theme_email">baumann.juergen@posteo.de</string>
-    <string name="title_app">Baumann Thema</string>
+    <string name="title_app">Blue Minimal</string>
 
-    <string name="title_wallpaper">BT Wallpaper</string>
-    <string name="title_iconrequest">BT Icon Request</string>
-    <string name="title_solidcolor">BT Solid Color</string>
+    <string name="title_wallpaper">Blue Minimal</string>
+    <string name="title_iconrequest">BM Icon Request</string>
+    <string name="title_solidcolor">BM Solid Color</string>
 
     <string name="start_send_grid">Ok, let\'s start</string>
     <string name="solid_color">Solid color</string>
