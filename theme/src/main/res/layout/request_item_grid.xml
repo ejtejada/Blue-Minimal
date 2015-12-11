@@ -3,7 +3,7 @@
 
 <!-- Change this SquareGridLayout path. Also change at the bottom -->
 
-<org.numixproject.iconsubmit.helpers.SquareGridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<de.baumann.thema.helpers.SquareGridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -87,4 +87,4 @@
         <ImageView style="@style/request_card_shadow" />
     </LinearLayout>
 
-</org.numixproject.iconsubmit.helpers.SquareGridLayout>
+</de.baumann.thema.helpers.SquareGridLayout>

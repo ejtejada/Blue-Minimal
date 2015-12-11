@@ -119,7 +119,7 @@
     <string name="request_made_by">Made by Alex Besler.</string>
     <string name="request_please_wait">Please wait…</string>
     <string name="request_please_wait2">Travelling through Time Vortex. Just for you :)</string>
-    <string name="request_send_request">Send Request</string>
+    <string name="request_send_request">Create Zip</string>
     <string name="request_toast_no_apps_selected">No Apps selected. Select at least one App</string>
     <string name="so_1337">Dear decompiler, you can find the contact details of the creator of this request tool below ;)</string>
     <!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/strings.xml -->
@@ -127,6 +127,14 @@
     <string name="solid_color">Solid color</string>
     <string name="start_send_grid">Ok, let\'s start</string>
     <string name="teal">Teal</string>
+    <string name="text_request">With this tool you can collect informations about
+    unthemed apps on your phone (mainly: app name, package name and component info).
+    This are important informations to create new app icons for a theme. The informations
+        will be stored with the original app icon in a zip-file. You can find the zip-file on
+        your sd-card in the BM_Icon-Request Folder. You can send this zip-file to a themer of
+        your choise. On the next page you can select apps with missing icons and create the
+        zip-file.
+    </string>
     <string name="theme_author">Baumann Produktion</string>
     <string name="theme_email">baumann.juergen@posteo.de</string>
     <string name="theme_name">Blue Minimal</string>

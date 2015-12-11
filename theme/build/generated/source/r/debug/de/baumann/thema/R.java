@@ -125,14 +125,15 @@ containing a value of this type.
         public static final int solid_color=0x7f0a0014;
         public static final int start_send_grid=0x7f0a0015;
         public static final int teal=0x7f0a0016;
-        public static final int theme_author=0x7f0a0017;
-        public static final int theme_email=0x7f0a0018;
-        public static final int theme_name=0x7f0a0019;
-        public static final int title_app=0x7f0a001a;
-        public static final int title_iconrequest=0x7f0a001b;
-        public static final int title_solidcolor=0x7f0a001c;
-        public static final int title_wallpaper=0x7f0a001d;
-        public static final int white=0x7f0a001e;
+        public static final int text_request=0x7f0a0017;
+        public static final int theme_author=0x7f0a0018;
+        public static final int theme_email=0x7f0a0019;
+        public static final int theme_name=0x7f0a001a;
+        public static final int title_app=0x7f0a001b;
+        public static final int title_iconrequest=0x7f0a001c;
+        public static final int title_solidcolor=0x7f0a001d;
+        public static final int title_wallpaper=0x7f0a001e;
+        public static final int white=0x7f0a001f;
     }
     public static final class style {
         public static final int AppBaseTheme=0x7f0b0000;

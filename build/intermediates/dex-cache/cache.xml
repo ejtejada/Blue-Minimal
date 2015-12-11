@@ -2,11 +2,46 @@
 <items version="2" >
 
     <item
-        jar="/home/juergen/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/19.0.1/support-v4-19.0.1.jar"
+        jar="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/libs/internal_impl-22.0.0.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="587da9a481ffd341d2fa091704489b89845ddacd">
-        <dex dex="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/pre-dexed/debug/support-v4-19.0.1-d54044e259f69431c40e486a25f58532c40875a2.jar" />
+        revision="22.0.0"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-dfef3f6c70fddf1872a7d0e4e3416d55814c13ee.jar" />
+    </item>
+    <item
+        jar="/home/juergen/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-8fb94eb80269aa80034b616447ff2f02bacb18c2.jar" />
+    </item>
+    <item
+        jar="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/pre-dexed/release/classes-02265fbe7007b5986c8a340f3cdb3ced48dd737a.jar" />
+    </item>
+    <item
+        jar="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/pre-dexed/release/internal_impl-23.0.0-2e72bd89e02293c284db6b95250508cfd6c6ba6b.jar" />
+    </item>
+    <item
+        jar="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/pre-dexed/debug/classes-85d2dbd95c0b914faebd88cc646e65b6e5b11e3f.jar" />
+    </item>
+    <item
+        jar="/home/juergen/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.0/support-annotations-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/pre-dexed/release/support-annotations-23.0.0-c5aab14f9fce16633c22cad62e1d9637f136e7be.jar" />
     </item>
 
 </items>

@@ -89,8 +89,8 @@ public class RequestActivity extends Activity {
 	private static final String SD = Environment.getExternalStorageDirectory().getAbsolutePath();
 
 	private static final String font = "fonts/Roboto-Condensed.ttf"; //TODO Set Path to font relative to assets folder
-	private static final String SAVE_LOC = SD + "/.icon_request/files"; //TODO Set own file path.
-	private static final String SAVE_LOC2 = SD + "/.icon_request"; //TODO Change also this one.
+	private static final String SAVE_LOC = SD + "/BM_Icon-Request/files"; //TODO Set own file path.
+	private static final String SAVE_LOC2 = SD + "/BM_Icon-Request"; //TODO Change also this one.
 	private static final String appfilter_path = "empty_appfilter.xml"; //TODO Define path to appfilter.xml in assets folder.
 	private boolean email_sent;
 
@@ -123,7 +123,7 @@ public class RequestActivity extends Activity {
 
 			taskList.execute();
 		}
-		else 
+		else
 		{
 			populateView(list_activities_final);
 			switcherLoad.showNext();
@@ -143,7 +143,7 @@ public class RequestActivity extends Activity {
 				prepareData();
 
 				return null;
-			} 
+			}
 			catch (Throwable e) {e.printStackTrace();}
 			return null;
 		}
@@ -200,22 +200,22 @@ public class RequestActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch (item.getItemId())
 		{
-		case R.id.action_sender:
-		{
-			// Called when the "Send Requests" Overflow Menu button is pressed
-			actionSend();
-			return true;
-		}
-		case android.R.id.home:{
-			// When the user presses on the home button
-			NavUtils.navigateUpFromSameTask(this);
-			return true;
-		}
-		default:
-		{
-			super.onOptionsItemSelected(item);
-			return true;
-		}
+			case R.id.action_sender:
+			{
+				// Called when the "Send Requests" Overflow Menu button is pressed
+				actionSend();
+				return true;
+			}
+			case android.R.id.home:{
+				// When the user presses on the home button
+				NavUtils.navigateUpFromSameTask(this);
+				return true;
+			}
+			default:
+			{
+				super.onOptionsItemSelected(item);
+				return true;
+			}
 		}
 	}
 
@@ -240,26 +240,26 @@ public class RequestActivity extends Activity {
 		{
 			switch(msg.what)
 			{
-			case 0:
-				if(DEBUG)Log.v(TAG,"Handler case 0");
+				case 0:
+					if(DEBUG)Log.v(TAG,"Handler case 0");
 
-				makeToast(getString(R.string.request_toast_no_apps_selected));
-				return;
+					makeToast(getString(R.string.request_toast_no_apps_selected));
+					return;
 
-			case 1:
-				if(DEBUG)Log.v(TAG,"Handler case 1");
+				case 1:
+					if(DEBUG)Log.v(TAG,"Handler case 1");
 
-				makeToast("There are no email clients installed. Weird");
-				return;
+					makeToast("There are no email clients installed. Weird");
+					return;
 
-			case 2:
-				if(DEBUG)Log.v(TAG,"Handler case 1");
+				case 2:
+					if(DEBUG)Log.v(TAG,"Handler case 1");
 
-				makeToast("Make sure you copied appfilter.xml in assets folder!");
-				return;
+					makeToast("Make sure you copied appfilter.xml in assets folder!");
+					return;
 
-			default:
-				return;
+				default:
+					return;
 			}
 		}
 	};
@@ -293,9 +293,9 @@ public class RequestActivity extends Activity {
 					{
 						String iconName = (((AppInfo)arrayList.get(i)).getCode().split("/")[0].replace(".", "_") + "_" +((AppInfo)arrayList.get(i)).getCode().split("/")[1]).replace(".", "_");
 						if(DEBUG)Log.i(TAG, "iconName: " + iconName);
-						
+
 						stringBuilderEmail.append(((AppInfo)arrayList.get(i)).getName() + "\n");
-						stringBuilderXML.append("<!-- " + ((AppInfo)arrayList.get(i)).getName() +" -->\n<item component=\"ComponentInfo{"+((AppInfo)arrayList.get(i)).getCode()+"}\" drawable=\""+ iconName +"\"/>"+"\n");			
+						stringBuilderXML.append("<!-- " + ((AppInfo)arrayList.get(i)).getName() +" -->\n<item component=\"ComponentInfo{"+((AppInfo)arrayList.get(i)).getCode()+"}\" drawable=\""+ iconName +"\"/>"+"\n");
 
 						Bitmap bitmap = ((BitmapDrawable)((AppInfo)arrayList.get(i)).getImage()).getBitmap();
 						FileOutputStream fOut;
@@ -332,29 +332,6 @@ public class RequestActivity extends Activity {
 
 					deleteDirectory(save_loc); //This deletes all generated files except the zip
 
-					intent = new Intent(Intent.ACTION_SEND);
-					intent.setType("application/zip");
-
-					String[] arrayOfString = new String[1];
-					arrayOfString[0] = getString(R.string.request_email_addr);
-
-					final Uri uri = Uri.parse("file://" + SAVE_LOC2 + "/" + zipName + ".zip");
-					intent.putExtra(Intent.EXTRA_STREAM, uri);//TODO
-					intent.putExtra("android.intent.extra.EMAIL", arrayOfString);
-					intent.putExtra("android.intent.extra.SUBJECT", getString(R.string.request_email_subject));
-					intent.putExtra("android.intent.extra.TEXT", stringBuilderEmail.toString());
-
-					intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-					try{
-						startActivity(Intent.createChooser(intent, "Send Email"));
-						email_sent = true;
-						return;
-					}
-					catch (ActivityNotFoundException localActivityNotFoundException){ //Just in case there is no email app installed
-						handler.sendEmptyMessage(1);
-						return;
-					}
 				}
 			}
 		};
@@ -380,25 +357,25 @@ public class RequestActivity extends Activity {
 			{
 				String name=myparser.getName();
 				switch (activity){
-				case XmlPullParser.START_TAG:
-					break;
-				case XmlPullParser.END_TAG:
-					if(name.equals("item"))
-					{	
-						try	{
-							String tmp_act = myparser.getAttributeValue(null,"component").split("/")[1];
-							String t_activity= tmp_act.substring(0, tmp_act.length()-1);
+					case XmlPullParser.START_TAG:
+						break;
+					case XmlPullParser.END_TAG:
+						if(name.equals("item"))
+						{
+							try	{
+								String tmp_act = myparser.getAttributeValue(null,"component").split("/")[1];
+								String t_activity= tmp_act.substring(0, tmp_act.length()-1);
 
-							String tmp_pack = myparser.getAttributeValue(null,"component").split("/")[0];
-							String t_package= tmp_pack.substring(14, tmp_pack.length());
+								String tmp_pack = myparser.getAttributeValue(null,"component").split("/")[0];
+								String t_package= tmp_pack.substring(14, tmp_pack.length());
 
-							list_activities.add(t_package + "/" + t_activity);
+								list_activities.add(t_package + "/" + t_activity);
 
-							if(DEBUG)Log.v(TAG,"Added Styled App: \"" +t_package + "/" + t_activity+"\"");
+								if(DEBUG)Log.v(TAG,"Added Styled App: \"" +t_package + "/" + t_activity+"\"");
+							}
+							catch(ArrayIndexOutOfBoundsException e){}
 						}
-						catch(ArrayIndexOutOfBoundsException e){}
-					}
-					break;
+						break;
 				}
 				activity = myparser.next();
 			}
@@ -430,7 +407,7 @@ public class RequestActivity extends Activity {
 						resolveInfo.loadLabel(pm).toString(), //Get the app name
 						getHighResIcon(pm, resolveInfo), //Loads xxxhdpi icon, returns normal if it on fail
 						false //Unselect icon per default
-						);
+				);
 				arrayList.add(tempAppInfo);
 
 				// This is just for debugging
@@ -530,11 +507,11 @@ public class RequestActivity extends Activity {
 			grid.setNumColumns(numCol_Portrait);
 
 			if(isTablet(context)) {
-				grid.setNumColumns(numCol_Portrait + 1 ); //Here you can change the number of columns for Tablets
+				grid.setNumColumns(numCol_Portrait + 0 ); //Here you can change the number of columns for Tablets
 				if(DEBUG)Log.v(TAG,"isTablet");
 			}
 			if(isXLargeTablet(context)) {
-				grid.setNumColumns(numCol_Portrait + 2 ); //Here you can change the number of columns for Large Tablets
+				grid.setNumColumns(numCol_Portrait + 0 ); //Here you can change the number of columns for Large Tablets
 				if(DEBUG)Log.v(TAG,"isXLargeTablet");
 			}
 
@@ -546,11 +523,11 @@ public class RequestActivity extends Activity {
 			grid.setNumColumns(numCol_Landscape);
 
 			if(isTablet(context)) {
-				grid.setNumColumns(numCol_Landscape + 1 ); //Here you can change the number of columns for Tablets
+				grid.setNumColumns(numCol_Landscape + 0 ); //Here you can change the number of columns for Tablets
 				if(DEBUG)Log.v(TAG,"isTablet");
 			}
 			if(isXLargeTablet(context)) {
-				grid.setNumColumns(numCol_Landscape + 2 ); //Here you can change the number of columns for Large Tablets
+				grid.setNumColumns(numCol_Landscape + 0 ); //Here you can change the number of columns for Large Tablets
 				if(DEBUG)Log.v(TAG,"isXLargeTablet");
 			}
 
@@ -565,7 +542,7 @@ public class RequestActivity extends Activity {
 				AppInfo appInfo = (AppInfo)AdapterView.getItemAtPosition(position);
 				CheckBox checker = (CheckBox)view.findViewById(R.id.CBappSelect);
 				ViewSwitcher icon = (ViewSwitcher)view.findViewById(R.id.viewSwitcherChecked);
-				LinearLayout localBackground = (LinearLayout)view.findViewById(R.id.card_bg);				
+				LinearLayout localBackground = (LinearLayout)view.findViewById(R.id.card_bg);
 				Animation aniIn = AnimationUtils.loadAnimation(context, R.anim.request_flip_in_half_1);
 				Animation aniOut = AnimationUtils.loadAnimation(context, R.anim.request_flip_in_half_2);
 
@@ -713,8 +690,8 @@ public class RequestActivity extends Activity {
 				}
 			}
 			zip_out.close();
-		} 
-		catch (FileNotFoundException e){ if(DEBUG)Log.e("File not found", e.getMessage()); return false; } 
+		}
+		catch (FileNotFoundException e){ if(DEBUG)Log.e("File not found", e.getMessage()); return false; }
 		catch (IOException e){ if(DEBUG)Log.e("IOException", e.getMessage()); return false; }
 		return true;
 	}
@@ -722,25 +699,25 @@ public class RequestActivity extends Activity {
 	// StahP !! Turn around ! Nothing to see here!
 
 	// keeps directory structure
-	public static void zipFile(final String path, final ZipOutputStream out, final String relPath) throws IOException 
+	public static void zipFile(final String path, final ZipOutputStream out, final String relPath) throws IOException
 	{
 		final File file = new File(path);
 		if (!file.exists()){if(DEBUG)Log.d(TAG, file.getName() + " does NOT exist!");return;}
 		final byte[] buf = new byte[1024];
 		final String[] files = file.list();
 		if (file.isFile())
-		{   
-			FileInputStream in = new FileInputStream(file.getAbsolutePath()); 
+		{
+			FileInputStream in = new FileInputStream(file.getAbsolutePath());
 
 			try
 			{
 				out.putNextEntry(new ZipEntry(relPath + file.getName()));
-				int len; 
-				while ((len = in.read(buf)) > 0) 
-				{ 
-					out.write(buf, 0, len); 
+				int len;
+				while ((len = in.read(buf)) > 0)
+				{
+					out.write(buf, 0, len);
 				}
-				out.closeEntry(); 
+				out.closeEntry();
 				in.close();
 			}
 			catch (ZipException zipE)
@@ -749,7 +726,7 @@ public class RequestActivity extends Activity {
 			}
 			finally
 			{
-				if (out != null) out.closeEntry(); 
+				if (out != null) out.closeEntry();
 				if (in != null) in.close();
 			}
 		}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="23.0.0"><source path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/res"/></dataSet><dataSet config="main"><source path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res"><file name="ic_launcher" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/mipmap-xxhdpi/ic_launcher.png" qualifiers="xxhdpi" type="mipmap"/><file path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/request_ strings.xml" qualifiers=""><string name="request_email_text">Some apps are missing on my phone :\n\n</string><string name="request_email_subject">Request for Baumann-Thema Icon Packs</string><string name="request_email_addr">please_not_to_me</string><string name="request_please_wait">Please wait…</string><string name="request_toast_no_apps_selected">No Apps selected. Select at least one App</string><string name="request_gplus_url">https://plus.google.com/+AlexBesler</string><string name="request_made_by">Made by Alex Besler.</string><string name="so_1337">Dear decompiler, you can find the contact details of the creator of this request tool below ;)</string><string name="request_dummy_text">Hello world!</string><string name="request_send_request">Send Request</string><string name="request_please_wait2">Travelling through Time Vortex. Just for you :)</string></file><file path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/request_custom_ressources.xml" qualifiers=""><declare-styleable name="SquareGridLayout">
+        <attr format="integer" name="size"/>
+    </declare-styleable></file><file path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/strings.xml" qualifiers=""><string name="white">White</string><string name="black">Black</string><string name="action_apply">Apply</string><string name="solid_color">Solid color</string><string name="purple">Purple</string><string name="title_wallpaper">Blue Minimal</string><string name="theme_email">baumann.juergen@posteo.de</string><string name="start_send_grid">Ok, let\'s start</string><string name="theme_name">Blue Minimal</string><string name="green">Green</string><string name="applying">Applying selected wallpaper</string><string name="teal">Teal</string><string name="blue">Blue</string><string name="title_solidcolor">BM Solid Color</string><string name="theme_author">Baumann Produktion</string><string name="orange">Orange</string><string name="title_app">Blue Minimal</string><string name="pick_color">Pick a color</string><string name="title_iconrequest">BM Icon Request</string><string name="red">Red</string></file><file path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/request_colors.xml" qualifiers=""><color name="request_background">#FFcccccc</color><color name="request_card_content">@android:color/secondary_text_light</color><color name="request_card_pressed">#FFffffff</color><color name="request_card_title">@android:color/primary_text_light</color><color name="request_card_unpressed">#60ffffff</color></file><file path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/wallpapers.xml" qualifiers=""><string-array name="wallpapers" translatable="false">
+    <item>wp_standard</item>
+    <item>wp_blue700</item>
+    <item>wp_amber700</item>
+    <item>wp_red700</item>
+    <item>wp_green700</item>
+    <item>wp_gray700</item>
+    <item>wp_icon_25</item>
+    <item>wallpaper_7</item>
+    <item>wallpaper_8</item>
+	<item>wallpaper_9</item>
+	<item>wallpaper_10</item>
+	<item>wallpaper_11</item>
+	<item>wallpaper_12</item>
+	<item>wallpaper_13</item>
+	<item>wallpaper_14</item>
+	<item>wallpaper_15</item>
+	<item>wallpaper_16</item>
+	<item>wallpaper_17</item>
+	<item>wallpaper_18</item>
+	<item>wallpaper_19</item>
+	<item>wallpaper_20</item>
+	<item>wallpaper_21</item>
+	<item>wallpaper_22</item>
+	<item>wallpaper_23</item>
+	<item>wallpaper_24</item>
+	<item>wallpaper_25</item>
+	<item>wallpaper_26</item>
+	<item>wallpaper_27</item>
+    <item>wallpaper_28</item>
+    </string-array><string-array name="info" translatable="false">
+		<item>Standard</item>
+		<item>Blue Circle Portrait</item>
+		<item>Amber Circle Portrait</item>
+		<item>Red Circle Portrait</item>
+		<item>Green Circle Portrait</item>
+		<item>Gray Circle Portrait</item>
+		<item>Logo Portrait</item>
+		<item>XeHD Light :: iceandfire</item>
+		<item>XenonHD :: RickerBilly</item>
+		<item>XenonHD Blue :: RickerBilly</item>
+		<item>Xe :: RickerBilly</item>
+		<item>Element Xenon :: RickerBilly</item>
+		<item>Dark Xenon :: Dominik Horvath</item>
+		<item>Gradient :: Dominik Horvath</item>
+		<item>Xenon :: wad3g</item>
+		<item>Xenon :: wad3g</item>
+		<item>Gold XenonHD :: wad3g</item>
+		<item>XenonHD :: Dominik Horvath</item>
+		<item>Solar :: Adam80460</item>
+		<item>Android Rush :: Adam80460</item>
+		<item>Android Green :: Adam80460</item>
+		<item>XenonHD :: Vicino</item>
+		<item>XenonHD :: Vicino</item>
+		<item>XenonHD :: Vicino</item>
+		<item>XenonHD :: Vicino</item>
+		<item>XenonHD :: Vicino</item>
+		<item>XenonHD :: Vicino</item>
+		<item>Proto :: Pr0xyMan1ac</item>
+
+    </string-array></file><file path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/arrays.xml" qualifiers=""><string-array name="colors">
+        <item>@string/red</item>
+        <item>@string/green</item>
+        <item>@string/blue</item>
+        <item>@string/purple</item>
+        <item>@string/orange</item>
+        <item>@string/teal</item>
+        <item>@string/white</item>
+        <item>@string/black</item>
+    </string-array></file><file path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/request_styles.xml" qualifiers=""><style name="request_card_title">
+        <item name="android:textColor">@color/request_card_title</item>t
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/request_card_title</item>
+        <item name="android:singleLine">true</item>
+    </style><style name="request_card_outer">
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">@dimen/request_card_outer_padding_top</item>
+        <item name="android:paddingBottom">@dimen/request_card_outer_padding_bottom</item>
+        <item name="android:paddingLeft">@dimen/request_card_outer_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/request_card_outer_padding_horizontal</item>
+    </style><style name="request_card_inner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/request_card_inner_padding_left</item>
+        <item name="android:paddingRight">@dimen/request_card_inner_padding_right</item>
+        <item name="android:paddingTop">@dimen/request_card_inner_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/request_card_inner_padding_vertical</item>
+    </style><style name="RequestActivityTheme" parent="RequestBaseTheme">
+        <item name="android:windowBackground">@color/request_background</item>
+    </style><style name="request_card_content">
+        <item name="android:textColor">@color/request_card_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/request_card_content</item>
+    </style><style name="request_card_title_frame_grid">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style><style name="request_card_shadow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/request_card_shadow</item>
+        <item name="android:src">@drawable/request_card_shadow</item>
+        <item name="android:layout_below">@id/card_bg</item>
+    </style><style name="RequestBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar"/><style name="request_card_thumbnail">
+        <item name="android:layout_width">@dimen/request_card_thumbnail</item>
+        <item name="android:layout_height">@dimen/request_card_thumbnail</item>
+    </style><style name="request_card_title_frame">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginLeft">@dimen/request_card_title_margin_left</item>
+    </style></file><file path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/request_dimens.xml" qualifiers=""><dimen name="request_card_outer_padding_bottom">1dp</dimen><dimen name="request_card_content">12sp</dimen><dimen name="request_card_inner_padding_left">10dp</dimen><dimen name="request_card_inner_padding_right">10dp</dimen><dimen name="request_card_thumbnail_margin">5dp</dimen><dimen name="request_card_inner_padding_vertical">10dp</dimen><dimen name="request_card_title_margin_left">10dp</dimen><dimen name="request_card_shadow">3dp</dimen><dimen name="request_card_outer_padding_horizontal">4dp</dimen><dimen name="request_card_thumbnail">48dip</dimen><dimen name="request_card_title">18sp</dimen><dimen name="request_card_outer_padding_top">4dp</dimen></file><file path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/styles.xml" qualifiers=""><style name="AppTheme" parent="AppBaseTheme"/><style name="AppBaseTheme" parent="android:Theme.Material.Light.DarkActionBar"/></file><file name="ic_launcher" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable-mdpi-v4/ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="request_flip" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/animator/request_flip.xml" qualifiers="" type="animator"/><file name="ic_launcher" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable-hdpi-v4/ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/mipmap-xhdpi/ic_launcher.png" qualifiers="xhdpi" type="mipmap"/><file name="ic_launcher" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable-xhdpi-v4/ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file name="request_card_shadow" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable/request_card_shadow.xml" qualifiers="" type="drawable"/><file name="ic_launcher" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable/ic_launcher.png" qualifiers="" type="drawable"/><file name="ic_solid" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable/ic_solid.png" qualifiers="" type="drawable"/><file name="wallpaper" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/layout/wallpaper.xml" qualifiers="" type="layout"/><file name="request_grid" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/layout/request_grid.xml" qualifiers="" type="layout"/><file name="activity_main" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/layout/activity_main.xml" qualifiers="" type="layout"/><file name="request_item_grid" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/layout/request_item_grid.xml" qualifiers="" type="layout"/><file name="request_item_list" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/layout/request_item_list.xml" qualifiers="" type="layout"/><file name="request_menu" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/menu/request_menu.xml" qualifiers="" type="menu"/><file name="menu_main" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/menu/menu_main.xml" qualifiers="" type="menu"/><file name="wp_amber700" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable-nodpi/wp_amber700.png" qualifiers="nodpi" type="drawable"/><file name="wp_red700" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable-nodpi/wp_red700.png" qualifiers="nodpi" type="drawable"/><file name="wp_standard" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable-nodpi/wp_standard.png" qualifiers="nodpi" type="drawable"/><file name="wp_blue700" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable-nodpi/wp_blue700.png" qualifiers="nodpi" type="drawable"/><file name="wp_icon_25" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable-nodpi/wp_icon_25.png" qualifiers="nodpi" type="drawable"/><file name="wp_gray700" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable-nodpi/wp_gray700.png" qualifiers="nodpi" type="drawable"/><file name="wp_green700" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable-nodpi/wp_green700.png" qualifiers="nodpi" type="drawable"/><file name="ic_launcher" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/mipmap-mdpi/ic_launcher.png" qualifiers="mdpi" type="mipmap"/><file name="request_ic_cab" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable-xxxhdpi/request_ic_cab.png" qualifiers="xxxhdpi" type="drawable"/><file name="ic_launcher" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable-xxhdpi-v4/ic_launcher.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_launcher" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/drawable-xxxhdpi-v4/ic_launcher.png" qualifiers="xxxhdpi-v4" type="drawable"/><file name="request_fade_in" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/anim/request_fade_in.xml" qualifiers="" type="anim"/><file name="request_flip_in_half_1" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/anim/request_flip_in_half_1.xml" qualifiers="" type="anim"/><file name="request_flip_in_half_2" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/anim/request_flip_in_half_2.xml" qualifiers="" type="anim"/><file name="request_fade_out" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/anim/request_fade_out.xml" qualifiers="" type="anim"/><file name="ic_launcher" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/mipmap-hdpi/ic_launcher.png" qualifiers="hdpi" type="mipmap"/><file name="ic_launcher" path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/mipmap-xxxhdpi/ic_launcher.png" qualifiers="xxxhdpi" type="mipmap"/></source><source path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/generated/res/rs/release"/><source path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/generated/res/resValues/release"/></dataSet><dataSet config="release"><source path="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/release/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="SquareGridLayout"><attr format="integer" name="size"/></declare-styleable></configuration></mergedItems></merger>

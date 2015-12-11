@@ -8,7 +8,7 @@
     <!-- Loading screen line 2 -->
     <string name="request_please_wait2">Travelling through Time Vortex. Just for you :)</string>
     <!-- Overflow Button text -->
-    <string name="request_send_request">Send Request</string>
+    <string name="request_send_request">Create Zip</string>
     <!-- Toast text if no app is selected -->
     <string name="request_toast_no_apps_selected">No Apps selected. Select at least one App</string>
     <!-- The email the request gets send to -->

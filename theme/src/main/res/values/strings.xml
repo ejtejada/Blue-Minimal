@@ -28,6 +28,17 @@
     <string name="title_iconrequest">BM Icon Request</string>
     <string name="title_solidcolor">BM Solid Color</string>
 
+    <string name="text_request">With this tool you can collect informations about
+    unthemed apps on your phone (mainly: app name, package name and component info).
+    This are important informations to create new app icons for a theme. The informations
+        will be stored with the original app icon in a zip-file. You can find the zip-file on
+        your sd-card in the BM_Icon-Request Folder. You can send this zip-file to a themer of
+        your choise. On the next page you can select apps with missing icons and create the
+        zip-file.
+    </string>
+
+
+
     <string name="start_send_grid">Ok, let\'s start</string>
     <string name="solid_color">Solid color</string>
     <string name="pick_color">Pick a color</string>

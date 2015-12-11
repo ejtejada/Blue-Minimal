@@ -21,7 +21,7 @@
 
     <uses-sdk
         android:minSdkVersion="21"
-        android:targetSdkVersion="21" />
+        android:targetSdkVersion="22" />
 
     <uses-feature
         android:name="org.cyanogenmod.theme"

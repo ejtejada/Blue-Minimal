@@ -77,7 +77,7 @@
                     android:layout_marginLeft="0dip"
                     android:ellipsize="marquee"
                     android:marqueeRepeatLimit="marquee_forever"
-                    android:maxLines="2"
+                    android:maxLines="6"
                     android:text="@string/request_dummy_text" />
             </LinearLayout>
         </LinearLayout>
