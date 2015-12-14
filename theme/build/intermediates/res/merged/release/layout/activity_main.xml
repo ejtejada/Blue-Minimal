@@ -10,9 +10,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="With this tool you can send us the app that are missing in our icon packs. Please note that it may be some time before you see your request fulfilled."
+        android:text="@string/text_request"
+        android:textSize="16dp"
         android:padding="10dp"
-/>
+        android:layout_margin="8dp" />
 
     <Button
         android:id="@+id/button2"
