@@ -1,5 +1,6 @@
 ### v3.1
 
+- changed app app name to Blue Minimal
 - changed app icon and bootscreen
 - added some icons
 - updatet some icons
