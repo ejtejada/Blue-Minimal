@@ -112,14 +112,12 @@
     <!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/request_%20strings.xml -->
     <eat-comment/>
     <string name="request_dummy_text">Hello world!</string>
-    <string name="request_email_addr">please_not_to_me</string>
-    <string name="request_email_subject">Request for Baumann-Thema Icon Packs</string>
-    <string name="request_email_text">Some apps are missing on my phone :\n\n</string>
     <string name="request_gplus_url">https://plus.google.com/+AlexBesler</string>
     <string name="request_made_by">Made by Alex Besler.</string>
     <string name="request_please_wait">Please wait…</string>
-    <string name="request_please_wait2">Travelling through Time Vortex. Just for you :)</string>
-    <string name="request_send_request">Create Zip</string>
+    <string name="request_please_wait2">Searching for installed apps. Just for you :)</string>
+    <string name="request_send_request">Create Zip-file</string>
+    <string name="request_toast_apps_selected">ZIP-file created and saved.</string>
     <string name="request_toast_no_apps_selected">No Apps selected. Select at least one App</string>
     <string name="so_1337">Dear decompiler, you can find the contact details of the creator of this request tool below ;)</string>
     <!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/strings.xml -->

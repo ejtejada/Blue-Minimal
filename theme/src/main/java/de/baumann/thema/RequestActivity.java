@@ -249,7 +249,7 @@ public class RequestActivity extends Activity {
 				case 1:
 					if(DEBUG)Log.v(TAG,"Handler case 1");
 
-					makeToast("There are no email clients installed. Weird");
+					makeToast(getString(R.string.request_toast_apps_selected));
 					return;
 
 				case 2:
@@ -283,7 +283,6 @@ public class RequestActivity extends Activity {
 				ArrayList arrayList = list_activities_final;
 				StringBuilder stringBuilderEmail = new StringBuilder();
 				StringBuilder stringBuilderXML = new StringBuilder();
-				stringBuilderEmail.append(getString(R.string.request_email_text));
 				int amount = 0;
 
 				// Get all selected apps
@@ -331,7 +330,7 @@ public class RequestActivity extends Activity {
 					createZipFile(SAVE_LOC, true, SAVE_LOC2 + "/" + zipName + ".zip");
 
 					deleteDirectory(save_loc); //This deletes all generated files except the zip
-
+					handler.sendEmptyMessage(1);
 				}
 			}
 		};

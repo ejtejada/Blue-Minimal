@@ -18,9 +18,9 @@ public final class R {
         public static final int request_flip=0x7f060000;
     }
     public static final class array {
-        public static final int colors=0x7f070000;
-        public static final int info=0x7f070001;
-        public static final int wallpapers=0x7f070002;
+        public static final int colors=0x7f080000;
+        public static final int info=0x7f080001;
+        public static final int wallpapers=0x7f080002;
     }
     public static final class attr {
         /** <p>Must be an integer value, such as "<code>100</code>".
@@ -33,25 +33,25 @@ containing a value of this type.
         public static final int size=0x7f010000;
     }
     public static final class color {
-        public static final int request_background=0x7f080000;
-        public static final int request_card_content=0x7f080001;
-        public static final int request_card_pressed=0x7f080002;
-        public static final int request_card_title=0x7f080003;
-        public static final int request_card_unpressed=0x7f080004;
+        public static final int request_background=0x7f090000;
+        public static final int request_card_content=0x7f090001;
+        public static final int request_card_pressed=0x7f090002;
+        public static final int request_card_title=0x7f090003;
+        public static final int request_card_unpressed=0x7f090004;
     }
     public static final class dimen {
-        public static final int request_card_content=0x7f090000;
-        public static final int request_card_inner_padding_left=0x7f090001;
-        public static final int request_card_inner_padding_right=0x7f090002;
-        public static final int request_card_inner_padding_vertical=0x7f090003;
-        public static final int request_card_outer_padding_bottom=0x7f090004;
-        public static final int request_card_outer_padding_horizontal=0x7f090005;
-        public static final int request_card_outer_padding_top=0x7f090006;
-        public static final int request_card_shadow=0x7f090007;
-        public static final int request_card_thumbnail=0x7f090008;
-        public static final int request_card_thumbnail_margin=0x7f090009;
-        public static final int request_card_title=0x7f09000a;
-        public static final int request_card_title_margin_left=0x7f09000b;
+        public static final int request_card_content=0x7f0a0000;
+        public static final int request_card_inner_padding_left=0x7f0a0001;
+        public static final int request_card_inner_padding_right=0x7f0a0002;
+        public static final int request_card_inner_padding_vertical=0x7f0a0003;
+        public static final int request_card_outer_padding_bottom=0x7f0a0004;
+        public static final int request_card_outer_padding_horizontal=0x7f0a0005;
+        public static final int request_card_outer_padding_top=0x7f0a0006;
+        public static final int request_card_shadow=0x7f0a0007;
+        public static final int request_card_thumbnail=0x7f0a0008;
+        public static final int request_card_thumbnail_margin=0x7f0a0009;
+        public static final int request_card_title=0x7f0a000a;
+        public static final int request_card_title_margin_left=0x7f0a000b;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
@@ -102,38 +102,36 @@ containing a value of this type.
         public static final int ic_launcher=0x7f030000;
     }
     public static final class string {
-        public static final int action_apply=0x7f0a0000;
-        public static final int applying=0x7f0a0001;
-        public static final int black=0x7f0a0002;
-        public static final int blue=0x7f0a0003;
-        public static final int green=0x7f0a0004;
-        public static final int orange=0x7f0a0005;
-        public static final int pick_color=0x7f0a0006;
-        public static final int purple=0x7f0a0007;
-        public static final int red=0x7f0a0008;
-        public static final int request_dummy_text=0x7f0a0009;
-        public static final int request_email_addr=0x7f0a000a;
-        public static final int request_email_subject=0x7f0a000b;
-        public static final int request_email_text=0x7f0a000c;
-        public static final int request_gplus_url=0x7f0a000d;
-        public static final int request_made_by=0x7f0a000e;
-        public static final int request_please_wait=0x7f0a000f;
-        public static final int request_please_wait2=0x7f0a0010;
-        public static final int request_send_request=0x7f0a0011;
-        public static final int request_toast_no_apps_selected=0x7f0a0012;
-        public static final int so_1337=0x7f0a0013;
-        public static final int solid_color=0x7f0a0014;
-        public static final int start_send_grid=0x7f0a0015;
-        public static final int teal=0x7f0a0016;
-        public static final int text_request=0x7f0a0017;
-        public static final int theme_author=0x7f0a0018;
-        public static final int theme_email=0x7f0a0019;
-        public static final int theme_name=0x7f0a001a;
-        public static final int title_app=0x7f0a001b;
-        public static final int title_iconrequest=0x7f0a001c;
-        public static final int title_solidcolor=0x7f0a001d;
-        public static final int title_wallpaper=0x7f0a001e;
-        public static final int white=0x7f0a001f;
+        public static final int action_apply=0x7f070000;
+        public static final int applying=0x7f070001;
+        public static final int black=0x7f070002;
+        public static final int blue=0x7f070003;
+        public static final int green=0x7f070004;
+        public static final int orange=0x7f070005;
+        public static final int pick_color=0x7f070006;
+        public static final int purple=0x7f070007;
+        public static final int red=0x7f070008;
+        public static final int request_dummy_text=0x7f070009;
+        public static final int request_gplus_url=0x7f070015;
+        public static final int request_made_by=0x7f070016;
+        public static final int request_please_wait=0x7f07000a;
+        public static final int request_please_wait2=0x7f07000b;
+        public static final int request_send_request=0x7f07000c;
+        public static final int request_toast_apps_selected=0x7f07000d;
+        public static final int request_toast_no_apps_selected=0x7f07000e;
+        public static final int so_1337=0x7f070017;
+        public static final int solid_color=0x7f070018;
+        public static final int start_send_grid=0x7f07000f;
+        public static final int teal=0x7f070010;
+        public static final int text_request=0x7f070011;
+        public static final int theme_author=0x7f070019;
+        public static final int theme_email=0x7f07001a;
+        public static final int theme_name=0x7f07001b;
+        public static final int title_app=0x7f07001c;
+        public static final int title_iconrequest=0x7f070012;
+        public static final int title_solidcolor=0x7f070013;
+        public static final int title_wallpaper=0x7f07001d;
+        public static final int white=0x7f070014;
     }
     public static final class style {
         public static final int AppBaseTheme=0x7f0b0000;
