@@ -135,8 +135,8 @@
     <item component="ComponentInfo{com.ghostsq.commander/com.ghostsq.commander.FileCommander}" drawable="a035" />
     <item component="ComponentInfo{kl.ime.oh/kl.ime.oh.M}" drawable="a048" />
     <item component="ComponentInfo{com.ghostflying.nfmxposed/com.ghostflying.nfmxposed.ui.MainActivity}" drawable="a040" />
-    <item component="ComponentInfo{}" drawable="a185" />
-    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{itkach.aard2/itkach.aard2.MainActivity}" drawable="a074" />
+    <item component="ComponentInfo{}" drawable="a074" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
