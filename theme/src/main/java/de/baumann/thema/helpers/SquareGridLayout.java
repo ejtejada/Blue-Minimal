@@ -1,7 +1,6 @@
 package de.baumann.thema.helpers;
 
 import de.baumann.thema.R;
-import de.baumann.thema.R.styleable;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;

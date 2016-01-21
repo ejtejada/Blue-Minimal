@@ -30,9 +30,10 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import android.animation.AnimatorInflater;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
-import android.content.ActivityNotFoundException;
+import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -40,6 +41,7 @@ import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
@@ -109,6 +111,7 @@ public class RequestActivity extends Activity {
 		context = this;
 
 		getActionBar().setDisplayHomeAsUpEnabled(true);
+		getActionBar().setDisplayUseLogoEnabled(false);
 
 		if(savedInstanceState == null){
 
@@ -161,7 +164,7 @@ public class RequestActivity extends Activity {
 
 	@Override
 	protected void onSaveInstanceState(Bundle savedInstanceState){
-		if(DEBUG)Log.v(TAG,"onSaveInstanceState");
+		if(DEBUG)Log.v(TAG, "onSaveInstanceState");
 		super.onSaveInstanceState(savedInstanceState);
 	}
 
@@ -190,6 +193,7 @@ public class RequestActivity extends Activity {
 	}
 
 	// Creates the Overflow Menu Button(s)
+	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
 		getMenuInflater().inflate(R.menu.request_menu, menu);
@@ -197,26 +201,45 @@ public class RequestActivity extends Activity {
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item){
-		switch (item.getItemId())
-		{
-			case R.id.action_sender:
+	public boolean onOptionsItemSelected(MenuItem item) {
+		int id = item.getItemId();
+
+		if (id == R.id.exit) {
+			moveTaskToBack(true);
+			return false;
+		}
+
+		if (id == R.id.license) {
+			new AlertDialog.Builder(RequestActivity.this)
+					.setTitle(getString(R.string.about_title))
+					.setMessage(getString(R.string.about_text))
+					.setPositiveButton(getString(R.string.about_yes),
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog, int id) {
+									Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/scoute-dich/Baumann_Thema"));
+									startActivity(i);
+									dialog.cancel();
+								}
+							})
+					.setNegativeButton(getString(R.string.about_no),
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog, int id) {
+									dialog.cancel();
+								}
+							}).show();
+		}
+
+		if (id == R.id.action_sender) {
 			{
 				// Called when the "Send Requests" Overflow Menu button is pressed
 				actionSend();
-				return true;
 			}
-			case android.R.id.home:{
-				// When the user presses on the home button
-				NavUtils.navigateUpFromSameTask(this);
-				return true;
-			}
-			default:
-			{
-				super.onOptionsItemSelected(item);
-				return true;
-			}
+			return true;
 		}
+
+
+
+		return super.onOptionsItemSelected(item);
 	}
 
 	//Toast wrapper to prevent showing each toast. Change text of current toast instead.

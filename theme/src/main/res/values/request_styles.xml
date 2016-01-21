@@ -1,11 +1,5 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="RequestBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar"></style>
-
-    <style name="RequestActivityTheme" parent="RequestBaseTheme">
-        <item name="android:windowBackground">@color/request_background</item>
-    </style>
-
     <style name="request_card_outer">
         <item name="android:orientation">vertical</item>
         <item name="android:paddingTop">@dimen/request_card_outer_padding_top</item>
@@ -54,13 +48,6 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/request_card_content</item>
-    </style>
-
-    <style name="request_card_shadow">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/request_card_shadow</item>
-        <item name="android:src">@drawable/request_card_shadow</item>
-        <item name="android:layout_below">@id/card_bg</item>
     </style>
 
 </resources>

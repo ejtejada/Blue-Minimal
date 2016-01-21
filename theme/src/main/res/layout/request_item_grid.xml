@@ -84,7 +84,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <ImageView style="@style/request_card_shadow" />
     </LinearLayout>
 
 </de.baumann.thema.helpers.SquareGridLayout>

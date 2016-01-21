@@ -45,12 +45,17 @@ Download: <http://www.oringz.com/oringz-uploads/sounds-767-arpeggio.mp3>
 
 ### Icons
 
-found on
-<http://www.flaticon.com/>
+[Google Material Icons](https://design.google.com/icons/)
+
+[Material Design Icons](https://materialdesignicons.com/)
+
+[Flaticon](http://www.flaticon.com/)
 
 
-### Other resources
+### Wallpapers
 
-[android_packages_apps_XenonWallpapers](https://github.com/TeamHorizon/android_packages_apps_XenonWallpapers)
+[Xenon Wallpapers](https://github.com/TeamHorizon/android_packages_apps_XenonWallpapers)
 
-[numix-application-icon-requests](https://github.com/numixproject/numix-application-icon-requests)
+[Numix application icon requests](https://github.com/numixproject/numix-application-icon-requests)
+
+[blowball wallpapers by Lydia on flickr](https://www.flickr.com/photos/129581906@N06/albums/72157651933980136)

@@ -47,7 +47,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/title_app"
-        android:theme="@style/AppTheme" >
+        android:theme="@android:style/Theme.Material" >
 
         <!-- Add this activity to your manifest. Change the path to where the RequestActivity.java file is. -->
         <activity
@@ -55,29 +55,18 @@
             android:label="@string/title_wallpaper"
             android:icon="@drawable/ic_launcher"
             android:screenOrientation="nosensor"
-            android:finishOnCloseSystemDialogs="true">
+            android:finishOnCloseSystemDialogs="true"
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SET_WALLPAPER" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name="SolidColor"
-
-            android:theme="@android:style/Theme.Material"
-            android:label="@string/title_solidcolor"
-            android:icon="@drawable/ic_solid" >
-            <intent-filter>
-                <action android:name="android.intent.action.SET_WALLPAPER" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
 
         <activity
             android:name="de.baumann.thema.RequestActivity"
-            android:label="@string/title_iconrequest" >
+            android:label="@string/title_iconrequest"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="de.baumann.thema.MainActivity" />

@@ -7,4 +7,14 @@
         android:showAsAction="always"
         android:title="@string/request_send_request"/>
 
+    <item
+        android:id="@+id/exit"
+        android:title="@string/menu_exit"
+        android:showAsAction="never" />
+
+    <item
+        android:id="@+id/license"
+        android:title="@string/menu_license"
+        android:showAsAction="never" />
+
 </menu><!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/menu/request_menu.xml -->

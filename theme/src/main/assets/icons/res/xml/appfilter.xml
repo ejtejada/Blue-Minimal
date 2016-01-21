@@ -49,6 +49,7 @@
     <item component="ComponentInfo{com.android.keepass/com.android.keepass.KeePass}" drawable="a018" />
     <item component="ComponentInfo{com.android.mms/com.android.mms.ui.ConversationList}" drawable="a036" />
     <item component="ComponentInfo{net.osmand.plus/net.osmand.plus.activities.MapActivity}" drawable="a028" />
+    <item component="ComponentInfo{net.osmand.plus/net.osmand.plus.activities.MainMenuActivity}" drawable="a028" />
     <item component="ComponentInfo{com.android.contacts/com.android.contacts.activities.PeopleActivity}" drawable="a019" />
     <item component="ComponentInfo{com.android.dialer/com.android.dialer.DialtactsActivity}" drawable="a039" />
     <item component="ComponentInfo{name.boyle.chris.sgtpuzzles/name.boyle.chris.sgtpuzzles.SGTPuzzles}" drawable="a075" />
@@ -65,7 +66,7 @@
     <item component="ComponentInfo{com.nolanlawson.keepscore/com.nolanlawson.keepscore.MainActivity}" drawable="a053" />
     <item component="ComponentInfo{org.videolan.vlc/org.videolan.vlc.gui.MainActivity}" drawable="a054" />
     <item component="ComponentInfo{com.android2.calculator3/com.android2.calculator3.Calculator}" drawable="a033" />
-    <item component="ComponentInfo{com.fsck.k9/com.fsck.k9.activity.Accounts}" drawable="a055" />
+    <item component="ComponentInfo{com.fsck.k9/com.fsck.k9.activity.Accounts}" drawable="a085" />
     <item component="ComponentInfo{com.mohammadag.colouredstatusbar/com.mohammadag.colouredstatusbar.MainActivity}" drawable="a040" />
     <item component="ComponentInfo{com.xda.one/com.xda.one.ui.MainActivity}" drawable="a043" />
     <item component="ComponentInfo{com.nauj27.android.colorpicker/com.nauj27.android.colorpicker.ColorPickerActivity}" drawable="a056" />
@@ -132,11 +133,54 @@
     <item component="ComponentInfo{org.fox.ttcomics2/org.fox.ttcomics2.LaunchActivity}" drawable="a025" />
     <item component="ComponentInfo{com.ceco.marshmallow.gravitybox/com.ceco.marshmallow.gravitybox.GravityBoxSettingsAlias}" drawable="a040" />
     <item component="ComponentInfo{eu.chainfire.supersu/eu.chainfire.supersu.MainActivity-Material}" drawable="a032" />
+    <item component="ComponentInfo{eu.chainfire.supersu/eu.chainfire.supersu.MainActivity-Emblem}" drawable="a032" />
     <item component="ComponentInfo{com.ghostsq.commander/com.ghostsq.commander.FileCommander}" drawable="a035" />
     <item component="ComponentInfo{kl.ime.oh/kl.ime.oh.M}" drawable="a048" />
     <item component="ComponentInfo{com.ghostflying.nfmxposed/com.ghostflying.nfmxposed.ui.MainActivity}" drawable="a040" />
     <item component="ComponentInfo{itkach.aard2/itkach.aard2.MainActivity}" drawable="a074" />
-    <item component="ComponentInfo{}" drawable="a074" />
+    <item component="ComponentInfo{org.cyanogenmod.snap/com.android.camera.CameraLauncher}" drawable="a017" />
+    <item component="ComponentInfo{com.politedroid/com.politedroid.Preferences}" drawable="a034" />
+    <item component="ComponentInfo{stericson.busybox/stericson.busybox.Activity.MainActivity}" drawable="a037" />
+    <item component="ComponentInfo{com.anddoes.launcher/com.anddoes.launcher.Launcher}" drawable="a047" />
+    <item component="ComponentInfo{com.anddoes.launcher.pro/com.anddoes.launcher.pro.ApexLauncherProActivity}" drawable="a047" />
+    <item component="ComponentInfo{com.anddoes.notifier/com.anddoes.notifier.SettingsActivity}" drawable="a047" />
+    <item component="ComponentInfo{de.kugihan.dictionaryformids.hmi_android/de.kugihan.dictionaryformids.hmi_android.DictionaryForMIDs}" drawable="a038" />
+    <item component="ComponentInfo{org.numixproject.iconsubmit/org.numixproject.iconsubmit.MainActivity}" drawable="a049" />
+    <item component="ComponentInfo{com.keramidas.TitaniumBackup/com.keramidas.TitaniumBackup.MainActivity}" drawable="a071" />
+    <item component="ComponentInfo{com.better.alarm/com.better.alarm.presenter.AlarmsListActivity}" drawable="a044" />
+    <item component="ComponentInfo{org.wikipedia/org.wikipedia.page.PageActivity}" drawable="a074" />
+    <item component="ComponentInfo{com.underwood.calendar_beta/com.android.calendar.AllInOneActivity}" drawable="a000" />
+    <item component="ComponentInfo{org.aykit.MyOwnNotes/org.aykit.owncloud_notes.NoteListActivity}" drawable="a027" />
+    <item component="ComponentInfo{net.cactii.flash2/net.cactii.flash2.MainActivity}" drawable="a046" />
+    <item component="ComponentInfo{ru.gelin.android.weather.notification/ru.gelin.android.weather.notification.app.MainActivity}" drawable="a042" />
+    <item component="ComponentInfo{com.opera.browser/com.opera.Opera}" drawable="a051" />
+    <item component="ComponentInfo{com.sand.airdroid/com.sand.airdroid.ui.splash.SplashActivity_}" drawable="a053" />
+    <item component="ComponentInfo{net.bible.android.activity/net.bible.android.activity.StartupActivity}" drawable="a055" />
+    <item component="ComponentInfo{de.blitzer.plus/de.blitzer.activity.SplashScreen}" drawable="a072" />
+    <item component="ComponentInfo{de.fiducia.smartphone.android.banking.vr/de.fiducia.smartphone.android.banking.vr.VRSplashScreenActivity}" drawable="a077" />
+    <item component="ComponentInfo{com.runtastic.android.pro2/com.runtastic.android.activities.StartActivity}" drawable="a080" />
+    <item component="ComponentInfo{com.google.android.googlequicksearchbox/com.google.android.googlequicksearchbox.VoiceSearchActivity}" drawable="a081" />
+    <item component="ComponentInfo{com.android.voicedialer/com.android.voicedialer.VoiceDialerActivity}" drawable="a082" />
+    <item component="ComponentInfo{com.github.mobile/com.github.mobile.ui.user.HomeActivity}" drawable="a083" />
+    <item component="ComponentInfo{jp.forkhub/com.github.mobile.ui.user.HomeActivity}" drawable="a083" />
+    <item component="ComponentInfo{com.android.vending/com.android.vending.AssetBrowserActivity}" drawable="a085" />
+    <item component="ComponentInfo{com.saulcintero.moveon/com.saulcintero.moveon.SplashScreen}" drawable="a080" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />

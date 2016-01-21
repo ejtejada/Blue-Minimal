@@ -21,9 +21,9 @@
 		<item>Red Circle Portrait</item>
 		<item>Green Circle Portrait</item>
 		<item>Gray Circle Portrait</item>
-		<item>Logo Portrait</item>
-		<item>XeHD Light :: iceandfire</item>
-		<item>XenonHD :: RickerBilly</item>
+		<item>Pusteblume Portrait</item>
+		<item>Pusteblume 2 Portrait</item>
+		<item>Marshmallow Portrait</item>
 		<item>XenonHD Blue :: RickerBilly</item>
 		<item>Xe :: RickerBilly</item>
 		<item>Element Xenon :: RickerBilly</item>
@@ -52,9 +52,9 @@
     <item>wp_red700</item>
     <item>wp_green700</item>
     <item>wp_gray700</item>
-    <item>wp_icon_25</item>
-    <item>wallpaper_7</item>
-    <item>wallpaper_8</item>
+    <item>wp_pusteblume</item>
+    <item>wp_pusteblume2</item>
+    <item>wp_mm</item>
 	<item>wallpaper_9</item>
 	<item>wallpaper_10</item>
 	<item>wallpaper_11</item>
@@ -78,11 +78,10 @@
     </string-array>
     <!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/request_colors.xml -->
     <eat-comment/>
-    <color name="request_background">#FFcccccc</color>
-    <color name="request_card_content">@android:color/secondary_text_light</color>
-    <color name="request_card_pressed">#FFffffff</color>
-    <color name="request_card_title">@android:color/primary_text_light</color>
-    <color name="request_card_unpressed">#60ffffff</color>
+    <color name="request_card_content">#e0e0e0</color>
+    <color name="request_card_pressed">#757575</color>
+    <color name="request_card_title">#f5f5f5</color>
+    <color name="request_card_unpressed">#424242</color>
     <declare-styleable name="SquareGridLayout"><attr format="integer" name="size"/></declare-styleable>
     <!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/request_dimens.xml -->
     <eat-comment/>
@@ -100,57 +99,61 @@
     <dimen name="request_card_title_margin_left">10dp</dimen>
     <!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="about_no" translatable="false">OK</string>
+    <string name="about_text" translatable="false">
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+
+        You should have received a copy of the GNU General Public License
+        along with this program.  If not, see http://www.gnu.org/licenses/.\n\n
+
+        For more informations visit the project site on GitHub.</string>
+    <string name="about_title" translatable="false">Copyright © 2015  by scoute-dich</string>
+    <string name="about_yes">Visit projectsite on Github</string>
     <string name="action_apply">Apply</string>
     <string name="applying">Applying selected wallpaper</string>
     <string name="black">Black</string>
-    <string name="blue">Blue</string>
-    <string name="green">Green</string>
-    <string name="orange">Orange</string>
+    <string name="blue">Blue 900</string>
+    <string name="green">Green 900</string>
+    <string name="home_but_1">Choose a picture or ...</string>
+    <string name="home_but_2">... a Color as wallpaper.</string>
+    <string name="home_but_3">Yeah! New icons.</string>
+    <string name="home_text">Here you can collect informations about unthemed app-icons on your phone. These informations
+        will be stored in a zip-file on your sd-card (in the BM_Icon-Request Folder).
+        You can send this zip-file to a themer of your choise.</string>
+    <string name="menu_exit">Exit app</string>
+    <string name="menu_license">License</string>
+    <string name="orange">Orange 900</string>
     <string name="pick_color">Pick a color</string>
-    <string name="purple">Purple</string>
-    <string name="red">Red</string>
-    <!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/request_%20strings.xml -->
-    <eat-comment/>
+    <string name="purple">Purple 900</string>
+    <string name="red">Red 900</string>
     <string name="request_dummy_text">Hello world!</string>
-    <string name="request_gplus_url">https://plus.google.com/+AlexBesler</string>
-    <string name="request_made_by">Made by Alex Besler.</string>
+    <string name="request_gplus_url" translatable="false">https://plus.google.com/+AlexBesler</string>
+    <string name="request_made_by" translatable="false">Made by Alex Besler.</string>
     <string name="request_please_wait">Please wait…</string>
     <string name="request_please_wait2">Searching for installed apps. Just for you :)</string>
     <string name="request_send_request">Create Zip-file</string>
     <string name="request_toast_apps_selected">ZIP-file created and saved.</string>
     <string name="request_toast_no_apps_selected">No Apps selected. Select at least one App</string>
-    <string name="so_1337">Dear decompiler, you can find the contact details of the creator of this request tool below ;)</string>
-    <!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/strings.xml -->
-    <eat-comment/>
-    <string name="solid_color">Solid color</string>
-    <string name="start_send_grid">Ok, let\'s start</string>
-    <string name="teal">Teal</string>
-    <string name="text_request">With this tool you can collect informations about
-    unthemed apps on your phone (mainly: app name, package name and component info).
-    This are important informations to create new app icons for a theme. The informations
-        will be stored with the original app icon in a zip-file. You can find the zip-file on
-        your sd-card in the BM_Icon-Request Folder. You can send this zip-file to a themer of
-        your choise. On the next page you can select apps with missing icons and create the
-        zip-file.
-    </string>
-    <string name="theme_author">Baumann Produktion</string>
-    <string name="theme_email">baumann.juergen@posteo.de</string>
-    <string name="theme_name">Blue Minimal</string>
-    <string name="title_app">Blue Minimal</string>
+    <string name="so_1337" translatable="false">Dear decompiler, you can find the contact details of the creator of this request tool below ;)</string>
+    <string name="teal">Teal 900</string>
+    <string name="theme_author" translatable="false">Baumann Produktion</string>
+    <string name="theme_email" translatable="false">baumann.juergen@posteo.de</string>
+    <string name="theme_name" translatable="false">Blue Minimal</string>
+    <string name="title_app" translatable="false">Blue Minimal</string>
     <string name="title_iconrequest">BM Icon Request</string>
     <string name="title_solidcolor">BM Solid Color</string>
-    <string name="title_wallpaper">Blue Minimal</string>
+    <string name="title_wallpaper">BM Wallpaper</string>
     <string name="white">White</string>
-    <!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/styles.xml -->
-    <eat-comment/>
-    <style name="AppBaseTheme" parent="android:Theme.Material.Light.DarkActionBar"/>
-    <style name="AppTheme" parent="AppBaseTheme"/>
     <!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/request_styles.xml -->
     <eat-comment/>
-    <style name="RequestActivityTheme" parent="RequestBaseTheme">
-        <item name="android:windowBackground">@color/request_background</item>
-    </style>
-    <style name="RequestBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar"/>
     <style name="request_card_content">
         <item name="android:textColor">@color/request_card_content</item>
         <item name="android:layout_width">wrap_content</item>
@@ -171,12 +174,6 @@
         <item name="android:paddingBottom">@dimen/request_card_outer_padding_bottom</item>
         <item name="android:paddingLeft">@dimen/request_card_outer_padding_horizontal</item>
         <item name="android:paddingRight">@dimen/request_card_outer_padding_horizontal</item>
-    </style>
-    <style name="request_card_shadow">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/request_card_shadow</item>
-        <item name="android:src">@drawable/request_card_shadow</item>
-        <item name="android:layout_below">@id/card_bg</item>
     </style>
     <style name="request_card_thumbnail">
         <item name="android:layout_width">@dimen/request_card_thumbnail</item>

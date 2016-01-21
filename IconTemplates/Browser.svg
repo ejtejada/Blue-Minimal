@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="Browser.svg"
-   inkscape:export-filename="/home/juergen/Schreibtisch/Icons/Email.svg.png"
+   inkscape:export-filename="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/assets/icons/res/drawable-xxhdpi/a051.png"
    inkscape:export-xdpi="648"
    inkscape:export-ydpi="648">
   <sodipodi:namedview
@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.2"
-     inkscape:cx="6.594025"
-     inkscape:cy="12.286174"
+     inkscape:zoom="15.839192"
+     inkscape:cx="8.7399381"
+     inkscape:cy="9.3509732"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -40,9 +40,9 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1366"
-     inkscape:window-height="726"
+     inkscape:window-height="744"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="24"
      inkscape:window-maximized="1"
      inkscape:snap-grids="true"
      inkscape:snap-to-guides="true">
@@ -420,7 +420,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -434,7 +434,7 @@
        cy="871.93365"
        cx="-1048.1428"
        id="path4136"
-       style="opacity:1;fill:#ffc107;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#ff5722;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
        inkscape:export-xdpi="648"
        inkscape:export-ydpi="648" />

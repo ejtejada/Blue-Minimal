@@ -10,12 +10,16 @@
 package de.baumann.thema;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.app.WallpaperManager;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -81,6 +85,9 @@ public class Wallpaper extends FragmentActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wallpaper);
+
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setDisplayUseLogoEnabled(false);
         // Create the adapter that will return a fragment for each of the three primary sections
         // of the app.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -204,7 +211,6 @@ public class Wallpaper extends FragmentActivity {
         @Override
         protected void onPostExecute(Boolean success) {
             mDialog.dismiss();
-            finish();
         }
         
         @Override
@@ -212,22 +218,51 @@ public class Wallpaper extends FragmentActivity {
             mDialog = ProgressDialog.show(mContext, null, getString(R.string.applying));
         }
     }
-    
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.wallpaper_menu, menu);
+        return true;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case MENU_APPLY:
-                new WallpaperLoader().execute(mCurrentFragment);
-                break;
+        int id = item.getItemId();
+
+        if (id == R.id.exit) {
+            moveTaskToBack(true);
+            return false;
         }
+
+        if (id == R.id.license) {
+            new AlertDialog.Builder(Wallpaper.this)
+                    .setTitle(getString(R.string.about_title))
+                    .setMessage(getString(R.string.about_text))
+                    .setPositiveButton(getString(R.string.about_yes),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/scoute-dich/Baumann_Thema"));
+                                    startActivity(i);
+                                    dialog.cancel();
+                                }
+                            })
+                    .setNegativeButton(getString(R.string.about_no),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            }).show();
+        }
+
+        if (id == R.id.action_apply) {
+            {
+                new WallpaperLoader().execute(mCurrentFragment);
+            }
+            return super.onOptionsItemSelected(item);
+        }
+
         return super.onOptionsItemSelected(item);
-    }
-    
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-         menu.add(Menu.NONE, MENU_APPLY, 0, R.string.action_apply)
-                 .setIcon(android.R.drawable.ic_menu_set_as)
-                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
-         return super.onCreateOptionsMenu(menu);
     }
 }

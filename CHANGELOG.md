@@ -1,3 +1,11 @@
+### v3.2
+
+- added wallpaers
+- added icons
+- changed app theme
+- new main layout
+- new layout for request activity
+
 ### v3.1
 
 - changed app app name to Blue Minimal

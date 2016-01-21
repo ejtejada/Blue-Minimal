@@ -84,7 +84,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <ImageView style="@style/request_card_shadow" />
     </LinearLayout>
 
 </de.baumann.thema.helpers.SquareGridLayout><!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/layout/request_item_grid.xml -->
