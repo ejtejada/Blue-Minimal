@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values-de/strings.xml -->
+    <eat-comment/>
+    <string name="about_yes">Besuche die Projektseite auf GitHub</string>
+    <string name="action_apply">Anwenden</string>
+    <string name="applying">Wende ausgesuchtes Wallpaper an</string>
+    <string name="black">Schwarz</string>
+    <string name="blue">Blau 900</string>
+    <string name="green">Grün 900</string>
+    <string name="home_but_1">Suche dir ein Bild oder ...</string>
+    <string name="home_but_2">... eine Farbe als Wallpaper aus.</string>
+    <string name="home_but_3">Juchu! Neue Icons.</string>
+    <string name="home_text">Hier kannst du Informationen über App-Icons sammeln, die in dem von dir verwendeten Theme noch nicht vorhanden sind. Diese Informationen werden         in einer ZIP-Datei auf der SD-Karte gespeichert (im Ordner BM_Icon-Request). Du kannst diese ZIP-Datei         dem Ersteller deines Themes zusenden.</string>
+    <string name="menu_exit">App verlassen</string>
+    <string name="menu_license">Lizenz</string>
+    <string name="orange">Orange 900</string>
+    <string name="pick_color">Suche eine Farbe aus ...</string>
+    <string name="purple">Lila 900</string>
+    <string name="red">Rot 900</string>
+    <string name="request_dummy_text">Hallo Welt!</string>
+    <string name="request_please_wait">Bitte warten ...</string>
+    <string name="request_please_wait2">Suche nach installierten Anwendungen. Nur für dich ;-)</string>
+    <string name="request_send_request">Erstelle ZIP-Datei</string>
+    <string name="request_toast_apps_selected">ZIP-Datei erstellt und gespeichert.</string>
+    <string name="request_toast_no_apps_selected">Keine Anwendung ausgewählt. Wähle mindestens eine aus.</string>
+    <string name="teal">Teal 900</string>
+    <string name="title_iconrequest">BM Icon Anfrage</string>
+    <string name="title_solidcolor">BM Farbe</string>
+    <string name="title_wallpaper">BM Wallpaper</string>
+    <string name="white">Weiß</string>
+</resources>

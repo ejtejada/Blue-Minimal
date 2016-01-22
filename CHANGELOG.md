@@ -1,3 +1,7 @@
+### v3.3
+
+- added a lot off new apps mainly from [Issue #1: Icon Request](https://github.com/scoute-dich/Baumann_Theme/issues/1) and a request on xda-threat
+
 ### v3.2
 
 - added wallpaers

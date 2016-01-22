@@ -1,0 +1,131 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:19:1-87:12
+	package
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:20:5-31
+		INJECTED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml
+		INJECTED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml
+		INJECTED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:19:11-69
+	android:versionCode
+		INJECTED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml
+		INJECTED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml
+uses-sdk
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:22.0.0] /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:24:9-38
+		INJECTED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml
+		INJECTED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:23:9-35
+		INJECTED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml
+		INJECTED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml
+uses-feature#org.cyanogenmod.theme
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:26:5-28:35
+	android:required
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:28:9-32
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:27:9-45
+meta-data#org.cyanogenmod.theme.name
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:30:5-32:40
+	android:value
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:32:9-37
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:31:9-50
+meta-data#org.cyanogenmod.theme.author
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:33:5-35:46
+	android:value
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:35:9-43
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:34:9-52
+meta-data#org.cyanogenmod.theme.email
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:36:5-38:53
+	android:value
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:38:9-50
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:37:9-51
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:40:5-80
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:40:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:41:5-81
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:41:22-78
+uses-permission#android.permission.SET_WALLPAPER
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:43:5-72
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:43:22-69
+uses-permission#android.permission.SET_WALLPAPER_HINTS
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:44:5-78
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:44:22-75
+application
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:46:5-84:19
+MERGED from [com.android.support:support-v4:22.0.0] /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:49:9-42
+	android:allowBackup
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:47:9-35
+	android:icon
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:48:9-45
+	android:theme
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:50:9-54
+activity#de.baumann.thema.Wallpaper
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:53:9-64:20
+	android:finishOnCloseSystemDialogs
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:58:13-54
+	android:screenOrientation
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:57:13-49
+	android:label
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:55:13-52
+	android:parentActivityName
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:59:13-55
+	android:icon
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:56:13-49
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:54:13-37
+intent-filter#android.intent.action.SET_WALLPAPER+android.intent.category.DEFAULT
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:60:13-63:29
+action#android.intent.action.SET_WALLPAPER
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:61:17-78
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:61:25-75
+category#android.intent.category.DEFAULT
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:62:17-76
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:62:27-73
+activity#de.baumann.thema.RequestActivity
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:66:9-73:20
+	android:label
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:68:13-54
+	android:parentActivityName
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:69:13-55
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:67:13-60
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:70:13-72:65
+	android:value
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:72:17-62
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:71:17-63
+activity#de.baumann.thema.MainActivity
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:75:9-83:20
+	android:label
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:77:13-46
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:76:13-57
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:78:13-82:29
+action#android.intent.action.MAIN
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:79:17-69
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:79:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:81:17-77
+	android:name
+		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:81:27-74

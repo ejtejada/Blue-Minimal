@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="de.baumann.thema.MainActivity">
+
+    <item
+        android:id="@+id/exit"
+        android:title="@string/menu_exit"
+        android:showAsAction="never" />
+
+    <item
+        android:id="@+id/license"
+        android:title="@string/menu_license"
+        android:showAsAction="never" />
+
+</menu>
+<!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/menu/menu_main.xml -->
