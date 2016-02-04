@@ -1,3 +1,11 @@
+### v3.4
+
+- added new wallpaers
+- reworked some icons
+- added icons: AOSP default apps and again from [Issue #1: Icon Request](https://github.com/scoute-dich/Baumann_Theme/issues/1)
+
+I'm using some icons for serveral apps. So if some apps are using the same icons, just report it [here](https://github.com/scoute-dich/Baumann_Theme/issues) or on the [xda threat](http://forum.xda-developers.com/android/themes/cm12-theme-source-t3164482).
+
 ### v3.3
 
 - added a lot off new apps mainly from [Issue #1: Icon Request](https://github.com/scoute-dich/Baumann_Theme/issues/1) and a request on xda-threat

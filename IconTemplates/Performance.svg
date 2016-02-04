@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="Performance.svg"
-   inkscape:export-filename="/home/juergen/Schreibtisch/Icons/Email.svg.png"
+   inkscape:export-filename="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/assets/icons/res/drawable-xxhdpi/a002.png"
    inkscape:export-xdpi="648"
    inkscape:export-ydpi="648">
   <sodipodi:namedview
@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.2"
-     inkscape:cx="-1.7913983"
-     inkscape:cy="4.1917569"
+     inkscape:zoom="22.4"
+     inkscape:cx="8.4572725"
+     inkscape:cy="5.7572305"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -40,12 +40,12 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1366"
-     inkscape:window-height="726"
+     inkscape:window-height="744"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="24"
      inkscape:window-maximized="1"
-     inkscape:snap-grids="true"
-     inkscape:snap-to-guides="true">
+     inkscape:snap-grids="false"
+     inkscape:snap-to-guides="false">
     <inkscape:grid
        id="grid4138"
        type="xygrid" />
@@ -281,6 +281,15 @@
          cy="10.000005"
          r="10" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4187">
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 7.5,9.5535715 14.017857,5.9375001 15.044643,6.7857144 13.705357,8.5267858 11.5625,12.589286 8.0803571,13.035714 Z"
+         id="path4189"
+         inkscape:connector-curvature="0" />
+    </clipPath>
   </defs>
   <metadata
      id="metadata7">
@@ -290,7 +299,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -334,5 +343,11 @@
        d="m 9.9999776,12.161564 a 1.5,1.5 0 0 1 -1.5,-1.5 c 0,-0.56 0.305,-1.0499999 0.75,-1.3049999 l 4.8550004,-2.81 -2.765,4.7899999 c -0.25,0.49 -0.755,0.825 -1.3400004,0.825 m 0,-6.4999996 c 0.9050004,0 1.7500004,0.25 2.4850004,0.66 l -1.05,0.6049997 c -0.435,-0.17 -0.935,-0.265 -1.4350004,-0.265 A 3.9999999,3.9999999 0 0 0 5.9999777,10.661564 c 0,1.105 0.445,2.105 1.17,2.825 l 0.005,0 c 0.195,0.195 0.195,0.51 0,0.705 -0.195,0.195 -0.515,0.195 -0.71,0.005 l 0,0 c -0.905,-0.905 -1.465,-2.155 -1.465,-3.535 A 4.9999999,4.9999999 0 0 1 9.9999776,5.6615644 m 5.0000004,4.9999996 c 0,1.38 -0.56,2.63 -1.465,3.535 l 0,0 c -0.195,0.19 -0.51,0.19 -0.705,-0.005 -0.195,-0.195 -0.195,-0.51 0,-0.705 l 0,0 c 0.725,-0.725 1.17,-1.72 1.17,-2.825 0,-0.5 -0.095,-0.9999999 -0.27,-1.4499999 l 0.605,-1.05 c 0.415,0.75 0.665,1.59 0.665,2.4999999 z"
        id="path10826"
        style="fill:#ffeb3b" />
+    <path
+       style="fill:#f5f5f5"
+       id="path4183"
+       d="m 9.9999776,12.161564 a 1.5,1.5 0 0 1 -1.5,-1.5 c 0,-0.56 0.305,-1.0499999 0.75,-1.3049999 l 4.8550004,-2.81 -2.765,4.7899999 c -0.25,0.49 -0.755,0.825 -1.3400004,0.825 m 0,-6.4999996 c 0.9050004,0 1.7500004,0.25 2.4850004,0.66 l -1.05,0.6049997 c -0.435,-0.17 -0.935,-0.265 -1.4350004,-0.265 A 3.9999999,3.9999999 0 0 0 5.9999777,10.661564 c 0,1.105 0.445,2.105 1.17,2.825 l 0.005,0 c 0.195,0.195 0.195,0.51 0,0.705 -0.195,0.195 -0.515,0.195 -0.71,0.005 l 0,0 c -0.905,-0.905 -1.465,-2.155 -1.465,-3.535 A 4.9999999,4.9999999 0 0 1 9.9999776,5.6615644 m 5.0000004,4.9999996 c 0,1.38 -0.56,2.63 -1.465,3.535 l 0,0 c -0.195,0.19 -0.51,0.19 -0.705,-0.005 -0.195,-0.195 -0.195,-0.51 0,-0.705 l 0,0 c 0.725,-0.725 1.17,-1.72 1.17,-2.825 0,-0.5 -0.095,-0.9999999 -0.27,-1.4499999 l 0.605,-1.05 c 0.415,0.75 0.665,1.59 0.665,2.4999999 z"
+       inkscape:connector-curvature="0"
+       clip-path="url(#clipPath4187)" />
   </g>
 </svg>

@@ -17,16 +17,16 @@
    viewBox="0 0 20 20"
    height="5.6444445mm"
    width="5.6444445mm"
-   inkscape:export-filename="/home/juergen/Schreibtisch/qdad.png"
+   inkscape:export-filename="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/assets/icons/res/drawable-xxhdpi/a012.png"
    inkscape:export-xdpi="648"
    inkscape:export-ydpi="648">
   <sodipodi:namedview
      inkscape:snap-to-guides="true"
      inkscape:snap-grids="true"
      inkscape:window-maximized="1"
-     inkscape:window-y="27"
+     inkscape:window-y="24"
      inkscape:window-x="0"
-     inkscape:window-height="699"
+     inkscape:window-height="744"
      inkscape:window-width="1366"
      inkscape:guide-bbox="true"
      showguides="true"
@@ -37,8 +37,8 @@
      showgrid="true"
      inkscape:current-layer="layer2"
      inkscape:document-units="px"
-     inkscape:cy="8.5875196"
-     inkscape:cx="16.052517"
+     inkscape:cy="15.442923"
+     inkscape:cx="5.0745375"
      inkscape:zoom="15.839192"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -216,7 +216,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -259,6 +259,13 @@
        id="path5246"
        style="fill-opacity:1;fill:url(#linearGradient6091);opacity:0.2"
        clip-path="url(#clipPath6096)" />
+    <rect
+       style="opacity:1;fill:#ff5722;fill-opacity:1;stroke:none;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4173"
+       width="6"
+       height="3"
+       x="7"
+       y="8" />
     <path
        style="fill:#ffffff"
        id="path5201"

@@ -16,14 +16,17 @@
    id="svg2"
    viewBox="0 0 20 20"
    height="5.6444445mm"
-   width="5.6444445mm">
+   width="5.6444445mm"
+   inkscape:export-filename="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/assets/icons/res/drawable-xxhdpi/a015.png"
+   inkscape:export-xdpi="648"
+   inkscape:export-ydpi="648">
   <sodipodi:namedview
-     inkscape:snap-to-guides="true"
-     inkscape:snap-grids="true"
+     inkscape:snap-to-guides="false"
+     inkscape:snap-grids="false"
      inkscape:window-maximized="1"
-     inkscape:window-y="0"
+     inkscape:window-y="24"
      inkscape:window-x="0"
-     inkscape:window-height="726"
+     inkscape:window-height="744"
      inkscape:window-width="1366"
      inkscape:guide-bbox="true"
      showguides="true"
@@ -32,11 +35,11 @@
      fit-margin-left="0"
      fit-margin-top="0"
      showgrid="true"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      inkscape:document-units="px"
-     inkscape:cy="5.037227"
-     inkscape:cx="14.197845"
-     inkscape:zoom="15.839192"
+     inkscape:cy="10.313754"
+     inkscape:cx="-1.0930657"
+     inkscape:zoom="22.4"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -161,7 +164,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
