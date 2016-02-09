@@ -37,6 +37,7 @@ int drawable wp_pusteblume 0x7f02000a
 int drawable wp_pusteblume2 0x7f02000b
 int drawable wp_red700 0x7f02000c
 int drawable wp_standard 0x7f02000d
+int drawable wp_tucan 0x7f02000e
 int id CBappSelect 0x7f0d000d
 int id IVappIcon 0x7f0d000f
 int id IVappIconBack 0x7f0d0010

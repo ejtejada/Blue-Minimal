@@ -67,6 +67,7 @@ containing a value of this type.
         public static final int wp_pusteblume2=0x7f02000b;
         public static final int wp_red700=0x7f02000c;
         public static final int wp_standard=0x7f02000d;
+        public static final int wp_tucan=0x7f02000e;
     }
     public static final class id {
         public static final int CBappSelect=0x7f0d000d;

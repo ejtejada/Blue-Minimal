@@ -18,6 +18,7 @@
 		<item>Marhmallow Dark Portrait</item>
 		<item>Marhmallow Blue Gray Portrait</item>
 		<item>Marhmallow Blue Portrait</item>
+		<item>Tucan by Göschi Portrait</item>
 		<item>Blue Circle Portrait</item>
 		<item>Amber Circle Portrait</item>
 		<item>Red Circle Portrait</item>
@@ -42,13 +43,13 @@
 		<item>XenonHD :: Vicino</item>
 		<item>XenonHD :: Vicino</item>
 		<item>XenonHD :: Vicino</item>
-		<item>Proto :: Pr0xyMan1ac</item>
 
     </string-array>
     <string-array name="wallpapers" translatable="false">
     <item>wp_mm</item>
 	<item>wp_mm_blue_grey</item>
 	<item>wp_mm_blue</item>
+	<item>wp_tucan</item>
     <item>wp_blue700</item>
     <item>wp_amber700</item>
     <item>wp_red700</item>
@@ -57,7 +58,6 @@
     <item>wp_pusteblume</item>
     <item>wp_pusteblume2</item>
     <item>wp_standard</item>
-	<item>wallpaper_11</item>
 	<item>wallpaper_12</item>
 	<item>wallpaper_13</item>
 	<item>wallpaper_14</item>

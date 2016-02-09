@@ -15,7 +15,10 @@
     <!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/wallpapers.xml -->
     <eat-comment/>
     <string-array name="info" translatable="false">
-		<item>Standard</item>
+		<item>Marhmallow Dark Portrait</item>
+		<item>Marhmallow Blue Gray Portrait</item>
+		<item>Marhmallow Blue Portrait</item>
+		<item>Tucan by Göschi Portrait</item>
 		<item>Blue Circle Portrait</item>
 		<item>Amber Circle Portrait</item>
 		<item>Red Circle Portrait</item>
@@ -23,9 +26,7 @@
 		<item>Gray Circle Portrait</item>
 		<item>Pusteblume Portrait</item>
 		<item>Pusteblume 2 Portrait</item>
-		<item>Marshmallow Portrait</item>
-		<item>XenonHD Blue :: RickerBilly</item>
-		<item>Xe :: RickerBilly</item>
+		<item>Dark Grey</item>
 		<item>Element Xenon :: RickerBilly</item>
 		<item>Dark Xenon :: Dominik Horvath</item>
 		<item>Gradient :: Dominik Horvath</item>
@@ -42,11 +43,13 @@
 		<item>XenonHD :: Vicino</item>
 		<item>XenonHD :: Vicino</item>
 		<item>XenonHD :: Vicino</item>
-		<item>Proto :: Pr0xyMan1ac</item>
 
     </string-array>
     <string-array name="wallpapers" translatable="false">
-    <item>wp_standard</item>
+    <item>wp_mm</item>
+	<item>wp_mm_blue_grey</item>
+	<item>wp_mm_blue</item>
+	<item>wp_tucan</item>
     <item>wp_blue700</item>
     <item>wp_amber700</item>
     <item>wp_red700</item>
@@ -54,10 +57,7 @@
     <item>wp_gray700</item>
     <item>wp_pusteblume</item>
     <item>wp_pusteblume2</item>
-    <item>wp_mm</item>
-	<item>wallpaper_9</item>
-	<item>wallpaper_10</item>
-	<item>wallpaper_11</item>
+    <item>wp_standard</item>
 	<item>wallpaper_12</item>
 	<item>wallpaper_13</item>
 	<item>wallpaper_14</item>
