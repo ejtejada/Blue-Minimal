@@ -225,10 +225,10 @@
     <item component="ComponentInfo{com.flarejune.perfectcolorbar/com.flarejune.perfectcolorbar.ui.actMain}" drawable="a040" />
     <item component="ComponentInfo{com.cmplay.tiles2/com.cmplay.tile2.ui.AppActivity}" drawable="a129" />
     <item component="ComponentInfo{com.gamehivecorp.taptitans/com.gamehivecorp.ghplugin.ImmersivePlayerNativeActivity}" drawable="a125" />
-    <item component="ComponentInfo{}" drawable="a185" />
-    <item component="ComponentInfo{}" drawable="a185" />
-    <item component="ComponentInfo{}" drawable="a185" />
-    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{net.dinglisch.android.taskerm/net.dinglisch.android.taskerm.Tasker}" drawable="a052" />
+    <item component="ComponentInfo{org.nameless.morckx.cmprofiles/org.nameless.morckx.cmprofiles.MainActivity}" drawable="a130" />
+    <item component="ComponentInfo{ccc71.at/ccc71.at.at_main_popup}" drawable="a132" />
+    <item component="ComponentInfo{com.intangibleobject.securesettings.plugin/com.intangibleobject.securesettings.plugin.Activities.MainTabsActivity}" drawable="a131" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
