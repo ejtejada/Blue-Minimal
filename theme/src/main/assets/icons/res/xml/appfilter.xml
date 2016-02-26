@@ -97,7 +97,7 @@
     <item component="ComponentInfo{com.catchingnow.tinyclipboardmanager/com.catchingnow.tinyclipboardmanager.activity.ActivityMain}" drawable="a064" />
     <item component="ComponentInfo{com.hamzah.immersiveforcer/com.hamzah.immersiveforcer.MainActivity}" drawable="a040" />
     <item component="ComponentInfo{com.woalk.apps.xposed.ttsb/com.woalk.apps.xposed.ttsb.MainActivity}" drawable="a040" />
-    <item component="ComponentInfo{de.hu_berlin.informatik.spws2014.mapever/de.hu_berlin.informatik.spws2014.mapever.Start}" drawable="a057" />
+    <item component="ComponentInfo{de.hu_berlin.informatik.spws2014.mapever/de.hu_berlin.informatik.spws2014.mapever.Start}" drawable="a049" />
     <item component="ComponentInfo{com.asksven.betterbatterystats_xdaedition/com.asksven.betterbatterystats.StatsActivity}" drawable="a069" />
     <item component="ComponentInfo{com.grarak.kerneladiutor/com.grarak.kerneladiutor.MainActivity}" drawable="a070" />
     <item component="ComponentInfo{dk.jens.backup/dk.jens.backup.OAndBackup}" drawable="a071" />
@@ -229,6 +229,24 @@
     <item component="ComponentInfo{org.nameless.morckx.cmprofiles/org.nameless.morckx.cmprofiles.MainActivity}" drawable="a130" />
     <item component="ComponentInfo{ccc71.at/ccc71.at.at_main_popup}" drawable="a132" />
     <item component="ComponentInfo{com.intangibleobject.securesettings.plugin/com.intangibleobject.securesettings.plugin.Activities.MainTabsActivity}" drawable="a131" />
+    <item component="ComponentInfo{menion.android.locus.pro/com.asamm.locus.core.StartScreen}" drawable="a057" />
+    <item component="ComponentInfo{org.kde.kdeconnect_tp/org.kde.kdeconnect.UserInterface.MaterialActivity}" drawable="a133" />
+    <item component="ComponentInfo{org.sufficientlysecure.viewer/org.ebookdroid.ui.library.RecentActivity}" drawable="a134" />
+    <item component="ComponentInfo{com.holokenmod/com.holokenmod.MainActivity}" drawable="a135" />
+    <item component="ComponentInfo{org.totschnig.myexpenses/org.totschnig.myexpenses.activity.MyExpenses}" drawable="a103" />
+    <item component="ComponentInfo{org.quantumbadger.redreader/org.quantumbadger.redreader.activities.MainActivity}" drawable="a136" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
