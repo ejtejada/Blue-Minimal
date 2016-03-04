@@ -25,6 +25,12 @@
     <string name="theme_author" translatable="false">Baumann Produktion</string>
     <string name="theme_email" translatable="false">baumann.juergen@posteo.de</string>
     <string name="title_app" translatable="false">Blue Minimal</string>
+    <string name="permissions">You must grant \"Access Storage Permission\" to save screenshots. After that you should
+        completely close the app or restart the phone. If you don\'t permit the storage access but want to use the
+        screenshot function at a later time, you can grant the permission later. Please open then: systemsettings - apps -
+        weather. In the permissions section you can grant the \"write storage permission\".</string>
+    <string name="yes">OK</string>
+    <string name="no">No</string>
 
     //Wallpaper
 

@@ -19,8 +19,7 @@ public final class R {
     }
     public static final class array {
         public static final int colors=0x7f080000;
-        public static final int info=0x7f080001;
-        public static final int wallpapers=0x7f080002;
+        public static final int wallpapers=0x7f080001;
     }
     public static final class attr {
         /** <p>Must be an integer value, such as "<code>100</code>".
@@ -75,19 +74,18 @@ containing a value of this type.
         public static final int IVappIconBack=0x7f0d0010;
         public static final int TVappName=0x7f0d0011;
         public static final int TVappPackage=0x7f0d0012;
-        public static final int action_apply=0x7f0d0019;
-        public static final int action_sender=0x7f0d0018;
+        public static final int action_apply=0x7f0d0018;
+        public static final int action_sender=0x7f0d0017;
         public static final int appgrid=0x7f0d000b;
         public static final int button=0x7f0d0003;
         public static final int button2=0x7f0d0004;
         public static final int button3=0x7f0d0002;
         public static final int card_bg=0x7f0d000c;
-        public static final int exit=0x7f0d0016;
+        public static final int exit=0x7f0d0015;
         public static final int imageView=0x7f0d0000;
         public static final int imageViewLogo=0x7f0d0007;
-        public static final int license=0x7f0d0017;
+        public static final int license=0x7f0d0016;
         public static final int pager=0x7f0d0014;
-        public static final int pager_title_strip=0x7f0d0015;
         public static final int textView1=0x7f0d0008;
         public static final int textView2=0x7f0d0009;
         public static final int textView3=0x7f0d0001;
@@ -113,9 +111,9 @@ containing a value of this type.
         public static final int ic_launcher=0x7f030000;
     }
     public static final class string {
-        public static final int about_no=0x7f07001b;
-        public static final int about_text=0x7f07001c;
-        public static final int about_title=0x7f07001d;
+        public static final int about_no=0x7f07001e;
+        public static final int about_text=0x7f07001f;
+        public static final int about_title=0x7f070020;
         public static final int about_yes=0x7f070000;
         public static final int action_apply=0x7f070001;
         public static final int applying=0x7f070002;
@@ -128,28 +126,31 @@ containing a value of this type.
         public static final int home_text=0x7f070009;
         public static final int menu_exit=0x7f07000a;
         public static final int menu_license=0x7f07000b;
-        public static final int orange=0x7f07000c;
-        public static final int pick_color=0x7f07000d;
-        public static final int purple=0x7f07000e;
-        public static final int red=0x7f07000f;
-        public static final int request_dummy_text=0x7f070010;
-        public static final int request_gplus_url=0x7f07001e;
-        public static final int request_made_by=0x7f07001f;
-        public static final int request_please_wait=0x7f070011;
-        public static final int request_please_wait2=0x7f070012;
-        public static final int request_send_request=0x7f070013;
-        public static final int request_toast_apps_selected=0x7f070014;
-        public static final int request_toast_no_apps_selected=0x7f070015;
-        public static final int so_1337=0x7f070020;
-        public static final int teal=0x7f070016;
-        public static final int theme_author=0x7f070021;
-        public static final int theme_email=0x7f070022;
-        public static final int theme_name=0x7f070023;
-        public static final int title_app=0x7f070024;
-        public static final int title_iconrequest=0x7f070017;
-        public static final int title_solidcolor=0x7f070018;
-        public static final int title_wallpaper=0x7f070019;
-        public static final int white=0x7f07001a;
+        public static final int no=0x7f07000c;
+        public static final int orange=0x7f07000d;
+        public static final int permissions=0x7f07000e;
+        public static final int pick_color=0x7f07000f;
+        public static final int purple=0x7f070010;
+        public static final int red=0x7f070011;
+        public static final int request_dummy_text=0x7f070012;
+        public static final int request_gplus_url=0x7f070021;
+        public static final int request_made_by=0x7f070022;
+        public static final int request_please_wait=0x7f070013;
+        public static final int request_please_wait2=0x7f070014;
+        public static final int request_send_request=0x7f070015;
+        public static final int request_toast_apps_selected=0x7f070016;
+        public static final int request_toast_no_apps_selected=0x7f070017;
+        public static final int so_1337=0x7f070023;
+        public static final int teal=0x7f070018;
+        public static final int theme_author=0x7f070024;
+        public static final int theme_email=0x7f070025;
+        public static final int theme_name=0x7f070026;
+        public static final int title_app=0x7f070027;
+        public static final int title_iconrequest=0x7f070019;
+        public static final int title_solidcolor=0x7f07001a;
+        public static final int title_wallpaper=0x7f07001b;
+        public static final int white=0x7f07001c;
+        public static final int yes=0x7f07001d;
     }
     public static final class style {
         public static final int request_card_content=0x7f0b0000;

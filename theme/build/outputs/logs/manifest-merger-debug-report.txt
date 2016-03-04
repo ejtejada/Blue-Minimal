@@ -15,7 +15,7 @@ ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src
 		INJECTED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml
 uses-sdk
 ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-v4:22.0.0] /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:24:9-38
 		INJECTED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml
@@ -66,7 +66,7 @@ ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src
 		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:44:22-75
 application
 ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:46:5-84:19
-MERGED from [com.android.support:support-v4:22.0.0] /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from /home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/AndroidManifest.xml:49:9-42
 	android:allowBackup

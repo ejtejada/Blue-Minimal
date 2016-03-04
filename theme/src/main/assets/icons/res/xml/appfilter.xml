@@ -235,13 +235,13 @@
     <item component="ComponentInfo{com.holokenmod/com.holokenmod.MainActivity}" drawable="a135" />
     <item component="ComponentInfo{org.totschnig.myexpenses/org.totschnig.myexpenses.activity.MyExpenses}" drawable="a103" />
     <item component="ComponentInfo{org.quantumbadger.redreader/org.quantumbadger.redreader.activities.MainActivity}" drawable="a136" />
-    <item component="ComponentInfo{}" drawable="a185" />
-    <item component="ComponentInfo{}" drawable="a185" />
-    <item component="ComponentInfo{}" drawable="a185" />
-    <item component="ComponentInfo{}" drawable="a185" />
-    <item component="ComponentInfo{}" drawable="a185" />
-    <item component="ComponentInfo{}" drawable="a185" />
-    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{net.iexos.musicalarm/net.iexos.musicalarm.AlarmViewActivity}" drawable="a137" />
+    <item component="ComponentInfo{de.tap.easy_xkcd/de.tap.easy_xkcd.Activities.MainActivity}" drawable="a138" />
+    <item component="ComponentInfo{org.pocketworkstation.pckeyboard/org.pocketworkstation.pckeyboard.Main}" drawable="a048" />
+    <item component="ComponentInfo{de.blinkt.openvpn/de.blinkt.openvpn.activities.MainActivity}" drawable="a139" />
+    <item component="ComponentInfo{it.niedermann.owncloud.notes/it.niedermann.owncloud.notes.android.activity.NotesListViewActivity}" drawable="a027" />
+    <item component="ComponentInfo{sk.vx.connectbot/sk.vx.connectbot.HostListActivity}" drawable="a140" />
+    <item component="ComponentInfo{org.wordpress.android/org.wordpress.android.ui.posts.PostsActivity}" drawable="a141" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />

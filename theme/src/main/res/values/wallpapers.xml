@@ -21,7 +21,6 @@
     <item>wp_pusteblume</item>
     <item>wp_pusteblume2</item>
     <item>wp_standard</item>
-	<item>wallpaper_12</item>
 	<item>wallpaper_13</item>
 	<item>wallpaper_14</item>
 	<item>wallpaper_15</item>
@@ -38,37 +37,5 @@
 	<item>wallpaper_26</item>
 	<item>wallpaper_27</item>
     <item>wallpaper_28</item>
-    </string-array>
-
-    <string-array name="info" translatable="false">
-		<item>Marhmallow Dark Portrait</item>
-		<item>Marhmallow Blue Gray Portrait</item>
-		<item>Marhmallow Blue Portrait</item>
-		<item>Tucan by Göschi Portrait</item>
-		<item>Blue Circle Portrait</item>
-		<item>Amber Circle Portrait</item>
-		<item>Red Circle Portrait</item>
-		<item>Green Circle Portrait</item>
-		<item>Gray Circle Portrait</item>
-		<item>Pusteblume Portrait</item>
-		<item>Pusteblume 2 Portrait</item>
-		<item>Dark Grey</item>
-		<item>Element Xenon :: RickerBilly</item>
-		<item>Dark Xenon :: Dominik Horvath</item>
-		<item>Gradient :: Dominik Horvath</item>
-		<item>Xenon :: wad3g</item>
-		<item>Xenon :: wad3g</item>
-		<item>Gold XenonHD :: wad3g</item>
-		<item>XenonHD :: Dominik Horvath</item>
-		<item>Solar :: Adam80460</item>
-		<item>Android Rush :: Adam80460</item>
-		<item>Android Green :: Adam80460</item>
-		<item>XenonHD :: Vicino</item>
-		<item>XenonHD :: Vicino</item>
-		<item>XenonHD :: Vicino</item>
-		<item>XenonHD :: Vicino</item>
-		<item>XenonHD :: Vicino</item>
-		<item>XenonHD :: Vicino</item>
-
     </string-array>
 </resources>

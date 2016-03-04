@@ -19,6 +19,8 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -26,6 +28,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.PagerTitleStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.SimpleOnPageChangeListener;
 import android.view.LayoutInflater;
@@ -108,7 +111,6 @@ public class Wallpaper extends FragmentActivity {
 
         fetchWallpapers(resources, packageName, R.array.wallpapers);
 	    mSectionsPagerAdapter.notifyDataSetChanged();
-        mWallpaperInfo = resources.getStringArray(R.array.info);
     }
 
     /**
@@ -135,10 +137,6 @@ public class Wallpaper extends FragmentActivity {
             return sWallpapers.size();
         }
 
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return mWallpaperInfo[position];
-        }
     }
 
     public static class WallpaperFragment extends Fragment {
@@ -171,7 +169,7 @@ public class Wallpaper extends FragmentActivity {
             }
         }
     }
-    
+
     class WallpaperLoader extends AsyncTask<Integer, Void, Boolean> {
         BitmapFactory.Options mOptions;
         ProgressDialog mDialog;
@@ -187,10 +185,12 @@ public class Wallpaper extends FragmentActivity {
             try {
                 Bitmap b = BitmapFactory.decodeResource(getResources(),
                         sWallpapers.get(params[0]), mOptions);
-                
+
                 WallpaperManager wallpaperManager = WallpaperManager.getInstance(mContext);
+
                 try {
                     wallpaperManager.setBitmap(b);
+
                 } catch (IOException e) {
                     // If we crash, we will probably have a null bitmap
                     // return before recycling to avoid exception

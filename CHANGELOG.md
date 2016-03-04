@@ -1,15 +1,19 @@
+**I'm using some icons for serveral apps. So if some apps are using the same icons or if something other went wrong, just report it [here](https://github.com/scoute-dich/Baumann_Theme/issues) or on the [xda threat](http://forum.xda-developers.com/android/themes/cm12-theme-source-t3164482).**
+
+### v3.6
+
+- switched to Android Marshmallow permission model
+- new icons [Issue #1: Icon Request](https://github.com/scoute-dich/Baumann_Theme/issues/1) and [New icon requests #6](https://github.com/scoute-dich/Baumann_Theme/issues/6)
+
 ### v3.5
 
 - added a wallapper (thanks to my daughter)
-
 
 ### v3.4
 
 - added new wallpaers
 - reworked some icons
 - added icons: AOSP default apps and again from [Issue #1: Icon Request](https://github.com/scoute-dich/Baumann_Theme/issues/1)
-
-I'm using some icons for serveral apps. So if some apps are using the same icons, just report it [here](https://github.com/scoute-dich/Baumann_Theme/issues) or on the [xda threat](http://forum.xda-developers.com/android/themes/cm12-theme-source-t3164482).
 
 ### v3.3
 

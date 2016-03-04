@@ -14,37 +14,6 @@
     </string-array>
     <!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/wallpapers.xml -->
     <eat-comment/>
-    <string-array name="info" translatable="false">
-		<item>Marhmallow Dark Portrait</item>
-		<item>Marhmallow Blue Gray Portrait</item>
-		<item>Marhmallow Blue Portrait</item>
-		<item>Tucan by Göschi Portrait</item>
-		<item>Blue Circle Portrait</item>
-		<item>Amber Circle Portrait</item>
-		<item>Red Circle Portrait</item>
-		<item>Green Circle Portrait</item>
-		<item>Gray Circle Portrait</item>
-		<item>Pusteblume Portrait</item>
-		<item>Pusteblume 2 Portrait</item>
-		<item>Dark Grey</item>
-		<item>Element Xenon :: RickerBilly</item>
-		<item>Dark Xenon :: Dominik Horvath</item>
-		<item>Gradient :: Dominik Horvath</item>
-		<item>Xenon :: wad3g</item>
-		<item>Xenon :: wad3g</item>
-		<item>Gold XenonHD :: wad3g</item>
-		<item>XenonHD :: Dominik Horvath</item>
-		<item>Solar :: Adam80460</item>
-		<item>Android Rush :: Adam80460</item>
-		<item>Android Green :: Adam80460</item>
-		<item>XenonHD :: Vicino</item>
-		<item>XenonHD :: Vicino</item>
-		<item>XenonHD :: Vicino</item>
-		<item>XenonHD :: Vicino</item>
-		<item>XenonHD :: Vicino</item>
-		<item>XenonHD :: Vicino</item>
-
-    </string-array>
     <string-array name="wallpapers" translatable="false">
     <item>wp_mm</item>
 	<item>wp_mm_blue_grey</item>
@@ -58,7 +27,6 @@
     <item>wp_pusteblume</item>
     <item>wp_pusteblume2</item>
     <item>wp_standard</item>
-	<item>wallpaper_12</item>
 	<item>wallpaper_13</item>
 	<item>wallpaper_14</item>
 	<item>wallpaper_15</item>
@@ -130,7 +98,12 @@
         You can send this zip-file to a themer of your choise.</string>
     <string name="menu_exit">Exit app</string>
     <string name="menu_license">License</string>
+    <string name="no">No</string>
     <string name="orange">Orange 900</string>
+    <string name="permissions">You must grant \"Access Storage Permission\" to save screenshots. After that you should
+        completely close the app or restart the phone. If you don\'t permit the storage access but want to use the
+        screenshot function at a later time, you can grant the permission later. Please open then: systemsettings - apps -
+        weather. In the permissions section you can grant the \"write storage permission\".</string>
     <string name="pick_color">Pick a color</string>
     <string name="purple">Purple 900</string>
     <string name="red">Red 900</string>
@@ -152,6 +125,7 @@
     <string name="title_solidcolor">BM Solid Color</string>
     <string name="title_wallpaper">BM Wallpaper</string>
     <string name="white">White</string>
+    <string name="yes">OK</string>
     <!-- From: file:/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/res/values/request_styles.xml -->
     <eat-comment/>
     <style name="request_card_content">
