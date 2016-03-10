@@ -31,11 +31,13 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerTitleStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.SimpleOnPageChangeListener;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -186,20 +188,25 @@ public class Wallpaper extends FragmentActivity {
                 Bitmap b = BitmapFactory.decodeResource(getResources(),
                         sWallpapers.get(params[0]), mOptions);
 
-                WallpaperManager wallpaperManager = WallpaperManager.getInstance(mContext);
+                Display d = ((WindowManager)getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+                int width = d.getWidth();
+                int height = d.getHeight();
+
+                final WallpaperManager wallpaperManager = WallpaperManager.getInstance(mContext);
+                wallpaperManager.setWallpaperOffsetSteps(1, 1);
+                wallpaperManager.suggestDesiredDimensions(width, height);
 
                 try {
                     wallpaperManager.setBitmap(b);
-
                 } catch (IOException e) {
                     // If we crash, we will probably have a null bitmap
                     // return before recycling to avoid exception
                     throw new NullPointerException();
                 }
-                
+
                 // Help GC
                 b.recycle();
-                
+
                 return true;
             } catch (OutOfMemoryError e) {
                 return false;
