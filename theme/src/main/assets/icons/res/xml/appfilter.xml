@@ -115,7 +115,7 @@
     <item component="ComponentInfo{com.motivebite.smokefree.free/com.motivebite.smokefree.activities.MainActivity}" drawable="a032" />
     <item component="ComponentInfo{fr.neamar.kiss/fr.neamar.kiss.MainActivity}" drawable="a010" />
     <item component="ComponentInfo{com.android.chuanl.sevenminutesworkout/com.android.chuanl.sevenminutesworkout.MainActivity}" drawable="a065" />
-    <item component="ComponentInfo{com.renard.ocr/com.renard.ocr.DocumentGridActivity}" drawable="a078" />
+    <item component="ComponentInfo{com.renard.ocr/com.renard.ocr.documents.viewing.grid.DocumentGridActivity}" drawable="a078" />
     <item component="ComponentInfo{com.hybride1/com.hybride1.StartActivity}" drawable="a042" />
     <item component="ComponentInfo{com.zegoggles.smssync/com.zegoggles.smssync.activity.MainActivity}" drawable="a079" />
     <item component="ComponentInfo{io.github.mthli.Ninja/io.github.mthli.Ninja.Activity.BrowserActivity}" drawable="a020" />
@@ -185,7 +185,7 @@
     <item component="ComponentInfo{{com.supercell.boombeach/com.supercell.boombeach.GameApp}" drawable="a104" />
     <item component="ComponentInfo{com.google.android.apps.chromecast.app/com.google.android.apps.chromecast.app.DiscoveryActivity}" drawable="a105" />
     <item component="ComponentInfo{com.supercell.clashofclans/com.supercell.clashofclans.GameApp}" drawable="a106" />
-    <item component="ComponentInfo{eu.siacs.conversations/eu.siacs.conversations.ui.ConversationActivity}" drawable="a016" />
+    <item component="ComponentInfo{eu.siacs.conversations/eu.siacs.conversations.ui.ConversationActivity}" drawable="a142" />
     <item component="ComponentInfo{com.debitoor.android/debitoormobile.SplashscreenActivity}" drawable="a107" />
     <item component="ComponentInfo{com.duolingo/com.duolingo.app.LoginActivity}" drawable="a108" />
     <item component="ComponentInfo{com.cyanogenmod.eleven/com.cyanogenmod.eleven.ui.activities.HomeActivity}" drawable="a060" />
@@ -242,7 +242,7 @@
     <item component="ComponentInfo{it.niedermann.owncloud.notes/it.niedermann.owncloud.notes.android.activity.NotesListViewActivity}" drawable="a027" />
     <item component="ComponentInfo{sk.vx.connectbot/sk.vx.connectbot.HostListActivity}" drawable="a140" />
     <item component="ComponentInfo{org.wordpress.android/org.wordpress.android.ui.posts.PostsActivity}" drawable="a141" />
-    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{com.alorma.github/com.alorma.github.ui.activity.MainActivity}" drawable="a083" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
