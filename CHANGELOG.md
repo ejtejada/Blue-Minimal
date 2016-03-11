@@ -2,8 +2,9 @@
 
 ### v3.6.1
 
-- possibly center wallpapers on landscape (please report if it works)
-- [Same Icons #7](https://github.com/scoute-dich/Baumann_Theme/issues/7)
+- center wallpapers on portrait (no scrolling)
+- reworked wallpapers
+- closed [Same Icons #7](https://github.com/scoute-dich/Baumann_Theme/issues/7)
 
 
 ### v3.6

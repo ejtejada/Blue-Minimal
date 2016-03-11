@@ -154,7 +154,7 @@ public class Wallpaper extends FragmentActivity {
                     (LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
             ImageView img = new ImageView(mContext);
             img.setLayoutParams(new ViewGroup.LayoutParams
-                    (ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                    (ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             img.setImageResource(sWallpapers.get(args.getInt(ARG_SECTION_NUMBER)));
             img.setScaleType(ImageView.ScaleType.CENTER_CROP);
             holder.addView(img);
@@ -188,13 +188,7 @@ public class Wallpaper extends FragmentActivity {
                 Bitmap b = BitmapFactory.decodeResource(getResources(),
                         sWallpapers.get(params[0]), mOptions);
 
-                Display d = ((WindowManager)getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
-                int width = d.getWidth();
-                int height = d.getHeight();
-
-                final WallpaperManager wallpaperManager = WallpaperManager.getInstance(mContext);
-                wallpaperManager.setWallpaperOffsetSteps(1, 1);
-                wallpaperManager.suggestDesiredDimensions(width, height);
+                WallpaperManager wallpaperManager = WallpaperManager.getInstance(mContext);
 
                 try {
                     wallpaperManager.setBitmap(b);

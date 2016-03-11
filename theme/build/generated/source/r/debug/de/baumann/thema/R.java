@@ -57,16 +57,16 @@ containing a value of this type.
         public static final int request_ic_cab=0x7f020002;
         public static final int wp_amber700=0x7f020003;
         public static final int wp_blue700=0x7f020004;
-        public static final int wp_gray700=0x7f020005;
-        public static final int wp_green700=0x7f020006;
+        public static final int wp_green700=0x7f020005;
+        public static final int wp_grey700=0x7f020006;
         public static final int wp_mm=0x7f020007;
-        public static final int wp_mm_blue=0x7f020008;
-        public static final int wp_mm_blue_grey=0x7f020009;
-        public static final int wp_pusteblume=0x7f02000a;
-        public static final int wp_pusteblume2=0x7f02000b;
-        public static final int wp_red700=0x7f02000c;
-        public static final int wp_standard=0x7f02000d;
-        public static final int wp_tucan=0x7f02000e;
+        public static final int wp_pusteblume=0x7f020008;
+        public static final int wp_pusteblume2=0x7f020009;
+        public static final int wp_red700=0x7f02000a;
+        public static final int wp_standard=0x7f02000b;
+        public static final int wp_tucan=0x7f02000c;
+        public static final int wp_tucan2=0x7f02000d;
+        public static final int wp_tucan3=0x7f02000e;
     }
     public static final class id {
         public static final int CBappSelect=0x7f0d000d;

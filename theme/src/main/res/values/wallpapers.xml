@@ -10,14 +10,14 @@
 <resources>
     <string-array name="wallpapers" translatable="false">
     <item>wp_mm</item>
-	<item>wp_mm_blue_grey</item>
-	<item>wp_mm_blue</item>
 	<item>wp_tucan</item>
+	<item>wp_tucan2</item>
+	<item>wp_tucan3</item>
     <item>wp_blue700</item>
     <item>wp_amber700</item>
     <item>wp_red700</item>
     <item>wp_green700</item>
-    <item>wp_gray700</item>
+    <item>wp_grey700</item>
     <item>wp_pusteblume</item>
     <item>wp_pusteblume2</item>
     <item>wp_standard</item>
