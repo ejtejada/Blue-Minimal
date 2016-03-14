@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="5.6444445mm"
+   height="5.6444445mm"
+   viewBox="0 0 20 20"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Document.svg"
+   inkscape:export-filename="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/assets/icons/res/drawable-xxhdpi/a097.png"
+   inkscape:export-xdpi="648"
+   inkscape:export-ydpi="648">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="22.4"
+     inkscape:cx="9.1600844"
+     inkscape:cy="5.2639319"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:snap-grids="true"
+     inkscape:snap-to-guides="false"
+     inkscape:snap-page="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4138" />
+    <sodipodi:guide
+       position="10,18"
+       orientation="0,1"
+       id="guide4140" />
+    <sodipodi:guide
+       position="10,2"
+       orientation="0,1"
+       id="guide4142" />
+    <sodipodi:guide
+       position="2,10"
+       orientation="1,0"
+       id="guide4144" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,20"
+       id="guide4146" />
+    <sodipodi:guide
+       position="20,0"
+       orientation="-20,0"
+       id="guide4148" />
+    <sodipodi:guide
+       position="20,20"
+       orientation="0,-20"
+       id="guide4150" />
+    <sodipodi:guide
+       position="0,20"
+       orientation="20,0"
+       id="guide4152" />
+    <sodipodi:guide
+       position="18,10"
+       orientation="1,0"
+       id="guide4154" />
+    <sodipodi:guide
+       position="10,10"
+       orientation="-0.70710678,0.70710678"
+       id="guide4156" />
+    <sodipodi:guide
+       position="4,10"
+       orientation="1,0"
+       id="guide4160" />
+    <sodipodi:guide
+       position="16,10"
+       orientation="1,0"
+       id="guide4162" />
+    <sodipodi:guide
+       position="10,4"
+       orientation="0,1"
+       id="guide4166" />
+    <sodipodi:guide
+       position="10,15"
+       orientation="0,1"
+       id="guide4168" />
+    <sodipodi:guide
+       position="10,5"
+       orientation="0,1"
+       id="guide4170" />
+    <sodipodi:guide
+       position="5,10"
+       orientation="1,0"
+       id="guide4172" />
+    <sodipodi:guide
+       position="15,10"
+       orientation="1,0"
+       id="guide4174" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient13455">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.2"
+         offset="0"
+         id="stop13457" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop13459" />
+    </linearGradient>
+    <clipPath
+       id="clipPath12478"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle12480"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5790">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle5792"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath5055"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle5057"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5119">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle5121"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath5194"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle5196"
+         style="opacity:1;fill:#cddc39;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath6175">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle6177"
+         style="opacity:1;fill:#f44336;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath7176"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle7178"
+         style="opacity:1;fill:#9c27b0;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8165">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle8167"
+         style="opacity:1;fill:#ffc107;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath9162"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle9164"
+         style="opacity:1;fill:#ff9800;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5147">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle5149"
+         style="opacity:1;fill:#ff9800;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath6144"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle6146"
+         style="opacity:1;fill:#e91e63;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath7143">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle7145"
+         style="opacity:1;fill:#ffeb3b;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath8148"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle8150"
+         style="opacity:1;fill:#9c27b0;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5332">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle5334"
+         style="opacity:1;fill:#f44336;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath6341"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle6343"
+         style="opacity:1;fill:#4caf50;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath7354">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle7356"
+         style="opacity:1;fill:#f44336;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath8344"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle8346"
+         style="opacity:1;fill:#673ab7;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath9436">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle9438"
+         style="opacity:1;fill:#9e9e9e;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath10432"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle10434"
+         style="opacity:1;fill:#795548;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath11433">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle11435"
+         style="opacity:1;fill:#03a9f4;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath12452"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle12454"
+         style="opacity:1;fill:#ffc107;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient13455"
+       id="linearGradient13461"
+       x1="9.9553576"
+       y1="9.9553566"
+       x2="20"
+       y2="20"
+       gradientUnits="userSpaceOnUse" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath13465">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle13467"
+         style="opacity:1;fill:#e91e63;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Hintergrund"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(1058.1428,-861.93365)">
+    <circle
+       inkscape:export-ydpi="648"
+       inkscape:export-xdpi="648"
+       inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+       style="opacity:1;fill:#607d8b;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4136"
+       cx="-1048.1428"
+       cy="871.93365"
+       r="10" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path12456"
+       d="m -1050.6874,868.40686 0.1339,3.79465 0.2678,0.89285 1.1161,0.75893 1.5179,0.0446 1.6071,-0.40178 0.5357,-1.25 -0.1339,-3.83929 -4.9107,0 z"
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:url(#linearGradient13461);fill-opacity:1;stroke-width:0.2;stroke-linejoin:round"
+       d="M 7.1542969 5.1503906 C 6.6017969 5.1503906 6.1582031 5.5983906 6.1582031 6.1503906 L 6.1484375 14.150391 C 6.1484375 14.464504 6.3019895 14.732642 6.5273438 14.916016 C 6.5712486 14.971194 6.6174228 15.01975 6.671875 15.064453 C 6.7168178 15.121251 6.7642448 15.17105 6.8203125 15.216797 C 6.8649329 15.272688 6.9133057 15.320147 6.96875 15.365234 C 7.0120539 15.419226 7.0578765 15.465884 7.1113281 15.509766 C 7.1553416 15.565116 7.201238 15.613388 7.2558594 15.658203 C 7.3004798 15.714095 7.3488526 15.761553 7.4042969 15.806641 C 7.4471061 15.859672 7.4922836 15.906005 7.5449219 15.949219 C 7.5882257 16.003211 7.6340484 16.049868 7.6875 16.09375 C 7.7303961 16.147184 7.7752776 16.194752 7.828125 16.238281 C 7.8711746 16.291778 7.9176707 16.337322 7.9707031 16.380859 C 8.0132892 16.433693 8.0570357 16.480327 8.109375 16.523438 C 8.1517866 16.576093 8.1979011 16.621053 8.25 16.664062 C 8.292309 16.716521 8.3367401 16.761816 8.3886719 16.804688 C 8.430912 16.857014 8.4755239 16.902534 8.5273438 16.945312 C 8.5693029 16.997291 8.6126457 17.043375 8.6640625 17.085938 C 8.7061051 17.137847 8.7512459 17.182129 8.8027344 17.224609 C 8.8430982 17.274213 8.8845578 17.3184 8.9335938 17.359375 C 8.9756668 17.41161 9.0206532 17.457251 9.0722656 17.5 C 9.1138754 17.551091 9.1581923 17.594813 9.2089844 17.636719 C 9.2491812 17.685803 9.2911268 17.728957 9.3398438 17.769531 C 9.3805481 17.819554 9.4231384 17.863055 9.4726562 17.904297 C 9.5123802 17.953073 9.5534401 17.996675 9.6015625 18.037109 C 9.6421207 18.087186 9.6850015 18.130548 9.734375 18.171875 C 9.7750688 18.221842 9.8176961 18.265444 9.8671875 18.306641 C 9.9065437 18.35454 9.9485982 18.39577 9.9960938 18.435547 C 10.03606 18.484418 10.076589 18.527907 10.125 18.568359 C 10.1644 18.616337 10.206343 18.657432 10.253906 18.697266 C 10.293241 18.745298 10.333352 18.788228 10.380859 18.828125 C 10.420272 18.876093 10.462191 18.91721 10.509766 18.957031 C 10.547818 19.003125 10.587187 19.043482 10.632812 19.082031 C 10.672536 19.130565 10.71366 19.172664 10.761719 19.212891 C 10.799839 19.25903 10.839056 19.299319 10.884766 19.337891 C 10.923674 19.384984 10.964915 19.425647 11.011719 19.464844 C 11.048812 19.509528 11.086618 19.548378 11.130859 19.585938 C 11.169738 19.633177 11.209051 19.675513 11.255859 19.714844 C 11.292835 19.759239 11.330955 19.798601 11.375 19.835938 C 11.412436 19.881135 11.451357 19.921062 11.496094 19.958984 C 11.533231 20.003786 11.572869 20.042427 11.617188 20.080078 C 11.654205 20.124671 11.69219 20.163674 11.736328 20.201172 C 11.773282 20.245654 11.811426 20.284848 11.855469 20.322266 C 11.891895 20.366112 11.929336 20.404417 11.972656 20.441406 C 12.009662 20.485951 12.047683 20.525041 12.091797 20.5625 C 12.127727 20.605402 12.164468 20.643408 12.207031 20.679688 C 12.24349 20.72343 12.280888 20.761938 12.324219 20.798828 C 12.358939 20.840149 12.39465 20.876943 12.435547 20.912109 C 12.472266 20.956186 12.510995 20.99413 12.554688 21.03125 C 12.589504 21.072565 12.625016 21.109392 12.666016 21.144531 C 12.700956 21.186221 12.736127 21.224324 12.777344 21.259766 C 12.813034 21.302261 12.850369 21.339022 12.892578 21.375 C 12.926248 21.414822 12.960565 21.4503 13 21.484375 C 13.035674 21.526961 13.073021 21.563548 13.115234 21.599609 C 13.148991 21.639448 13.183123 21.674915 13.222656 21.708984 C 13.257473 21.750299 13.292985 21.787126 13.333984 21.822266 C 13.367163 21.861319 13.40071 21.896189 13.439453 21.929688 C 13.473113 21.969526 13.507446 22.004971 13.546875 22.039062 C 13.580475 22.078803 13.614954 22.114421 13.654297 22.148438 C 13.688102 22.188246 13.722141 22.22378 13.761719 22.257812 C 13.793375 22.294927 13.826576 22.327288 13.863281 22.359375 C 13.897603 22.400122 13.932316 22.435954 13.972656 22.470703 C 14.004706 22.508196 14.037015 22.541874 14.074219 22.574219 C 14.10715 22.612954 14.141279 22.646419 14.179688 22.679688 C 14.211453 22.716848 14.242466 22.751097 14.279297 22.783203 C 14.311191 22.820596 14.343843 22.854431 14.380859 22.886719 C 14.41256 22.923885 14.445659 22.956157 14.482422 22.988281 C 14.513927 23.025137 14.54554 23.057957 14.582031 23.089844 C 14.614164 23.127451 14.646277 23.16093 14.683594 23.193359 C 14.714859 23.229616 14.747089 23.261571 14.783203 23.292969 C 14.813589 23.328206 14.843933 23.35997 14.878906 23.390625 C 14.909236 23.425989 14.939672 23.457501 14.974609 23.488281 C 15.005426 23.524213 15.036697 23.556695 15.072266 23.587891 C 15.102976 23.623519 15.134526 23.654604 15.169922 23.685547 C 15.200152 23.720432 15.230886 23.750882 15.265625 23.78125 C 15.294909 23.815044 15.3239 23.845438 15.357422 23.875 C 15.387153 23.909477 15.417044 23.940607 15.451172 23.970703 C 15.48041 24.004609 15.509474 24.034781 15.542969 24.064453 C 15.572741 24.098978 15.602538 24.130025 15.636719 24.160156 C 15.664701 24.192323 15.692771 24.221677 15.724609 24.25 C 15.754448 24.28451 15.786063 24.313645 15.820312 24.34375 C 15.847551 24.374993 15.873411 24.404028 15.904297 24.431641 C 15.934069 24.466166 15.963866 24.497213 15.998047 24.527344 C 16.025915 24.559205 16.054274 24.587168 16.085938 24.615234 C 16.113766 24.64705 16.142216 24.675094 16.173828 24.703125 C 16.200811 24.733991 16.227263 24.76175 16.257812 24.789062 C 16.285253 24.820625 16.312594 24.849085 16.34375 24.876953 C 16.371138 24.908437 16.398602 24.937038 16.429688 24.964844 C 16.456565 24.995572 16.483259 25.023577 16.513672 25.050781 C 16.540977 25.08201 16.568656 25.109131 16.599609 25.136719 C 16.62657 25.167375 16.653104 25.195532 16.683594 25.222656 C 16.709344 25.251841 16.734711 25.27871 16.763672 25.304688 C 16.789733 25.334385 16.816329 25.360321 16.845703 25.386719 C 16.871468 25.416015 16.896786 25.442672 16.925781 25.46875 C 16.952214 25.498817 16.977982 25.526061 17.007812 25.552734 C 17.033345 25.581514 17.059226 25.607172 17.087891 25.632812 C 17.112465 25.660512 17.136582 25.686141 17.164062 25.710938 C 17.189552 25.739827 17.215503 25.765268 17.244141 25.791016 C 17.268114 25.818038 17.291617 25.842925 17.318359 25.867188 C 17.343457 25.895631 17.368334 25.921865 17.396484 25.947266 C 17.420789 25.974585 17.445519 25.998951 17.472656 26.023438 C 17.496408 26.050135 17.520415 26.073661 17.546875 26.097656 C 17.571449 26.125356 17.595566 26.150985 17.623047 26.175781 C 17.645659 26.20106 17.668307 26.22325 17.693359 26.246094 C 17.716778 26.272504 17.739559 26.296534 17.765625 26.320312 C 17.789598 26.347335 17.813101 26.372222 17.839844 26.396484 C 17.862366 26.421651 17.885215 26.444045 17.910156 26.466797 C 17.933601 26.49308 17.956348 26.517359 17.982422 26.541016 C 18.005054 26.566179 18.027677 26.588595 18.052734 26.611328 C 18.074446 26.635468 18.095193 26.65778 18.119141 26.679688 C 18.141663 26.704854 18.164512 26.727248 18.189453 26.75 C 18.210877 26.773809 18.23226 26.794769 18.255859 26.816406 C 18.277203 26.840204 18.296799 26.863128 18.320312 26.884766 C 18.342505 26.909564 18.364129 26.932623 18.388672 26.955078 C 18.409758 26.978436 18.431893 26.998271 18.455078 27.019531 C 18.475594 27.042217 18.495078 27.06328 18.517578 27.083984 C 18.538019 27.106702 18.557652 27.127693 18.580078 27.148438 C 18.601126 27.171829 18.621382 27.193547 18.644531 27.214844 C 18.664706 27.237076 18.684947 27.257022 18.707031 27.277344 C 18.727219 27.299594 18.74743 27.319506 18.769531 27.339844 C 18.789112 27.361416 18.808697 27.380615 18.830078 27.400391 C 18.849403 27.421751 18.867583 27.44133 18.888672 27.460938 C 18.908568 27.48293 18.927455 27.503306 18.949219 27.523438 C 18.968233 27.544277 18.987112 27.562878 19.007812 27.582031 C 19.026839 27.602887 19.045691 27.621458 19.066406 27.640625 C 19.084459 27.660414 19.101517 27.678995 19.121094 27.697266 C 19.139664 27.717725 19.157542 27.737013 19.177734 27.755859 C 19.196749 27.776699 19.215627 27.7953 19.236328 27.814453 C 19.254178 27.833906 19.271689 27.851165 19.291016 27.869141 C 19.307863 27.887501 19.323631 27.904828 19.341797 27.921875 C 19.359813 27.941617 19.376951 27.960285 19.396484 27.978516 C 19.413051 27.996521 19.429429 28.012559 19.447266 28.029297 C 19.465918 28.049735 19.483631 28.069074 19.503906 28.087891 C 19.519542 28.104733 19.53598 28.119043 19.552734 28.134766 C 19.568991 28.152483 19.584077 28.169052 19.601562 28.185547 C 19.619436 28.20503 19.636895 28.222233 19.65625 28.240234 C 19.671039 28.25613 19.685384 28.27026 19.701172 28.285156 C 19.717708 28.303178 19.732193 28.321134 19.75 28.337891 C 19.764653 28.353675 19.779285 28.36801 19.794922 28.382812 C 19.811432 28.400747 19.827932 28.416917 19.845703 28.433594 C 19.860096 28.44906 19.873332 28.463995 19.888672 28.478516 C 19.904045 28.495128 19.919087 28.509863 19.935547 28.525391 C 19.950327 28.541275 19.964691 28.555426 19.980469 28.570312 C 19.994862 28.585778 20.008098 28.600714 20.023438 28.615234 C 20.036897 28.629654 20.050168 28.642654 20.064453 28.65625 C 20.080053 28.673104 20.094609 28.689341 20.111328 28.705078 C 20.123883 28.718412 20.137125 28.729565 20.150391 28.742188 C 20.163568 28.756347 20.175481 28.769835 20.189453 28.783203 C 20.204255 28.799111 20.218572 28.813218 20.234375 28.828125 C 20.246046 28.840493 20.257247 28.851526 20.269531 28.863281 C 20.282957 28.877708 20.294343 28.892645 20.308594 28.90625 C 20.320132 28.918504 20.331611 28.929752 20.34375 28.941406 C 20.357199 28.955814 20.370492 28.968837 20.384766 28.982422 C 20.397035 28.995421 20.408929 29.00721 20.421875 29.019531 C 20.43354 29.031891 20.444753 29.04294 20.457031 29.054688 C 20.468679 29.067029 20.479929 29.078113 20.492188 29.089844 C 20.503489 29.101818 20.513514 29.1136 20.525391 29.125 C 20.536338 29.136564 20.547108 29.147177 20.558594 29.158203 C 20.568549 29.168719 20.57749 29.179381 20.587891 29.189453 C 20.598783 29.201019 20.609665 29.211624 20.621094 29.222656 C 20.632153 29.234375 20.642687 29.24469 20.654297 29.255859 C 20.665374 29.267533 20.675874 29.277939 20.6875 29.289062 C 20.696634 29.298605 20.70534 29.307234 20.714844 29.316406 C 20.723595 29.3256 20.731141 29.334897 20.740234 29.34375 C 20.749545 29.353583 20.757878 29.363602 20.767578 29.373047 C 20.777537 29.383566 20.78647 29.394222 20.796875 29.404297 C 20.806617 29.414496 20.817962 29.421864 20.828125 29.431641 C 20.835652 29.439462 20.841833 29.447507 20.849609 29.455078 C 20.858709 29.464636 20.867484 29.473233 20.876953 29.482422 C 20.885079 29.490911 20.891972 29.499616 20.900391 29.507812 C 20.908145 29.515887 20.915808 29.523441 20.923828 29.53125 C 20.931599 29.539343 20.939228 29.546862 20.947266 29.554688 C 20.955037 29.56278 20.962665 29.5703 20.970703 29.578125 C 20.977612 29.585281 20.985069 29.59071 20.992188 29.597656 C 20.998459 29.604174 21.00332 29.610843 21.009766 29.617188 C 21.017255 29.625012 21.023511 29.633049 21.03125 29.640625 C 21.037771 29.647379 21.044074 29.65359 21.050781 29.660156 C 21.056928 29.666522 21.062047 29.673488 21.068359 29.679688 C 21.074153 29.685669 21.079997 29.691431 21.085938 29.697266 C 21.091731 29.703247 21.097575 29.70901 21.103516 29.714844 C 21.109042 29.720548 21.115434 29.724898 21.121094 29.730469 C 21.126385 29.735919 21.131306 29.740765 21.136719 29.746094 C 21.141004 29.750508 21.144072 29.755431 21.148438 29.759766 C 21.153956 29.765481 21.15841 29.771762 21.164062 29.777344 C 21.168598 29.782001 21.173109 29.786448 21.177734 29.791016 C 21.182022 29.795418 21.187039 29.798412 21.191406 29.802734 C 21.195439 29.806866 21.199022 29.810392 21.203125 29.814453 C 21.206149 29.817552 21.207873 29.82116 21.210938 29.824219 C 21.216234 29.829675 21.221144 29.83451 21.226562 29.839844 C 21.227575 29.840872 21.229452 29.844679 21.230469 29.845703 C 21.235011 29.850366 21.239509 29.854802 21.244141 29.859375 C 21.244141 29.859375 21.246094 29.861328 21.246094 29.861328 C 21.247369 29.862612 21.248718 29.863957 21.25 29.865234 C 21.251265 29.866522 21.252635 29.86786 21.253906 29.869141 C 21.253906 29.869141 21.255859 29.869141 21.255859 29.869141 C 21.259489 29.872859 21.263892 29.877198 21.267578 29.880859 C 21.267578 29.880859 21.267578 29.882812 21.267578 29.882812 C 21.270867 29.886171 21.274008 29.889267 21.277344 29.892578 C 21.278985 29.894254 21.281551 29.898727 21.283203 29.900391 C 21.283203 29.900391 21.285156 29.900391 21.285156 29.900391 C 21.286169 29.901419 21.286093 29.903273 21.287109 29.904297 C 21.287109 29.904297 21.289062 29.904297 21.289062 29.904297 C 21.289062 29.904297 21.289062 29.90625 21.289062 29.90625 C 21.289317 29.906507 21.290761 29.905993 21.291016 29.90625 C 21.316916 29.932105 21.352251 29.945872 21.380859 29.96875 C 21.551023 30.106004 21.757797 30.199219 21.994141 30.199219 L 27.998047 30.199219 C 27.998712 30.199219 27.999335 30.19922 28 30.199219 C 28.275418 30.199219 28.52417 30.086578 28.705078 29.90625 C 28.886751 29.72516 29 29.4758 29 29.199219 L 29 23.199219 L 28.998047 23.199219 L 28.996094 23.197266 L 28.994141 23.195312 L 28.994141 23.193359 L 28.990234 23.191406 L 28.986328 23.185547 L 28.982422 23.181641 L 28.976562 23.175781 L 28.970703 23.169922 L 28.962891 23.162109 L 28.955078 23.154297 L 28.947266 23.146484 L 28.9375 23.136719 L 28.927734 23.126953 L 28.916016 23.115234 L 28.904297 23.103516 L 28.892578 23.091797 L 28.878906 23.078125 L 28.865234 23.064453 L 28.851562 23.048828 L 28.835938 23.033203 L 28.820312 23.017578 L 28.802734 23.001953 L 28.785156 22.982422 L 28.767578 22.964844 L 28.748047 22.945312 L 28.728516 22.925781 L 28.708984 22.90625 L 28.708984 22.904297 L 28.6875 22.882812 L 28.666016 22.861328 L 28.642578 22.837891 L 28.619141 22.814453 L 28.595703 22.791016 L 28.570312 22.765625 L 28.544922 22.738281 L 28.519531 22.712891 L 28.492188 22.685547 L 28.464844 22.65625 L 28.435547 22.626953 L 28.40625 22.597656 L 28.375 22.568359 L 28.345703 22.537109 L 28.314453 22.503906 L 28.28125 22.470703 L 28.248047 22.4375 L 28.214844 22.404297 L 28.179688 22.369141 L 28.144531 22.333984 L 28.109375 22.296875 L 28.072266 22.259766 L 28.035156 22.220703 L 27.996094 22.183594 L 27.957031 22.142578 L 27.917969 22.103516 L 27.876953 22.0625 L 27.835938 22.019531 L 27.792969 21.978516 L 27.751953 21.9375 L 27.751953 21.935547 L 27.751953 21.933594 L 27.707031 21.890625 L 27.664062 21.845703 L 27.619141 21.800781 L 27.572266 21.753906 L 27.527344 21.707031 L 27.478516 21.658203 L 27.431641 21.611328 L 27.382812 21.560547 L 27.333984 21.511719 L 27.283203 21.460938 L 27.232422 21.408203 L 27.181641 21.357422 L 27.128906 21.302734 L 27.076172 21.25 L 27.021484 21.195312 L 26.966797 21.140625 L 26.912109 21.083984 L 26.855469 21.027344 L 26.798828 20.96875 L 26.740234 20.910156 L 26.683594 20.851562 L 26.623047 20.792969 L 26.564453 20.732422 L 26.503906 20.669922 L 26.441406 20.607422 L 26.380859 20.544922 L 26.318359 20.482422 L 26.253906 20.417969 L 26.189453 20.351562 L 26.125 20.287109 L 26.058594 20.220703 L 25.992188 20.152344 L 25.925781 20.083984 L 25.857422 20.015625 L 25.789062 19.945312 L 25.71875 19.875 L 25.648438 19.804688 L 25.578125 19.732422 L 25.505859 19.660156 L 25.433594 19.585938 L 25.361328 19.511719 L 25.287109 19.4375 L 25.212891 19.361328 L 25.136719 19.285156 L 25.060547 19.208984 L 24.984375 19.130859 L 24.90625 19.052734 L 24.828125 18.972656 L 24.75 18.892578 L 24.669922 18.8125 L 24.587891 18.730469 L 24.507812 18.648438 L 24.425781 18.564453 L 24.341797 18.480469 L 24.259766 18.396484 L 24.175781 18.310547 L 24.089844 18.224609 L 24.003906 18.136719 L 23.917969 18.050781 L 23.830078 17.960938 L 23.742188 17.873047 L 23.654297 17.783203 L 23.564453 17.691406 L 23.474609 17.599609 L 23.382812 17.507812 L 23.291016 17.416016 L 23.199219 17.322266 L 23.105469 17.226562 L 23.011719 17.130859 L 22.917969 17.035156 L 22.822266 16.939453 L 22.724609 16.841797 L 22.628906 16.744141 L 22.53125 16.644531 L 22.431641 16.544922 L 22.333984 16.445312 L 22.234375 16.34375 L 22.132812 16.242188 L 22.03125 16.138672 L 21.929688 16.035156 L 21.826172 15.931641 L 21.722656 15.826172 L 21.619141 15.720703 L 21.513672 15.613281 L 21.408203 15.505859 L 21.300781 15.398438 L 21.193359 15.289062 L 21.085938 15.179688 L 20.976562 15.070312 L 20.867188 14.958984 L 20.757812 14.847656 L 20.646484 14.734375 L 20.535156 14.621094 L 20.421875 14.507812 L 20.308594 14.392578 L 20.195312 14.277344 L 20.080078 14.160156 L 19.964844 14.044922 L 19.847656 13.925781 L 19.730469 13.808594 L 19.613281 13.689453 L 19.496094 13.572266 L 19.496094 13.568359 L 19.376953 13.447266 L 19.255859 13.326172 L 19.134766 13.203125 L 19.013672 13.080078 L 18.892578 12.957031 L 18.769531 12.832031 L 18.644531 12.707031 L 18.521484 12.582031 L 18.396484 12.455078 L 18.269531 12.326172 L 18.142578 12.199219 L 18.015625 12.070312 L 17.888672 11.943359 L 17.888672 11.939453 L 17.759766 11.808594 L 17.628906 11.677734 L 17.5 11.546875 L 17.369141 11.414062 L 17.236328 11.279297 L 17.103516 11.144531 L 16.970703 11.009766 L 16.835938 10.875 L 16.701172 10.738281 L 16.566406 10.603516 L 16.566406 10.599609 L 16.429688 10.462891 L 16.292969 10.324219 L 16.15625 10.1875 L 16.15625 10.183594 L 16.017578 10.042969 L 15.876953 9.9023438 L 15.738281 9.7617188 L 15.597656 9.6210938 L 15.597656 9.6171875 L 15.455078 9.4746094 L 15.3125 9.3300781 L 15.169922 9.1855469 L 15.027344 9.0410156 L 14.882812 8.8945312 L 14.736328 8.7460938 L 14.591797 8.5996094 L 14.445312 8.4511719 L 14.296875 8.3007812 L 14.148438 8.1503906 L 11.148438 5.1503906 L 7.1542969 5.1503906 z "
+       transform="translate(-1058.1428,861.93365)"
+       id="path12581"
+       clip-path="url(#clipPath13465)" />
+    <path
+       style="fill:#212121;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -1050.0178,868.54079 -1.6518,2.05357 0,5.49108 6.875,0 0.4464,-5.84822 -3.3035,-3.08036 z"
+       id="path13469"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#eeeeee;fill-opacity:1;stroke-width:0.2;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m -1047.6428,870.43364 2.75,0 -2.75,-2.74999 0,2.74999 z m -3.5,-3.49999 4,0 3,3 0,6 c 0,0.552 -0.448,1 -1,1 l -6.005,0 c -0.552,0 -0.995,-0.448 -0.995,-1 l 0.01,-8 c 0,-0.552 0.4425,-1 0.995,-1 z m 4.5003,8.00095 0,-1 -4.505,0 0,1 4.505,0 z m 1.5,-1.99999 0,-1 -6.005,0 0,1 6.005,0 z"
+       id="path12500" />
+  </g>
+  <g
+     style="display:inline"
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Icon">
+    <path
+       d="m 3.9999777,4.0333382 12.0000003,0 0,11.9333328 -12.0000003,0 z"
+       id="path4"
+       inkscape:connector-curvature="0"
+       style="fill:none" />
+    <path
+       style="fill:none"
+       inkscape:connector-curvature="0"
+       id="path9956"
+       d="m 18.999978,19.033339 12,0 0,11.933333 -12,0 z" />
+  </g>
+</svg>
