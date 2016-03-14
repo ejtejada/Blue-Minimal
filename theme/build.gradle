@@ -8,8 +8,8 @@ android {
         applicationId "de.baumann.thema"
         minSdkVersion 21
         targetSdkVersion 23
-        versionCode 18
-        versionName "3.6.1"
+        versionCode 19
+        versionName "3.6.1.1"
     }
     buildTypes {
         release {
