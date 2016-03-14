@@ -27,6 +27,7 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
+import android.Manifest;
 import android.animation.AnimatorInflater;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
@@ -101,6 +102,8 @@ public class RequestActivity extends Activity {
 
 	private static final String TAG = "RequestActivity";
 	private static final boolean DEBUG = true; //TODO Set to false for PlayStore Release
+
+    final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -232,6 +235,30 @@ public class RequestActivity extends Activity {
 		if (id == R.id.action_sender) {
 			{
 				// Called when the "Send Requests" Overflow Menu button is pressed
+                if (android.os.Build.VERSION.SDK_INT >= 23) {
+                    int hasWRITE_EXTERNAL_STORAGE = checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                    if (hasWRITE_EXTERNAL_STORAGE != PackageManager.PERMISSION_GRANTED) {
+                        if (!shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                            new AlertDialog.Builder(this)
+                                    .setMessage(R.string.permissions)
+                                    .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener()
+                                    {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            if (android.os.Build.VERSION.SDK_INT >= 23)
+                                                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                                                        REQUEST_CODE_ASK_PERMISSIONS);
+                                        }
+                                    })
+                                    .setNegativeButton(getString(R.string.no), null)
+                                    .show();
+                            return (true);
+                        }
+                        requestPermissions(new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                                REQUEST_CODE_ASK_PERMISSIONS);
+                        return (true);
+                    }
+                }
 				actionSend();
 			}
 			return true;

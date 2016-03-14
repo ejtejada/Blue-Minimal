@@ -1,6 +1,10 @@
 **I'm using some icons for serveral apps. So if some apps are using the same icons or if something other went wrong, just report it [here](https://github.com/scoute-dich/Baumann_Theme/issues) or on the [xda threat](http://forum.xda-developers.com/android/themes/cm12-theme-source-t3164482).**
 
-### v3.6.1 + 3.6.1.1.
+### v3.7
+
+- fixed marshmallows permissions
+
+### v3.6.1
 
 - center wallpapers on portrait (no scrolling)
 - reworked wallpapers
