@@ -8,13 +8,17 @@ android {
         applicationId "de.baumann.thema"
         minSdkVersion 21
         targetSdkVersion 23
-        versionCode 21
-        versionName "3.7"
+        versionCode 22
+        versionName "3.7.1"
     }
     buildTypes {
         release {
             minifyEnabled false
         }
+    }
+
+    lintOptions {
+        disable 'MissingTranslation'
     }
 }
 
