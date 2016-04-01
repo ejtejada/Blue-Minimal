@@ -79,8 +79,8 @@ public class SquareGridLayout extends ViewGroup {
 	 * 
 	 * @param size the size of grid (at least 1)
 	 */
-	
-	public void setSize(int size) {
+
+	private void setSize(int size) {
 		if (size < 1) throw new IllegalArgumentException("size must be positive");
 		if (mSize != size) {
 			mSize = size;

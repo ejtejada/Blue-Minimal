@@ -26,8 +26,8 @@ public class MainActivity extends Activity {
 
     public ProgressDialog progBar;
 
-    public final static boolean DEBUG = false;
-    public final static String TAG = "AppGetter";
+    private final static boolean DEBUG = false;
+    private final static String TAG = "AppGetter";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +65,7 @@ public class MainActivity extends Activity {
 
     }
 
-    public void start_request()
+    private void start_request()
     {
         String pkg = getPackageName();
         Intent intent = new Intent(Intent.ACTION_MAIN);
@@ -75,7 +75,7 @@ public class MainActivity extends Activity {
         if(DEBUG)Log.v(TAG,"Intent intent: "+intent);
     }
 
-    public void start_color()
+    private void start_color()
     {
         final CharSequence[] items = getResources().getStringArray(R.array.colors);
         final Context mContext = this;

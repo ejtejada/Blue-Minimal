@@ -4,17 +4,17 @@ import android.graphics.drawable.Drawable;
 
 public class AppInfo
 {
-	String code = null;
-	String name = null;
-	Drawable icon;
-	boolean selected = false;
+	private String code = null;
+	private String name = null;
+	private Drawable icon;
+	private boolean selected = false;
 
-	public AppInfo(String paramString1, String paramString2, Drawable paramDrawable, boolean paramBoolean)
+	public AppInfo(String paramString1, String paramString2, Drawable paramDrawable)
 	{
 		code = paramString1;
 		name = paramString2;
 		icon = paramDrawable;
-		selected = paramBoolean;
+		selected = false;
 	}
 
 	public String getCode()

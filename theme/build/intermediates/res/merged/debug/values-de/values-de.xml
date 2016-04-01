@@ -8,8 +8,8 @@
     <string name="black">Schwarz</string>
     <string name="blue">Blau 900</string>
     <string name="green">Grün 900</string>
-    <string name="home_but_1">Suche dir ein Bild oder ...</string>
-    <string name="home_but_2">... eine Farbe als Wallpaper aus.</string>
+    <string name="home_but_1">Suche dir ein Bild oder …</string>
+    <string name="home_but_2">… eine Farbe als Wallpaper aus.</string>
     <string name="home_but_3">Juchu! Neue Icons.</string>
     <string name="home_text">Hier kannst du Informationen über App-Icons sammeln, die in dem von dir verwendeten Theme noch nicht vorhanden sind. Diese Informationen werden         in einer ZIP-Datei auf der SD-Karte gespeichert (im Ordner BM_Icon-Request). Du kannst diese ZIP-Datei         dem Ersteller deines Themes zusenden.</string>
     <string name="menu_exit">App verlassen</string>
@@ -21,11 +21,11 @@
         Wenn du den Zugriff verweigerst und die Funktion später doch nutzen willst, kannst du die Berechtigung
         nachträglich erteilen. Öffne dafür: Systemeinstellungen - Apps - Wetter. Im Bereich Berechtigungen kannst
         dann die entsprechende Einstellung vornehmen.</string>
-    <string name="pick_color">Suche eine Farbe aus ...</string>
+    <string name="pick_color">Suche eine Farbe aus …</string>
     <string name="purple">Lila 900</string>
     <string name="red">Rot 900</string>
     <string name="request_dummy_text">Hallo Welt!</string>
-    <string name="request_please_wait">Bitte warten ...</string>
+    <string name="request_please_wait">Bitte warten …</string>
     <string name="request_please_wait2">Suche nach installierten Anwendungen. Nur für dich ;-)</string>
     <string name="request_send_request">Erstelle ZIP-Datei</string>
     <string name="request_toast_apps_selected">ZIP-Datei erstellt und gespeichert.</string>

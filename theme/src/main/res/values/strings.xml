@@ -56,8 +56,8 @@
     <string name="menu_exit">Exit app</string>
 
     //Homescreen
-    <string name="home_but_1">Choose a picture or ...</string>
-    <string name="home_but_2">... a Color as wallpaper.</string>
+    <string name="home_but_1">Choose a picture or …</string>
+    <string name="home_but_2">… a Color as wallpaper.</string>
     <string name="home_but_3">Yeah! New icons.</string>
 
     <string name="home_text">Here you can collect informations about unthemed app-icons on your phone. These informations

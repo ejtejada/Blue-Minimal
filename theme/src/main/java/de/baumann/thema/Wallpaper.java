@@ -19,8 +19,6 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -28,16 +26,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerTitleStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.SimpleOnPageChangeListener;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -53,12 +48,12 @@ public class Wallpaper extends FragmentActivity {
      * keep every loaded fragment in memory. If this becomes too memory intensive, it may be best
      * to switch to a {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
-    SectionsPagerAdapter mSectionsPagerAdapter;
+    private SectionsPagerAdapter mSectionsPagerAdapter;
 
     /**
      * The {@link ViewPager} that will host the section contents.
      */
-    ViewPager mViewPager;
+    private ViewPager mViewPager;
     
     /**
      * Menu item used for "Apply" button on actionbar
@@ -73,7 +68,7 @@ public class Wallpaper extends FragmentActivity {
     /**
      * The {@link ArrayList} that will host the wallpapers resource ID's
      */
-    static ArrayList <Integer> sWallpapers = new ArrayList<Integer>();
+    private static final ArrayList <Integer> sWallpapers = new ArrayList<>();
     
     /**
      * The {@link String[]} that will store wallpaper name
@@ -83,7 +78,7 @@ public class Wallpaper extends FragmentActivity {
     /**
      * The {@link Context} to be used by the app
      */
-    static Context mContext;
+    private static Context mContext;
 
     
     @Override
@@ -111,7 +106,7 @@ public class Wallpaper extends FragmentActivity {
         final Resources resources = getResources();
         final String packageName = getApplication().getPackageName();
 
-        fetchWallpapers(resources, packageName, R.array.wallpapers);
+        fetchWallpapers(resources, packageName);
 	    mSectionsPagerAdapter.notifyDataSetChanged();
     }
 
@@ -162,8 +157,8 @@ public class Wallpaper extends FragmentActivity {
         }
     }
 
-    private void fetchWallpapers(Resources resources, String packageName, int list) {
-        final String[] extras = resources.getStringArray(list);
+    private void fetchWallpapers(Resources resources, String packageName) {
+        final String[] extras = resources.getStringArray(R.array.wallpapers);
         for (String extra : extras) {
             int res = resources.getIdentifier(extra, "drawable", packageName);
             if (res != 0) {
@@ -173,7 +168,7 @@ public class Wallpaper extends FragmentActivity {
     }
 
     class WallpaperLoader extends AsyncTask<Integer, Void, Boolean> {
-        BitmapFactory.Options mOptions;
+        final BitmapFactory.Options mOptions;
         ProgressDialog mDialog;
 
         WallpaperLoader() {

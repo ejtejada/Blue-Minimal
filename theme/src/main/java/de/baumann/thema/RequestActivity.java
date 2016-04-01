@@ -42,7 +42,6 @@ import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
@@ -53,7 +52,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -79,10 +77,9 @@ import de.baumann.thema.helpers.AppInfo;
 public class RequestActivity extends Activity {
 
 	@SuppressWarnings("unchecked")
-	private ArrayList<String> list_activities = new ArrayList();
+	private final ArrayList<String> list_activities = new ArrayList();
 	@SuppressWarnings("unchecked")
 	private static ArrayList<AppInfo> list_activities_final = new ArrayList();
-	private AppAdapter appInfoAdapter = null;
 	private static Context context;
 	private ViewSwitcher switcherLoad;
 	private final AsyncWorkerList taskList = new AsyncWorkerList();
@@ -270,7 +267,7 @@ public class RequestActivity extends Activity {
 	}
 
 	//Toast wrapper to prevent showing each toast. Change text of current toast instead.
-	public void makeToast (String text){
+	private void makeToast(String text){
 		try{
 			toast.getView().isShown();
 			toast.setText(text);
@@ -283,7 +280,7 @@ public class RequestActivity extends Activity {
 	}
 
 	// Handler for sending messages out of separate Threads
-	private Handler handler = new Handler()
+	private final Handler handler = new Handler()
 	{
 		@Override
 		public void handleMessage(Message msg)
@@ -309,7 +306,6 @@ public class RequestActivity extends Activity {
 					return;
 
 				default:
-					return;
 			}
 		}
 	};
@@ -343,8 +339,8 @@ public class RequestActivity extends Activity {
 						String iconName = (((AppInfo)arrayList.get(i)).getCode().split("/")[0].replace(".", "_") + "_" +((AppInfo)arrayList.get(i)).getCode().split("/")[1]).replace(".", "_");
 						if(DEBUG)Log.i(TAG, "iconName: " + iconName);
 
-						stringBuilderEmail.append(((AppInfo)arrayList.get(i)).getName() + "\n");
-						stringBuilderXML.append("<!-- " + ((AppInfo)arrayList.get(i)).getName() +" -->\n<item component=\"ComponentInfo{"+((AppInfo)arrayList.get(i)).getCode()+"}\" drawable=\""+ iconName +"\"/>"+"\n");
+						stringBuilderEmail.append(((AppInfo) arrayList.get(i)).getName()).append("\n");
+						stringBuilderXML.append("<!-- ").append(((AppInfo) arrayList.get(i)).getName()).append(" -->\n<item component=\"ComponentInfo{").append(((AppInfo) arrayList.get(i)).getCode()).append("}\" drawable=\"").append(iconName).append("\"/>").append("\n");
 
 						Bitmap bitmap = ((BitmapDrawable)((AppInfo)arrayList.get(i)).getImage()).getBitmap();
 						FileOutputStream fOut;
@@ -362,7 +358,6 @@ public class RequestActivity extends Activity {
 				}
 				if (amount == 0){//When there's no app selected show a toast and return.
 					handler.sendEmptyMessage(0);
-					return;
 				}
 				else // write zip and start email intent.
 				{
@@ -377,7 +372,7 @@ public class RequestActivity extends Activity {
 					SimpleDateFormat date = new SimpleDateFormat("yyyyMMdd_hhmmss");
 					String zipName = date.format(new Date());
 
-					createZipFile(SAVE_LOC, true, SAVE_LOC2 + "/" + zipName + ".zip");
+					createZipFile(SAVE_LOC2 + "/" + zipName + ".zip");
 
 					deleteDirectory(save_loc); //This deletes all generated files except the zip
 					handler.sendEmptyMessage(1);
@@ -422,19 +417,21 @@ public class RequestActivity extends Activity {
 
 								if(DEBUG)Log.v(TAG,"Added Styled App: \"" +t_package + "/" + t_activity+"\"");
 							}
-							catch(ArrayIndexOutOfBoundsException e){}
+							catch(ArrayIndexOutOfBoundsException ignored){}
 						}
 						break;
 				}
 				activity = myparser.next();
 			}
 		}
-		catch(IOException exIO){handler.sendEmptyMessage(2);return;} //Show toast when there's no appfilter.xml in assets
-		catch(XmlPullParserException exXPPE){return;}
+		catch(IOException exIO){handler.sendEmptyMessage(2);
+		} //Show toast when there's no appfilter.xml in assets
+		catch(XmlPullParserException exXPPE){
+		}
 	}
 
 	@SuppressWarnings("unchecked")
-	private void prepareData() throws Throwable // Sort the apps
+	private void prepareData()  // Sort the apps
 	{
 		ArrayList<AppInfo> arrayList = new ArrayList();
 		PackageManager pm = getPackageManager();
@@ -454,8 +451,8 @@ public class RequestActivity extends Activity {
 				AppInfo tempAppInfo = new AppInfo(
 						resolveInfo.activityInfo.packageName + "/" + resolveInfo.activityInfo.name, //Get package/activity
 						resolveInfo.loadLabel(pm).toString(), //Get the app name
-						getHighResIcon(pm, resolveInfo), //Loads xxxhdpi icon, returns normal if it on fail
-						false //Unselect icon per default
+						getHighResIcon(pm, resolveInfo) //Loads xxxhdpi icon, returns normal if it on fail
+						//Unselect icon per default
 				);
 				arrayList.add(tempAppInfo);
 
@@ -481,7 +478,6 @@ public class RequestActivity extends Activity {
 		});
 
 		list_activities_final = arrayList;
-		return;
 	}
 
 
@@ -511,7 +507,7 @@ public class RequestActivity extends Activity {
 	}
 
 	@SuppressWarnings("deprecation")
-	public int getDisplaySize(String which){
+	private int getDisplaySize(String which){
 		Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
 		if(which.equals("height")){
 			return display.getHeight();
@@ -551,16 +547,17 @@ public class RequestActivity extends Activity {
 
 		if(DEBUG)Log.v(TAG,"height: "+getDisplaySize("height")+"; width: "+getDisplaySize("width"));
 
+		AppAdapter appInfoAdapter = null;
 		if(isPortrait())
 		{
 			grid.setNumColumns(numCol_Portrait);
 
 			if(isTablet(context)) {
-				grid.setNumColumns(numCol_Portrait + 0 ); //Here you can change the number of columns for Tablets
+				grid.setNumColumns(numCol_Portrait); //Here you can change the number of columns for Tablets
 				if(DEBUG)Log.v(TAG,"isTablet");
 			}
 			if(isXLargeTablet(context)) {
-				grid.setNumColumns(numCol_Portrait + 0 ); //Here you can change the number of columns for Large Tablets
+				grid.setNumColumns(numCol_Portrait); //Here you can change the number of columns for Large Tablets
 				if(DEBUG)Log.v(TAG,"isXLargeTablet");
 			}
 
@@ -572,11 +569,11 @@ public class RequestActivity extends Activity {
 			grid.setNumColumns(numCol_Landscape);
 
 			if(isTablet(context)) {
-				grid.setNumColumns(numCol_Landscape + 0 ); //Here you can change the number of columns for Tablets
+				grid.setNumColumns(numCol_Landscape); //Here you can change the number of columns for Tablets
 				if(DEBUG)Log.v(TAG,"isTablet");
 			}
 			if(isXLargeTablet(context)) {
-				grid.setNumColumns(numCol_Landscape + 0 ); //Here you can change the number of columns for Large Tablets
+				grid.setNumColumns(numCol_Landscape); //Here you can change the number of columns for Large Tablets
 				if(DEBUG)Log.v(TAG,"isXLargeTablet");
 			}
 
@@ -623,7 +620,7 @@ public class RequestActivity extends Activity {
 	private class AppAdapter extends ArrayAdapter<AppInfo>
 	{
 		@SuppressWarnings("unchecked")
-		private ArrayList<AppInfo> appList = new ArrayList();
+		private final ArrayList<AppInfo> appList = new ArrayList();
 
 		public AppAdapter(Context context, int position, ArrayList<AppInfo> adapterArrayList)
 		{
@@ -701,35 +698,34 @@ public class RequestActivity extends Activity {
 
 	//Zip Stuff. Better leave that Alone ^^
 
-	public static boolean deleteDirectory(File path) {
+	private static boolean deleteDirectory(File path) {
 		if( path.exists() ) {
 			File[] files = path.listFiles();
-			for(int i=0; i<files.length; i++) {
-				if(files[i].isDirectory()) {
-					deleteDirectory(files[i]);
-				}
-				else {
-					files[i].delete();
+			for (File file : files) {
+				if (file.isDirectory()) {
+					deleteDirectory(file);
+				} else {
+					file.delete();
 				}
 			}
 		}
 		return( path.delete() );
 	}
 
-	public static boolean createZipFile(final String path, final boolean keepDirectoryStructure, final String out_file) {
-		final File f = new File(path);
+	private static boolean createZipFile(final String out_file) {
+		final File f = new File(RequestActivity.SAVE_LOC);
 		if (!f.canRead() || !f.canWrite())
 		{
-			if(DEBUG)Log.d(TAG, path + " cannot be compressed due to file permissions");
+			if(DEBUG)Log.d(TAG, RequestActivity.SAVE_LOC + " cannot be compressed due to file permissions");
 			return false;
 		}
 		try {
 			ZipOutputStream zip_out = new ZipOutputStream(
 					new BufferedOutputStream(
 							new FileOutputStream(out_file), BUFFER));
-			if (keepDirectoryStructure)
+			if (true)
 			{
-				zipFile(path, zip_out, "");
+				zipFile(RequestActivity.SAVE_LOC, zip_out, "");
 			}
 			else
 			{
@@ -748,7 +744,7 @@ public class RequestActivity extends Activity {
 	// StahP !! Turn around ! Nothing to see here!
 
 	// keeps directory structure
-	public static void zipFile(final String path, final ZipOutputStream out, final String relPath) throws IOException
+	private static void zipFile(final String path, final ZipOutputStream out, final String relPath) throws IOException
 	{
 		final File file = new File(path);
 		if (!file.exists()){if(DEBUG)Log.d(TAG, file.getName() + " does NOT exist!");return;}
@@ -776,14 +772,13 @@ public class RequestActivity extends Activity {
 			finally
 			{
 				if (out != null) out.closeEntry();
-				if (in != null) in.close();
+				in.close();
 			}
 		}
 		else if (files.length > 0) // non-empty folder
 		{
-			for (int i = 0, length = files.length; i < length; ++i)
-			{
-				zipFile(path + "/" + files[i], out, relPath + file.getName() + "/");
+			for (String file1 : files) {
+				zipFile(path + "/" + file1, out, relPath + file.getName() + "/");
 			}
 		}
 	}
@@ -803,8 +798,7 @@ public class RequestActivity extends Activity {
 		} else if (file.isDirectory()) {
 			String[] list = file.list();
 			int len = list.length;
-			for(int i = 0; i < len; i++)
-				zip_folder(new File(file.getPath() +"/"+ list[i]), zout);
+			for (String aList : list) zip_folder(new File(file.getPath() + "/" + aList), zout);
 		}
 	}
 	// Sigh...

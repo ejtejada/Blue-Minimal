@@ -7,7 +7,7 @@
         dann die entsprechende Einstellung vornehmen.</string>
     <string name="yes">OK</string>
     <string name="no">Nein</string>
-    <string name="pick_color">Suche eine Farbe aus ...</string>
+    <string name="pick_color">Suche eine Farbe aus …</string>
     <string name="action_apply">Anwenden</string>
     <string name="applying">Wende ausgesuchtes Wallpaper an</string>
     <string name="black">Schwarz</string>
@@ -18,7 +18,7 @@
     <string name="red">Rot 900</string>
     <string name="teal">Teal 900</string>
     <string name="request_dummy_text">Hallo Welt!</string>
-    <string name="request_please_wait">Bitte warten ...</string>
+    <string name="request_please_wait">Bitte warten …</string>
     <string name="request_please_wait2">Suche nach installierten Anwendungen. Nur für dich ;-)</string>
     <string name="request_send_request">Erstelle ZIP-Datei</string>
     <string name="request_toast_apps_selected">ZIP-Datei erstellt und gespeichert.</string>
@@ -31,7 +31,7 @@
     <string name="menu_license">Lizenz</string>
     <string name="title_wallpaper">BM Wallpaper</string>
     <string name="home_text">Hier kannst du Informationen über App-Icons sammeln, die in dem von dir verwendeten Theme noch nicht vorhanden sind. Diese Informationen werden         in einer ZIP-Datei auf der SD-Karte gespeichert (im Ordner BM_Icon-Request). Du kannst diese ZIP-Datei         dem Ersteller deines Themes zusenden.</string>
-    <string name="home_but_1">Suche dir ein Bild oder ...</string>
-    <string name="home_but_2">... eine Farbe als Wallpaper aus.</string>
+    <string name="home_but_1">Suche dir ein Bild oder …</string>
+    <string name="home_but_2">… eine Farbe als Wallpaper aus.</string>
     <string name="home_but_3">Juchu! Neue Icons.</string>
 </resources>
