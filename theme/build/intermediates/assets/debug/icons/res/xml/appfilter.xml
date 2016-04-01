@@ -35,8 +35,7 @@
     <item component="ComponentInfo{com.android.calculator2/com.android.calculator2.Calculator}" drawable="a033" />
     <item component="ComponentInfo{com.android.camera2/com.android.camera.CameraLauncher}" drawable="a017" />
     <item component="ComponentInfo{com.android.deskclock/com.android.deskclock.DeskClock}" drawable="a041" />
-    <item component="ComponentInfo{at.bitfire.davdroid/at.bitfire.davdroid.MainActivity}" drawable="a050" />
-    <item component="ComponentInfo{at.bitfire.davdroid/at.bitfire.davdroid.ui.MainActivity}" drawable="a050" />
+    <item component="ComponentInfo{at.bitfire.davdroid/at.bitfire.davdroid.ui.AccountsActivity}" drawable="a050" />
     <item component="ComponentInfo{net.nurik.roman.dashclock/com.google.android.apps.dashclock.configuration.ConfigurationLauncherActivity}" drawable="a041" />
     <item component="ComponentInfo{com.android.documentsui/com.android.documentsui.DocumentsActivity}" drawable="a035" />
     <item component="ComponentInfo{com.android.providers.downloads.ui/com.android.providers.downloads.ui.DownloadList}" drawable="a007" />
@@ -156,6 +155,7 @@
     <item component="ComponentInfo{de.blitzer.plus/de.blitzer.activity.SplashScreen}" drawable="a072" />
     <item component="ComponentInfo{de.fiducia.smartphone.android.banking.vr/de.fiducia.smartphone.android.banking.vr.VRSplashScreenActivity}" drawable="a077" />
     <item component="ComponentInfo{com.runtastic.android.pro2/com.runtastic.android.activities.StartActivity}" drawable="a080" />
+    <item component="ComponentInfo{com.runtastic.android.me.lite/com.runtastic.android.me.activities.MigrationActivity}" drawable="a080" />
     <item component="ComponentInfo{com.google.android.googlequicksearchbox/com.google.android.googlequicksearchbox.VoiceSearchActivity}" drawable="a115" />
     <item component="ComponentInfo{com.android.voicedialer/com.android.voicedialer.VoiceDialerActivity}" drawable="a082" />
     <item component="ComponentInfo{com.github.mobile/com.github.mobile.ui.user.HomeActivity}" drawable="a083" />
@@ -244,6 +244,14 @@
     <item component="ComponentInfo{org.wordpress.android/org.wordpress.android.ui.posts.PostsActivity}" drawable="a141" />
     <item component="ComponentInfo{com.alorma.github/com.alorma.github.ui.activity.MainActivity}" drawable="a083" />
     <item component="ComponentInfo{com.bocharov.xposed.fscb/com.bocharov.xposed.fscb.settings.ModuleSettings}" drawable="a040" />
+    <item component="ComponentInfo{de.schildbach.wallet_ltc/de.schildbach.wallet.ui.WalletActivity}" drawable="a143" />
+    <item component="ComponentInfo{ch.bailu.aat/ch.bailu.aat.activities.MainActivity}" drawable="a144" />
+    <item component="ComponentInfo{com.fddb/com.fddb.ui.LoginActivity}" drawable="a145" />
+    <item component="ComponentInfo{de.flixbus.app/de.meinfernbus.Main}" drawable="a146" />
+    <item component="ComponentInfo{net.damsy.soupeaucaillou.heriswap/net.damsy.soupeaucaillou.heriswap.HeriswapActivity}" drawable="a147" />
+    <item component="ComponentInfo{com.zeapo.pwdstore/com.zeapo.pwdstore.PasswordStore}" drawable="a018" />
+    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
