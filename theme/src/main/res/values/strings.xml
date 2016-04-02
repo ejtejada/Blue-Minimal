@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program. If not, see <http://www.gnu.org/licenses/>
+*
+* For more license informations look at LICENSE.md file.
+*
+-->
+
+<resources>
+
+    //App
+
+    <string name="theme_name" translatable="false">Blue Minimal</string>
+    <string name="theme_author" translatable="false">Baumann Produktion</string>
+    <string name="theme_email" translatable="false">baumann.juergen@posteo.de</string>
+    <string name="title_app" translatable="false">Blue Minimal</string>
+    <string name="permissions">You must grant \"Access Storage Permission\" to save screenshots. After that you should
+        completely close the app or restart the phone. If you don\'t permit the storage access but want to use the
+        screenshot function at a later time, you can grant the permission later. Please open then: systemsettings - apps -
+        weather. In the permissions section you can grant the \"write storage permission\".</string>
+    <string name="yes">OK</string>
+    <string name="no">No</string>
+
+    //Wallpaper
+
+    <string name="title_wallpaper">BM Wallpaper</string>
+    <string name="title_iconrequest">BM Icon Request</string>
+    <string name="title_solidcolor">BM Solid Color</string>
+
+    <string name="pick_color">Pick a color</string>
+    <string name="red">Red 900</string>
+    <string name="green">Green 900</string>
+    <string name="blue">Blue 900</string>
+    <string name="purple">Purple 900</string>
+    <string name="orange">Orange 900</string>
+    <string name="teal">Teal 900</string>
+    <string name="white">White</string>
+    <string name="black">Black</string>
+    <string name="action_apply">Apply</string>
+    <string name="applying">Applying selected wallpaper</string>
+
+    //Menu
+
+    <string name="menu_license">License</string>
+    <string name="menu_exit">Exit app</string>
+
+    //Homescreen
+    <string name="home_but_1">Choose a picture or …</string>
+    <string name="home_but_2">… a Color as wallpaper.</string>
+    <string name="home_but_3">Yeah! New icons.</string>
+
+    <string name="home_text">Here you can collect informations about unthemed app-icons on your phone. These informations
+        will be stored in a zip-file on your sd-card (in the BM_Icon-Request Folder).
+        You can send this zip-file to a themer of your choise.</string>
+
+
+    //Icon request
+
+    <string name="request_dummy_text">Hello world!</string>
+    <string name="request_please_wait">Please wait…</string>
+    <string name="request_please_wait2">Searching for installed apps. Just for you :)</string>
+    <string name="request_send_request">Create Zip-file</string>
+    <string name="request_toast_no_apps_selected">No Apps selected. Select at least one App</string>
+    <string name="request_toast_apps_selected">ZIP-file created and saved.</string>
+
+    <!-- Just leave this in here. If someone is clever enough to decompile the app he can see this -->
+    <string name="so_1337" translatable="false">Dear decompiler, you can find the contact details of the creator of this request tool below ;)</string>
+    <string name="request_made_by" translatable="false">Made by Alex Besler.</string>
+    <string name="request_gplus_url" translatable="false">https://plus.google.com/+AlexBesler</string>
+
+    //License
+
+    <string name="about_yes">Visit projectsite on Github</string>
+    <string name="about_no" translatable="false">OK</string>
+    <string name="about_title" translatable="false">Copyright © 2015  by scoute-dich</string>
+    <string name="about_text" translatable="false">
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+
+        You should have received a copy of the GNU General Public License
+        along with this program.  If not, see http://www.gnu.org/licenses/.\n\n
+
+        For more informations visit the project site on GitHub.</string>
+
+</resources>
