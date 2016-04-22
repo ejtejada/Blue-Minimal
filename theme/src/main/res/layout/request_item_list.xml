@@ -19,7 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="left|center_vertical" >
+            android:gravity="start|center_vertical" >
 
             <CheckBox
                 android:id="@+id/CBappSelect"
@@ -32,31 +32,31 @@
                 android:longClickable="false"
                 android:visibility="gone" />
 
-        <ViewSwitcher
-            android:id="@+id/viewSwitcherChecked"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
+            <ViewSwitcher
+                android:id="@+id/viewSwitcherChecked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
 
-            <ImageView
-                android:id="@+id/IVappIcon"
-                style="@style/request_card_thumbnail"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_launcher" />
+                <ImageView
+                    android:id="@+id/IVappIcon"
+                    style="@style/request_card_thumbnail"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher" />
 
-            <ImageView
-                android:id="@+id/IVappIconBack"
-                style="@style/request_card_thumbnail"
-                android:scaleType="centerCrop"
-                android:src="@drawable/request_ic_cab" />
-        </ViewSwitcher>
+                <ImageView
+                    android:id="@+id/IVappIconBack"
+                    style="@style/request_card_thumbnail"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/request_ic_cab" />
+            </ViewSwitcher>
 
             <LinearLayout
                 android:id="@+id/title_frame"
                 style="@style/request_card_title_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="left"
+                android:gravity="start"
                 android:orientation="vertical" >
 
                 <TextView
@@ -74,7 +74,6 @@
                     style="@style/request_card_content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="0dip"
                     android:ellipsize="marquee"
                     android:marqueeRepeatLimit="marquee_forever"
                     android:maxLines="6"

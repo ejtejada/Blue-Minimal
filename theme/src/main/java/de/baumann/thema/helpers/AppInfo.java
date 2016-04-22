@@ -6,7 +6,7 @@ public class AppInfo
 {
 	private String code = null;
 	private String name = null;
-	private Drawable icon;
+	private final Drawable icon;
 	private boolean selected = false;
 
 	public AppInfo(String paramString1, String paramString2, Drawable paramDrawable)
@@ -37,25 +37,9 @@ public class AppInfo
 		return selected;
 	}
 
-	public void setCode(String paramString)
-	{
-		code = paramString;
-	}
-
-	public void setImage(Drawable paramDrawable)
-	{
-		icon = paramDrawable;
-	}
-
-	public void setName(String paramString)
-	{
-		name = paramString;
-	}
-
 	public void setSelected(boolean paramBoolean)
 	{
 		selected = paramBoolean;
 	}
-
 
 }

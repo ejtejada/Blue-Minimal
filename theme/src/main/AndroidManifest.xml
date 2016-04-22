@@ -16,12 +16,10 @@
 * For more license informations look at LICENSE.md file.
 *
 -->
+
+<!--suppress AndroidElementNotAllowed -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="de.baumann.thema" >
-
-    <uses-sdk
-        android:minSdkVersion="21"
-        android:targetSdkVersion="23" />
 
     <uses-feature
         android:name="org.cyanogenmod.theme"
@@ -32,10 +30,7 @@
         android:value="Blue Minimal" />
     <meta-data
         android:name="org.cyanogenmod.theme.author"
-        android:value="Baumann Produktion" />
-    <meta-data
-        android:name="org.cyanogenmod.theme.email"
-        android:value="baumann.juergen@posteo.de" />
+        android:value="Gaukler Faun" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -45,9 +40,10 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/title_app"
-        android:theme="@android:style/Theme.Material" >
+        android:theme="@style/AppTheme" >
 
         <!-- Add this activity to your manifest. Change the path to where the RequestActivity.java file is. -->
         <activity

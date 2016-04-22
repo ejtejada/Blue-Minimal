@@ -1,8 +1,6 @@
 package de.baumann.thema;
 
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.app.WallpaperManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -13,6 +11,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,9 +21,7 @@ import android.widget.Button;
 
 import java.io.IOException;
 
-public class MainActivity extends Activity {
-
-    public ProgressDialog progBar;
+public class MainActivity extends AppCompatActivity {
 
     private final static boolean DEBUG = false;
     private final static String TAG = "AppGetter";
@@ -34,7 +31,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(false);
+        }
+
         Button start_button3 = (Button) findViewById(R.id.button3);
+        assert start_button3 != null;
         start_button3.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -45,6 +48,7 @@ public class MainActivity extends Activity {
         });
 
         Button start_button2 = (Button) findViewById(R.id.button2);
+        assert start_button2 != null;
         start_button2.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -55,6 +59,7 @@ public class MainActivity extends Activity {
         });
 
         Button start_button1 = (Button) findViewById(R.id.button);
+        assert start_button1 != null;
         start_button1.setOnClickListener(new OnClickListener() {
 
             @Override

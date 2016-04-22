@@ -1,6 +1,5 @@
 package de.baumann.thema;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -30,7 +29,6 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import android.Manifest;
 import android.animation.AnimatorInflater;
 import android.animation.ObjectAnimator;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
@@ -42,7 +40,6 @@ import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -52,6 +49,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -74,7 +73,7 @@ import android.widget.ViewSwitcher;
 import de.baumann.thema.helpers.AppInfo;
 
 @SuppressWarnings("rawtypes")
-public class RequestActivity extends Activity {
+public class RequestActivity extends AppCompatActivity {
 
 	@SuppressWarnings("unchecked")
 	private final ArrayList<String> list_activities = new ArrayList();
@@ -92,7 +91,6 @@ public class RequestActivity extends Activity {
 	private static final String SAVE_LOC = SD + "/BM_Icon-Request/files"; //TODO Set own file path.
 	private static final String SAVE_LOC2 = SD + "/BM_Icon-Request"; //TODO Change also this one.
 	private static final String appfilter_path = "empty_appfilter.xml"; //TODO Define path to appfilter.xml in assets folder.
-	private boolean email_sent;
 
 	private static final int numCol_Portrait = 1; //For Portrait orientation. Tablets have +1 and LargeTablets +2 Columns.
 	private static final int numCol_Landscape = 5; //For Landscape orientation. Tablets have +1 and LargeTablets +2 Columns.
@@ -110,8 +108,10 @@ public class RequestActivity extends Activity {
 		switcherLoad = (ViewSwitcher)findViewById(R.id.viewSwitcherLoadingMain);
 		context = this;
 
-		getActionBar().setDisplayHomeAsUpEnabled(true);
-		getActionBar().setDisplayUseLogoEnabled(false);
+		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+		if(actionBar != null) {
+			actionBar.setDisplayHomeAsUpEnabled(true);
+		}
 
 		if(savedInstanceState == null){
 
@@ -166,23 +166,6 @@ public class RequestActivity extends Activity {
 	protected void onSaveInstanceState(Bundle savedInstanceState){
 		if(DEBUG)Log.v(TAG, "onSaveInstanceState");
 		super.onSaveInstanceState(savedInstanceState);
-	}
-
-
-	@Override
-	public void onStop(){
-		super.onStop();
-		if(DEBUG)Log.v(TAG,"onStop");
-		//Stops the activity when the user opens the email app from the send intent.
-		if(email_sent)finish();
-	}
-
-	@Override
-	public void onResume(){
-		super.onResume();
-		if(DEBUG)Log.v(TAG,"onResume");
-		//When the user dismisses the email intent reset the boolean.
-		if(email_sent)email_sent = false;
 	}
 
 	@Override
@@ -325,9 +308,7 @@ public class RequestActivity extends Activity {
 				save_loc.mkdirs(); // recreates the directory
 				save_loc2.mkdirs();
 
-				Intent intent;
 				ArrayList arrayList = list_activities_final;
-				StringBuilder stringBuilderEmail = new StringBuilder();
 				StringBuilder stringBuilderXML = new StringBuilder();
 				int amount = 0;
 
@@ -339,7 +320,6 @@ public class RequestActivity extends Activity {
 						String iconName = (((AppInfo)arrayList.get(i)).getCode().split("/")[0].replace(".", "_") + "_" +((AppInfo)arrayList.get(i)).getCode().split("/")[1]).replace(".", "_");
 						if(DEBUG)Log.i(TAG, "iconName: " + iconName);
 
-						stringBuilderEmail.append(((AppInfo) arrayList.get(i)).getName()).append("\n");
 						stringBuilderXML.append("<!-- ").append(((AppInfo) arrayList.get(i)).getName()).append(" -->\n<item component=\"ComponentInfo{").append(((AppInfo) arrayList.get(i)).getCode()).append("}\" drawable=\"").append(iconName).append("\"/>").append("\n");
 
 						Bitmap bitmap = ((BitmapDrawable)((AppInfo)arrayList.get(i)).getImage()).getBitmap();
@@ -426,7 +406,7 @@ public class RequestActivity extends Activity {
 		}
 		catch(IOException exIO){handler.sendEmptyMessage(2);
 		} //Show toast when there's no appfilter.xml in assets
-		catch(XmlPullParserException exXPPE){
+		catch(XmlPullParserException ignored){
 		}
 	}
 
@@ -494,7 +474,7 @@ public class RequestActivity extends Activity {
 			int iconId = resolveInfo.getIconResource();//Get the resource Id for the activity icon
 
 			if(iconId != 0) {
-				icon = resources.getDrawableForDensity(iconId, 640);//Loads the icon at xxhdpi resolution or lower.
+				icon = resources.getDrawableForDensity(iconId, 640, null); //Loads the icon at xxhdpi resolution or lower.
 				return icon;
 			}
 			return resolveInfo.loadIcon(pm);
@@ -532,14 +512,13 @@ public class RequestActivity extends Activity {
 
 	@SuppressWarnings("unchecked")
 	private void populateView(ArrayList arrayListFinal){
-		ArrayList<AppInfo> local_arrayList = new ArrayList();
+		ArrayList<AppInfo> local_arrayList;
 		local_arrayList = arrayListFinal;
 
-		GridView grid = (GridView)findViewById(R.id.appgrid);
+        GridView grid = (GridView)findViewById(R.id.appgrid);
 
-		grid = (GridView)findViewById(R.id.appgrid);
-
-		grid.setVerticalSpacing(GridView.AUTO_FIT);
+        assert grid != null;
+        grid.setVerticalSpacing(GridView.AUTO_FIT);
 		grid.setHorizontalSpacing(GridView.AUTO_FIT);
 		grid.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
 		grid.setFastScrollEnabled(true);
@@ -547,7 +526,7 @@ public class RequestActivity extends Activity {
 
 		if(DEBUG)Log.v(TAG,"height: "+getDisplaySize("height")+"; width: "+getDisplaySize("width"));
 
-		AppAdapter appInfoAdapter = null;
+		AppAdapter appInfoAdapter;
 		if(isPortrait())
 		{
 			grid.setNumColumns(numCol_Portrait);
@@ -601,14 +580,14 @@ public class RequestActivity extends Activity {
 				if(appInfo.isSelected())
 				{
 					if(DEBUG)Log.v(TAG,"Selected App: "+appInfo.getName());
-					localBackground.setBackgroundColor(Color.parseColor(getString(R.color.request_card_pressed)));
+					localBackground.setBackgroundColor(ContextCompat.getColor(context, R.color.request_card_pressed));
 					if(icon.getDisplayedChild() == 0){
 						icon.showNext();
 					}
 				}
 				else{
 					if(DEBUG)Log.v(TAG,"Deselected App: "+appInfo.getName());
-					localBackground.setBackgroundColor(Color.parseColor(getString(R.color.request_card_unpressed)));
+					localBackground.setBackgroundColor(ContextCompat.getColor(context, R.color.request_card_unpressed));
 					if(icon.getDisplayedChild() == 1){
 						icon.showPrevious();
 					}
@@ -637,9 +616,9 @@ public class RequestActivity extends Activity {
 			if (convertView == null) {
 				if(isPortrait())
 				{
-					convertView = ((LayoutInflater)getSystemService("layout_inflater")).inflate(R.layout.request_item_list, null);
+					convertView = ((LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.request_item_list, parent, false);
 				} else {
-					convertView = ((LayoutInflater)getSystemService("layout_inflater")).inflate(R.layout.request_item_grid, null);
+					convertView = ((LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.request_item_grid, parent, false);
 				}
 				holder = new ViewHolder();
 				holder.apkIcon = (ImageView) convertView.findViewById(R.id.IVappIcon);
@@ -653,7 +632,7 @@ public class RequestActivity extends Activity {
 				holder = (ViewHolder) convertView.getTag();
 			}
 
-			AppInfo appInfo = (AppInfo)appList.get(position);
+			AppInfo appInfo = appList.get(position);
 
 			if(isPortrait()) {
 				holder.apkPackage.setText(appInfo.getCode().split("/")[0]+"/"+appInfo.getCode().split("/")[1]);
@@ -672,17 +651,16 @@ public class RequestActivity extends Activity {
 			holder.checker.setChecked(appInfo.isSelected());
 			if(appInfo.isSelected())
 			{
-				holder.cardBack.setBackgroundColor(Color.parseColor(getString(R.color.request_card_pressed)));
+				holder.cardBack.setBackgroundColor(ContextCompat.getColor(context, R.color.request_card_pressed));
 				if(holder.switcherChecked.getDisplayedChild() == 0){
 					holder.switcherChecked.showNext();
 				}
 			} else {
-				holder.cardBack.setBackgroundColor(Color.parseColor(getString(R.color.request_card_unpressed)));
+				holder.cardBack.setBackgroundColor(ContextCompat.getColor(context, R.color.request_card_unpressed));
 				if(holder.switcherChecked.getDisplayedChild() == 1){
 					holder.switcherChecked.showPrevious();
 				}
 			}
-			holder = (ViewHolder)convertView.getTag();
 			return convertView;
 		}
 	}
@@ -698,7 +676,7 @@ public class RequestActivity extends Activity {
 
 	//Zip Stuff. Better leave that Alone ^^
 
-	private static boolean deleteDirectory(File path) {
+	private static void deleteDirectory(File path) {
 		if( path.exists() ) {
 			File[] files = path.listFiles();
 			for (File file : files) {
@@ -709,37 +687,27 @@ public class RequestActivity extends Activity {
 				}
 			}
 		}
-		return( path.delete() );
 	}
 
-	private static boolean createZipFile(final String out_file) {
+	private static void createZipFile(final String out_file) {
 		final File f = new File(RequestActivity.SAVE_LOC);
 		if (!f.canRead() || !f.canWrite())
 		{
 			if(DEBUG)Log.d(TAG, RequestActivity.SAVE_LOC + " cannot be compressed due to file permissions");
-			return false;
+            return;
 		}
 		try {
 			ZipOutputStream zip_out = new ZipOutputStream(
 					new BufferedOutputStream(
 							new FileOutputStream(out_file), BUFFER));
-			if (true)
-			{
-				zipFile(RequestActivity.SAVE_LOC, zip_out, "");
-			}
-			else
-			{
-				final File files[] = f.listFiles();
-				for (final File file : files) {
-					zip_folder(file, zip_out);
-				}
-			}
+			zipFile(RequestActivity.SAVE_LOC, zip_out, "");
 			zip_out.close();
 		}
-		catch (FileNotFoundException e){ if(DEBUG)Log.e("File not found", e.getMessage()); return false; }
-		catch (IOException e){ if(DEBUG)Log.e("IOException", e.getMessage()); return false; }
-		return true;
-	}
+		catch (FileNotFoundException e){ if(DEBUG)Log.e("File not found", e.getMessage());
+        }
+		catch (IOException e){ if(DEBUG)Log.e("IOException", e.getMessage());
+        }
+    }
 
 	// StahP !! Turn around ! Nothing to see here!
 
@@ -752,28 +720,21 @@ public class RequestActivity extends Activity {
 		final String[] files = file.list();
 		if (file.isFile())
 		{
-			FileInputStream in = new FileInputStream(file.getAbsolutePath());
 
-			try
-			{
-				out.putNextEntry(new ZipEntry(relPath + file.getName()));
-				int len;
-				while ((len = in.read(buf)) > 0)
-				{
-					out.write(buf, 0, len);
-				}
-				out.closeEntry();
-				in.close();
-			}
-			catch (ZipException zipE)
-			{
-				if(DEBUG)Log.d(TAG, zipE.getMessage());
-			}
-			finally
-			{
-				if (out != null) out.closeEntry();
-				in.close();
-			}
+            try (FileInputStream in = new FileInputStream(file.getAbsolutePath())) {
+                out.putNextEntry(new ZipEntry(relPath + file.getName()));
+                int len;
+                while ((len = in.read(buf)) > 0) {
+                    out.write(buf, 0, len);
+                }
+                out.closeEntry();
+                in.close();
+            } catch (ZipException zipE) {
+                if (DEBUG) Log.d(TAG, zipE.getMessage());
+            } finally {
+                if (out != null) out.closeEntry();
+
+            }
 		}
 		else if (files.length > 0) // non-empty folder
 		{
@@ -783,23 +744,4 @@ public class RequestActivity extends Activity {
 		}
 	}
 
-	private static void zip_folder(File file, ZipOutputStream zout) throws IOException {
-		byte[] data = new byte[BUFFER];
-		int read;
-		if(file.isFile()){
-			ZipEntry entry = new ZipEntry(file.getName());
-			zout.putNextEntry(entry);
-			BufferedInputStream instream = new BufferedInputStream(
-					new FileInputStream(file));
-			while((read = instream.read(data, 0, BUFFER)) != -1)
-				zout.write(data, 0, read);
-			zout.closeEntry();
-			instream.close();
-		} else if (file.isDirectory()) {
-			String[] list = file.list();
-			int len = list.length;
-			for (String aList : list) zip_folder(new File(file.getPath() + "/" + aList), zout);
-		}
-	}
-	// Sigh...
 }

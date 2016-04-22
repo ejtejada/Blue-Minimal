@@ -23,11 +23,11 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.SimpleOnPageChangeListener;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -40,26 +40,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 @SuppressLint("ParserError")
-public class Wallpaper extends FragmentActivity {
+public class Wallpaper extends AppCompatActivity {
 
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide fragments for each of the
-     * sections. We use a {@link FragmentPagerAdapter} derivative, which will
-     * keep every loaded fragment in memory. If this becomes too memory intensive, it may be best
-     * to switch to a {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
-    private SectionsPagerAdapter mSectionsPagerAdapter;
 
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
-    private ViewPager mViewPager;
-    
-    /**
-     * Menu item used for "Apply" button on actionbar
-     */
-    private static final int MENU_APPLY = Menu.FIRST;
-    
     /**
      * The {@link Integer} that stores current fragment selected
      */
@@ -69,12 +52,7 @@ public class Wallpaper extends FragmentActivity {
      * The {@link ArrayList} that will host the wallpapers resource ID's
      */
     private static final ArrayList <Integer> sWallpapers = new ArrayList<>();
-    
-    /**
-     * The {@link String[]} that will store wallpaper name
-     */
-    String[] mWallpaperInfo;
-    
+
     /**
      * The {@link Context} to be used by the app
      */
@@ -86,16 +64,30 @@ public class Wallpaper extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wallpaper);
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setDisplayUseLogoEnabled(false);
+
+
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
         // Create the adapter that will return a fragment for each of the three primary sections
         // of the app.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        /*
+      The {@link android.support.v4.view.PagerAdapter} that will provide fragments for each of the
+      sections. We use a {@link FragmentPagerAdapter} derivative, which will
+      keep every loaded fragment in memory. If this becomes too memory intensive, it may be best
+      to switch to a {@link android.support.v4.app.FragmentStatePagerAdapter}.
+     */
+        SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.pager);
+        /*
+      The {@link ViewPager} that will host the section contents.
+     */
+        ViewPager mViewPager = (ViewPager) findViewById(R.id.pager);
+        assert mViewPager != null;
         mViewPager.setAdapter(mSectionsPagerAdapter);
-        mViewPager.setOnPageChangeListener(new SimpleOnPageChangeListener(){
+        mViewPager.addOnPageChangeListener(new SimpleOnPageChangeListener(){
             public void onPageSelected(int position) {
                 mCurrentFragment = position;
             }
