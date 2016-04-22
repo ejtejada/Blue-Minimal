@@ -49,6 +49,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -68,7 +69,6 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ViewSwitcher;
 import de.baumann.thema.helpers.AppInfo;
 
@@ -82,7 +82,6 @@ public class RequestActivity extends AppCompatActivity {
 	private static Context context;
 	private ViewSwitcher switcherLoad;
 	private final AsyncWorkerList taskList = new AsyncWorkerList();
-	private Toast toast;
 	private Typeface tf;
 	private static final int BUFFER = 2048;
 	private static final String SD = Environment.getExternalStorageDirectory().getAbsolutePath();
@@ -99,6 +98,7 @@ public class RequestActivity extends AppCompatActivity {
 	private static final boolean DEBUG = true; //TODO Set to false for PlayStore Release
 
     final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
+    private ViewSwitcher viewSwitcher;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -193,23 +193,23 @@ public class RequestActivity extends AppCompatActivity {
 		}
 
 		if (id == R.id.license) {
-			new AlertDialog.Builder(RequestActivity.this)
-					.setTitle(getString(R.string.about_title))
-					.setMessage(getString(R.string.about_text))
-					.setPositiveButton(getString(R.string.about_yes),
-							new DialogInterface.OnClickListener() {
-								public void onClick(DialogInterface dialog, int id) {
-									Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/scoute-dich/Baumann_Thema"));
-									startActivity(i);
-									dialog.cancel();
-								}
-							})
-					.setNegativeButton(getString(R.string.about_no),
-							new DialogInterface.OnClickListener() {
-								public void onClick(DialogInterface dialog, int id) {
-									dialog.cancel();
-								}
-							}).show();
+            new AlertDialog.Builder(RequestActivity.this)
+                    .setTitle(getString(R.string.about_title))
+                    .setMessage(getString(R.string.about_text))
+                    .setPositiveButton(getString(R.string.about_no),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            })
+                    .setNegativeButton(getString(R.string.about_yes),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/scoute-dich/Baumann_Thema"));
+                                    startActivity(i);
+                                    dialog.cancel();
+                                }
+                            }).show();
 		}
 
 		if (id == R.id.action_sender) {
@@ -249,19 +249,6 @@ public class RequestActivity extends AppCompatActivity {
 		return super.onOptionsItemSelected(item);
 	}
 
-	//Toast wrapper to prevent showing each toast. Change text of current toast instead.
-	private void makeToast(String text){
-		try{
-			toast.getView().isShown();
-			toast.setText(text);
-		}
-		catch (Exception e)
-		{
-			toast = Toast.makeText(context, text, Toast.LENGTH_SHORT);
-		}
-		toast.show();
-	}
-
 	// Handler for sending messages out of separate Threads
 	private final Handler handler = new Handler()
 	{
@@ -273,19 +260,19 @@ public class RequestActivity extends AppCompatActivity {
 				case 0:
 					if(DEBUG)Log.v(TAG,"Handler case 0");
 
-					makeToast(getString(R.string.request_toast_no_apps_selected));
+					Snackbar.make(switcherLoad, R.string.request_toast_no_apps_selected, Snackbar.LENGTH_LONG).show();
 					return;
 
 				case 1:
 					if(DEBUG)Log.v(TAG,"Handler case 1");
 
-					makeToast(getString(R.string.request_toast_apps_selected));
+                    Snackbar.make(switcherLoad, R.string.request_toast_apps_selected, Snackbar.LENGTH_LONG).show();
 					return;
 
 				case 2:
 					if(DEBUG)Log.v(TAG,"Handler case 1");
 
-					makeToast("Make sure you copied appfilter.xml in assets folder!");
+                    Snackbar.make(switcherLoad, "Make sure you copied appfilter.xml in assets folder!", Snackbar.LENGTH_LONG).show();
 					return;
 
 				default:

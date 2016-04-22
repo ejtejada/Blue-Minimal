@@ -11,6 +11,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -18,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import java.io.IOException;
 
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private final static boolean DEBUG = false;
     private final static String TAG = "AppGetter";
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         if(actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(false);
         }
+
+        imageView = (ImageView) findViewById(R.id.imageView);
 
         Button start_button3 = (Button) findViewById(R.id.button3);
         assert start_button3 != null;
@@ -94,24 +99,31 @@ public class MainActivity extends AppCompatActivity {
                 switch (item) {
                     case 0:
                         color = Color.parseColor("#b71c1c");
+                        Snackbar.make(imageView, R.string.applying, Snackbar.LENGTH_LONG).show();
                         break;
                     case 1:
                         color = Color.parseColor("#1b5e20");
+                        Snackbar.make(imageView, R.string.applying, Snackbar.LENGTH_LONG).show();
                         break;
                     case 2:
                         color = Color.parseColor("#0d47a1");
+                        Snackbar.make(imageView, R.string.applying, Snackbar.LENGTH_LONG).show();
                         break;
                     case 3:
                         color = Color.parseColor("#4a148c");
+                        Snackbar.make(imageView, R.string.applying, Snackbar.LENGTH_LONG).show();
                         break;
                     case 4:
                         color = Color.parseColor("#e65100");
+                        Snackbar.make(imageView, R.string.applying, Snackbar.LENGTH_LONG).show();
                         break;
                     case 5:
                         color = Color.parseColor("#004d40");
+                        Snackbar.make(imageView, R.string.applying, Snackbar.LENGTH_LONG).show();
                         break;
                     case 6:
                         color = Color.WHITE;
+                        Snackbar.make(imageView, R.string.applying, Snackbar.LENGTH_LONG).show();
                         break;
                 }
 
@@ -160,17 +172,17 @@ public class MainActivity extends AppCompatActivity {
             new AlertDialog.Builder(MainActivity.this)
                     .setTitle(getString(R.string.about_title))
                     .setMessage(getString(R.string.about_text))
-                    .setPositiveButton(getString(R.string.about_yes),
+                    .setPositiveButton(getString(R.string.about_no),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            })
+                    .setNegativeButton(getString(R.string.about_yes),
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/scoute-dich/Baumann_Thema"));
                                     startActivity(i);
-                                    dialog.cancel();
-                                }
-                            })
-                    .setNegativeButton(getString(R.string.about_no),
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
                                     dialog.cancel();
                                 }
                             }).show();

@@ -11,7 +11,6 @@ package de.baumann.thema;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.app.WallpaperManager;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -22,6 +21,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -58,6 +58,8 @@ public class Wallpaper extends AppCompatActivity {
      */
     private static Context mContext;
 
+    private ViewPager mViewPager;
+
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -84,7 +86,8 @@ public class Wallpaper extends AppCompatActivity {
         /*
       The {@link ViewPager} that will host the section contents.
      */
-        ViewPager mViewPager = (ViewPager) findViewById(R.id.pager);
+
+        mViewPager = (ViewPager) findViewById(R.id.pager);
         assert mViewPager != null;
         mViewPager.setAdapter(mSectionsPagerAdapter);
         mViewPager.addOnPageChangeListener(new SimpleOnPageChangeListener(){
@@ -161,7 +164,6 @@ public class Wallpaper extends AppCompatActivity {
 
     class WallpaperLoader extends AsyncTask<Integer, Void, Boolean> {
         final BitmapFactory.Options mOptions;
-        ProgressDialog mDialog;
 
         WallpaperLoader() {
             mOptions = new BitmapFactory.Options();
@@ -195,15 +197,10 @@ public class Wallpaper extends AppCompatActivity {
                 return false;
             }
         }
-        
-        @Override
-        protected void onPostExecute(Boolean success) {
-            mDialog.dismiss();
-        }
-        
+
         @Override
         protected void onPreExecute() {
-            mDialog = ProgressDialog.show(mContext, null, getString(R.string.applying));
+            Snackbar.make(mViewPager, R.string.applying, Snackbar.LENGTH_LONG).show();
         }
     }
 
@@ -228,17 +225,17 @@ public class Wallpaper extends AppCompatActivity {
             new AlertDialog.Builder(Wallpaper.this)
                     .setTitle(getString(R.string.about_title))
                     .setMessage(getString(R.string.about_text))
-                    .setPositiveButton(getString(R.string.about_yes),
+                    .setPositiveButton(getString(R.string.about_no),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            })
+                    .setNegativeButton(getString(R.string.about_yes),
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/scoute-dich/Baumann_Thema"));
                                     startActivity(i);
-                                    dialog.cancel();
-                                }
-                            })
-                    .setNegativeButton(getString(R.string.about_no),
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
                                     dialog.cancel();
                                 }
                             }).show();
