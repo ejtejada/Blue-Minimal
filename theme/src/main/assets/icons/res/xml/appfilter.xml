@@ -252,7 +252,7 @@
     <item component="ComponentInfo{com.zeapo.pwdstore/com.zeapo.pwdstore.PasswordStore}" drawable="a018" />
     <item component="ComponentInfo{info.papdt.blackblub/info.papdt.blackblub.ui.LaunchActivity}" drawable="a148" />
     <item component="ComponentInfo{com.aripuca.tracker/com.aripuca.tracker.MainActivity}" drawable="a149" />
-    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{com.cyngn.cameranext/com.android.camera.CameraLauncher}" drawable="a017" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />

@@ -98,7 +98,8 @@ public class RequestActivity extends AppCompatActivity {
 	private static final boolean DEBUG = true; //TODO Set to false for PlayStore Release
 
     final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
-    private ViewSwitcher viewSwitcher;
+    @SuppressWarnings("unused")
+	private ViewSwitcher viewSwitcher;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -622,7 +623,7 @@ public class RequestActivity extends AppCompatActivity {
 			AppInfo appInfo = appList.get(position);
 
 			if(isPortrait()) {
-				holder.apkPackage.setText(appInfo.getCode().split("/")[0]+"/"+appInfo.getCode().split("/")[1]);
+				holder.apkPackage.setText(String.valueOf(appInfo.getCode().split("/")[0]+"/"+appInfo.getCode().split("/")[1]));
 				holder.apkPackage.setTypeface(tf);
 			} else {
 				holder.apkPackage.setVisibility(View.GONE);
