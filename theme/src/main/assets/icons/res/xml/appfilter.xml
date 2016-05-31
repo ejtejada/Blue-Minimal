@@ -253,8 +253,8 @@
     <item component="ComponentInfo{info.papdt.blackblub/info.papdt.blackblub.ui.LaunchActivity}" drawable="a148" />
     <item component="ComponentInfo{com.aripuca.tracker/com.aripuca.tracker.MainActivity}" drawable="a149" />
     <item component="ComponentInfo{com.cyngn.cameranext/com.android.camera.CameraLauncher}" drawable="a017" />
-    <item component="ComponentInfo{}" drawable="a185" />
-    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{com.plusonelabs.calendar/com.plusonelabs.calendar.WidgetConfigurationActivity}" drawable="a034" />
+    <item component="ComponentInfo{com.andryr.guitartuner/com.andryr.guitartuner.TunerActivity}" drawable="a060" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
