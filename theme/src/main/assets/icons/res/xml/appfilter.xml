@@ -255,9 +255,9 @@
     <item component="ComponentInfo{com.cyngn.cameranext/com.android.camera.CameraLauncher}" drawable="a017" />
     <item component="ComponentInfo{com.plusonelabs.calendar/com.plusonelabs.calendar.WidgetConfigurationActivity}" drawable="a034" />
     <item component="ComponentInfo{com.andryr.guitartuner/com.andryr.guitartuner.TunerActivity}" drawable="a060" />
-    <item component="ComponentInfo{}" drawable="a185" />
-    <item component="ComponentInfo{}" drawable="a185" />
-    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{tk.wasdennnoch.androidn_ify/tk.wasdennnoch.androidn_ify.SettingsAlias}" drawable="a044" />
+    <item component="ComponentInfo{com.ProjectZed.autopilotmode/com.ProjectZed.autopilotmode.MainActivity}" drawable="a150" />
+    <item component="ComponentInfo{ws.xsoh.etar/com.android.calendar.AllInOneActivity}" drawable="a000" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
