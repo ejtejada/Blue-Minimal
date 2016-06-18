@@ -337,7 +337,7 @@ public class RequestActivity extends AppCompatActivity {
 					} catch (Exception e){ return;}
 
 
-					SimpleDateFormat date = new SimpleDateFormat("yyyyMMdd_hhmmss");
+					SimpleDateFormat date = new SimpleDateFormat("dd-MM-yy_HH-mm", Locale.getDefault());
 					String zipName = date.format(new Date());
 
 					createZipFile(SAVE_LOC2 + "/" + zipName + ".zip");

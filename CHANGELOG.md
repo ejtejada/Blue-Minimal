@@ -3,6 +3,9 @@
 ### 3.7.4
 
 - added icons
+- new notification design
+- updated permission dialog
+- bug fixes
 
 ### v3.7.3
 
