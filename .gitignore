@@ -1,4 +1,3 @@
-/build
 /.idea
 # built application files
 # files for the dex VM
@@ -9,9 +8,7 @@ local.properties
 
 # Eclipse project files
 # Android Studio
-.idea/
 .gradle
 gradle
 build
 *.iml
-Würde IconTemplates/Airplane.svg löschen
