@@ -189,7 +189,7 @@ public class RequestActivity extends AppCompatActivity {
 		int id = item.getItemId();
 
 		if (id == R.id.exit) {
-			moveTaskToBack(true);
+			finish();
 			return false;
 		}
 
@@ -338,11 +338,23 @@ public class RequestActivity extends AppCompatActivity {
 
 
 					SimpleDateFormat date = new SimpleDateFormat("dd-MM-yy_HH-mm", Locale.getDefault());
-					String zipName = date.format(new Date());
+					String zipName = "Icon_request_" + date.format(new Date());
 
-					createZipFile(SAVE_LOC2 + "/" + zipName + ".zip");
+					createZipFile(SD + "/" + zipName + ".zip");
+                    String path = SD + "/BM_Icon-Request/";
 
 					deleteDirectory(save_loc); //This deletes all generated files except the zip
+                    File dirTemp = new File(path);
+
+                    if (dirTemp.exists()) {
+                        String deleteCmd = "rm -r " + dirTemp;
+                        Runtime runtime = Runtime.getRuntime();
+                        try {
+                            runtime.exec(deleteCmd);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
 					handler.sendEmptyMessage(1);
 				}
 			}
@@ -510,7 +522,7 @@ public class RequestActivity extends AppCompatActivity {
 		grid.setHorizontalSpacing(GridView.AUTO_FIT);
 		grid.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
 		grid.setFastScrollEnabled(true);
-		grid.setFastScrollAlwaysVisible(true);
+		grid.setFastScrollAlwaysVisible(false);
 
 		if(DEBUG)Log.v(TAG,"height: "+getDisplaySize("height")+"; width: "+getDisplaySize("width"));
 

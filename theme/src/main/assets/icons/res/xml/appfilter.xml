@@ -262,8 +262,8 @@
     <item component="ComponentInfo{org.t2k269.perapphacking/org.t2k269.perapphacking.TabsActivity}" drawable="a040" />
     <item component="ComponentInfo{eu.faircode.netguard/eu.faircode.netguard.ActivityMain}" drawable="a152" />
     <item component="ComponentInfo{com.tengu.sharetoclipboard/com.tengu.sharetoclipboard.MainActivity}" drawable="a064" />
-    <item component="ComponentInfo{}" drawable="a185" />
-    <item component="ComponentInfo{}" drawable="a185" />
+    <item component="ComponentInfo{com.smartmadsoft.xposed.aio/com.smartmadsoft.xposed.aio.Launch}" drawable="a040" />
+    <item component="ComponentInfo{com.gh4a/com.gh4a.activities.Github4AndroidActivity}" drawable="a083" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
     <item component="ComponentInfo{}" drawable="a185" />
