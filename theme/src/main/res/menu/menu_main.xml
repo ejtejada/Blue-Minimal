@@ -4,9 +4,10 @@
     tools:context="de.baumann.thema.MainActivity">
 
     <item
-        android:id="@+id/exit"
-        android:title="@string/menu_exit"
-        app:showAsAction="never" />
+        android:id="@+id/color"
+        android:icon="@drawable/format_color_fill"
+        android:title="@string/menu_color"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/license"

@@ -19,6 +19,7 @@
 
 <!--suppress AndroidElementNotAllowed -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="de.baumann.thema" >
 
     <uses-feature
@@ -44,40 +45,25 @@
         android:icon="@drawable/ic_launcher"
         android:supportsRtl="false"
         android:label="@string/title_app"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
 
-        <!-- Add this activity to your manifest. Change the path to where the RequestActivity.java file is. -->
         <activity
-            android:name="Wallpaper"
-            android:label="@string/title_wallpaper"
-            android:icon="@drawable/ic_launcher"
-            android:screenOrientation="nosensor"
-            android:finishOnCloseSystemDialogs="true"
-            android:parentActivityName=".MainActivity">
+            android:name="de.baumann.thema.Screen_Main"
+            android:label="@string/title_app"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
             <intent-filter>
                 <action android:name="android.intent.action.SET_WALLPAPER" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
-        <activity
-            android:name="de.baumann.thema.RequestActivity"
-            android:label="@string/title_iconrequest"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="de.baumann.thema.MainActivity" />
-        </activity>
-
-        <activity
-            android:name="de.baumann.thema.MainActivity"
-            android:label="@string/title_app" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 

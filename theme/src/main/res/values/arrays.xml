@@ -18,6 +18,7 @@
         <item>@string/teal</item>
         <item>@string/white</item>
         <item>@string/black</item>
+        <item>@string/custom</item>
     </string-array>
 
 </resources>

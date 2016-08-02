@@ -8,8 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".RequestActivity" >
+    android:orientation="vertical" >
 
     <LinearLayout
         android:id="@+id/card_bg"
@@ -43,10 +42,9 @@
                 android:src="@drawable/ic_launcher" />
 
             <ImageView
-                android:id="@+id/IVappIconBack"
                 style="@style/request_card_thumbnail"
                 android:scaleType="centerInside"
-                android:src="@drawable/request_ic_cab" />
+                android:src="@drawable/ic_check_white_48dp" />
         </ViewSwitcher>
 
         <LinearLayout
