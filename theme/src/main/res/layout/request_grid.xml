@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     tools:context=".Screen_Main">
 
     <ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,31 +14,45 @@
         tools:context=".RequestActivity"
         tools:ignore="UselessParent">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical" >
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="275dp"
+                android:id="@+id/imageView_header"
+                android:src="@drawable/header_icon"
+                android:scaleType="centerCrop"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
 
             <ImageView
                 android:id="@+id/imageViewLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_launcher" />
+                android:src="@drawable/ic_launcher"
+                android:padding="@dimen/fab_margin"
+                android:layout_below="@+id/imageView_header"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="64dp"
+                android:layout_marginBottom="@dimen/fab_margin" />
 
             <TextView
+                android:id="@+id/textview_request"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/request_please_wait"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:textSize="18sp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:layout_below="@+id/imageViewLogo"
+                android:layout_centerHorizontal="true" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/request_please_wait2" />
-
-        </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

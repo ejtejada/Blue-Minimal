@@ -1,10 +1,15 @@
 package de.baumann.thema;
 
+import android.Manifest;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -14,16 +19,23 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Screen_Main extends AppCompatActivity {
 
+    final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,19 +51,220 @@ public class Screen_Main extends AppCompatActivity {
         assert tabLayout != null;
         tabLayout.setupWithViewPager(viewPager);
 
-        FloatingActionButton floatingActionButton_wp = (FloatingActionButton) findViewById(R.id.fab_rq);
+        FloatingActionButton floatingActionButton_wp = (FloatingActionButton) findViewById(R.id.fab_wp);
         assert floatingActionButton_wp != null;
         floatingActionButton_wp.setVisibility(View.GONE);
+
+        FloatingActionButton floatingActionButton_rq = (FloatingActionButton) findViewById(R.id.fab_rq);
+        assert floatingActionButton_rq != null;
+        floatingActionButton_rq.setVisibility(View.GONE);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        if (android.os.Build.VERSION.SDK_INT >= 23) {
+            int hasWRITE_EXTERNAL_STORAGE = checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+            if (hasWRITE_EXTERNAL_STORAGE != PackageManager.PERMISSION_GRANTED) {
+                if (!shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                    new AlertDialog.Builder(Screen_Main.this)
+                            .setMessage(R.string.permissions)
+                            .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    if (android.os.Build.VERSION.SDK_INT >= 23)
+                                        requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                                                REQUEST_CODE_ASK_PERMISSIONS);
+                                }
+                            })
+                            .setNegativeButton(getString(R.string.no), null)
+                            .show();
+                    return;
+                }
+                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        REQUEST_CODE_ASK_PERMISSIONS);
+            }
+        }
+
+        File directory = new File(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/");
+        if (!directory.exists()) {
+            directory.mkdirs();
+        }
+
+        try {
+
+            InputStream in;
+            OutputStream out;
+            in = getResources().openRawResource(R.raw.what_friends_are_for);
+            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/what_friends_are_for.mp3");
+
+            byte[] buffer = new byte[1024];
+            int read;
+            while ((read = in.read(buffer)) != -1) {
+                out.write(buffer, 0, read);
+            }
+            in.close();
+
+            // write the output file
+            out.flush();
+            out.close();
+        } catch (Exception e) {
+            Log.e("tag", e.getMessage());
+        }
+
+        try {
+
+            InputStream in;
+            OutputStream out;
+            in = getResources().openRawResource(R.raw.isnt_it);
+            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/isnt_it.mp3");
+
+            byte[] buffer = new byte[1024];
+            int read;
+            while ((read = in.read(buffer)) != -1) {
+                out.write(buffer, 0, read);
+            }
+            in.close();
+
+            // write the output file
+            out.flush();
+            out.close();
+        } catch (Exception e) {
+            Log.e("tag", e.getMessage());
+        }
+
+        try {
+
+            InputStream in;
+            OutputStream out;
+            in = getResources().openRawResource(R.raw.jingle_bells_sms);
+            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/jingle_bells_sms.mp3");
+
+            byte[] buffer = new byte[1024];
+            int read;
+            while ((read = in.read(buffer)) != -1) {
+                out.write(buffer, 0, read);
+            }
+            in.close();
+
+            // write the output file
+            out.flush();
+            out.close();
+        } catch (Exception e) {
+            Log.e("tag", e.getMessage());
+        }
+
+        try {
+
+            InputStream in;
+            OutputStream out;
+            in = getResources().openRawResource(R.raw.loving_you);
+            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/loving_you.mp3");
+
+            byte[] buffer = new byte[1024];
+            int read;
+            while ((read = in.read(buffer)) != -1) {
+                out.write(buffer, 0, read);
+            }
+            in.close();
+
+            // write the output file
+            out.flush();
+            out.close();
+        } catch (Exception e) {
+            Log.e("tag", e.getMessage());
+        }
+
+        try {
+
+            InputStream in;
+            OutputStream out;
+            in = getResources().openRawResource(R.raw.good_morning);
+            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/good_morning.mp3");
+
+            byte[] buffer = new byte[1024];
+            int read;
+            while ((read = in.read(buffer)) != -1) {
+                out.write(buffer, 0, read);
+            }
+            in.close();
+
+            // write the output file
+            out.flush();
+            out.close();
+        } catch (Exception e) {
+            Log.e("tag", e.getMessage());
+        }
+
+        try {
+
+            InputStream in;
+            OutputStream out;
+            in = getResources().openRawResource(R.raw.oringz_w442);
+            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/oringz_w442.mp3");
+
+            byte[] buffer = new byte[1024];
+            int read;
+            while ((read = in.read(buffer)) != -1) {
+                out.write(buffer, 0, read);
+            }
+            in.close();
+
+            // write the output file
+            out.flush();
+            out.close();
+        } catch (Exception e) {
+            Log.e("tag", e.getMessage());
+        }
+
+        try {
+
+            InputStream in;
+            OutputStream out;
+            in = getResources().openRawResource(R.raw.hymne);
+            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/hymne.mp3");
+
+            byte[] buffer = new byte[1024];
+            int read;
+            while ((read = in.read(buffer)) != -1) {
+                out.write(buffer, 0, read);
+            }
+            in.close();
+
+            // write the output file
+            out.flush();
+            out.close();
+        } catch (Exception e) {
+            Log.e("tag", e.getMessage());
+        }
+
+        try {
+
+            InputStream in;
+            OutputStream out;
+            in = getResources().openRawResource(R.raw.canon);
+            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/canon.mp3");
+
+            byte[] buffer = new byte[1024];
+            int read;
+            while ((read = in.read(buffer)) != -1) {
+                out.write(buffer, 0, read);
+            }
+            in.close();
+
+            // write the output file
+            out.flush();
+            out.close();
+        } catch (Exception e) {
+            Log.e("tag", e.getMessage());
+        }
     }
+
 
     private void setupViewPager(ViewPager viewPager) {
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
+        adapter.addFragment(new FragmentSound(), String.valueOf(getString(R.string.sound)));
         adapter.addFragment(new FragmentWallpaper(), String.valueOf(getString(R.string.title_wallpaper)));
         adapter.addFragment(new FragmentRequest(), String.valueOf(getString(R.string.title_iconrequest)));
 
@@ -65,6 +278,13 @@ public class Screen_Main extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 if (position == 0) {
+                    FloatingActionButton floatingActionButton_wp = (FloatingActionButton) findViewById(R.id.fab_wp);
+                    assert floatingActionButton_wp != null;
+                    floatingActionButton_wp.setVisibility(View.GONE);
+                    FloatingActionButton floatingActionButton_rq = (FloatingActionButton) findViewById(R.id.fab_rq);
+                    assert floatingActionButton_rq != null;
+                    floatingActionButton_rq.setVisibility(View.GONE);
+                } else if (position == 1) {
                     FloatingActionButton floatingActionButton_wp = (FloatingActionButton) findViewById(R.id.fab_wp);
                     assert floatingActionButton_wp != null;
                     floatingActionButton_wp.setVisibility(View.VISIBLE);

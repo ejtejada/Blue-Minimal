@@ -40,6 +40,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -100,15 +101,12 @@ public class FragmentRequest extends Fragment {
     private static final String TAG = "RequestActivity";
     private static final boolean DEBUG = true; //TODO Set to false for PlayStore Release
 
-    final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
     @SuppressWarnings("unused")
     private ViewSwitcher viewSwitcher;
 
-    @SuppressLint("SetJavaScriptEnabled")
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.request_grid, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        final View rootView = inflater.inflate(R.layout.request_grid, container, false);
         switcherLoad = (ViewSwitcher)rootView.findViewById(R.id.viewSwitcherLoadingMain);
         context = getActivity();
 
@@ -119,50 +117,40 @@ public class FragmentRequest extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (android.os.Build.VERSION.SDK_INT >= 23) {
-                    int hasWRITE_EXTERNAL_STORAGE = getActivity().checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-                    if (hasWRITE_EXTERNAL_STORAGE != PackageManager.PERMISSION_GRANTED) {
-                        if (!shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-                            new AlertDialog.Builder(getActivity())
-                                    .setMessage(R.string.permissions)
-                                    .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener()
-                                    {
-                                        @Override
-                                        public void onClick(DialogInterface dialog, int which) {
-                                            if (android.os.Build.VERSION.SDK_INT >= 23)
-                                                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                                                        REQUEST_CODE_ASK_PERMISSIONS);
-                                        }
-                                    })
-                                    .setNegativeButton(getString(R.string.no), null)
-                                    .show();
-                        }
-                        requestPermissions(new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                                REQUEST_CODE_ASK_PERMISSIONS);
-                    }
-                }
+
                 actionSend();
             }
         });
 
-        if(savedInstanceState == null){
+        ImageView but = (ImageView) rootView.findViewById(R.id.imageViewLogo);
+        but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-            //Loading Logo Animation
-            ImageView logo = (ImageView)rootView.findViewById(R.id.imageViewLogo);
-            ObjectAnimator logoAni = (ObjectAnimator) AnimatorInflater.loadAnimator(context, R.animator.request_flip);
-            logoAni.setRepeatCount(Animation.INFINITE);
-            logoAni.setRepeatMode(Animation.RESTART);
-            logoAni.setTarget(logo);
-            logoAni.setDuration(2000);
-            logoAni.start();
+                TextView text = (TextView) rootView.findViewById(R.id.textview_request);
+                text.setText(R.string.request_please_wait2);
+                //Loading Logo Animation
+                ImageView logo = (ImageView)rootView.findViewById(R.id.imageViewLogo);
+                ObjectAnimator logoAni = (ObjectAnimator) AnimatorInflater.loadAnimator(context, R.animator.request_flip);
+                logoAni.setRepeatCount(Animation.INFINITE);
+                logoAni.setRepeatMode(Animation.RESTART);
+                logoAni.setTarget(logo);
+                logoAni.setDuration(2000);
+                logoAni.start();
 
-            taskList.execute();
-        }
-        else
-        {
-            populateView(list_activities_final);
-            switcherLoad.showNext();
-        }
+                if(taskList.getStatus() == AsyncTask.Status.PENDING){
+                    // My AsyncTask has not started yet
+                    taskList.execute();
+                }
+
+                if(taskList.getStatus() == AsyncTask.Status.FINISHED){
+                    // My AsyncTask is done and onPostExecute was called
+                    new AsyncWorkerList().execute();
+                }
+            }
+        });
+
+
 
         return rootView;
     }
@@ -187,6 +175,7 @@ public class FragmentRequest extends Fragment {
 
         @Override
         protected void onPostExecute(String result) {
+
             // Display the unstyled app
             populateView(list_activities_final);
             //Switch from loading screen to the main view
@@ -255,13 +244,13 @@ public class FragmentRequest extends Fragment {
         }
     };
 
-    private void actionSend()
-    {
-        Thread actionSend_Thread = new Thread()
-        {
+    private void actionSend() {
+
+        Thread actionSend_Thread = new Thread() {
+
             @Override
-            public void run()
-            {
+            public void run() {
+
                 final File save_loc = new File(SAVE_LOC);
                 final File save_loc2 = new File(SAVE_LOC2);
 
@@ -275,10 +264,9 @@ public class FragmentRequest extends Fragment {
                 int amount = 0;
 
                 // Get all selected apps
-                for (int i = 0; i < arrayList.size(); i++)
-                {
-                    if (((AppInfo)arrayList.get(i)).isSelected())
-                    {
+                for (int i = 0; i < arrayList.size(); i++) {
+                    if (((AppInfo)arrayList.get(i)).isSelected()) {
+
                         String iconName = (((AppInfo)arrayList.get(i)).getCode().split("/")[0].replace(".", "_") + "_" +((AppInfo)arrayList.get(i)).getCode().split("/")[1]).replace(".", "_");
                         if(DEBUG)Log.i(TAG, "iconName: " + iconName);
 
@@ -300,9 +288,9 @@ public class FragmentRequest extends Fragment {
                 }
                 if (amount == 0){//When there's no app selected show a toast and return.
                     handler.sendEmptyMessage(0);
-                }
-                else // write zip and start email intent.
-                {
+
+                } else {
+                    // write zip and start email intent.
                     try {
                         FileWriter fstream = new FileWriter(SAVE_LOC + "/appfilter.xml");
                         BufferedWriter out = new BufferedWriter(fstream);
@@ -333,15 +321,15 @@ public class FragmentRequest extends Fragment {
                 }
             }
         };
-        if(!actionSend_Thread.isAlive()) //Prevents the thread to be executed twice (or more) times.
-        {
+        if(!actionSend_Thread.isAlive()) {
+            //Prevents the thread to be executed twice (or more) times.
             actionSend_Thread.start();
         }
     }
 
     // Read the appfilter.xml from assets and get all activities
-    private void parseXML()
-    {
+    private void parseXML() {
+
         try{
             XmlPullParserFactory xmlFactoryObject = XmlPullParserFactory.newInstance();
             XmlPullParser myparser = xmlFactoryObject.newPullParser();
@@ -351,15 +339,13 @@ public class FragmentRequest extends Fragment {
             myparser.setInput(inputStream, null);
 
             int activity = myparser.getEventType();
-            while (activity != XmlPullParser.END_DOCUMENT)
-            {
+            while (activity != XmlPullParser.END_DOCUMENT) {
                 String name=myparser.getName();
                 switch (activity){
                     case XmlPullParser.START_TAG:
                         break;
                     case XmlPullParser.END_TAG:
-                        if(name.equals("item"))
-                        {
+                        if(name.equals("item")) {
                             try	{
                                 String tmp_act = myparser.getAttributeValue(null,"component").split("/")[1];
                                 String t_activity= tmp_act.substring(0, tmp_act.length()-1);
@@ -377,16 +363,15 @@ public class FragmentRequest extends Fragment {
                 }
                 activity = myparser.next();
             }
-        }
-        catch(IOException exIO){handler.sendEmptyMessage(2);
+        } catch(IOException exIO){handler.sendEmptyMessage(2);
         } //Show toast when there's no appfilter.xml in assets
         catch(XmlPullParserException ignored){
         }
     }
 
     @SuppressWarnings("unchecked")
-    private void prepareData()  // Sort the apps
-    {
+    private void prepareData() { // Sort the apps
+
         ArrayList<AppInfo> arrayList = new ArrayList();
         PackageManager pm = getActivity().getPackageManager();
         Intent intent = new Intent("android.intent.action.MAIN", null);
@@ -395,8 +380,7 @@ public class FragmentRequest extends Fragment {
         Iterator localIterator = list.iterator();
         if(DEBUG)Log.v(TAG,"list.size(): "+list.size());
 
-        for (int i = 0; i < list.size(); i++)
-        {
+        for (int i = 0; i < list.size(); i++) {
             ResolveInfo resolveInfo = (ResolveInfo)localIterator.next();
 
             // This is the main part where the already styled apps are sorted out.
@@ -517,8 +501,7 @@ public class FragmentRequest extends Fragment {
             appInfoAdapter = new AppAdapter(getActivity(), R.layout.request_item_list, local_arrayList);
         }
 
-        else
-        {
+        else {
             grid.setNumColumns(numCol_Landscape);
 
             if(isTablet(context)) {
@@ -551,15 +534,13 @@ public class FragmentRequest extends Fragment {
                 icon.setInAnimation(aniIn);
                 icon.setOutAnimation(aniOut);
 
-                if(appInfo.isSelected())
-                {
+                if(appInfo.isSelected()) {
                     if(DEBUG)Log.v(TAG,"Selected App: "+appInfo.getName());
                     localBackground.setBackgroundColor(ContextCompat.getColor(context, R.color.request_card_pressed));
                     if(icon.getDisplayedChild() == 0){
                         icon.showNext();
                     }
-                }
-                else{
+                } else {
                     if(DEBUG)Log.v(TAG,"Deselected App: "+appInfo.getName());
                     localBackground.setBackgroundColor(ContextCompat.getColor(context, R.color.request_card_unpressed));
                     if(icon.getDisplayedChild() == 1){
@@ -570,18 +551,15 @@ public class FragmentRequest extends Fragment {
         });
     }
 
-    private class AppAdapter extends ArrayAdapter<AppInfo>
-    {
+    private class AppAdapter extends ArrayAdapter<AppInfo> {
         @SuppressWarnings("unchecked")
         private final ArrayList<AppInfo> appList = new ArrayList();
 
-        public AppAdapter(Context context, int position, ArrayList<AppInfo> adapterArrayList)
-        {
+        public AppAdapter(Context context, int position, ArrayList<AppInfo> adapterArrayList) {
             super(context, position, adapterArrayList);
             appList.addAll(adapterArrayList);
         }
-        public View getView(int position, View convertView, ViewGroup parent)
-        {
+        public View getView(int position, View convertView, ViewGroup parent) {
             if(tf == null){
                 tf = Typeface.createFromAsset(context.getAssets(), font);
             }
@@ -623,8 +601,7 @@ public class FragmentRequest extends Fragment {
             holder.switcherChecked.setOutAnimation(null);
 
             holder.checker.setChecked(appInfo.isSelected());
-            if(appInfo.isSelected())
-            {
+            if(appInfo.isSelected()) {
                 holder.cardBack.setBackgroundColor(ContextCompat.getColor(context, R.color.request_card_pressed));
                 if(holder.switcherChecked.getDisplayedChild() == 0){
                     holder.switcherChecked.showNext();
@@ -686,14 +663,13 @@ public class FragmentRequest extends Fragment {
     // StahP !! Turn around ! Nothing to see here!
 
     // keeps directory structure
-    private static void zipFile(final String path, final ZipOutputStream out, final String relPath) throws IOException
-    {
+    private static void zipFile(final String path, final ZipOutputStream out, final String relPath) throws IOException {
+
         final File file = new File(path);
         if (!file.exists()){if(DEBUG)Log.d(TAG, file.getName() + " does NOT exist!");return;}
         final byte[] buf = new byte[1024];
         final String[] files = file.list();
-        if (file.isFile())
-        {
+        if (file.isFile()) {
 
             try (FileInputStream in = new FileInputStream(file.getAbsolutePath())) {
                 out.putNextEntry(new ZipEntry(relPath + file.getName()));
@@ -707,11 +683,9 @@ public class FragmentRequest extends Fragment {
                 if (DEBUG) Log.d(TAG, zipE.getMessage());
             } finally {
                 if (out != null) out.closeEntry();
-
             }
-        }
-        else if (files.length > 0) // non-empty folder
-        {
+        } else if (files.length > 0) {// non-empty folder
+
             for (String file1 : files) {
                 zipFile(path + "/" + file1, out, relPath + file.getName() + "/");
             }

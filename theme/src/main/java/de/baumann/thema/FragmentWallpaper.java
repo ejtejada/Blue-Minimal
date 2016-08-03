@@ -99,7 +99,7 @@ public class FragmentWallpaper extends Fragment {
         fetchWallpapers(resources, packageName);
         mSectionsPagerAdapter.notifyDataSetChanged();
 
-        return mViewPager;
+        return rootView;
     }
 
     /**

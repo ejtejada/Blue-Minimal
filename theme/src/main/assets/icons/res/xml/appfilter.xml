@@ -80,6 +80,9 @@
     <item component="ComponentInfo{com.google.android.inputmethod.latin/com.android.inputmethod.latin.setup.SetupActivity}" drawable="a048" />
     <item component="ComponentInfo{com.google.zxing.client.android/com.google.zxing.client.android.CaptureActivity}" drawable="a005" />
 
+    <!-- cm -->
+    <item component="ComponentInfo{cm.aptoide.pt/com.aptoide.amethyst.MainActivity}" drawable="a153" />
+
     <!-- com -->
     <item component="ComponentInfo{com.additioapp.additio/com.additioapp.additio.SplashActivity}" drawable="a114" />
     <item component="ComponentInfo{com.alorma.github/com.alorma.github.ui.activity.MainActivity}" drawable="a083" />
@@ -110,6 +113,7 @@
     <item component="ComponentInfo{com.debitoor.android/debitoormobile.SplashscreenActivity}" drawable="a107" />
     <item component="ComponentInfo{com.dhm47.nativeclipboard/com.dhm47.nativeclipboard.Setting}" drawable="a040" />
     <item component="ComponentInfo{com.dnielfe.manager/com.dnielfe.manager.BrowserActivity}" drawable="a035" />
+    <item component="ComponentInfo{com.duckduckgo.mobile.android/com.duckduckgo.mobile.android.activity.DuckDuckGo}" drawable="a157" />
     <item component="ComponentInfo{com.duolingo/com.duolingo.app.LoginActivity}" drawable="a108" />
     <item component="ComponentInfo{com.elesbb.xposedinputautocorrectalways/com.elesbb.xposedinputautocorrectalways.options}" drawable="a040" />
     <item component="ComponentInfo{com.eolwral.osmonitor/com.eolwral.osmonitor.OSMonitor}" drawable="a072" />
@@ -129,8 +133,10 @@
     <item component="ComponentInfo{com.holokenmod/com.holokenmod.MainActivity}" drawable="a135" />
     <item component="ComponentInfo{com.hybride1/com.hybride1.StartActivity}" drawable="a042" />
     <item component="ComponentInfo{com.ing.diba.mbbr2/com.ing.diba.ibbr.ui.MainActivity}" drawable="a088" />
+    <item component="ComponentInfo{com.instagram.android/com.instagram.android.activity.MainTabActivity}" drawable="a158" />
     <item component="ComponentInfo{com.intangibleobject.securesettings.plugin/com.intangibleobject.securesettings.plugin.Activities.MainTabsActivity}" drawable="a131" />
     <item component="ComponentInfo{com.javiersantos.whatsappbetaupdater/com.javiersantos.whatsappbetaupdater.activity.MainActivity}" drawable="a118" />
+    <item component="ComponentInfo{com.justeat.app.it/com.justeat.app.ui.MainActivity}" drawable="a145" />
     <item component="ComponentInfo{com.keramidas.TitaniumBackup/com.keramidas.TitaniumBackup.MainActivity}" drawable="a071" />
     <item component="ComponentInfo{com.mehtank.androminion/com.mehtank.androminion.activities.MenuActivity}" drawable="a023" />
     <item component="ComponentInfo{com.mohammadag.colouredstatusbar/com.mohammadag.colouredstatusbar.MainActivity}" drawable="a040" />
@@ -143,6 +149,7 @@
     <item component="ComponentInfo{com.opera.browser/com.opera.Opera}" drawable="a051" />
     <item component="ComponentInfo{com.ota.updates/com.ota.updates.activities.MainActivity}" drawable="a127" />
     <item component="ComponentInfo{com.owncloud.android/com.owncloud.android.ui.activity.FileDisplayActivity}" drawable="a029" />
+    <item component="ComponentInfo{com.piriform.ccleaner/com.piriform.ccleaner.ui.activity.MainActivity}" drawable="a155" />
     <item component="ComponentInfo{com.playagames.shakesfidget/com.playagames.shakesfidget.AppEntry}" drawable="a125" />
     <item component="ComponentInfo{com.plusonelabs.calendar/com.plusonelabs.calendar.WidgetConfigurationActivity}" drawable="a034" />
     <item component="ComponentInfo{com.politedroid/com.politedroid.Preferences}" drawable="a034" />
@@ -277,6 +284,9 @@
     <item component="ComponentInfo{net.osmand.plus/net.osmand.plus.activities.MainMenuActivity}" drawable="a028" />
     <item component="ComponentInfo{net.sourceforge.opencamera/net.sourceforge.opencamera.MainActivity}" drawable="a017" />
 
+    <!-- nextapp -->
+    <item component="ComponentInfo{nextapp.atlas/nextapp.atlas.ui.MainBrowserActivity}" drawable="a057" />
+
     <!-- ohm -->
     <item component="ComponentInfo{ohm.quickdice/ohm.quickdice.activity.QuickDiceActivity}" drawable="a068" />
 
@@ -284,6 +294,7 @@
     <item component="ComponentInfo{org.adaway/org.adaway.ui.BaseActivity}" drawable="a001" />
     <item component="ComponentInfo{org.aykit.MyOwnNotes/org.aykit.owncloud_notes.NoteListActivity}" drawable="a027" />
     <item component="ComponentInfo{org.birthdayadapter/org.birthdayadapter.ui.BaseActivity}" drawable="a000" />
+    <item component="ComponentInfo{org.csploit.android/org.csploit.android.MainActivity}" drawable="a156" />
     <item component="ComponentInfo{org.documentfoundation.libreoffice/org.libreoffice.ui.LibreOfficeUIActivity}" drawable="a067" />
     <item component="ComponentInfo{org.dmfs.tasks/org.dmfs.tasks.TaskListActivity}" drawable="a006" />
     <item component="ComponentInfo{org.example.libreoffice/org.libreoffice.ui.LibreOfficeUIActivity}" drawable="a067" />
@@ -314,6 +325,9 @@
     <item component="ComponentInfo{org.wordpress.android/org.wordpress.android.ui.posts.PostsActivity}" drawable="a141" />
     <item component="ComponentInfo{org.xphnx.iconsubmit/org.xphnx.iconsubmit.MainActivity}" drawable="a049" />
 
+    <!-- pt -->
+    <item component="ComponentInfo{pt.aptoide.backupapps/pt.aptoide.backupapps.MainActivity}" drawable="a0154" />
+
     <!-- pw -->
     <item component="ComponentInfo{pw.bastiaan.github/pw.bastiaan.github.ui.MainActivity}" drawable="a083" />
 
@@ -332,6 +346,7 @@
 
     <!-- ru -->
     <item component="ComponentInfo{ru.gelin.android.weather.notification/ru.gelin.android.weather.notification.app.MainActivity}" drawable="a042" />
+    <item component="ComponentInfo{ru.meefik.busybox/ru.meefik.busybox.MainActivity}" drawable="a037" />
 
     <!-- ws -->
     <item component="ComponentInfo{ws.xsoh.etar/com.android.calendar.AllInOneActivity}" drawable="a000" />

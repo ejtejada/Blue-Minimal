@@ -17,7 +17,7 @@
     <string name="teal">Teal 900</string>
     <string name="custom">Eigene Farbe</string>
     <string name="request_dummy_text">Hallo Welt!</string>
-    <string name="request_please_wait">Bitte warten …</string>
+    <string name="request_please_wait">Klicke auf das Logo um nach installierten Anwendungen zu suchen.</string>
     <string name="request_please_wait2">Suche nach installierten Anwendungen. Nur für dich ;-)</string>
     <string name="request_toast_apps_selected">ZIP-Datei erstellt und auf der SD-Karte gespeichert.</string>
     <string name="request_toast_no_apps_selected">Keine Anwendung ausgewählt. Wähle mindestens eine aus.</string>
@@ -31,4 +31,19 @@
     <string name="materialcolorpicker__errHex">Hex-Code nicht korrekt</string>
     <string name="toast_install_folder">Bitte installiere einen Dateimanager.</string>
     <string name="toast_open">Öffnen?</string>
+    <string name="permissions_2">Du musst der App \"Einstellungen ändern\" erlauben um Töne wie z.B. den Klingelton ändern
+        zu können. Wähle im nächsten Fenster \"Blue Minimal\" aus und gewähre die Berechtigung.</string>
+
+    //Sound
+
+    <string name="set_notification">Als Benachrichtigunston verwenden</string>
+    <string name="set_ringtone">Als Klingelton verwenden</string>
+    <string name="set_alarm">Als Alarm verwenden</string>
+
+    <string name="duration">Dauer</string>
+    <string name="sound">Töne</string>
+
+    <string name="set_notification_suc">Erfoglreich als Benachrichtigungston eingestellt.</string>
+    <string name="set_ringtone_suc">Erfolgreich als Klingelton eingestellt.</string>
+    <string name="set_alarm_suc">Erfolgreich als Alarm eingestellt.</string>
 </resources>
