@@ -27,6 +27,15 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 [CM12_Theme](https://github.com/infamous-downloads/CM12_Theme)
 
 
+### Used open source projects
+
+[Xenon Wallpapers](https://github.com/TeamHorizon/android_packages_apps_XenonWallpapers)
+
+[Numix application icon requests](https://github.com/numixproject/numix-application-icon-requests)
+
+[material-colorpicker](https://github.com/minto5050/material-colorpicker)
+
+
 ### Alarm
 
 ["Ouverture - Hymne" Les Chemins von Steven Testelin](https://www.jamendo.com/fr/track/1004091/ouverture-hymne)
@@ -53,9 +62,5 @@ Download: <http://www.oringz.com/oringz-uploads/sounds-767-arpeggio.mp3>
 
 
 ### Wallpapers
-
-[Xenon Wallpapers](https://github.com/TeamHorizon/android_packages_apps_XenonWallpapers)
-
-[Numix application icon requests](https://github.com/numixproject/numix-application-icon-requests)
 
 [blowball wallpapers by Lydia on flickr](https://www.flickr.com/photos/129581906@N06/albums/72157651933980136)
