@@ -24,7 +24,7 @@
     <string name="title_app" translatable="false">Blue Minimal</string>
     <string name="permissions">You must grant \"Access Storage Permission\" to make icon requests. After that you should
         completely close the app or restart the phone. If you don\'t permit the storage access but want to use the
-        screenshot function at a later time, you can grant the permission later. Please open then: systemsettings - apps -
+        function at a later time, you can grant the permission later. Please open then: systemsettings - apps -
         weather. In the permissions section you can grant the \"write storage permission\".</string>
 
     <string name="permissions_2">You must grant \"Write settings\" to change sounds like the default ringtone. Please search in the
@@ -54,6 +54,7 @@
 
     <string name="menu_license">License</string>
     <string name="menu_color">Color as wallpaper</string>
+    <string name="menu_help">Help</string>
 
 
     //Icon request
@@ -76,10 +77,11 @@
 
     <string name="duration">Duration</string>
     <string name="sound">Sound</string>
+    <string name="play">Play whole track</string>
 
     <string name="set_notification_suc">Successfully set as notification.</string>
     <string name="set_ringtone_suc">Successfully set as ringtone.</string>
-    <string name="set_alarm_suc">Successfully set as alarm.</string>
+    <string name="set_alarm_suc">Successfully copied in \"alarms folder\".</string>
 
     <!-- Just leave this in here. If someone is clever enough to decompile the app he can see this -->
 
@@ -102,9 +104,22 @@
         You should have received a copy of the GNU General Public License
         along with this program.  If not, see http://www.gnu.org/licenses/.\n\n
 
-        For more informations visit the project site on GitHub.</string>
+        For more informations used open source projects visit the project site on GitHub.</string>
 
     <string name="materialcolorpicker__errHex" >Hex Code Format incorrect</string>
-    <string name="materialcolorpicker__btnSelectColor">Select …</string>
+
+
+    // Help
+
+    <string name="help_sound">Click on a list entry to hear a five seconds preview of the sound. By long pressing you can open
+    a menu. There you can set the sound as ringtone, notification or alarm. You can also hear the whole track. If you
+    set an alarm tone, the tone will be copied in the \"alarms folder\". You must reboot your device an choose the wanted alarm tone
+    in the alarm settings.</string>
+
+    <string name="help_wallpaper">Here you can set a wallpaper. You can also set a color as wallpaper.
+        Just click the menu entry.</string>
+
+    <string name="help_request">Here you can create a ZIP-file with informations, concerning app icons you want to be
+    themed. Send the created ZIP-file to the developer of your theme.</string>
 
 </resources>

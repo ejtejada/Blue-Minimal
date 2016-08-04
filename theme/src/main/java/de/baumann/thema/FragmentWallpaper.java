@@ -18,6 +18,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.text.Html;
+import android.text.SpannableString;
+import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -304,6 +307,19 @@ public class FragmentWallpaper extends Fragment {
             });
             AlertDialog alert = builder.create();
             alert.show();
+            return false;
+        }
+
+        if (id == R.id.help) {
+            final SpannableString s = new SpannableString(Html.fromHtml(getString(R.string.help_wallpaper)));
+            Linkify.addLinks(s, Linkify.WEB_URLS);
+
+            final AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity())
+                    .setTitle(R.string.title_wallpaper)
+                    .setMessage(s)
+                    .setPositiveButton(getString(R.string.yes), null);
+            dialog.show();
+
             return false;
         }
         return super.onOptionsItemSelected(item);

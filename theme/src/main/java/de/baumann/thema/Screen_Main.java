@@ -1,7 +1,6 @@
 package de.baumann.thema;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,7 +8,6 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -26,13 +24,13 @@ import android.view.View;
 import android.view.WindowManager;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("ResultOfMethodCallIgnored")
 public class Screen_Main extends AppCompatActivity {
 
     final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
@@ -90,25 +88,9 @@ public class Screen_Main extends AppCompatActivity {
             directory.mkdirs();
         }
 
-        try {
-
-            InputStream in;
-            OutputStream out;
-            in = getResources().openRawResource(R.raw.what_friends_are_for);
-            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/what_friends_are_for.mp3");
-
-            byte[] buffer = new byte[1024];
-            int read;
-            while ((read = in.read(buffer)) != -1) {
-                out.write(buffer, 0, read);
-            }
-            in.close();
-
-            // write the output file
-            out.flush();
-            out.close();
-        } catch (Exception e) {
-            Log.e("tag", e.getMessage());
+        File directory_al = new File(Environment.getExternalStorageDirectory()  + "/Alarms/");
+        if (!directory_al.exists()) {
+            directory_al.mkdirs();
         }
 
         try {
@@ -157,69 +139,6 @@ public class Screen_Main extends AppCompatActivity {
 
             InputStream in;
             OutputStream out;
-            in = getResources().openRawResource(R.raw.loving_you);
-            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/loving_you.mp3");
-
-            byte[] buffer = new byte[1024];
-            int read;
-            while ((read = in.read(buffer)) != -1) {
-                out.write(buffer, 0, read);
-            }
-            in.close();
-
-            // write the output file
-            out.flush();
-            out.close();
-        } catch (Exception e) {
-            Log.e("tag", e.getMessage());
-        }
-
-        try {
-
-            InputStream in;
-            OutputStream out;
-            in = getResources().openRawResource(R.raw.good_morning);
-            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/good_morning.mp3");
-
-            byte[] buffer = new byte[1024];
-            int read;
-            while ((read = in.read(buffer)) != -1) {
-                out.write(buffer, 0, read);
-            }
-            in.close();
-
-            // write the output file
-            out.flush();
-            out.close();
-        } catch (Exception e) {
-            Log.e("tag", e.getMessage());
-        }
-
-        try {
-
-            InputStream in;
-            OutputStream out;
-            in = getResources().openRawResource(R.raw.oringz_w442);
-            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/oringz_w442.mp3");
-
-            byte[] buffer = new byte[1024];
-            int read;
-            while ((read = in.read(buffer)) != -1) {
-                out.write(buffer, 0, read);
-            }
-            in.close();
-
-            // write the output file
-            out.flush();
-            out.close();
-        } catch (Exception e) {
-            Log.e("tag", e.getMessage());
-        }
-
-        try {
-
-            InputStream in;
-            OutputStream out;
             in = getResources().openRawResource(R.raw.hymne);
             out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/hymne.mp3");
 
@@ -241,8 +160,50 @@ public class Screen_Main extends AppCompatActivity {
 
             InputStream in;
             OutputStream out;
+            in = getResources().openRawResource(R.raw.epic);
+            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/epic.mp3");
+
+            byte[] buffer = new byte[1024];
+            int read;
+            while ((read = in.read(buffer)) != -1) {
+                out.write(buffer, 0, read);
+            }
+            in.close();
+
+            // write the output file
+            out.flush();
+            out.close();
+        } catch (Exception e) {
+            Log.e("tag", e.getMessage());
+        }
+
+        try {
+
+            InputStream in;
+            OutputStream out;
             in = getResources().openRawResource(R.raw.canon);
             out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/canon.mp3");
+
+            byte[] buffer = new byte[1024];
+            int read;
+            while ((read = in.read(buffer)) != -1) {
+                out.write(buffer, 0, read);
+            }
+            in.close();
+
+            // write the output file
+            out.flush();
+            out.close();
+        } catch (Exception e) {
+            Log.e("tag", e.getMessage());
+        }
+
+        try {
+
+            InputStream in;
+            OutputStream out;
+            in = getResources().openRawResource(R.raw.wet);
+            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/wet.mp3");
 
             byte[] buffer = new byte[1024];
             int read;

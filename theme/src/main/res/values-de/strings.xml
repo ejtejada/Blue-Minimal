@@ -27,12 +27,12 @@
     <string name="menu_color">Farbe als Wallpaper</string>
     <string name="menu_license">Lizenz</string>
     <string name="title_wallpaper">Wallpaper</string>
-    <string name="materialcolorpicker__btnSelectColor">Wähle aus …</string>
     <string name="materialcolorpicker__errHex">Hex-Code nicht korrekt</string>
     <string name="toast_install_folder">Bitte installiere einen Dateimanager.</string>
     <string name="toast_open">Öffnen?</string>
     <string name="permissions_2">Du musst der App \"Einstellungen ändern\" erlauben um Töne wie z.B. den Klingelton ändern
         zu können. Wähle im nächsten Fenster \"Blue Minimal\" aus und gewähre die Berechtigung.</string>
+    <string name="menu_help">Hilfe</string>
 
     //Sound
 
@@ -42,8 +42,23 @@
 
     <string name="duration">Dauer</string>
     <string name="sound">Töne</string>
+    <string name="play">Ganzes Stück abspielen</string>
 
     <string name="set_notification_suc">Erfoglreich als Benachrichtigungston eingestellt.</string>
     <string name="set_ringtone_suc">Erfolgreich als Klingelton eingestellt.</string>
-    <string name="set_alarm_suc">Erfolgreich als Alarm eingestellt.</string>
+    <string name="set_alarm_suc">Erfolgreich in den \"Alarms Ordner\" kopiert.</string>
+
+
+    // Help
+
+    <string name="help_sound">Klicke auf einen Listeneintrag um eine kurze Vorschau des Tons zu hören.
+        Durch langes drücken öffnet sich ein Menü. Du kannst den Ton dann als Klingelton, Benachrichtungston oder Alarm festlegen.
+        Du kannst außerdem das ganze Stück anhören. Wenn du einen Alarmton aussuchst wird dieser in den \"Alarm Ordner\"
+        kopiert. Du musst das Telefon dann neu starten und den Ton in den Alarm-Einstellungen auswählen.</string>
+
+    <string name="help_wallpaper">Hier kannst du dir ein Wallpaper aussuchen. Du kannst außerdem eine Farbe als Hintergrund
+        wählen, wenn du den entsprechenden Menüeintrag anklickst.</string>
+
+    <string name="help_request">Hier kannst du eine ZIP-Datei erstellen, die Informationen bezüglich der Anwendungen enthält,
+        derren Icon du verändert haben möchtest. Schicke die ZIP-Datei dem Entwickler deines Themes zu.</string>
 </resources>

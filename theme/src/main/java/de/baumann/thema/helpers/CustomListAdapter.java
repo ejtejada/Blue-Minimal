@@ -17,14 +17,16 @@ public class CustomListAdapter extends ArrayAdapter<String> {
     private final String[] itemTITLE;
     private final String[] itemURL;
     private final String[] itemDES;
+    private final String[] itemFN;
 
-    public CustomListAdapter(Activity context, String[] itemTITLE, String[] itemURL, String[] itemDES) {
+    public CustomListAdapter(Activity context, String[] itemTITLE, String[] itemURL, String[] itemDES, String[] itemFN) {
         super(context, R.layout.sound_item_list, itemTITLE);
 
         this.context=context;
         this.itemTITLE=itemTITLE;
         this.itemURL=itemURL;
         this.itemDES=itemDES;
+        this.itemFN=itemFN;
     }
 
     public View getView(int position,View rowView,ViewGroup parent) {

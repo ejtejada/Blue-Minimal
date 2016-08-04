@@ -1,6 +1,5 @@
 package de.baumann.thema;
 
-import android.Manifest;
 import android.animation.AnimatorInflater;
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
@@ -8,7 +7,6 @@ import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -29,10 +27,14 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.text.Html;
+import android.text.SpannableString;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -40,7 +42,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -697,6 +698,25 @@ public class FragmentRequest extends Fragment {
         // Inflate the menu; this adds items to the action bar if it is present.
         super.onPrepareOptionsMenu(menu);
         menu.findItem(R.id.color).setVisible(false);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.help:
+
+                final SpannableString s = new SpannableString(Html.fromHtml(getString(R.string.help_request)));
+                Linkify.addLinks(s, Linkify.WEB_URLS);
+
+                final AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity())
+                        .setTitle(R.string.title_iconrequest)
+                        .setMessage(s)
+                        .setPositiveButton(getString(R.string.yes), null);
+                dialog.show();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

@@ -11,14 +11,27 @@ import android.os.Environment;
 import android.provider.Settings;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.text.Html;
+import android.text.SpannableString;
+import android.text.util.Linkify;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FilterInputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import de.baumann.thema.helpers.CustomListAdapter;
 
 
@@ -53,40 +66,42 @@ public class FragmentSound extends Fragment {
         }
 
         final String[] itemTITLE ={
-                "What friends are for" + " | " + getString(R.string.duration) + " 00:05",
-                "Ouverture - Hymne" + " | " + getString(R.string.duration) + " 01:49",
+                "Ouverture - Hymne" + " (Steven Testelin)" + " | " + getString(R.string.duration) + " 01:49",
                 "Canon and Gigue in D major" + " | " + getString(R.string.duration) + "  00:45",
+                "Epic" + " (Alexey Anisimov)" + " | " + getString(R.string.duration) + "  01:53",
                 "Isn't it" + " | " + getString(R.string.duration) + " 00:01",
                 "Jingle Bells Sms" + " | " + getString(R.string.duration) + " 00:04",
-                "Loving You" + " | " + getString(R.string.duration) + " 00:35",
-                "Good Morning" + " | " + getString(R.string.duration) + " 00:07",
-                "Oringz w442" + " | " + getString(R.string.duration) + "  00:08",
+                "Wet" + " | " + getString(R.string.duration) + " 00:01",
         };
 
         final String[] itemURL ={
-                Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/what_friends_are_for.mp3",
                 Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/hymne.mp3",
                 Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/canon.mp3",
+                Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/epic.mp3",
                 Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/isnt_it.mp3",
                 Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/jingle_bells_sms.mp3",
-                Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/loving_you.mp3",
-                Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/good_morning.mp3",
-                Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/oringz_w442.mp3",
+                Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/wet.mp3",
         };
 
-        final String[] itemDES ={
-                "CC license: https://notificationsounds.com/wake-up-tones/what-friends-are-for-507",
-                "CC license: https://www.jamendo.com/track/1004091/ouverture-hymne?language=fr",
+        final String[] itemDES ={"CC license: https://www.jamendo.com/track/1004091/ouverture-hymne",
                 "CC license: https://musopen.org/music/2672/johann-pachelbel/canon-and-gigue-in-d-major/",
+                "CC license: https://www.jamendo.com/track/1344095/epic",
                 "CC license: https://notificationsounds.com/standard-ringtones/isnt-it-524",
                 "CC license: https://notificationsounds.com/message-tones/jingle-bells-sms-523",
-                "CC license: https://notificationsounds.com/wake-up-tones/loving-you-509",
-                "CC license: https://notificationsounds.com/wake-up-tones/good-morning-502",
-                "CC license: https://notificationsounds.com/message-tones/oringz-w442-357",
+                "CC license: https://notificationsounds.com/notification-sounds/wet-431",
+        };
+
+        final String[] itemFN ={
+                "hymne.mp3",
+                "canon.mp3",
+                "epic.mp3",
+                "isnt_it.mp3",
+                "jingle_bells_sms.mp3",
+                "wet.mp3",
         };
 
 
-        CustomListAdapter adapter=new CustomListAdapter(getActivity(), itemTITLE, itemURL, itemDES);
+        CustomListAdapter adapter=new CustomListAdapter(getActivity(), itemTITLE, itemURL, itemDES, itemDES);
         listView = (ListView)rootView.findViewById(R.id.bookmarks);
         listView.setAdapter(adapter);
 
@@ -96,8 +111,16 @@ public class FragmentSound extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // TODO Auto-generated method stub
                 String Selecteditem= itemURL[+position];
-                MediaPlayer mp = MediaPlayer.create(getActivity(), Uri.parse(Selecteditem));
+                final MediaPlayer mp = MediaPlayer.create(getActivity(), Uri.parse(Selecteditem));
                 mp.start();
+
+                Timer timer = new Timer();
+                timer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        mp.stop();
+                    }
+                }, 5000);
             }
         });
 
@@ -105,7 +128,9 @@ public class FragmentSound extends Fragment {
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
                 final String Selecteditem= itemURL[+position];
-                final CharSequence[] options = {getString(R.string.set_ringtone), getString(R.string.set_notification), getString(R.string.set_alarm)};
+                final String SelecteditemTitle= itemFN[+position];
+                final CharSequence[] options = {getString(R.string.set_ringtone), getString(R.string.set_notification),
+                        getString(R.string.set_alarm), getString(R.string.play)};
 
                 new AlertDialog.Builder(getActivity())
                         .setItems(options, new DialogInterface.OnClickListener() {
@@ -135,15 +160,32 @@ public class FragmentSound extends Fragment {
                                     Snackbar.make(listView, getString(R.string.set_notification_suc), Snackbar.LENGTH_LONG).show();
 
                                 } else if (options[item].equals (getString(R.string.set_alarm))) {
-                                    File k = new File(Selecteditem);
-                                    Uri newUri = Uri.fromFile(k);
+                                    try {
 
-                                    RingtoneManager.setActualDefaultRingtoneUri(
-                                            getActivity(),
-                                            RingtoneManager.TYPE_ALARM,
-                                            newUri
-                                    );
+                                        InputStream in;
+                                        OutputStream out;
+                                        in = new FileInputStream(Selecteditem);
+                                        out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Alarms/" + SelecteditemTitle + ".mp3");
+
+                                        byte[] buffer = new byte[1024];
+                                        int read;
+                                        while ((read = in.read(buffer)) != -1) {
+                                            out.write(buffer, 0, read);
+                                        }
+                                        in.close();
+
+                                        // write the output file
+                                        out.flush();
+                                        out.close();
+                                    } catch (Exception e) {
+                                        Log.e("tag", e.getMessage());
+                                    }
+
                                     Snackbar.make(listView, getString(R.string.set_alarm_suc), Snackbar.LENGTH_LONG).show();
+
+                                } else if (options[item].equals (getString(R.string.play))) {
+                                    final MediaPlayer mp = MediaPlayer.create(getActivity(), Uri.parse(Selecteditem));
+                                    mp.start();
                                 }
                             }
                         }).show();
@@ -161,5 +203,22 @@ public class FragmentSound extends Fragment {
         menu.findItem(R.id.color).setVisible(false);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
 
+        switch (item.getItemId()) {
+            case R.id.help:
+
+                final SpannableString s = new SpannableString(Html.fromHtml(getString(R.string.help_sound)));
+                Linkify.addLinks(s, Linkify.WEB_URLS);
+
+                final AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity())
+                        .setTitle(R.string.sound)
+                        .setMessage(s)
+                        .setPositiveButton(getString(R.string.yes), null);
+                dialog.show();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
