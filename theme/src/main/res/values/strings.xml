@@ -102,9 +102,7 @@
         GNU General Public License for more details.
 
         You should have received a copy of the GNU General Public License
-        along with this program.  If not, see http://www.gnu.org/licenses/.\n\n
-
-        For more informations used open source projects visit the project site on GitHub.</string>
+        along with this program.  If not, see http://www.gnu.org/licenses/.</string>
 
     <string name="materialcolorpicker__errHex" >Hex Code Format incorrect</string>
 
