@@ -36,20 +36,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 [material-colorpicker](https://github.com/minto5050/material-colorpicker)
 
 
-### Alarm
+### Sounds
 
-["Ouverture - Hymne" Les Chemins von Steven Testelin](https://www.jamendo.com/fr/track/1004091/ouverture-hymne)
-
-
-### Ringtone
-
-[Canon and Gigue in D major](https://musopen.org/music/2672/johann-pachelbel/canon-and-gigue-in-d-major/)
-
-
-### Notification
-
-Found on <http://oringz.com/>
-Download: <http://www.oringz.com/oringz-uploads/sounds-767-arpeggio.mp3>
+You proof see all sound sources in the "sounds fragment".
 
 
 ### Icons
