@@ -51,9 +51,9 @@ public class ColorPicker extends Dialog implements SeekBar.OnSeekBarChangeListen
         super(a);
 
         this.c = a;
-        this.red = 0;
-        this.green = 0;
-        this.blue = 0;
+        this.red = 33;
+        this.green = 150;
+        this.blue = 243;
     }
 
     /**

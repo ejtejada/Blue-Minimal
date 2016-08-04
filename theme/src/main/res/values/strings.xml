@@ -113,7 +113,7 @@
 
     <string name="help_sound">Click on a list entry to hear a five seconds preview of the sound. By long pressing you can open
     a menu. There you can set the sound as ringtone, notification or alarm. You can also hear the whole track. If you
-    set an alarm tone, the tone will be copied in the \"alarms folder\". You must reboot your device an choose the wanted alarm tone
+    set an alarm tone, the tone will be copied in the \"alarms folder\" on your sd-card. You must reboot your device an choose the wanted alarm tone
     in the alarm settings.</string>
 
     <string name="help_wallpaper">Here you can set a wallpaper. You can also set a color as wallpaper.

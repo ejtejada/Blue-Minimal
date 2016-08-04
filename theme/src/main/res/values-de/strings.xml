@@ -53,8 +53,8 @@
 
     <string name="help_sound">Klicke auf einen Listeneintrag um eine kurze Vorschau des Tons zu hören.
         Durch langes drücken öffnet sich ein Menü. Du kannst den Ton dann als Klingelton, Benachrichtungston oder Alarm festlegen.
-        Du kannst außerdem das ganze Stück anhören. Wenn du einen Alarmton aussuchst wird dieser in den \"Alarm Ordner\"
-        kopiert. Du musst das Telefon dann neu starten und den Ton in den Alarm-Einstellungen auswählen.</string>
+        Du kannst außerdem das ganze Stück anhören. Wenn du einen Alarmton aussuchst wird dieser in den \"Alarms Ordner\"
+        auf deiner SD-Karte kopiert. Du musst das Telefon dann neu starten und den Ton in den Alarm-Einstellungen auswählen.</string>
 
     <string name="help_wallpaper">Hier kannst du dir ein Wallpaper aussuchen. Du kannst außerdem eine Farbe als Hintergrund
         wählen, wenn du den entsprechenden Menüeintrag anklickst.</string>

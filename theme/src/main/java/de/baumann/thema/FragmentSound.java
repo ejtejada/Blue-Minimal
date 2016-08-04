@@ -26,7 +26,6 @@ import android.widget.ListView;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.FilterInputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Timer;
@@ -165,7 +164,7 @@ public class FragmentSound extends Fragment {
                                         InputStream in;
                                         OutputStream out;
                                         in = new FileInputStream(Selecteditem);
-                                        out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Alarms/" + SelecteditemTitle + ".mp3");
+                                        out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Alarms/" + SelecteditemTitle);
 
                                         byte[] buffer = new byte[1024];
                                         int read;
