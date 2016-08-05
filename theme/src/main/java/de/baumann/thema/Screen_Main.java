@@ -3,9 +3,7 @@ package de.baumann.thema;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
@@ -17,11 +15,16 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.text.SpannableString;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -310,23 +313,23 @@ public class Screen_Main extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.license) {
-            new AlertDialog.Builder(Screen_Main.this)
-                    .setTitle(getString(R.string.about_title))
-                    .setMessage(getString(R.string.about_text))
-                    .setPositiveButton(getString(R.string.about_no),
+            SpannableString s;
+            s = new SpannableString(Html.fromHtml(getString(R.string.about_text)));
+
+            Linkify.addLinks(s, Linkify.WEB_URLS);
+
+            final AlertDialog d = new AlertDialog.Builder(Screen_Main.this)
+                    .setTitle(R.string.about_title)
+                    .setMessage(s)
+                    .setPositiveButton(getString(R.string.yes),
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     dialog.cancel();
                                 }
                             })
-                    .setNegativeButton(getString(R.string.about_yes),
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/scoute-dich/Baumann_Thema"));
-                                    startActivity(i);
-                                    dialog.cancel();
-                                }
-                            }).show();
+                    .show();
+            d.show();
+            ((TextView) d.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
         }
 
         return super.onOptionsItemSelected(item);

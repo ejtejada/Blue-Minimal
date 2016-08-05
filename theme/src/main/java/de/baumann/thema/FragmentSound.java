@@ -82,7 +82,8 @@ public class FragmentSound extends Fragment {
                 Environment.getExternalStorageDirectory()  + "/Android/data/de.baumann.thema/wet.mp3",
         };
 
-        final String[] itemDES ={"CC license: https://www.jamendo.com/track/1004091/ouverture-hymne",
+        final String[] itemDES ={
+                "CC license: https://www.jamendo.com/track/1004091/ouverture-hymne",
                 "CC license: https://musopen.org/music/2672/johann-pachelbel/canon-and-gigue-in-d-major/",
                 "CC license: https://www.jamendo.com/track/1344095/epic",
                 "CC license: https://notificationsounds.com/standard-ringtones/isnt-it-524",
