@@ -38,7 +38,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 ### Sounds
 
-You proof see all sound sources in the "sounds fragment".
+You can see all sound sources in the ["sound fragment"](https://github.com/scoute-dich/Blue-Minimal/blob/master/theme/src/main/java/de/baumann/thema/FragmentSound.java).
 
 
 ### Icons
