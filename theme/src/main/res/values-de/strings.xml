@@ -33,6 +33,7 @@
     <string name="permissions_2">Du musst der App \"Einstellungen ändern\" erlauben um Töne wie z.B. den Klingelton ändern
         zu können. Wähle im nächsten Fenster \"Blue Minimal\" aus und gewähre die Berechtigung.</string>
     <string name="menu_help">Hilfe</string>
+    <string name="menu_settings">Einstellungen</string>
 
     //Sound
 
@@ -46,16 +47,30 @@
 
     <string name="set_notification_suc">Erfoglreich als Benachrichtigungston eingestellt.</string>
     <string name="set_ringtone_suc">Erfolgreich als Klingelton eingestellt.</string>
+
+    <string name="set_notification_suc2">Erfolgreich in den \"Notifications Ordner\" kopiert.</string>
+    <string name="set_ringtone_suc2">Erfolgreich in den \"Ringtones Ordner\" kopiert.</string>
+
     <string name="set_alarm_suc">Erfolgreich in den \"Alarms Ordner\" kopiert.</string>
+
+    <string name="setting_permission">Benutze Berechtigung \"Ändere Systemeinstellungen\"</string>
+    <string name="setting_permission_not">Benutze die Berechtigung nicht</string>
 
 
     // Help
 
     <string name="help_sound">Klicke auf einen Listeneintrag um eine kurze Vorschau des Tons zu hören.
-        Durch langes drücken öffnet sich ein Menü. Du kannst den Ton dann als Klingelton, Benachrichtungston oder Alarm festlegen.
-        Du kannst außerdem das ganze Stück anhören. Wenn du einen Alarmton aussuchst wird dieser in den \"Alarms Ordner\"
-        auf deiner SD-Karte kopiert. Du musst das Telefon dann neu starten und den Ton in den Alarm-Einstellungen auswählen.</string>
+        Durch langes drücken öffnet sich ein Menü. Du kannst dann den kompletten Klingelton anhören.
+        Außerdem kannst du hier den Ton als Klingel-, Benachrichtigungs- oder Alarmton festlegen.&lt;br>&lt;br>
 
+    Hierfür gibt es zwei Möglichkeiten, die du über den Einstellungsknopf erreichst:&lt;br>&lt;br>
+    &lt;i>Benutze die Berechtigung \"Systemeinstellungen ändern\":&lt;/i> Wenn du der Anwendung diese Berechtigung erteilst,
+        kannst du den Klingel- und den Benachrichtigungston sofort einstellen. Du wirst zu der Einstellungsseite weitergeleitet,
+        auf der du der App die entsprechende Berechtigung erteilen kannst.&lt;br>&lt;br>
+    &lt;i>Ändern ohne die Berechtigung zu gewähren:&lt;/i> Wenn du diese Möglichkeit auswählst, wird der Ton in den \"alarms,
+        ringtones oder notifications Ordner\" auf deiner SD-Karte kopiert. Du musst danach das Telefon neustarten und den
+        entsprechenden Ton in den Systemeinstellungen aussuchen. Diese Option wird immer für Alarmtöne verwendet, da es für die
+        keine Systemeinstellungen gibt.</string>
     <string name="help_wallpaper">Hier kannst du dir ein Wallpaper aussuchen. Du kannst außerdem eine Farbe als Hintergrund
         wählen, wenn du den entsprechenden Menüeintrag anklickst.</string>
 

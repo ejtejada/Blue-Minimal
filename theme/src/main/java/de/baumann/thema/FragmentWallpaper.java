@@ -22,6 +22,7 @@ import android.text.Html;
 import android.text.SpannableString;
 import android.text.util.Linkify;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -202,6 +203,13 @@ public class FragmentWallpaper extends Fragment {
         protected void onPreExecute() {
             Snackbar.make(mViewPager, R.string.applying, Snackbar.LENGTH_LONG).show();
         }
+    }
+
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        super.onPrepareOptionsMenu(menu);
+        menu.findItem(R.id.settings).setVisible(false);
     }
 
     @Override

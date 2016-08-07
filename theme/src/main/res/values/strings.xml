@@ -55,6 +55,7 @@
     <string name="menu_license">License</string>
     <string name="menu_color">Color as wallpaper</string>
     <string name="menu_help">Help</string>
+    <string name="menu_settings">Settings</string>
 
 
     //Icon request
@@ -81,7 +82,14 @@
 
     <string name="set_notification_suc">Successfully set as notification.</string>
     <string name="set_ringtone_suc">Successfully set as ringtone.</string>
+
+    <string name="set_notification_suc2">Successfully copied in \"notifications folder\".</string>
+    <string name="set_ringtone_suc2">Successfully copied in \"ringtontes folder\".</string>
+
     <string name="set_alarm_suc">Successfully copied in \"alarms folder\".</string>
+
+    <string name="setting_permission">Use permission \"write system settings\"</string>
+    <string name="setting_permission_not">Do not use permission</string>
 
     <!-- Just leave this in here. If someone is clever enough to decompile the app he can see this -->
 
@@ -113,9 +121,15 @@
     // Help
 
     <string name="help_sound">Click on a list entry to hear a five seconds preview of the sound. By long pressing you can open
-    a menu. There you can set the sound as ringtone, notification or alarm. You can also hear the whole track. If you
-    set an alarm tone, the tone will be copied in the \"alarms folder\" on your sd-card. You must reboot your device an choose the wanted alarm tone
-    in the alarm settings.</string>
+    a menu. You can hear the whole track. There you can set the sound as ringtone, notification or alarm.&lt;br>&lt;br>
+
+    You have two options, which are configurable in the settings popup:&lt;br>&lt;br>
+    &lt;i>use permission \"write system settings\":&lt;/i> If you grant the application these permissions, you can set ringtone and
+    notification sound immediately without reboot. You will be redirectes to the settings page, where you can grant the
+    permission.&lt;br>&lt;br>
+    &lt;i>Change without giving permission:&lt;/i> If you this option, the tone will be copied in the \"alarms, ringtones or
+    notifications folder\" on your sd-card. You must reboot your device and choose the wanted sound in the system settings manually.
+    This option is always used for alarm tones, since you can not configure this in the system settings.</string>
 
     <string name="help_wallpaper">Here you can set a wallpaper. You can also set a color as wallpaper.
         Just click the menu entry.</string>

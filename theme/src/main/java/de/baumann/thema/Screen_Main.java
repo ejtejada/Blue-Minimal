@@ -91,11 +91,6 @@ public class Screen_Main extends AppCompatActivity {
             directory.mkdirs();
         }
 
-        File directory_al = new File(Environment.getExternalStorageDirectory()  + "/Alarms/");
-        if (!directory_al.exists()) {
-            directory_al.mkdirs();
-        }
-
         try {
 
             InputStream in;

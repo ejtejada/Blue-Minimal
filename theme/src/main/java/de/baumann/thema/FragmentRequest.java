@@ -698,6 +698,7 @@ public class FragmentRequest extends Fragment {
         // Inflate the menu; this adds items to the action bar if it is present.
         super.onPrepareOptionsMenu(menu);
         menu.findItem(R.id.color).setVisible(false);
+        menu.findItem(R.id.settings).setVisible(false);
     }
 
     @Override
