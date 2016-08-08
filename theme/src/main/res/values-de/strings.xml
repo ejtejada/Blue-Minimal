@@ -63,14 +63,15 @@
         Durch langes drücken öffnet sich ein Menü. Du kannst dann den kompletten Klingelton anhören.
         Außerdem kannst du hier den Ton als Klingel-, Benachrichtigungs- oder Alarmton festlegen.&lt;br>&lt;br>
 
-    Hierfür gibt es zwei Möglichkeiten, die du über den Einstellungsknopf erreichst:&lt;br>&lt;br>
+    Hierfür gibt es zwei Möglichkeiten, zwischen denen du über den Einstellungsknopf wechseln kannst:&lt;br>&lt;br>
     &lt;i>Benutze die Berechtigung \"Systemeinstellungen ändern\":&lt;/i> Wenn du der Anwendung diese Berechtigung erteilst,
-        kannst du den Klingel- und den Benachrichtigungston sofort einstellen. Du wirst zu der Einstellungsseite weitergeleitet,
-        auf der du der App die entsprechende Berechtigung erteilen kannst.&lt;br>&lt;br>
-    &lt;i>Ändern ohne die Berechtigung zu gewähren:&lt;/i> Wenn du diese Möglichkeit auswählst, wird der Ton in den \"alarms,
-        ringtones oder notifications Ordner\" auf deiner SD-Karte kopiert. Du musst danach das Telefon neustarten und den
+        kannst du den Klingel- und den Benachrichtigungston sofort einstellen. Du wirst vorher einmalig zu der Einstellungsseite
+        weitergeleitet, auf der du der App die entsprechende Berechtigung erteilen kannst. Danach solltest du die App komplett
+        schließen oder das Telefon neu starten.&lt;br>&lt;br>
+    &lt;i>Ändern ohne die Berechtigung zu gewähren:&lt;/i> Wenn du diese Möglichkeit auswählst, wird der Ton in den \"Alarms,
+        Ringtones oder Notifications Ordner\" auf deiner SD-Karte kopiert. Du musst danach das Telefon neustarten und den
         entsprechenden Ton in den Systemeinstellungen aussuchen. Diese Option wird immer für Alarmtöne verwendet, da es für die
-        keine Systemeinstellungen gibt.</string>
+        keine Systemeinstellung gibt.</string>
     <string name="help_wallpaper">Hier kannst du dir ein Wallpaper aussuchen. Du kannst außerdem eine Farbe als Hintergrund
         wählen, wenn du den entsprechenden Menüeintrag anklickst.</string>
 

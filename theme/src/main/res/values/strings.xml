@@ -123,10 +123,10 @@
     <string name="help_sound">Click on a list entry to hear a five seconds preview of the sound. By long pressing you can open
     a menu. You can hear the whole track. There you can set the sound as ringtone, notification or alarm.&lt;br>&lt;br>
 
-    You have two options, which are configurable in the settings popup:&lt;br>&lt;br>
-    &lt;i>use permission \"write system settings\":&lt;/i> If you grant the application these permissions, you can set ringtone and
-    notification sound immediately without reboot. You will be redirectes to the settings page, where you can grant the
-    permission.&lt;br>&lt;br>
+    You have two options, between which you can choose in the settings popup:&lt;br>&lt;br>
+    &lt;i>use permission \"write system settings\":&lt;/i> If you grant the application these permission, you can set ringtone and
+    notification sound immediately without reboot. You will be redirected to the settings page, where you can grant the
+    permission for one time. After that you should close the app completely or reboot your phone.&lt;br>&lt;br>
     &lt;i>Change without giving permission:&lt;/i> If you this option, the tone will be copied in the \"alarms, ringtones or
     notifications folder\" on your sd-card. You must reboot your device and choose the wanted sound in the system settings manually.
     This option is always used for alarm tones, since you can not configure this in the system settings.</string>
