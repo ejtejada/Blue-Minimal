@@ -74,6 +74,7 @@
                     android:id="@+id/TVappPackage"
                     style="@style/request_card_content"
                     android:layout_width="match_parent"
+                    android:fontFamily="sans-serif"
                     android:layout_height="wrap_content"
                     android:ellipsize="marquee"
                     android:marqueeRepeatLimit="marquee_forever"
