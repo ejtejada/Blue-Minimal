@@ -84,42 +84,6 @@ public class FragmentSound extends Fragment {
                 "wet.mp3",
         };
 
-        final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-
-        if (sharedPref.getBoolean ("permission", true)) {
-
-
-            File directory_rt = new File(Environment.getExternalStorageDirectory()  + "/Ringtones/");
-            if (!directory_rt.exists()) {
-                directory_rt.mkdirs();
-            }
-
-            File directory_nt = new File(Environment.getExternalStorageDirectory()  + "/Notifications/");
-            if (!directory_nt.exists()) {
-                directory_nt.mkdirs();
-            }
-        } else {
-            if (android.os.Build.VERSION.SDK_INT >= 23) {
-                boolean canDo =  Settings.System.canWrite(getActivity());
-                if (!canDo) {
-                    new AlertDialog.Builder(getActivity())
-                            .setMessage(R.string.permissions_2)
-                            .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    if (android.os.Build.VERSION.SDK_INT >= 23) {
-                                        Intent grantIntent = new   Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
-                                        startActivity(grantIntent);
-                                    }
-                                }
-                            })
-                            .setNegativeButton(getString(R.string.no), null)
-                            .show();
-                }
-            }
-        }
-
-
         CustomListAdapter adapter=new CustomListAdapter(getActivity(), itemTITLE, itemURL, itemDES, itemDES);
         listView = (ListView)rootView.findViewById(R.id.bookmarks);
         listView.setAdapter(adapter);
@@ -307,14 +271,45 @@ public class FragmentSound extends Fragment {
                             @Override
                             public void onClick(DialogInterface dialog, int item) {
                                 if (options[item].equals(getString(R.string.setting_permission))) {
+
                                     sharedPref.edit()
                                             .putBoolean("permission", false)
                                             .apply();
+
+                                    if (android.os.Build.VERSION.SDK_INT >= 23) {
+                                        boolean canDo =  Settings.System.canWrite(getActivity());
+                                        if (!canDo) {
+                                            new AlertDialog.Builder(getActivity())
+                                                    .setMessage(R.string.permissions_2)
+                                                    .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
+                                                        @Override
+                                                        public void onClick(DialogInterface dialog, int which) {
+                                                            if (android.os.Build.VERSION.SDK_INT >= 23) {
+                                                                Intent grantIntent = new   Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
+                                                                startActivity(grantIntent);
+                                                            }
+                                                        }
+                                                    })
+                                                    .setNegativeButton(getString(R.string.no), null)
+                                                    .show();
+                                        }
+                                    }
                                 }
                                 if (options[item].equals(getString(R.string.setting_permission_not))) {
+
                                     sharedPref.edit()
                                             .putBoolean("permission", true)
                                             .apply();
+
+                                    File directory_rt = new File(Environment.getExternalStorageDirectory()  + "/Ringtones/");
+                                    if (!directory_rt.exists()) {
+                                        directory_rt.mkdirs();
+                                    }
+
+                                    File directory_nt = new File(Environment.getExternalStorageDirectory()  + "/Notifications/");
+                                    if (!directory_nt.exists()) {
+                                        directory_nt.mkdirs();
+                                    }
                                 }
                             }
                         }).show();

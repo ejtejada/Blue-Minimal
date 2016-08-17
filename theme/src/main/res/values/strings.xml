@@ -22,9 +22,9 @@
     //App
 
     <string name="title_app" translatable="false">Blue Minimal</string>
-    <string name="permissions">You must grant \"Access Storage Permission\" to make icon requests. After that you should
-        completely close the app or restart the phone. If you don\'t permit the storage access but want to use the
-        function at a later time, you can grant the permission later. Please open then: systemsettings - apps -
+    <string name="permissions">You must grant \"Access Storage Permission\" to set custom sounds and to make icon requests.
+        After that you should completely close the app or restart the phone. If you don\'t permit the storage access but want
+        to use the function at a later time, you can grant the permission later. Please open then: systemsettings - apps -
         weather. In the permissions section you can grant the \"write storage permission\".</string>
 
     <string name="permissions_2">You must grant \"Write settings\" to change sounds like the default ringtone. Please search in the
