@@ -337,6 +337,7 @@
     <item component="ComponentInfo{org.kde.kdeconnect_tp/org.kde.kdeconnect.UserInterface.MaterialActivity}" drawable="a133" />
     <item component="ComponentInfo{org.kiwix.kiwixmobile/org.kiwix.kiwixmobile.KiwixMobileActivity}" drawable="a074" />
     <item component="ComponentInfo{org.kontalk/org.kontalk.ui.ConversationsActivity}" drawable="a174" />
+    <item component="ComponentInfo{org.mariotaku.twidere/org.mariotaku.twidere.activity.MainActivity}" drawable="a112" />
     <item component="ComponentInfo{org.mozilla.fennec_fdroid/org.mozilla.fennec_fdroid.App}" drawable="a051" />
     <item component="ComponentInfo{org.mozilla.firefox/org.mozilla.firefox.App}" drawable="a051" />
     <item component="ComponentInfo{org.nameless.morckx.cmprofiles/org.nameless.morckx.cmprofiles.MainActivity}" drawable="a130" />
