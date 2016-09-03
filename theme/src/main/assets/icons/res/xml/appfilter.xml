@@ -183,6 +183,7 @@
     <item component="ComponentInfo{com.termux/com.termux.app.TermuxActivity}" drawable="a093" />
     <item component="ComponentInfo{com.tobykurien.google_news/com.tobykurien.google_news.GoogleNewsActivity}" drawable="a116" />
     <item component="ComponentInfo{com.underwood.calendar_beta/com.android.calendar.AllInOneActivity}" drawable="a000" />
+    <item component="ComponentInfo{com.vonglasow.michael.satstat/com.vonglasow.michael.satstat.ui.MainActivity}" drawable="a178" />
     <item component="ComponentInfo{com.vinz243.materialstatusbar/com.vinz243.materialstatusbar.MainActivity}" drawable="a040" />
     <item component="ComponentInfo{com.waze/com.waze.FreeMapAppActivity}" drawable="a170" />
     <item component="ComponentInfo{com.whatsapp/com.whatsapp.Main}" drawable="a059" />
@@ -289,6 +290,7 @@
 
     <!-- me -->
     <item component="ComponentInfo{me.danielbarnett.addresstogps/me.danielbarnett.AddressToGPS.MainActivity}" drawable="a171" />
+    <item component="ComponentInfo{me.guillaumin.android.osmtracker/me.guillaumin.android.osmtracker.activity.TrackManager}" drawable="a021" />
     <item component="ComponentInfo{me.sheimi.sgit/me.sheimi.sgit.RepoListActivity}" drawable="a163" />
 
     <!-- menion -->
@@ -307,6 +309,7 @@
     <item component="ComponentInfo{net.iexos.musicalarm/net.iexos.musicalarm.AlarmViewActivity}" drawable="a137" />
     <item component="ComponentInfo{net.mitchtech.xposed.macroexpand/net.mitchtech.xposed.EditMacrosActivity}" drawable="a040" />
     <item component="ComponentInfo{net.pluservice.myCicero/net.pluservice.myCicero.MainActivity}" drawable="a169" />
+    <item component="ComponentInfo{net.programmierecke.radiodroid2/net.programmierecke.radiodroid2.ActivityMain}" drawable="a004" />
     <item component="ComponentInfo{net.nurik.roman.dashclock/com.google.android.apps.dashclock.configuration.ConfigurationLauncherActivity}" drawable="a041" />
     <item component="ComponentInfo{net.osmand.plus/net.osmand.plus.activities.MapActivity}" drawable="a028" />
     <item component="ComponentInfo{net.osmand.plus/net.osmand.plus.activities.MainMenuActivity}" drawable="a028" />
@@ -340,6 +343,7 @@
     <item component="ComponentInfo{org.mariotaku.twidere/org.mariotaku.twidere.activity.MainActivity}" drawable="a112" />
     <item component="ComponentInfo{org.mozilla.fennec_fdroid/org.mozilla.fennec_fdroid.App}" drawable="a051" />
     <item component="ComponentInfo{org.mozilla.firefox/org.mozilla.firefox.App}" drawable="a051" />
+    <item component="ComponentInfo{org.mozilla.mozstumbler/org.mozilla.mozstumbler.client.navdrawer.MainDrawerActivity}" drawable="a177" />
     <item component="ComponentInfo{org.nameless.morckx.cmprofiles/org.nameless.morckx.cmprofiles.MainActivity}" drawable="a130" />
     <item component="ComponentInfo{org.numixproject.iconsubmit/org.numixproject.iconsubmit.MainActivity}" drawable="a049" />
     <item component="ComponentInfo{org.pocketworkstation.pckeyboard/org.pocketworkstation.pckeyboard.Main}" drawable="a048" />
@@ -366,6 +370,9 @@
 
     <!-- posteitaliane -->
     <item component="ComponentInfo{posteitaliane.posteapp.apppostepay/posteitaliane.posteapp.apppostepay.SplashActivity}" drawable="a161" />
+
+    <!-- protect -->
+    <item component="ComponentInfo{protect.budgetwatch/protect.budgetwatch.MainActivity}" drawable="a143" />
 
     <!-- pt -->
     <item component="ComponentInfo{pt.aptoide.backupapps/pt.aptoide.backupapps.MainActivity}" drawable="a0154" />

@@ -99,7 +99,8 @@
     <string name="about_no" translatable="false">OK</string>
     <string name="about_title" translatable="false">Copyright © 2015  by Gaukler Faun</string>
     <string name="about_text" translatable="false">
-        &lt;i>For more informations about the project and used resources visit the project site on github:&lt;br>
+        &lt;i>For more informations about the project and used resources visit the project site on github.If you want,
+        you can donate there to me via paypal:&lt;br>
         https://github.com/scoute-dich/Baumann_Thema&lt;/i>&lt;br>&lt;br>
 
         This program is free software: you can redistribute it and/or modify
@@ -113,7 +114,8 @@
         GNU General Public License for more details.
 
         You should have received a copy of the GNU General Public License
-        along with this program.  If not, see http://www.gnu.org/licenses.</string>
+        along with this program.  If not, see http://www.gnu.org/licenses.
+    </string>
 
     <string name="materialcolorpicker__errHex" >Hex Code Format incorrect</string>
 
