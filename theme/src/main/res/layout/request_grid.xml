@@ -21,7 +21,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="275dp"
+                android:layout_height="200dp"
                 android:id="@+id/imageView_header"
                 android:src="@drawable/header_icon"
                 android:scaleType="centerCrop"

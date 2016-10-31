@@ -9,36 +9,25 @@
 
 <resources>
     <string-array name="wallpapers" translatable="false">
+
+	<item>wp_blue700</item>
+	<item>wp_amber700</item>
+	<item>wp_red700</item>
+	<item>wp_green700</item>
+	<item>wp_grey700</item>
+
 	<item>wp_mm_blue</item>
 	<item>wp_mm_amber</item>
 	<item>wp_mm_red</item>
 	<item>wp_mm_green</item>
 	<item>wp_mm_grey</item>
-    <item>wp_blue700</item>
-    <item>wp_amber700</item>
-    <item>wp_red700</item>
-    <item>wp_green700</item>
-    <item>wp_grey700</item>
-    <item>wp_pusteblume</item>
-    <item>wp_pusteblume2</item>
-	<item>wp_tucan</item>
-	<item>wp_tucan2</item>
-	<item>wp_tucan3</item>
-    <item>wp_standard</item>
-	<item>wallpaper_14</item>
-	<item>wallpaper_15</item>
-	<item>wallpaper_16</item>
-	<item>wallpaper_17</item>
-	<item>wallpaper_18</item>
-	<item>wallpaper_19</item>
-	<item>wallpaper_20</item>
-	<item>wallpaper_21</item>
-	<item>wallpaper_22</item>
-	<item>wallpaper_23</item>
-	<item>wallpaper_24</item>
-	<item>wallpaper_25</item>
-	<item>wallpaper_26</item>
-	<item>wallpaper_27</item>
-    <item>wallpaper_28</item>
+
+	<item>wp_n_blue</item>
+	<item>wp_n_amber</item>
+	<item>wp_n_red</item>
+	<item>wp_n_green</item>
+	<item>wp_n_grey</item>
+
+	<item>wp_standard</item>
     </string-array>
 </resources>
