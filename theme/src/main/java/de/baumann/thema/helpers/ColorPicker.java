@@ -179,6 +179,7 @@ public class ColorPicker extends Dialog implements SeekBar.OnSeekBarChangeListen
      * @param progress The new progress value
      * @param fromUser If it coem from User
      */
+    @SuppressLint("SetTextI18n")
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 

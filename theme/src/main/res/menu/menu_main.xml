@@ -25,4 +25,9 @@
         android:title="@string/menu_license"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/donate"
+        android:title="@string/menu_donate"
+        app:showAsAction="never" />
+
 </menu>

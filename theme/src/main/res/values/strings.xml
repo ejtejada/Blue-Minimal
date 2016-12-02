@@ -56,6 +56,7 @@
     <string name="menu_color">Color as wallpaper</string>
     <string name="menu_help">Help</string>
     <string name="menu_settings">Settings</string>
+    <string name="menu_donate">Donate</string>
 
 
     //Icon request
@@ -88,8 +89,8 @@
 
     <string name="set_alarm_suc">Successfully copied in \"alarms folder\".</string>
 
-    <string name="setting_permission">Use permission \"write system settings\"</string>
-    <string name="setting_permission_not">Do not use permission</string>
+    <string name="setting_permission_title">\"write system settings\"</string>
+    <string name="setting_permission_allow">Use permission</string>
 
     <!-- Just leave this in here. If someone is clever enough to decompile the app he can see this -->
 
@@ -99,9 +100,11 @@
     <string name="about_no" translatable="false">OK</string>
     <string name="about_title" translatable="false">Copyright © 2015  by Gaukler Faun</string>
     <string name="about_text" translatable="false">
-        &lt;i>For more information about the project and used resources visit the project site. If you want,
-        you can donate there to me via paypal:&lt;br>
+        &lt;i>For more information about the project: &lt;br>
         https://github.com/scoute-dich/Baumann_Thema&lt;/i>&lt;br>&lt;br>
+
+        &lt;i>For more information about used projects and resources: &lt;br>
+        https://github.com/scoute-dich/Blue-Minimal/blob/master/LICENSE.md&lt;/i>&lt;br>&lt;br>
 
         This program is free software: you can redistribute it and/or modify
         it under the terms of the GNU General Public License as published by

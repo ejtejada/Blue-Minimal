@@ -39,12 +39,14 @@
                 android:id="@+id/IVappIcon"
                 style="@style/request_card_thumbnail"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_launcher" />
+                android:src="@drawable/ic_launcher"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 style="@style/request_card_thumbnail"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_check_white_48dp" />
+                android:src="@drawable/ic_check_white_48dp"
+                tools:ignore="ContentDescription" />
         </ViewSwitcher>
 
         <LinearLayout

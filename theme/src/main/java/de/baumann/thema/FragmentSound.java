@@ -23,7 +23,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.CompoundButton;
 import android.widget.ListView;
+import android.widget.Switch;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -40,6 +42,7 @@ import de.baumann.thema.helpers.CustomListAdapter;
 public class FragmentSound extends Fragment {
 
     private ListView listView;
+    private SharedPreferences sharedPref;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,6 +50,8 @@ public class FragmentSound extends Fragment {
         View rootView = inflater.inflate(R.layout.sound, container, false);
 
         setHasOptionsMenu(true);
+
+        sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
         final String[] itemTITLE ={
                 "Ouverture - Hymne" + " (Steven Testelin)" + " | " + getString(R.string.duration) + " 01:49",
@@ -119,8 +124,6 @@ public class FragmentSound extends Fragment {
                         .setItems(options, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int item) {
-
-                                final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
                                 if (options[item].equals (getString(R.string.set_ringtone))) {
 
@@ -263,58 +266,72 @@ public class FragmentSound extends Fragment {
                 return true;
 
             case R.id.settings:
-                final CharSequence[] options = {getString(R.string.setting_permission), getString(R.string.setting_permission_not)};
-                new AlertDialog.Builder(getActivity())
-                        .setItems(options, new DialogInterface.OnClickListener() {
-                            final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
-                            @Override
-                            public void onClick(DialogInterface dialog, int item) {
-                                if (options[item].equals(getString(R.string.setting_permission))) {
+                final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
-                                    sharedPref.edit()
-                                            .putBoolean("permission", false)
-                                            .apply();
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                View dialogView = View.inflate(getActivity(), R.layout.dialog_toggle, null);
 
-                                    if (android.os.Build.VERSION.SDK_INT >= 23) {
-                                        boolean canDo =  Settings.System.canWrite(getActivity());
-                                        if (!canDo) {
-                                            new AlertDialog.Builder(getActivity())
-                                                    .setMessage(R.string.permissions_2)
-                                                    .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
-                                                        @Override
-                                                        public void onClick(DialogInterface dialog, int which) {
-                                                            if (android.os.Build.VERSION.SDK_INT >= 23) {
-                                                                Intent grantIntent = new   Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
-                                                                startActivity(grantIntent);
-                                                            }
-                                                        }
-                                                    })
-                                                    .setNegativeButton(getString(R.string.no), null)
-                                                    .show();
-                                        }
-                                    }
-                                }
-                                if (options[item].equals(getString(R.string.setting_permission_not))) {
+                Switch toggle = (Switch) dialogView.findViewById(R.id.switch1);
+                String allow = sharedPref.getString("allow", "no");
 
-                                    sharedPref.edit()
-                                            .putBoolean("permission", true)
-                                            .apply();
+                if (allow.equals("yes")){
+                    toggle.setChecked(true);
+                } else  {
+                    toggle.setChecked(false);
+                }
 
-                                    File directory_rt = new File(Environment.getExternalStorageDirectory()  + "/Ringtones/");
-                                    if (!directory_rt.exists()) {
-                                        directory_rt.mkdirs();
-                                    }
+                toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
-                                    File directory_nt = new File(Environment.getExternalStorageDirectory()  + "/Notifications/");
-                                    if (!directory_nt.exists()) {
-                                        directory_nt.mkdirs();
-                                    }
+                    @Override
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                        if(isChecked){
+                            sharedPref.edit().putString("allow", "yes").apply();
+
+                            if (android.os.Build.VERSION.SDK_INT >= 23) {
+                                boolean canDo =  Settings.System.canWrite(getActivity());
+                                if (!canDo) {
+                                    new AlertDialog.Builder(getActivity())
+                                            .setMessage(R.string.permissions_2)
+                                            .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialog, int which) {
+                                                    if (android.os.Build.VERSION.SDK_INT >= 23) {
+                                                        Intent grantIntent = new   Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
+                                                        startActivity(grantIntent);
+                                                    }
+                                                }
+                                            })
+                                            .setNegativeButton(getString(R.string.no), null)
+                                            .show();
                                 }
                             }
-                        }).show();
 
+                        }else{
+                            sharedPref.edit().putString("allow", "no").apply();
 
+                            File directory_rt = new File(Environment.getExternalStorageDirectory()  + "/Ringtones/");
+                            if (!directory_rt.exists()) {
+                                directory_rt.mkdirs();
+                            }
+
+                            File directory_nt = new File(Environment.getExternalStorageDirectory()  + "/Notifications/");
+                            if (!directory_nt.exists()) {
+                                directory_nt.mkdirs();
+                            }
+
+                        }
+
+                    }
+                });
+
+                builder.setView(dialogView);
+                builder.setTitle(R.string.setting_permission_title);
+
+                final AlertDialog dialog2 = builder.create();
+                // Display the custom alert dialog on interface
+                dialog2.show();
 
                 return true;
         }

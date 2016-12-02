@@ -3,7 +3,7 @@
 <resources>
 
     <color name="colorPrimary">#2196f3</color>
-    <color name="colorPrimaryDark">#2196f3</color>
+    <color name="colorPrimaryDark">#1976d2</color>
     <color name="colorAccent">#ff9800</color>
 
     <color name="materialcolorpicker__red">#f44336</color>

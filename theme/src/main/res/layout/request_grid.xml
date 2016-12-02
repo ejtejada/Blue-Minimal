@@ -26,7 +26,8 @@
                 android:src="@drawable/header_icon"
                 android:scaleType="centerCrop"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/imageViewLogo"
@@ -38,7 +39,8 @@
                 android:layout_below="@+id/imageView_header"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="64dp"
-                android:layout_marginBottom="@dimen/fab_margin" />
+                android:layout_marginBottom="@dimen/fab_margin"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textview_request"

@@ -2,9 +2,9 @@ package de.baumann.thema;
 
 import android.animation.AnimatorInflater;
 import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -17,12 +17,12 @@ import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -84,6 +84,7 @@ public class FragmentRequest extends Fragment {
     private final ArrayList<String> list_activities = new ArrayList();
     @SuppressWarnings("unchecked")
     private static ArrayList<AppInfo> list_activities_final = new ArrayList();
+    @SuppressLint("StaticFieldLeak")
     private static Context context;
     private ViewSwitcher switcherLoad;
     private final FragmentRequest.AsyncWorkerList taskList = new AsyncWorkerList();
@@ -134,7 +135,7 @@ public class FragmentRequest extends Fragment {
                 ImageView logo = (ImageView)rootView.findViewById(R.id.imageViewLogo);
                 ObjectAnimator logoAni = (ObjectAnimator) AnimatorInflater.loadAnimator(context, R.animator.request_flip);
                 logoAni.setRepeatCount(Animation.INFINITE);
-                logoAni.setRepeatMode(Animation.RESTART);
+                logoAni.setRepeatMode(ValueAnimator.RESTART);
                 logoAni.setTarget(logo);
                 logoAni.setDuration(2000);
                 logoAni.start();
@@ -211,26 +212,7 @@ public class FragmentRequest extends Fragment {
                     if(DEBUG)Log.v(TAG,"Handler case 1");
 
                     Snackbar snackbar = Snackbar
-                            .make(switcherLoad, getString(R.string.request_toast_apps_selected), Snackbar.LENGTH_LONG)
-                            .setAction(getString(R.string.toast_open), new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-
-                                    File directory = new File(Environment.getExternalStorageDirectory(),
-                                            "/");
-                                    Intent target = new Intent(Intent.ACTION_VIEW);
-                                    target.setDataAndType(Uri.fromFile(directory), "resource/folder");
-                                    target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-
-                                    try {
-                                        startActivity(target);
-                                    } catch (ActivityNotFoundException e) {
-                                        // Instruct the user to install a PDF reader here, or something
-                                        Snackbar.make(switcherLoad, getString(R.string.toast_install_folder), Snackbar.LENGTH_LONG)
-                                                .setAction("Action", null).show();
-                                    }
-                                }
-                            });
+                            .make(switcherLoad, getString(R.string.request_toast_apps_selected), Snackbar.LENGTH_LONG);
                     snackbar.show();
                     return;
 
@@ -560,7 +542,8 @@ public class FragmentRequest extends Fragment {
             super(context, position, adapterArrayList);
             appList.addAll(adapterArrayList);
         }
-        public View getView(int position, View convertView, ViewGroup parent) {
+        @NonNull
+        public View getView(int position, View convertView, @NonNull ViewGroup parent) {
             if(tf == null){
                 tf = Typeface.createFromAsset(context.getAssets(), font);
             }
@@ -683,7 +666,8 @@ public class FragmentRequest extends Fragment {
             } catch (ZipException zipE) {
                 if (DEBUG) Log.d(TAG, zipE.getMessage());
             } finally {
-                if (out != null) out.closeEntry();
+                if (out != null) //noinspection ThrowFromFinallyBlock
+                    out.closeEntry();
             }
         } else if (files.length > 0) {// non-empty folder
 

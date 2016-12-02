@@ -49,6 +49,7 @@ public class FragmentWallpaper extends Fragment {
     /**
      * The {@link Context} to be used by the app
      */
+    @SuppressLint("StaticFieldLeak")
     private static Context mContext;
 
     private ViewPager mViewPager;
