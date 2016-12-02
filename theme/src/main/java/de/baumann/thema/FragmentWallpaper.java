@@ -22,7 +22,6 @@ import android.text.Html;
 import android.text.SpannableString;
 import android.text.util.Linkify;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -170,6 +169,7 @@ public class FragmentWallpaper extends Fragment {
 
         WallpaperLoader() {
             mOptions = new BitmapFactory.Options();
+            //noinspection deprecation
             mOptions.inDither = false;
             mOptions.inPreferredConfig = Bitmap.Config.ARGB_8888;
         }
@@ -204,13 +204,6 @@ public class FragmentWallpaper extends Fragment {
         protected void onPreExecute() {
             Snackbar.make(mViewPager, R.string.applying, Snackbar.LENGTH_LONG).show();
         }
-    }
-
-    @Override
-    public void onPrepareOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        super.onPrepareOptionsMenu(menu);
-        menu.findItem(R.id.settings).setVisible(false);
     }
 
     @Override
@@ -320,7 +313,15 @@ public class FragmentWallpaper extends Fragment {
         }
 
         if (id == R.id.help) {
-            final SpannableString s = new SpannableString(Html.fromHtml(getString(R.string.help_wallpaper)));
+
+            SpannableString s;
+
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                s = new SpannableString(Html.fromHtml(getString(R.string.help_wallpaper),Html.FROM_HTML_MODE_LEGACY));
+            } else {
+                //noinspection deprecation
+                s = new SpannableString(Html.fromHtml(getString(R.string.help_wallpaper)));
+            }
             Linkify.addLinks(s, Linkify.WEB_URLS);
 
             final AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity())

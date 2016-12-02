@@ -2,10 +2,10 @@
 
 ### 4.3 (WIP)
 
-- added icons
-- added donate action
-- improved ui (overflow menu, audio settings)
-- Android N wallpapers
+- added: icons
+- added: donate action
+- improved: ui (overflow menu)
+- removed: permission "write system settings"
 
 
 ### 4.2

@@ -310,9 +310,15 @@ public class Screen_Main extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.license) {
-            SpannableString s;
-            s = new SpannableString(Html.fromHtml(getString(R.string.about_text)));
 
+            SpannableString s;
+
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                s = new SpannableString(Html.fromHtml(getString(R.string.about_text),Html.FROM_HTML_MODE_LEGACY));
+            } else {
+                //noinspection deprecation
+                s = new SpannableString(Html.fromHtml(getString(R.string.about_text)));
+            }
             Linkify.addLinks(s, Linkify.WEB_URLS);
 
             final AlertDialog d = new AlertDialog.Builder(Screen_Main.this)

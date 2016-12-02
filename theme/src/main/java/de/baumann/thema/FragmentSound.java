@@ -3,13 +3,11 @@ package de.baumann.thema;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.media.MediaPlayer;
-import android.media.RingtoneManager;
+import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -23,9 +21,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.CompoundButton;
 import android.widget.ListView;
-import android.widget.Switch;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -42,7 +38,6 @@ import de.baumann.thema.helpers.CustomListAdapter;
 public class FragmentSound extends Fragment {
 
     private ListView listView;
-    private SharedPreferences sharedPref;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,8 +45,6 @@ public class FragmentSound extends Fragment {
         View rootView = inflater.inflate(R.layout.sound, container, false);
 
         setHasOptionsMenu(true);
-
-        sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
         final String[] itemTITLE ={
                 "Ouverture - Hymne" + " (Steven Testelin)" + " | " + getString(R.string.duration) + " 01:49",
@@ -127,76 +120,76 @@ public class FragmentSound extends Fragment {
 
                                 if (options[item].equals (getString(R.string.set_ringtone))) {
 
-                                    if (sharedPref.getBoolean ("permission", true)) {
-                                        try {
+                                    try {
 
-                                            InputStream in;
-                                            OutputStream out;
-                                            in = new FileInputStream(Selecteditem);
-                                            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Ringtones/" + SelecteditemTitle);
+                                        InputStream in;
+                                        OutputStream out;
+                                        in = new FileInputStream(Selecteditem);
+                                        out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Ringtones/" + SelecteditemTitle);
 
-                                            byte[] buffer = new byte[1024];
-                                            int read;
-                                            while ((read = in.read(buffer)) != -1) {
-                                                out.write(buffer, 0, read);
-                                            }
-                                            in.close();
-
-                                            // write the output file
-                                            out.flush();
-                                            out.close();
-                                        } catch (Exception e) {
-                                            Log.e("tag", e.getMessage());
+                                        byte[] buffer = new byte[1024];
+                                        int read;
+                                        while ((read = in.read(buffer)) != -1) {
+                                            out.write(buffer, 0, read);
                                         }
-                                        Snackbar.make(listView, getString(R.string.set_ringtone_suc2), Snackbar.LENGTH_LONG).show();
+                                        in.close();
 
-                                    } else {
-                                        File k = new File(Selecteditem);
-                                        Uri newUri = Uri.fromFile(k);
+                                        // write the output file
+                                        out.flush();
+                                        out.close();
 
-                                        RingtoneManager.setActualDefaultRingtoneUri(
+                                        MediaScannerConnection.scanFile(
                                                 getActivity(),
-                                                RingtoneManager.TYPE_RINGTONE,
-                                                newUri
-                                        );
-                                        Snackbar.make(listView, getString(R.string.set_ringtone_suc), Snackbar.LENGTH_LONG).show();
+                                                new String[]{Environment.getExternalStorageDirectory()  + "/Ringtones/" + SelecteditemTitle},
+                                                null,
+                                                new MediaScannerConnection.OnScanCompletedListener() {
+                                                    @Override
+                                                    public void onScanCompleted(String path, Uri uri) {
+                                                        Intent intent2 = new Intent(Settings.ACTION_SOUND_SETTINGS);
+                                                        intent2.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                                        getActivity().startActivity(intent2);
+                                                    }
+                                                });
+
+                                    } catch (Exception e) {
+                                        Log.e("tag", e.getMessage());
                                     }
 
                                 } else if (options[item].equals (getString(R.string.set_notification))) {
 
-                                    if (sharedPref.getBoolean ("permission", true)) {
-                                        try {
+                                    try {
 
-                                            InputStream in;
-                                            OutputStream out;
-                                            in = new FileInputStream(Selecteditem);
-                                            out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Notifications/" + SelecteditemTitle);
+                                        InputStream in;
+                                        OutputStream out;
+                                        in = new FileInputStream(Selecteditem);
+                                        out = new FileOutputStream(Environment.getExternalStorageDirectory()  + "/Notifications/" + SelecteditemTitle);
 
-                                            byte[] buffer = new byte[1024];
-                                            int read;
-                                            while ((read = in.read(buffer)) != -1) {
-                                                out.write(buffer, 0, read);
-                                            }
-                                            in.close();
-
-                                            // write the output file
-                                            out.flush();
-                                            out.close();
-                                        } catch (Exception e) {
-                                            Log.e("tag", e.getMessage());
+                                        byte[] buffer = new byte[1024];
+                                        int read;
+                                        while ((read = in.read(buffer)) != -1) {
+                                            out.write(buffer, 0, read);
                                         }
-                                        Snackbar.make(listView, getString(R.string.set_notification_suc2), Snackbar.LENGTH_LONG).show();
+                                        in.close();
 
-                                    } else {
-                                        File k = new File(Selecteditem);
-                                        Uri newUri = Uri.fromFile(k);
+                                        // write the output file
+                                        out.flush();
+                                        out.close();
 
-                                        RingtoneManager.setActualDefaultRingtoneUri(
+                                        MediaScannerConnection.scanFile(
                                                 getActivity(),
-                                                RingtoneManager.TYPE_NOTIFICATION,
-                                                newUri
-                                        );
-                                        Snackbar.make(listView, getString(R.string.set_notification_suc), Snackbar.LENGTH_LONG).show();
+                                                new String[]{Environment.getExternalStorageDirectory()  + "/Notifications/" + SelecteditemTitle},
+                                                null,
+                                                new MediaScannerConnection.OnScanCompletedListener() {
+                                                    @Override
+                                                    public void onScanCompleted(String path, Uri uri) {
+                                                        Intent intent2 = new Intent(Settings.ACTION_SOUND_SETTINGS);
+                                                        intent2.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                                        getActivity().startActivity(intent2);
+                                                    }
+                                                });
+
+                                    } catch (Exception e) {
+                                        Log.e("tag", e.getMessage());
                                     }
 
                                 } else if (options[item].equals (getString(R.string.set_alarm))) {
@@ -223,6 +216,20 @@ public class FragmentSound extends Fragment {
                                         // write the output file
                                         out.flush();
                                         out.close();
+
+                                        MediaScannerConnection.scanFile(
+                                                getActivity(),
+                                                new String[]{Environment.getExternalStorageDirectory()  + "/Alarms/" + SelecteditemTitle},
+                                                null,
+                                                new MediaScannerConnection.OnScanCompletedListener() {
+                                                    @Override
+                                                    public void onScanCompleted(String path, Uri uri) {
+                                                        Intent intent2 = new Intent(Settings.ACTION_SOUND_SETTINGS);
+                                                        intent2.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                                        getActivity().startActivity(intent2);
+                                                    }
+                                                });
+
                                     } catch (Exception e) {
                                         Log.e("tag", e.getMessage());
                                     }
@@ -254,8 +261,14 @@ public class FragmentSound extends Fragment {
 
         switch (item.getItemId()) {
             case R.id.help:
+                SpannableString s;
 
-                final SpannableString s = new SpannableString(Html.fromHtml(getString(R.string.help_sound)));
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                    s = new SpannableString(Html.fromHtml(getString(R.string.help_sound),Html.FROM_HTML_MODE_LEGACY));
+                } else {
+                    //noinspection deprecation
+                    s = new SpannableString(Html.fromHtml(getString(R.string.help_sound)));
+                }
                 Linkify.addLinks(s, Linkify.WEB_URLS);
 
                 final AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity())
@@ -263,76 +276,6 @@ public class FragmentSound extends Fragment {
                         .setMessage(s)
                         .setPositiveButton(getString(R.string.yes), null);
                 dialog.show();
-                return true;
-
-            case R.id.settings:
-
-                final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                View dialogView = View.inflate(getActivity(), R.layout.dialog_toggle, null);
-
-                Switch toggle = (Switch) dialogView.findViewById(R.id.switch1);
-                String allow = sharedPref.getString("allow", "no");
-
-                if (allow.equals("yes")){
-                    toggle.setChecked(true);
-                } else  {
-                    toggle.setChecked(false);
-                }
-
-                toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-
-                    @Override
-                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                        if(isChecked){
-                            sharedPref.edit().putString("allow", "yes").apply();
-
-                            if (android.os.Build.VERSION.SDK_INT >= 23) {
-                                boolean canDo =  Settings.System.canWrite(getActivity());
-                                if (!canDo) {
-                                    new AlertDialog.Builder(getActivity())
-                                            .setMessage(R.string.permissions_2)
-                                            .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialog, int which) {
-                                                    if (android.os.Build.VERSION.SDK_INT >= 23) {
-                                                        Intent grantIntent = new   Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
-                                                        startActivity(grantIntent);
-                                                    }
-                                                }
-                                            })
-                                            .setNegativeButton(getString(R.string.no), null)
-                                            .show();
-                                }
-                            }
-
-                        }else{
-                            sharedPref.edit().putString("allow", "no").apply();
-
-                            File directory_rt = new File(Environment.getExternalStorageDirectory()  + "/Ringtones/");
-                            if (!directory_rt.exists()) {
-                                directory_rt.mkdirs();
-                            }
-
-                            File directory_nt = new File(Environment.getExternalStorageDirectory()  + "/Notifications/");
-                            if (!directory_nt.exists()) {
-                                directory_nt.mkdirs();
-                            }
-
-                        }
-
-                    }
-                });
-
-                builder.setView(dialogView);
-                builder.setTitle(R.string.setting_permission_title);
-
-                final AlertDialog dialog2 = builder.create();
-                // Display the custom alert dialog on interface
-                dialog2.show();
-
                 return true;
         }
         return super.onOptionsItemSelected(item);
