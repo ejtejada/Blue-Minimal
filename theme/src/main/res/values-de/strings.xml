@@ -30,6 +30,7 @@
     <string name="materialcolorpicker__errHex">Hex-Code nicht korrekt</string>
     <string name="menu_help">Hilfe</string>
     <string name="menu_donate">Spenden</string>
+    <string name="menu_changelog">Changelog</string>
 
     //Sound
 

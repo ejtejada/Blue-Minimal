@@ -335,6 +335,12 @@ public class Screen_Main extends AppCompatActivity {
             ((TextView) d.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
         }
 
+        if (id == R.id.changelog) {
+            Uri uri = Uri.parse("https://github.com/scoute-dich/Blue-Minimal/blob/master/CHANGELOG.md"); // missing 'http://' will cause crashed
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        }
+
         if (id == R.id.donate) {
             Uri uri = Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NP6TGYDYP9SHY"); // missing 'http://' will cause crashed
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);

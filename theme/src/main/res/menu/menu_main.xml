@@ -20,6 +20,11 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/changelog"
+        android:title="@string/menu_changelog"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/donate"
         android:title="@string/menu_donate"
         app:showAsAction="never" />

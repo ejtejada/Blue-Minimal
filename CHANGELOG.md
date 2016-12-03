@@ -2,7 +2,7 @@
 
 ### 4.3 (WIP)
 
-- added: icons
+- added: icons (thanks to @thomas31415 on xda thread)
 - added: donate action
 - improved: ui (overflow menu)
 - removed: permission "write system settings"
