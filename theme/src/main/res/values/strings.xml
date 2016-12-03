@@ -73,6 +73,7 @@
     <string name="duration">Duration</string>
     <string name="sound">Sound</string>
     <string name="play">Play whole track</string>
+    <string name="open">Open source website</string>
 
     <string name="set_alarm_suc">Successfully copied in \"alarms folder\".</string>
 

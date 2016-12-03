@@ -110,8 +110,13 @@ public class FragmentSound extends Fragment {
 
                 final String Selecteditem= itemURL[+position];
                 final String SelecteditemTitle= itemFN[+position];
-                final CharSequence[] options = {getString(R.string.set_ringtone), getString(R.string.set_notification),
-                        getString(R.string.set_alarm), getString(R.string.play)};
+                final String SelecteditemUrl = itemDES[+position].substring(12);
+                final CharSequence[] options = {
+                        getString(R.string.set_ringtone),
+                        getString(R.string.set_notification),
+                        getString(R.string.set_alarm),
+                        getString(R.string.play),
+                        getString(R.string.open)};
 
                 new AlertDialog.Builder(getActivity())
                         .setItems(options, new DialogInterface.OnClickListener() {
@@ -119,6 +124,11 @@ public class FragmentSound extends Fragment {
                             public void onClick(DialogInterface dialog, int item) {
 
                                 if (options[item].equals (getString(R.string.set_ringtone))) {
+
+                                    File directory_al = new File(Environment.getExternalStorageDirectory()  + "/Ringtones/");
+                                    if (!directory_al.exists()) {
+                                        directory_al.mkdirs();
+                                    }
 
                                     try {
 
@@ -156,6 +166,11 @@ public class FragmentSound extends Fragment {
                                     }
 
                                 } else if (options[item].equals (getString(R.string.set_notification))) {
+
+                                    File directory_al = new File(Environment.getExternalStorageDirectory()  + "/Notifications/");
+                                    if (!directory_al.exists()) {
+                                        directory_al.mkdirs();
+                                    }
 
                                     try {
 
@@ -224,9 +239,7 @@ public class FragmentSound extends Fragment {
                                                 new MediaScannerConnection.OnScanCompletedListener() {
                                                     @Override
                                                     public void onScanCompleted(String path, Uri uri) {
-                                                        Intent intent2 = new Intent(Settings.ACTION_SOUND_SETTINGS);
-                                                        intent2.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                                        getActivity().startActivity(intent2);
+                                                        Snackbar.make(listView, R.string.set_alarm_suc, Snackbar.LENGTH_LONG).show();
                                                     }
                                                 });
 
@@ -239,6 +252,10 @@ public class FragmentSound extends Fragment {
                                 } else if (options[item].equals (getString(R.string.play))) {
                                     final MediaPlayer mp = MediaPlayer.create(getActivity(), Uri.parse(Selecteditem));
                                     mp.start();
+                                } else if (options[item].equals (getString(R.string.open))) {
+                                    Uri uri = Uri.parse(SelecteditemUrl); // missing 'http://' will cause crashed
+                                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                    startActivity(intent);
                                 }
                             }
                         }).show();

@@ -40,6 +40,7 @@
     <string name="duration">Dauer</string>
     <string name="sound">Töne</string>
     <string name="play">Ganzes Stück abspielen</string>
+    <string name="open">Öffne Quelle im Browser</string>
 
     <string name="set_alarm_suc">Erfolgreich in den \"Alarms Ordner\" kopiert.</string>
 
