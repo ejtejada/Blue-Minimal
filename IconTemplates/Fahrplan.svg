@@ -28,10 +28,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="22.627417"
-     inkscape:cx="10.725479"
-     inkscape:cy="6.4512079"
+     inkscape:cx="-1.6709868"
+     inkscape:cy="6.3628196"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -342,7 +342,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -356,8 +356,8 @@
        cy="871.93365"
        cx="-1048.1428"
        id="path4136"
-       style="opacity:1;fill:#ff5722;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+       style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/assets/icons/res/drawable-xxhdpi/a180.png"
        inkscape:export-xdpi="648"
        inkscape:export-ydpi="648" />
     <g
@@ -534,6 +534,6 @@
        inkscape:connector-curvature="0"
        d="m 13,9.5 -5.9999997,0 0,-2.5 L 13,7 m -3.0000002,6 c -0.5549997,0 -0.9999997,-0.45 -0.9999997,-1 0,-0.555 0.445,-1 0.9999997,-1 A 1,1 0 0 1 11,12 1,1 0 0 1 9.9999998,13 M 6.0000003,12.25 a 1.75,1.75 0 0 0 1.75,1.75 l -0.75,0.75 0,0.25 L 13,15 13,14.75 12.25,14 A 1.75,1.75 0 0 0 14,12.25 L 14,7 C 14,5.25 12.21,5 9.9999998,5 7.7900003,5 6.0000003,5.25 6.0000003,7 l 0,5.25 z"
        id="path7881"
-       style="fill:#4caf50" />
+       style="fill:#424242" />
   </g>
 </svg>
