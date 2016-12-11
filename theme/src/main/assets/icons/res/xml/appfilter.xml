@@ -80,6 +80,7 @@
     <!-- ch -->
     <item component="ComponentInfo{ch.bailu.aat/ch.bailu.aat.activities.MainActivity}" drawable="a144" />
     <item component="ComponentInfo{ch.ihdg.calendarcolor/ch.ihdg.calendarcolor.CalendarListActivity}" drawable="a034" />
+    <item component="ComponentInfo{ch.logixisland.anuto/ch.logixisland.anuto.MainActivity}" drawable="a215"/>
     <item component="ComponentInfo{ch.protonmail.android/ch.protonmail.android.activities.SplashActivity}" drawable="a008" />
     <item component="ComponentInfo{ch.threema.app/ch.threema.app.activities.MainActivity}" drawable="a092" />
 
@@ -110,6 +111,7 @@
     <item component="ComponentInfo{com.artifex.mupdfdemo/com.artifex.mupdfdemo.ChoosePDFActivity}" drawable="a098" />
     <item component="ComponentInfo{com.asksven.betterbatterystats_xdaedition/com.asksven.betterbatterystats.StatsActivity}" drawable="a069" />
     <item component="ComponentInfo{com.babbel.mobile.android.en/com.babbel.mobile.android.en.BabbelAppStartPage}" drawable="a102" />
+    <item component="ComponentInfo{com.bluefirereader/com.bluefirereader.SplashActivity}" drawable="a218"/>
     <item component="ComponentInfo{com.bocharov.xposed.fscb/com.bocharov.xposed.fscb.settings.ModuleSettings}" drawable="a040" />
     <item component="ComponentInfo{com.better.alarm/com.better.alarm.presenter.AlarmsListActivity}" drawable="a044" />
     <item component="ComponentInfo{com.bob.blauncher/com.bob.blauncher.SettingsActivity}" drawable="a062" />
@@ -222,6 +224,7 @@
 
     <!-- cn -->
     <item component="ComponentInfo{cn.wps.moffice_eng/cn.wps.moffice.documentmanager.PreStartActivity}" drawable="a167" />
+    <item component="ComponentInfo{cn.wq.disableservice/cn.wq.disableservice.MainActivity}" drawable="a220"/>
 
     <!-- cz -->
     <item component="ComponentInfo{cz.martykan.forecastie/cz.martykan.forecastie.MainActivity}" drawable="a042" />
@@ -237,6 +240,7 @@
     <item component="ComponentInfo{de.blitzer.plus/de.blitzer.activity.SplashScreen}" drawable="a072" />
     <item component="ComponentInfo{de.blinkt.openvpn/de.blinkt.openvpn.activities.MainActivity}" drawable="a139" />
     <item component="ComponentInfo{de.danoeh.antennapod/de.danoeh.antennapod.activity.MainActivity}" drawable="a004" />
+    <item component="ComponentInfo{de.etecture.ekz.onleihe/de.etecture.ekz.onleihe.gui.Start}" drawable="a217"/>
     <item component="ComponentInfo{de.fiducia.smartphone.android.banking.vr/de.fiducia.smartphone.android.banking.vr.VRSplashScreenActivity}" drawable="a077" />
     <item component="ComponentInfo{de.flixbus.app/de.meinfernbus.Main}" drawable="a146" />
     <item component="ComponentInfo{de.funke.hoerzu/de.proofit.gong.app.SplashActivity}" drawable="a201"/>
@@ -287,6 +291,7 @@
 
     <!-- im -->
     <item component="ComponentInfo{im.tox.antox/im.tox.antox.activities.LoginActivity}" drawable="a101" />
+    <item component="ComponentInfo{im.zom.messenger/org.awesomeapp.messenger.RouterActivity}" drawable="a219"/>
 
     <!-- info -->
     <item component="ComponentInfo{info.papdt.blackblub/info.papdt.blackblub.ui.LaunchActivity}" drawable="a148" />
@@ -373,7 +378,7 @@
     <item component="ComponentInfo{org.geometerplus.zlibrary.ui.android/org.geometerplus.android.fbreader.FBReader}" drawable="a013" />
     <item component="ComponentInfo{org.indywidualni.fblite/org.indywidualni.fblite.activity.SplashActivity}" drawable="a076" />
     <item component="ComponentInfo{org.isoron.uhabits/org.isoron.uhabits.MainActivity}" drawable="a175" />
-    <item component="ComponentInfo{org.jfedor.frozenbubble/com.efortin.frozenbubble.HomeScreen}" drawable="a214"/>
+    <item component="ComponentInfo{org.jfedor.frozenbubble/com.efortin.frozenbubble.HomeScreen}" drawable="a216"/>
     <item component="ComponentInfo{org.kde.kdeconnect_tp/org.kde.kdeconnect.UserInterface.MaterialActivity}" drawable="a133" />
     <item component="ComponentInfo{org.kiwix.kiwixmobile/org.kiwix.kiwixmobile.KiwixMobileActivity}" drawable="a074" />
     <item component="ComponentInfo{org.kontalk/org.kontalk.ui.ConversationsActivity}" drawable="a174" />

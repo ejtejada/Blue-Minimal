@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="5.6444445mm"
+   height="5.6444445mm"
+   viewBox="0 0 20 20"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Onleihe.svg"
+   inkscape:export-filename="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/assets/icons/res/drawable-xxhdpi/a036.png"
+   inkscape:export-xdpi="648"
+   inkscape:export-ydpi="648">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="31.678384"
+     inkscape:cx="8.3290881"
+     inkscape:cy="10.053058"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:snap-grids="true"
+     inkscape:snap-to-guides="true">
+    <inkscape:grid
+       id="grid4138"
+       type="xygrid" />
+    <sodipodi:guide
+       id="guide4140"
+       orientation="0,1"
+       position="10,18" />
+    <sodipodi:guide
+       id="guide4142"
+       orientation="0,1"
+       position="10,2" />
+    <sodipodi:guide
+       id="guide4144"
+       orientation="1,0"
+       position="2,10" />
+    <sodipodi:guide
+       id="guide4146"
+       orientation="0,20"
+       position="0,0" />
+    <sodipodi:guide
+       id="guide4148"
+       orientation="-20,0"
+       position="20,0" />
+    <sodipodi:guide
+       id="guide4150"
+       orientation="0,-20"
+       position="20,20" />
+    <sodipodi:guide
+       id="guide4152"
+       orientation="20,0"
+       position="0,20" />
+    <sodipodi:guide
+       id="guide4154"
+       orientation="1,0"
+       position="18,10" />
+    <sodipodi:guide
+       id="guide4156"
+       orientation="-0.70710678,0.70710678"
+       position="10,10" />
+    <sodipodi:guide
+       id="guide4160"
+       orientation="1,0"
+       position="4,10" />
+    <sodipodi:guide
+       id="guide4162"
+       orientation="1,0"
+       position="16,10" />
+    <sodipodi:guide
+       id="guide4164"
+       orientation="0,1"
+       position="10,16" />
+    <sodipodi:guide
+       id="guide4166"
+       orientation="0,1"
+       position="10,4" />
+    <sodipodi:guide
+       id="guide4168"
+       orientation="0,1"
+       position="10,15" />
+    <sodipodi:guide
+       id="guide4170"
+       orientation="0,1"
+       position="10,5" />
+    <sodipodi:guide
+       id="guide4172"
+       orientation="1,0"
+       position="5,10" />
+    <sodipodi:guide
+       id="guide4174"
+       orientation="1,0"
+       position="15,10" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient7144">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.2"
+         offset="0"
+         id="stop7146" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0"
+         offset="1"
+         id="stop7148" />
+    </linearGradient>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath12478">
+      <circle
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle12480"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       id="clipPath5790"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/path4136.png"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle5792"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5055">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/path4136.png"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle5057"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       id="clipPath5119"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle5121"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5194">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#cddc39;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle5196"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       id="clipPath6175"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#f44336;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle6177"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath7176">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#9c27b0;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle7178"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       id="clipPath8165"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#ffc107;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle8167"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath9162">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#ff9800;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle9164"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       id="clipPath10753"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#607d8b;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle10755"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5153">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle5155"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       id="clipPath6152"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle6154"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath7155">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle7157"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       id="clipPath8162"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle8164"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5177">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#8bc34a;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle5179"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       id="clipPath6194"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#4caf50;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle6196"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5189">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#4caf50;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle5191"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7144"
+       id="linearGradient7150"
+       x1="10"
+       y1="10"
+       x2="20"
+       y2="20"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(1058.1428,-861.93365)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Hintergrund">
+    <circle
+       r="10"
+       cy="871.93365"
+       cx="-1048.1428"
+       id="path4136-1"
+       style="opacity:1;fill:#4caf50;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/thomas/Programme/android/BlueIconsMinimal/app/src/main/res/drawable-xxhdpi/a217.png"
+       inkscape:export-xdpi="648"
+       inkscape:export-ydpi="648" />
+    <path
+       style="opacity:1;fill:url(#linearGradient7150);fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 13.779297 6.2207031 L 10.986328 8.0683594 C 10.986328 8.0683594 11.053147 10.159543 11.34375 11.519531 L 8.8066406 8.9824219 L 5.8515625 9.6464844 C 5.8515625 9.6464844 4.9231594 12.567601 5.6308594 13.275391 C 12.051092 19.695602 11.594168 19.232894 12.125 19.759766 A 10 10 0 0 0 19.744141 12.205078 C 18.479074 10.930604 17.199043 9.6404531 13.779297 6.2207031 z "
+       transform="translate(-1058.1428,861.93365)"
+       id="path4136" />
+  </g>
+  <g
+     inkscape:label="Icon"
+     id="layer2"
+     inkscape:groupmode="layer"
+     style="display:inline">
+    <path
+       style="fill:none"
+       inkscape:connector-curvature="0"
+       id="path4"
+       d="m 3.9999777,4.0333382 12.0000003,0 0,11.9333328 -12.0000003,0 z" />
+    <path
+       d="m 18.999978,19.033339 12,0 0,11.933333 -12,0 z"
+       id="path9754"
+       inkscape:connector-curvature="0"
+       style="fill:none" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.74194241px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-0.40311924"
+       y="15.484555"
+       id="text4824"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.92925418,-0.36944102,0.36944102,0.92925418,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan4830"
+         x="-0.40311924"
+         y="15.484555">on</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="_hoerzu.svg"
+   inkscape:version="0.91 r13725"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 20 20"
+   height="5.6444445mm"
+   width="5.6444445mm"
+   inkscape:export-filename="/home/thomas/Programme/android/BlueIconsMinimal/app/src/main/res/drawable-xxhdpi/a201.png"
+   inkscape:export-xdpi="648"
+   inkscape:export-ydpi="648">
+  <sodipodi:namedview
+     inkscape:snap-to-guides="true"
+     inkscape:snap-grids="true"
+     inkscape:window-maximized="1"
+     inkscape:window-y="27"
+     inkscape:window-x="0"
+     inkscape:window-height="1016"
+     inkscape:window-width="1920"
+     inkscape:guide-bbox="true"
+     showguides="true"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     showgrid="true"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="7.9047265"
+     inkscape:cx="4.5044193"
+     inkscape:zoom="31.68"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     gridtolerance="10">
+    <inkscape:grid
+       id="grid4138"
+       type="xygrid" />
+    <sodipodi:guide
+       id="guide4140"
+       orientation="0,1"
+       position="24,18" />
+    <sodipodi:guide
+       id="guide4142"
+       orientation="0,1"
+       position="10,2" />
+    <sodipodi:guide
+       id="guide4144"
+       orientation="1,0"
+       position="2,10" />
+    <sodipodi:guide
+       id="guide4146"
+       orientation="0,20"
+       position="0,0" />
+    <sodipodi:guide
+       id="guide4148"
+       orientation="-20,0"
+       position="20,0" />
+    <sodipodi:guide
+       id="guide4150"
+       orientation="0,-20"
+       position="20,20" />
+    <sodipodi:guide
+       id="guide4152"
+       orientation="20,0"
+       position="0,20" />
+    <sodipodi:guide
+       id="guide4154"
+       orientation="1,0"
+       position="18,10" />
+    <sodipodi:guide
+       id="guide4156"
+       orientation="-0.70710678,0.70710678"
+       position="10,10" />
+    <sodipodi:guide
+       id="guide4158"
+       orientation="0.70710678,0.70710678"
+       position="10,10" />
+    <sodipodi:guide
+       id="guide4160"
+       orientation="1,0"
+       position="4,10" />
+    <sodipodi:guide
+       id="guide4162"
+       orientation="1,0"
+       position="16,10" />
+    <sodipodi:guide
+       id="guide4164"
+       orientation="0,1"
+       position="10,16" />
+    <sodipodi:guide
+       id="guide4166"
+       orientation="0,1"
+       position="10,4" />
+    <sodipodi:guide
+       id="guide4168"
+       orientation="0,1"
+       position="10,15" />
+    <sodipodi:guide
+       id="guide4170"
+       orientation="0,1"
+       position="10,5" />
+    <sodipodi:guide
+       id="guide4172"
+       orientation="1,0"
+       position="5,10" />
+    <sodipodi:guide
+       id="guide4174"
+       orientation="1,0"
+       position="15,10" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient6310">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop6312" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop6314" />
+    </linearGradient>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath12478">
+      <circle
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle12480"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       id="clipPath5790"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/path4136.png"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle5792"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath7690">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle7692"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       id="clipPath5119"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#ff9800;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle5121"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath6101">
+      <circle
+         inkscape:export-ydpi="648"
+         inkscape:export-xdpi="648"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         style="opacity:1;fill:#8bc34a;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle6103"
+         cx="9.9999781"
+         cy="10.000005"
+         r="10" />
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6310"
+       id="linearGradient6316"
+       x1="7"
+       y1="7"
+       x2="20"
+       y2="20"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(1058.1428,-861.93365)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Hintergrund">
+    <circle
+       r="10"
+       cy="871.93365"
+       cx="-1048.1428"
+       id="path4136-9"
+       style="opacity:1;fill:#9e9e9e;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+       inkscape:export-xdpi="648"
+       inkscape:export-ydpi="648" />
+    <path
+       style="opacity:0.2;fill:url(#linearGradient6316);fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 13.619141 4.6386719 C 10.454442 4.3325302 4.8300781 10.144531 4.8300781 10.144531 C 7.201448 12.515901 7.2050781 12.511719 7.2050781 12.511719 C 7.2050781 12.511719 7.7189086 14.999172 7.828125 15.271484 C 12.283751 19.72711 10.765182 18.213929 12.275391 19.724609 A 10 10 0 0 0 19.984375 10.324219 C 19.394199 9.7535551 18.094951 8.4738578 14.800781 5.1796875 C 14.472625 4.8515308 14.07124 4.6824064 13.619141 4.6386719 z "
+       transform="translate(-1058.1428,861.93365)"
+       id="path4136" />
+  </g>
+  <g
+     inkscape:label="Icon"
+     id="layer2"
+     inkscape:groupmode="layer"
+     style="display:inline">
+    <path
+       style="fill:none"
+       inkscape:connector-curvature="0"
+       id="path4"
+       d="m 3.9999777,4.0333382 12.0000003,0 0,11.9333328 -12.0000003,0 z" />
+    <path
+       d="m 18.999978,19.033339 12,0 0,11.933333 -12,0 z"
+       id="path9754"
+       inkscape:connector-curvature="0"
+       style="fill:none" />
+    <ellipse
+       style="display:inline;opacity:1;fill:#0b00cd;fill-opacity:1;stroke:#ffffff;stroke-width:0.53846157;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path15148-4"
+       cx="12.5"
+       cy="7.8098068"
+       rx="3.2307694"
+       ry="3.2307692" />
+    <ellipse
+       style="display:inline;opacity:1;fill:#009a17;fill-opacity:1;stroke:#ffffff;stroke-width:0.53846157;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path15148-6"
+       cx="7.5"
+       cy="7.8729401"
+       rx="3.2307694"
+       ry="3.2307692" />
+    <circle
+       style="opacity:1;fill:#d50000;fill-opacity:1;stroke:#ffffff;stroke-width:0.53846157;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path15148"
+       cx="10"
+       cy="12.5"
+       r="3.2307692" />
+  </g>
+</svg>
