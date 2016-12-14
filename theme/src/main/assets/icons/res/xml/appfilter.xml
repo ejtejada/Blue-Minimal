@@ -45,6 +45,7 @@
     <item component="ComponentInfo{com.android.email/com.android.email.activity.Welcome}" drawable="a008" />
     <item component="ComponentInfo{com.android.deskclock/com.android.deskclock.DeskClock}" drawable="a041" />
     <item component="ComponentInfo{com.android.dialer/com.android.dialer.DialtactsActivity}" drawable="a039" />
+    <item component="ComponentInfo{com.android.documentsui/com.android.documentsui.LauncherActivity}" drawable="a007" />
     <item component="ComponentInfo{com.android.documentsui/com.android.documentsui.DocumentsActivity}" drawable="a035" />
     <item component="ComponentInfo{com.android.fmradio/com.android.fmradio.FmMainActivity}" drawable="a207"/>
     <item component="ComponentInfo{com.android.gallery3d/com.android.gallery3d.app.GalleryActivity}" drawable="a015" />
@@ -96,6 +97,7 @@
     <item component="ComponentInfo{cm.aptoide.pt/com.aptoide.amethyst.MainActivity}" drawable="a153" />
 
     <!-- com -->
+    <item component="ComponentInfo{com.actionlauncher.playstore/com.actionlauncher.ActionLauncherActivity}" drawable="a047" />
     <item component="ComponentInfo{com.additioapp.additio/com.additioapp.additio.SplashActivity}" drawable="a114" />
     <item component="ComponentInfo{com.adobe.reader/com.adobe.reader.AdobeReader}" drawable="a009"/>
     <item component="ComponentInfo{com.alorma.github/com.alorma.github.ui.activity.MainActivity}" drawable="a083" />
@@ -145,7 +147,7 @@
     <item component="ComponentInfo{com.gamehivecorp.taptitans/com.gamehivecorp.ghplugin.ImmersivePlayerNativeActivity}" drawable="a125" />
     <item component="ComponentInfo{com.ghostsq.commander/com.ghostsq.commander.FileCommander}" drawable="a035" />
     <item component="ComponentInfo{com.ghostflying.nfmxposed/com.ghostflying.nfmxposed.ui.MainActivity}" drawable="a040" />
-    <item component="ComponentInfo{com.github.dfa.diaspora_android/com.github.dfa.diaspora_android.activity.SplashActivity}" drawable="a179" />
+    <item component="ComponentInfo{com.github.dfa.diaspora_android/com.github.dfa.diaspora_android.activity.MainActivity}" drawable="a179" />
     <item component="ComponentInfo{com.github.mobile/com.github.mobile.ui.user.HomeActivity}" drawable="a083" />
     <item component="ComponentInfo{com.grarak.kerneladiutor/com.grarak.kerneladiutor.MainActivity}" drawable="a070" />
     <item component="ComponentInfo{com.grupet.web.app/com.untis.mobile.activities.PreLoadDataActivity}" drawable="a114"/>
@@ -175,6 +177,7 @@
     <item component="ComponentInfo{com.nextcloud.client/com.owncloud.android.ui.activity.FileDisplayActivity}" drawable="a212"/>
     <item component="ComponentInfo{com.nkanaev.comics/com.nkanaev.comics.activity.MainActivity}" drawable="a151" />
     <item component="ComponentInfo{com.nolanlawson.keepscore/com.nolanlawson.keepscore.MainActivity}" drawable="a053" />
+    <item component="ComponentInfo{com.noname81.lmt/com.noname81.lmt.LMT}" drawable="a047" />
     <item component="ComponentInfo{com.numix.icons_circle/com.numix.icons_circle.activity.MainActivity}" drawable="a089" />
     <item component="ComponentInfo{com.opera.browser/com.opera.Opera}" drawable="a051" />
     <item component="ComponentInfo{com.ota.updates/com.ota.updates.activities.MainActivity}" drawable="a127" />
@@ -214,6 +217,7 @@
     <item component="ComponentInfo{com.woalk.apps.xposed.ttsb/com.woalk.apps.xposed.ttsb.MainActivity}" drawable="a040" />
     <item component="ComponentInfo{com.write.Quill/com.write.Quill.QuillWriterActivity}" drawable="a113"/>
     <item component="ComponentInfo{com.wunderkinder.wunderlistandroid/com.wunderkinder.wunderlistandroid.activity.WLMainFragmentActivity}" drawable="a090" />
+    <item component="ComponentInfo{com.xda.labs/com.xda.labs.LabsLauncher}" drawable="a043" />
     <item component="ComponentInfo{com.xda.labs/com.xda.labs.MainActivity}" drawable="a043" />
     <item component="ComponentInfo{com.xda.labs/com.xda.labs.ForumLauncher}" drawable="a043" />
     <item component="ComponentInfo{com.xda.one/com.xda.one.ui.MainActivity}" drawable="a043" />
@@ -283,7 +287,7 @@
 
     <!-- fr -->
     <item component="ComponentInfo{fr.gaulupeau.apps.InThePoche/fr.gaulupeau.apps.Poche.ui.ArticlesListActivity}" drawable="a111" />
-    <item component="ComponentInfo{fr.kwiatkowski.ApkTrack/fr.kwiatkowski.ApkTrack.MainActivity}" drawable="a030" />
+    <item component="ComponentInfo{fr.kwiatkowski.ApkTrack/fr.kwiatkowski.apktrack.MainActivity}" drawable="a030" />
     <item component="ComponentInfo{fr.neamar.kiss/fr.neamar.kiss.MainActivity}" drawable="a010" />
 
     <!-- free -->
@@ -393,6 +397,7 @@
     <item component="ComponentInfo{org.runnerup/org.runnerup.view.MainLayout}" drawable="a080" />
     <item component="ComponentInfo{org.smssecure.smssecure/org.smssecure.smssecure.RoutingActivity}" drawable="a036" />
     <item component="ComponentInfo{org.schabi.newpipe/org.schabi.newpipe.VideoItemListActivity}" drawable="a124" />
+    <item component="ComponentInfo{org.secuso.privacyfriendlymemory/org.secuso.privacyfriendlymemory.ui.SplashActivity}" drawable="a210" />
     <item component="ComponentInfo{org.sufficientlysecure.keychain/org.sufficientlysecure.keychain.ui.KeyListActivity}" drawable="a096" />
     <item component="ComponentInfo{org.sufficientlysecure.keychain/org.sufficientlysecure.keychain.ui.MainActivity}" drawable="a096" />
     <item component="ComponentInfo{org.sufficientlysecure.viewer/org.ebookdroid.ui.library.RecentActivity}" drawable="a134" />
@@ -404,7 +409,7 @@
     <item component="ComponentInfo{org.totschnig.myexpenses/org.totschnig.myexpenses.activity.MyExpenses}" drawable="a103" />
     <item component="ComponentInfo{org.tuxpaint/org.tuxpaint.tuxpaintActivity}" drawable="a155"/>
     <item component="ComponentInfo{org.tuxpaint/org.tuxpaint.ConfigActivity}" drawable="a155"/>
-    <item component="ComponentInfo{org.videolan.vlc/org.videolan.vlc.gui.MainActivity}" drawable="a054" />
+    <item component="ComponentInfo{org.videolan.vlc/org.videolan.vlc.StartActivity}" drawable="a054" />
     <item component="ComponentInfo{org.wikipedia/org.wikipedia.page.PageActivity}" drawable="a074" />
     <item component="ComponentInfo{org.wordpress.android/org.wordpress.android.ui.posts.PostsActivity}" drawable="a141" />
     <item component="ComponentInfo{org.xbmc.kore/org.xbmc.kore.ui.RemoteActivity}" drawable="a202"/>
