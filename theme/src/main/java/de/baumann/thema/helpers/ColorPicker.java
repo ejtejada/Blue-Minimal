@@ -19,7 +19,7 @@ import android.widget.TextView;
 import de.baumann.thema.R;
 
 /**
- * This is the only class of the project. Consist in a costum dialog that show
+ * This is the only class of the project. Consist in a custom dialog that show
  * the GUI for choose the color.
  *
  * @author Simone Pessotto
@@ -114,7 +114,7 @@ public class ColorPicker extends Dialog implements SeekBar.OnSeekBarChangeListen
     }
 
     /**
-     * Method that syncrhonize the color between the bars, the view and the HEC code text.
+     * Method that synchronize the color between the bars, the view and the HEC code text.
      *
      * @param s HEX Code of the color.
      */
@@ -177,7 +177,7 @@ public class ColorPicker extends Dialog implements SeekBar.OnSeekBarChangeListen
      *
      * @param seekBar SeekBar that has changed
      * @param progress The new progress value
-     * @param fromUser If it coem from User
+     * @param fromUser If it come from User
      */
     @SuppressLint("SetTextI18n")
     @Override

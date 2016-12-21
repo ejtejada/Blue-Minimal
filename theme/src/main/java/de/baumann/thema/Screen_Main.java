@@ -8,7 +8,6 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -24,7 +23,6 @@ import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
@@ -53,14 +51,6 @@ public class Screen_Main extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         assert tabLayout != null;
         tabLayout.setupWithViewPager(viewPager);
-
-        FloatingActionButton floatingActionButton_wp = (FloatingActionButton) findViewById(R.id.fab_wp);
-        assert floatingActionButton_wp != null;
-        floatingActionButton_wp.setVisibility(View.GONE);
-
-        FloatingActionButton floatingActionButton_rq = (FloatingActionButton) findViewById(R.id.fab_rq);
-        assert floatingActionButton_rq != null;
-        floatingActionButton_rq.setVisibility(View.GONE);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -238,7 +228,6 @@ public class Screen_Main extends AppCompatActivity {
         }
     }
 
-
     private void setupViewPager(ViewPager viewPager) {
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
@@ -248,43 +237,6 @@ public class Screen_Main extends AppCompatActivity {
         adapter.addFragment(new FragmentRequest(), String.valueOf(getString(R.string.title_iconrequest)));
 
         viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                if (position == 0) {
-                    FloatingActionButton floatingActionButton_wp = (FloatingActionButton) findViewById(R.id.fab_wp);
-                    assert floatingActionButton_wp != null;
-                    floatingActionButton_wp.setVisibility(View.GONE);
-                    FloatingActionButton floatingActionButton_rq = (FloatingActionButton) findViewById(R.id.fab_rq);
-                    assert floatingActionButton_rq != null;
-                    floatingActionButton_rq.setVisibility(View.GONE);
-                } else if (position == 1) {
-                    FloatingActionButton floatingActionButton_wp = (FloatingActionButton) findViewById(R.id.fab_wp);
-                    assert floatingActionButton_wp != null;
-                    floatingActionButton_wp.setVisibility(View.VISIBLE);
-                    FloatingActionButton floatingActionButton_rq = (FloatingActionButton) findViewById(R.id.fab_rq);
-                    assert floatingActionButton_rq != null;
-                    floatingActionButton_rq.setVisibility(View.GONE);
-                } else {
-                    FloatingActionButton floatingActionButton_wp = (FloatingActionButton) findViewById(R.id.fab_wp);
-                    assert floatingActionButton_wp != null;
-                    floatingActionButton_wp.setVisibility(View.GONE);
-                    FloatingActionButton floatingActionButton_rq = (FloatingActionButton) findViewById(R.id.fab_rq);
-                    assert floatingActionButton_rq != null;
-                    floatingActionButton_rq.setVisibility(View.VISIBLE);
-                }
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {

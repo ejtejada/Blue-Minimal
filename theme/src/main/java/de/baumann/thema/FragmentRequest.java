@@ -114,7 +114,7 @@ public class FragmentRequest extends Fragment {
 
         setHasOptionsMenu(true);
 
-        FloatingActionButton fab = (FloatingActionButton) getActivity().findViewById(R.id.fab_rq);
+        FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fab_rq);
         fab.setImageResource(R.drawable.ic_zip_box_white_48dp);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -62,7 +62,7 @@ public class FragmentWallpaper extends Fragment {
 
         setHasOptionsMenu(true);
 
-        FloatingActionButton fab = (FloatingActionButton) getActivity().findViewById(R.id.fab_wp);
+        FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fab_wp);
         fab.setImageResource(R.drawable.ic_check_white_48dp);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,7 +142,7 @@ public class FragmentWallpaper extends Fragment {
             Bundle args = getArguments();
             LinearLayout holder = new LinearLayout(mContext);
             holder.setLayoutParams(new LinearLayout.LayoutParams
-                    (LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    (LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             ImageView img = new ImageView(mContext);
             img.setLayoutParams(new ViewGroup.LayoutParams
                     (ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
