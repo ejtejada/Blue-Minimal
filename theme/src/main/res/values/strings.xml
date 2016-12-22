@@ -29,6 +29,7 @@
 
     <string name="yes">OK</string>
     <string name="no">No</string>
+    <string name="cancel">Cancel</string>
 
     //Wallpaper
 
@@ -39,13 +40,13 @@
     <string name="red">Red 900</string>
     <string name="green">Green 900</string>
     <string name="blue">Blue 900</string>
-    <string name="purple">Purple 900</string>
-    <string name="orange">Orange 900</string>
+    <string name="amber">Amber 900</string>
     <string name="teal">Teal 900</string>
-    <string name="white">White</string>
-    <string name="black">Black</string>
+    <string name="grey">Grey 900</string>
     <string name="custom">Custom color</string>
     <string name="applying">Applying selected wallpaper.</string>
+    <string name="check_wallpaper">Please select wallpaper from above.</string>
+    <string name="hint_wallpaper">Please select wallpaper from above. Then press the orange button to apply.</string>
 
     //Menu
 

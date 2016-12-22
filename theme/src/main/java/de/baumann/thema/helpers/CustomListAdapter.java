@@ -18,6 +18,7 @@ public class CustomListAdapter extends ArrayAdapter<String> {
     private final String[] itemTITLE;
     private final String[] itemURL;
     private final String[] itemDES;
+    @SuppressWarnings("FieldCanBeLocal")
     private final String[] itemFN;
 
     public CustomListAdapter(Activity context, String[] itemTITLE, String[] itemURL, String[] itemDES, String[] itemFN) {

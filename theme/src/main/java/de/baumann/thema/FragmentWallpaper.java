@@ -5,19 +5,14 @@ import android.app.AlertDialog;
 import android.app.WallpaperManager;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.os.AsyncTask;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.text.Html;
 import android.text.SpannableString;
 import android.text.util.Linkify;
@@ -25,34 +20,17 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import de.baumann.thema.helpers.ColorPicker;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class FragmentWallpaper extends Fragment {
 
-    /**
-     * The {@link Integer} that stores current fragment selected
-     */
-    private int mCurrentFragment;
-
-    /**
-     * The {@link ArrayList} that will host the wallpapers resource ID's
-     */
-    private static final ArrayList <Integer> sWallpapers = new ArrayList<>();
-
-    /**
-     * The {@link Context} to be used by the app
-     */
-    @SuppressLint("StaticFieldLeak")
-    private static Context mContext;
-
-    private ViewPager mViewPager;
     private int selectedColorRGB;
+    private ImageView wallpaperPreview;
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -62,149 +40,68 @@ public class FragmentWallpaper extends Fragment {
 
         setHasOptionsMenu(true);
 
+        wallpaperPreview = (ImageView) rootView.findViewById(R.id.wallpaperPreview);
+
+        wallpaper(rootView, R.id.wp13, R.drawable.wp_lp_amber);
+        wallpaper(rootView, R.id.wp14, R.drawable.wp_lp_blue);
+        wallpaper(rootView, R.id.wp15, R.drawable.wp_lp_green);
+        wallpaper(rootView, R.id.wp16, R.drawable.wp_lp_grey);
+        wallpaper(rootView, R.id.wp17, R.drawable.wp_lp_red);
+        wallpaper(rootView, R.id.wp18, R.drawable.wp_lp_teal);
+
+        wallpaper(rootView, R.id.wp7, R.drawable.wp_mm_amber);
+        wallpaper(rootView, R.id.wp8, R.drawable.wp_mm_blue);
+        wallpaper(rootView, R.id.wp9, R.drawable.wp_mm_green);
+        wallpaper(rootView, R.id.wp10, R.drawable.wp_mm_grey);
+        wallpaper(rootView, R.id.wp11, R.drawable.wp_mm_red);
+        wallpaper(rootView, R.id.wp12, R.drawable.wp_mm_teal);
+
+        wallpaper(rootView, R.id.wp1, R.drawable.wp_n_amber);
+        wallpaper(rootView, R.id.wp2, R.drawable.wp_n_blue);
+        wallpaper(rootView, R.id.wp3, R.drawable.wp_n_green);
+        wallpaper(rootView, R.id.wp4, R.drawable.wp_n_grey);
+        wallpaper(rootView, R.id.wp5, R.drawable.wp_n_red);
+        wallpaper(rootView, R.id.wp6, R.drawable.wp_n_teal);
+        
         FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fab_wp);
         fab.setImageResource(R.drawable.ic_check_white_48dp);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new WallpaperLoader().execute(mCurrentFragment);
+
+                if (wallpaperPreview.getDrawable() == null) {
+                    Snackbar.make(wallpaperPreview, R.string.check_wallpaper, Snackbar.LENGTH_LONG).show();
+                } else {
+                    Snackbar.make(wallpaperPreview, R.string.applying, Snackbar.LENGTH_LONG).show();
+
+                    WallpaperManager myWallpaperManager
+                            = WallpaperManager.getInstance(getActivity());
+                    try {
+                        Bitmap bitmap=((BitmapDrawable)wallpaperPreview.getDrawable()).getBitmap();
+                        if(bitmap!=null)
+                            myWallpaperManager.setBitmap(bitmap);
+                    } catch (IOException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }
             }
         });
-
-        // Create the adapter that will return a fragment for each of the three primary sections
-        // of the app.
-        /*
-      The {@link android.support.v4.view.PagerAdapter} that will provide fragments for each of the
-      sections. We use a {@link FragmentPagerAdapter} derivative, which will
-      keep every loaded fragment in memory. If this becomes too memory intensive, it may be best
-      to switch to a {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
-        SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(getActivity().getSupportFragmentManager());
-
-        // Set up the ViewPager with the sections adapter.
-        /*
-      The {@link ViewPager} that will host the section contents.
-     */
-
-        mViewPager = (ViewPager) rootView.findViewById(R.id.pager);
-        assert mViewPager != null;
-        mViewPager.setAdapter(mSectionsPagerAdapter);
-        mViewPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
-            public void onPageSelected(int position) {
-                mCurrentFragment = position;
-            }
-        });
-
-        sWallpapers.clear();
-
-        final Resources resources = getResources();
-        final String packageName = getActivity().getApplication().getPackageName();
-
-        fetchWallpapers(resources, packageName);
-        mSectionsPagerAdapter.notifyDataSetChanged();
 
         return rootView;
     }
 
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to one of the primary
-     * sections of the app.
-     */
-    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+    private void wallpaper(View view, int id, final int id2) {
 
-        public SectionsPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int i) {
-            Fragment fragment = new WallpaperFragment();
-            Bundle args = new Bundle();
-            args.putInt(WallpaperFragment.ARG_SECTION_NUMBER, i);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        @Override
-        public int getCount() {
-            return sWallpapers.size();
-        }
-
-    }
-
-    public static class WallpaperFragment extends Fragment {
-        public static final String ARG_SECTION_NUMBER = "section_number";
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            mContext = getActivity();
-            Bundle args = getArguments();
-            LinearLayout holder = new LinearLayout(mContext);
-            holder.setLayoutParams(new LinearLayout.LayoutParams
-                    (LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-            ImageView img = new ImageView(mContext);
-            img.setLayoutParams(new ViewGroup.LayoutParams
-                    (ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-            img.setImageResource(sWallpapers.get(args.getInt(ARG_SECTION_NUMBER)));
-            img.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            holder.addView(img);
-
-            return holder;
-        }
-    }
-
-    private void fetchWallpapers(Resources resources, String packageName) {
-        final String[] extras = resources.getStringArray(R.array.wallpapers);
-        for (String extra : extras) {
-            int res = resources.getIdentifier(extra, "drawable", packageName);
-            if (res != 0) {
-                sWallpapers.add(res);
+        ImageButton image = (ImageButton) view.findViewById(id);
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                wallpaperPreview.setImageResource(id2);
             }
-        }
+        });
     }
 
-    class WallpaperLoader extends AsyncTask<Integer, Void, Boolean> {
-        final BitmapFactory.Options mOptions;
-
-        WallpaperLoader() {
-            mOptions = new BitmapFactory.Options();
-            //noinspection deprecation
-            mOptions.inDither = false;
-            mOptions.inPreferredConfig = Bitmap.Config.ARGB_8888;
-        }
-
-        @Override
-        protected Boolean doInBackground(Integer... params) {
-            try {
-                Bitmap b = BitmapFactory.decodeResource(getResources(),
-                        sWallpapers.get(params[0]), mOptions);
-
-                WallpaperManager wallpaperManager = WallpaperManager.getInstance(mContext);
-
-                try {
-                    wallpaperManager.setBitmap(b);
-                } catch (IOException e) {
-                    // If we crash, we will probably have a null bitmap
-                    // return before recycling to avoid exception
-                    throw new NullPointerException();
-                }
-                // Help GC
-                b.recycle();
-
-                return true;
-            } catch (OutOfMemoryError e) {
-                return false;
-            } catch(NullPointerException e){
-                return false;
-            }
-        }
-
-        @Override
-        protected void onPreExecute() {
-            Snackbar.make(mViewPager, R.string.applying, Snackbar.LENGTH_LONG).show();
-        }
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -216,6 +113,12 @@ public class FragmentWallpaper extends Fragment {
             final Context mContext = getActivity();
 
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setPositiveButton(R.string.cancel, new DialogInterface.OnClickListener() {
+
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    dialog.cancel();
+                }
+            });
             builder.setTitle(getString(R.string.pick_color));
             builder.setItems(items, new DialogInterface.OnClickListener() {
                 @Override
@@ -223,38 +126,30 @@ public class FragmentWallpaper extends Fragment {
                     int color = Color.BLACK;
                     switch (item) {
                         case 0:
-                            Snackbar.make(mViewPager, R.string.applying, Snackbar.LENGTH_LONG).show();
-                            color = Color.parseColor("#b71c1c");
+                            Snackbar.make(wallpaperPreview, R.string.applying, Snackbar.LENGTH_LONG).show();
+                            color = Color.parseColor("#ff6f00");
                             break;
                         case 1:
-                            Snackbar.make(mViewPager, R.string.applying, Snackbar.LENGTH_LONG).show();
-                            color = Color.parseColor("#1b5e20");
-                            break;
-                        case 2:
-                            Snackbar.make(mViewPager, R.string.applying, Snackbar.LENGTH_LONG).show();
+                            Snackbar.make(wallpaperPreview, R.string.applying, Snackbar.LENGTH_LONG).show();
                             color = Color.parseColor("#0d47a1");
                             break;
+                        case 2:
+                            Snackbar.make(wallpaperPreview, R.string.applying, Snackbar.LENGTH_LONG).show();
+                            color = Color.parseColor("#1b5e20");
+                            break;
                         case 3:
-                            Snackbar.make(mViewPager, R.string.applying, Snackbar.LENGTH_LONG).show();
-                            color = Color.parseColor("#4a148c");
+                            Snackbar.make(wallpaperPreview, R.string.applying, Snackbar.LENGTH_LONG).show();
+                            color = Color.parseColor("#212121");
                             break;
                         case 4:
-                            Snackbar.make(mViewPager, R.string.applying, Snackbar.LENGTH_LONG).show();
-                            color = Color.parseColor("#e65100");
+                            Snackbar.make(wallpaperPreview, R.string.applying, Snackbar.LENGTH_LONG).show();
+                            color = Color.parseColor("#b71c1c");
                             break;
                         case 5:
-                            Snackbar.make(mViewPager, R.string.applying, Snackbar.LENGTH_LONG).show();
+                            Snackbar.make(wallpaperPreview, R.string.applying, Snackbar.LENGTH_LONG).show();
                             color = Color.parseColor("#004d40");
                             break;
                         case 6:
-                            Snackbar.make(mViewPager, R.string.applying, Snackbar.LENGTH_LONG).show();
-                            color = Color.WHITE;
-                            break;
-                        case 7:
-                            Snackbar.make(mViewPager, R.string.applying, Snackbar.LENGTH_LONG).show();
-                            color = Color.BLACK;
-                            break;
-                        case 8:
                             final ColorPicker cp = new ColorPicker(getActivity());
 
                             /* Show color picker dialog */
@@ -284,7 +179,7 @@ public class FragmentWallpaper extends Fragment {
                                         // oh lord!
                                     }
                                     cp.dismiss();
-                                    Snackbar.make(mViewPager, R.string.applying, Snackbar.LENGTH_LONG).show();
+                                    Snackbar.make(wallpaperPreview, R.string.applying, Snackbar.LENGTH_LONG).show();
                                 }
                             });
                             break;

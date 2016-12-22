@@ -10,14 +10,12 @@
 <resources>
 
     <string-array name="colors">
-        <item>@string/red</item>
-        <item>@string/green</item>
+        <item>@string/amber</item>
         <item>@string/blue</item>
-        <item>@string/purple</item>
-        <item>@string/orange</item>
+        <item>@string/green</item>
+        <item>@string/grey</item>
+        <item>@string/red</item>
         <item>@string/teal</item>
-        <item>@string/white</item>
-        <item>@string/black</item>
         <item>@string/custom</item>
     </string-array>
 

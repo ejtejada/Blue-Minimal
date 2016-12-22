@@ -16,7 +16,6 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
         android:paddingBottom="@dimen/fab_margin"
         android:paddingRight="@dimen/fab_margin"
         android:paddingTop="@dimen/fab_margin"
@@ -77,6 +76,7 @@
         <SeekBar
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:id="@+id/blueSeekBar"
             android:layout_below="@id/blueToolTip"
             android:max="255"
@@ -85,15 +85,13 @@
             android:progressDrawable="@drawable/materialcolorpicker__blue_progress"
             android:thumbTint="@android:color/holo_blue_light"/>
 
-        <EditText
+        <TextView
             android:layout_width="70dp"
             android:layout_height="40dp"
             android:textSize="18sp"
             android:id="@+id/codHex"
             android:layout_alignParentBottom="false"
             android:textAllCaps="false"
-            android:textColor="@color/primary_text_default_material_light"
-            android:textColorHint="@color/primary_text_default_material_light"
             android:layout_below="@+id/blueSeekBar"
             android:layout_marginTop="15dp"
             android:layout_alignParentStart="false"

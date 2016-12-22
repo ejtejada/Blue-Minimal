@@ -108,6 +108,7 @@ public class FragmentSound extends Fragment {
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
+                final String SelecteditemMes= itemTITLE[+position];
                 final String Selecteditem= itemURL[+position];
                 final String SelecteditemTitle= itemFN[+position];
                 final String SelecteditemUrl = itemDES[+position].substring(12);
@@ -119,6 +120,12 @@ public class FragmentSound extends Fragment {
                         getString(R.string.open)};
 
                 new AlertDialog.Builder(getActivity())
+                        .setPositiveButton(R.string.cancel, new DialogInterface.OnClickListener() {
+
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                dialog.cancel();
+                            }
+                        })
                         .setItems(options, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int item) {
@@ -251,9 +258,21 @@ public class FragmentSound extends Fragment {
 
                                 } else if (options[item].equals (getString(R.string.play))) {
                                     final MediaPlayer mp = MediaPlayer.create(getActivity(), Uri.parse(Selecteditem));
+
+                                    new AlertDialog.Builder(getActivity())
+                                            .setTitle(getString(R.string.play))
+                                            .setMessage(SelecteditemMes)
+                                            .setPositiveButton(R.string.cancel, new DialogInterface.OnClickListener() {
+
+                                                public void onClick(DialogInterface dialog, int whichButton) {
+                                                    mp.stop();
+                                                    dialog.cancel();
+                                                }
+                                            })
+                                           .show();
                                     mp.start();
                                 } else if (options[item].equals (getString(R.string.open))) {
-                                    Uri uri = Uri.parse(SelecteditemUrl); // missing 'http://' will cause crashed
+                                    Uri uri = Uri.parse(SelecteditemMes); // missing 'http://' will cause crashed
                                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                                     startActivity(intent);
                                 }

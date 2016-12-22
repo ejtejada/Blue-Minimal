@@ -3,16 +3,11 @@ package de.baumann.thema.helpers;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
-import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -36,7 +31,7 @@ public class ColorPicker extends Dialog implements SeekBar.OnSeekBarChangeListen
     private TextView redToolTip;
     private TextView greenToolTip;
     private TextView blueToolTip;
-    private EditText codHex;
+    private TextView codHex;
     private int red, green, blue;
     private int seekBarLeft;
     private Rect thumbRect;
@@ -80,7 +75,7 @@ public class ColorPicker extends Dialog implements SeekBar.OnSeekBarChangeListen
         greenToolTip = (TextView)findViewById(R.id.greenToolTip);
         blueToolTip = (TextView)findViewById(R.id.blueToolTip);
 
-        codHex = (EditText)findViewById(R.id.codHex);
+        codHex = (TextView)findViewById(R.id.codHex);
 
         redSeekBar.setOnSeekBarChangeListener(this);
         greenSeekBar.setOnSeekBarChangeListener(this);
@@ -93,46 +88,6 @@ public class ColorPicker extends Dialog implements SeekBar.OnSeekBarChangeListen
         colorView.setBackgroundColor(Color.rgb(red, green, blue));
 
         codHex.setText(String.format("%02x%02x%02x", red, green, blue));
-
-        codHex.setOnEditorActionListener(
-                new EditText.OnEditorActionListener() {
-                    @Override
-                    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                        if (actionId == EditorInfo.IME_ACTION_SEARCH ||
-                                actionId == EditorInfo.IME_ACTION_DONE ||
-                                event.getAction() == KeyEvent.ACTION_DOWN &&
-                                        event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
-                            updateColorView(v.getText().toString());
-                            InputMethodManager imm = (InputMethodManager) c.getSystemService(Context.INPUT_METHOD_SERVICE);
-                            imm.hideSoftInputFromWindow(codHex.getWindowToken(), 0);
-
-                            return true;
-                        }
-                        return false;
-                    }
-                });
-    }
-
-    /**
-     * Method that synchronize the color between the bars, the view and the HEC code text.
-     *
-     * @param s HEX Code of the color.
-     */
-    private void updateColorView(String s) {
-        if(s.matches("-?[0-9a-fA-F]+")){
-            int color = (int)Long.parseLong(s, 16);
-            red = (color >> 16) & 0xFF;
-            green = (color >> 8) & 0xFF;
-            blue = (color) & 0xFF;
-
-            colorView.setBackgroundColor(Color.rgb(red, green, blue));
-            redSeekBar.setProgress(red);
-            greenSeekBar.setProgress(green);
-            blueSeekBar.setProgress(blue);
-        }
-        else{
-            codHex.setError(c.getResources().getText(R.string.materialcolorpicker__errHex));
-        }
     }
 
 

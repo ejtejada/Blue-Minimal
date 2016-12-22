@@ -7,15 +7,15 @@
         dann die entsprechende Einstellung vornehmen.</string>
     <string name="yes">OK</string>
     <string name="no">Nein</string>
+    <string name="cancel">Abbrechen</string>
     <string name="pick_color">Suche eine Farbe aus …</string>
     <string name="applying">Wende ausgesuchtes Wallpaper an.</string>
-    <string name="black">Schwarz</string>
-    <string name="blue">Blau 900</string>
-    <string name="green">Grün 900</string>
-    <string name="orange">Orange 900</string>
-    <string name="purple">Lila 900</string>
     <string name="red">Rot 900</string>
+    <string name="green">Grün 900</string>
+    <string name="blue">Blau 900</string>
+    <string name="amber">Amber 900</string>
     <string name="teal">Teal 900</string>
+    <string name="grey">Grau 900</string>
     <string name="custom">Eigene Farbe</string>
     <string name="request_dummy_text">Hallo Welt!</string>
     <string name="request_please_wait">Klicke auf das Logo um nach installierten Anwendungen zu suchen.</string>
@@ -31,6 +31,8 @@
     <string name="menu_help">Hilfe</string>
     <string name="menu_donate">Spenden</string>
     <string name="menu_changelog">Changelog</string>
+    <string name="check_wallpaper">Bitte zuerst oben ein Wallpaper auswählen.</string>
+    <string name="hint_wallpaper">Bitte zuerst oben ein Wallpaper auswählen. Dann den orangenen Knopf drücken um es anzuwenden.</string>
 
     //Sound
 
