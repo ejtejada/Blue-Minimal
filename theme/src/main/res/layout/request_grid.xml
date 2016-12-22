@@ -9,9 +9,6 @@
         android:id="@+id/viewSwitcherLoadingMain"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:inAnimation="@anim/request_fade_in"
-        android:outAnimation="@anim/request_fade_out"
-        tools:context=".RequestActivity"
         tools:ignore="UselessParent">
 
         <RelativeLayout
@@ -29,23 +26,10 @@
                 android:layout_alignParentStart="true"
                 tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/imageViewLogo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_launcher"
-                android:padding="@dimen/fab_margin"
-                android:layout_below="@+id/imageView_header"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="64dp"
-                android:layout_marginBottom="@dimen/fab_margin"
-                tools:ignore="ContentDescription" />
-
             <TextView
                 android:id="@+id/textview_request"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
                 android:text="@string/request_please_wait"
                 android:fontFamily="sans-serif-condensed"
                 android:textStyle="bold"
@@ -53,8 +37,8 @@
                 android:gravity="center_vertical|center_horizontal"
                 android:layout_marginRight="@dimen/fab_margin"
                 android:layout_marginLeft="@dimen/fab_margin"
-                android:layout_below="@+id/imageViewLogo"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/imageView_header" />
 
         </RelativeLayout>
 
@@ -77,6 +61,18 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_rq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="false"
+        android:layout_marginBottom="@dimen/fab_margin" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_rq2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"

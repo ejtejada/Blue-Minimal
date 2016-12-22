@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,6 +14,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
             android:layout_marginTop="4dp"
+            tools:ignore="ContentDescription"
             android:id="@+id/horizontalScrollView">
 
             <LinearLayout
@@ -27,7 +29,7 @@
                     android:id="@+id/wp13"
                     android:src="@drawable/wp_lp_amber"
                     android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
+                    android:background="?android:selectableItemBackground" />
 
                 <ImageButton
                     android:layout_width="121dp"

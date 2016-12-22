@@ -46,7 +46,7 @@
     <string name="custom">Custom color</string>
     <string name="applying">Applying selected wallpaper.</string>
     <string name="check_wallpaper">Please select wallpaper from above.</string>
-    <string name="hint_wallpaper">Please select wallpaper from above. Then press the orange button to apply.</string>
+    <string name="hint_wallpaper">Please select wallpaper from above. Then confirm to apply.</string>
 
     //Menu
 
@@ -60,7 +60,7 @@
     //Icon request
 
     <string name="request_dummy_text">Hello world!</string>
-    <string name="request_please_wait">Click the logo to search for installed apps.</string>
+    <string name="request_please_wait">Search for installed apps.</string>
     <string name="request_please_wait2">Searching for installed apps. Just for you :)</string>
     <string name="request_toast_no_apps_selected">No Apps selected. Select at least one App.</string>
     <string name="request_toast_apps_selected">ZIP-file created and saved on SD card.</string>

@@ -1,8 +1,5 @@
 package de.baumann.thema;
 
-import android.animation.AnimatorInflater;
-import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.ComponentName;
@@ -103,19 +100,24 @@ public class FragmentRequest extends Fragment {
     private static final String TAG = "RequestActivity";
     private static final boolean DEBUG = true; //TODO Set to false for PlayStore Release
 
+    private FloatingActionButton fab;
+    private FloatingActionButton fab2;
+    private View rootView;
+
     @SuppressWarnings("unused")
     private ViewSwitcher viewSwitcher;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View rootView = inflater.inflate(R.layout.request_grid, container, false);
+        rootView = inflater.inflate(R.layout.request_grid, container, false);
         switcherLoad = (ViewSwitcher)rootView.findViewById(R.id.viewSwitcherLoadingMain);
         context = getActivity();
 
         setHasOptionsMenu(true);
 
-        FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fab_rq);
-        fab.setImageResource(R.drawable.ic_zip_box_white_48dp);
+        fab = (FloatingActionButton) rootView.findViewById(R.id.fab_rq);
+        fab.setVisibility(View.GONE);
+        fab.setImageResource(R.drawable.zip_box);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -124,21 +126,14 @@ public class FragmentRequest extends Fragment {
             }
         });
 
-        ImageView but = (ImageView) rootView.findViewById(R.id.imageViewLogo);
-        but.setOnClickListener(new View.OnClickListener() {
+        fab2 = (FloatingActionButton) rootView.findViewById(R.id.fab_rq2);
+        fab2.setImageResource(R.drawable.magnify);
+        fab2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 TextView text = (TextView) rootView.findViewById(R.id.textview_request);
                 text.setText(R.string.request_please_wait2);
-                //Loading Logo Animation
-                ImageView logo = (ImageView)rootView.findViewById(R.id.imageViewLogo);
-                ObjectAnimator logoAni = (ObjectAnimator) AnimatorInflater.loadAnimator(context, R.animator.request_flip);
-                logoAni.setRepeatCount(Animation.INFINITE);
-                logoAni.setRepeatMode(ValueAnimator.RESTART);
-                logoAni.setTarget(logo);
-                logoAni.setDuration(2000);
-                logoAni.start();
 
                 if(taskList.getStatus() == AsyncTask.Status.PENDING){
                     // My AsyncTask has not started yet
@@ -151,8 +146,6 @@ public class FragmentRequest extends Fragment {
                 }
             }
         });
-
-
 
         return rootView;
     }
@@ -182,6 +175,9 @@ public class FragmentRequest extends Fragment {
             populateView(list_activities_final);
             //Switch from loading screen to the main view
             switcherLoad.showNext();
+
+            fab.setVisibility(View.VISIBLE);
+            fab2.setVisibility(View.GONE);
 
             super.onPostExecute(result);
         }
@@ -456,7 +452,7 @@ public class FragmentRequest extends Fragment {
         ArrayList<AppInfo> local_arrayList;
         local_arrayList = arrayListFinal;
 
-        GridView grid = (GridView)getActivity().findViewById(R.id.appgrid);
+        GridView grid = (GridView)rootView.findViewById(R.id.appgrid);
 
         assert grid != null;
         grid.setVerticalSpacing(GridView.AUTO_FIT);

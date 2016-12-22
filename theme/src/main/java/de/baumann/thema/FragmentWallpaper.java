@@ -64,7 +64,7 @@ public class FragmentWallpaper extends Fragment {
         wallpaper(rootView, R.id.wp6, R.drawable.wp_n_teal);
         
         FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fab_wp);
-        fab.setImageResource(R.drawable.ic_check_white_48dp);
+        fab.setImageResource(R.drawable.check);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -156,7 +156,7 @@ public class FragmentWallpaper extends Fragment {
                             cp.show();
 
                             FloatingActionButton fab = (FloatingActionButton) cp.findViewById(R.id.fab);
-                            fab.setImageResource(R.drawable.ic_check_white_48dp);
+                            fab.setImageResource(R.drawable.check);
                             fab.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {

@@ -18,21 +18,19 @@
     <string name="grey">Grau 900</string>
     <string name="custom">Eigene Farbe</string>
     <string name="request_dummy_text">Hallo Welt!</string>
-    <string name="request_please_wait">Klicke auf das Logo um nach installierten Anwendungen zu suchen.</string>
+    <string name="request_please_wait">Suche nach installierten Anwendungen.</string>
     <string name="request_please_wait2">Suche nach installierten Anwendungen. Nur für dich ;-)</string>
     <string name="request_toast_apps_selected">ZIP-Datei erstellt und auf der SD-Karte gespeichert.</string>
     <string name="request_toast_no_apps_selected">Keine Anwendung ausgewählt. Wähle mindestens eine aus.</string>
     <string name="title_iconrequest">Icon Anfrage</string>
-    <string name="white">Weiß</string>
     <string name="menu_color">Farbe als Wallpaper</string>
     <string name="menu_license">Lizenz</string>
     <string name="title_wallpaper">Wallpaper</string>
-    <string name="materialcolorpicker__errHex">Hex-Code nicht korrekt</string>
     <string name="menu_help">Hilfe</string>
     <string name="menu_donate">Spenden</string>
     <string name="menu_changelog">Changelog</string>
     <string name="check_wallpaper">Bitte zuerst oben ein Wallpaper auswählen.</string>
-    <string name="hint_wallpaper">Bitte zuerst oben ein Wallpaper auswählen. Dann den orangenen Knopf drücken um es anzuwenden.</string>
+    <string name="hint_wallpaper">Bitte zuerst oben ein Wallpaper auswählen. Dann bestätigen.</string>
 
     //Sound
 

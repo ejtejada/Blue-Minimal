@@ -272,7 +272,7 @@ public class FragmentSound extends Fragment {
                                            .show();
                                     mp.start();
                                 } else if (options[item].equals (getString(R.string.open))) {
-                                    Uri uri = Uri.parse(SelecteditemMes); // missing 'http://' will cause crashed
+                                    Uri uri = Uri.parse(SelecteditemUrl); // missing 'http://' will cause crashed
                                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                                     startActivity(intent);
                                 }

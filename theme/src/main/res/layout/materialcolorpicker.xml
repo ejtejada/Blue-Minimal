@@ -98,7 +98,6 @@
             android:hint="2c45ff"
             android:text="123456"
             android:layout_marginStart="10dp"
-            android:imeOptions="actionDone|actionGo|actionSend"
             android:maxLines="1"
             tools:ignore="HardcodedText,PrivateResource" />
 
@@ -107,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/fab"
-            android:src="@drawable/ic_check_white_48dp"
+            android:src="@drawable/check"
             android:scaleType="fitCenter"
             tools:ignore="ContentDescription"
             android:layout_alignBottom="@+id/textView"

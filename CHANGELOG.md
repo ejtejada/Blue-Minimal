@@ -3,6 +3,7 @@
 ### 4.5 (WIP)
 
 - added: icons (thanks to @thomas31415 on xda thread)
+- added: new wallpapers
 - improved: wallpaper fragment layout
 - fixed: fab behavior
 

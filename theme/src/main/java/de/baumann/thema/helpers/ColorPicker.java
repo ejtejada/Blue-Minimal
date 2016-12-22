@@ -22,6 +22,7 @@ import de.baumann.thema.R;
  */
 public class ColorPicker extends Dialog implements SeekBar.OnSeekBarChangeListener {
 
+    @SuppressWarnings({"FieldCanBeLocal", "unused"})
     private final Activity c;
 
     private View colorView;

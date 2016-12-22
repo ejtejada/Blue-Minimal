@@ -48,7 +48,7 @@
                 <ImageView
                     style="@style/request_card_thumbnail"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_check_white_48dp"
+                    android:src="@drawable/check"
                     tools:ignore="ContentDescription" />
             </ViewSwitcher>
 
