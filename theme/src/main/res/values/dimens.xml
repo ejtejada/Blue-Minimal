@@ -1,17 +1,4 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="fab_margin">16dp</dimen>
-
-    <dimen name="request_card_outer_padding_top">4dp</dimen>
-    <dimen name="request_card_outer_padding_bottom">1dp</dimen>
-    <dimen name="request_card_outer_padding_horizontal">4dp</dimen>
-
-    <dimen name="request_card_inner_padding_vertical">10dp</dimen>
-    <dimen name="request_card_inner_padding_left">10dp</dimen>
-    <dimen name="request_card_inner_padding_right">10dp</dimen>
-
-    <dimen name="request_card_thumbnail">48dip</dimen>
-    <dimen name="request_card_title_margin_left">10dp</dimen>
-    <dimen name="request_card_title">18sp</dimen>
-    <dimen name="request_card_content">12sp</dimen>
 </resources>

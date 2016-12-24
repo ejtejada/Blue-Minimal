@@ -1,48 +1,45 @@
 package de.baumann.thema;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.AssetManager;
-import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
-import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
 import android.text.Html;
 import android.text.SpannableString;
 import android.text.util.Linkify;
 import android.util.Log;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
-import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
@@ -85,67 +82,70 @@ public class FragmentRequest extends Fragment {
     private static Context context;
     private ViewSwitcher switcherLoad;
     private final FragmentRequest.AsyncWorkerList taskList = new AsyncWorkerList();
-    private Typeface tf;
     private static final int BUFFER = 2048;
     private static final String SD = Environment.getExternalStorageDirectory().getAbsolutePath();
 
-    private static final String font = "fonts/Roboto-Condensed.ttf"; //TODO Set Path to font relative to assets folder
     private static final String SAVE_LOC = SD + "/BM_Icon-Request/files"; //TODO Set own file path.
     private static final String SAVE_LOC2 = SD + "/BM_Icon-Request"; //TODO Change also this one.
     private static final String appfilter_path = "empty_appfilter.xml"; //TODO Define path to appfilter.xml in assets folder.
 
-    private static final int numCol_Portrait = 1; //For Portrait orientation. Tablets have +1 and LargeTablets +2 Columns.
-    private static final int numCol_Landscape = 5; //For Landscape orientation. Tablets have +1 and LargeTablets +2 Columns.
-
     private static final String TAG = "RequestActivity";
     private static final boolean DEBUG = true; //TODO Set to false for PlayStore Release
 
-    private FloatingActionButton fab;
-    private FloatingActionButton fab2;
     private View rootView;
-
-    @SuppressWarnings("unused")
-    private ViewSwitcher viewSwitcher;
+    private SharedPreferences sharedPref;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.request_grid, container, false);
+        rootView = inflater.inflate(R.layout.request, container, false);
         switcherLoad = (ViewSwitcher)rootView.findViewById(R.id.viewSwitcherLoadingMain);
         context = getActivity();
 
+        sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        sharedPref.edit().putString("canClose", "false").apply();
+
         setHasOptionsMenu(true);
 
-        fab = (FloatingActionButton) rootView.findViewById(R.id.fab_rq);
-        fab.setVisibility(View.GONE);
+        FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fab_rq);
         fab.setImageResource(R.drawable.zip_box);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                actionSend();
+                if (android.os.Build.VERSION.SDK_INT >= 23) {
+                    int hasWRITE_EXTERNAL_STORAGE = getActivity().checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                    if (hasWRITE_EXTERNAL_STORAGE != PackageManager.PERMISSION_GRANTED) {
+                        Snackbar snackbar = Snackbar
+                                .make(switcherLoad, getString(R.string.permissions_granted), Snackbar.LENGTH_LONG)
+                                .setAction(getString(R.string.yes), new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Intent intent = new Intent();
+                                        intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                                        Uri uri = Uri.fromParts("package", getActivity().getPackageName(), null);
+                                        intent.setData(uri);
+                                        getActivity().startActivity(intent);
+                                    }
+                                });
+                        snackbar.show();
+                    } else {
+                        actionSend();
+                    }
+                } else {
+                    actionSend();
+                }
             }
         });
 
-        fab2 = (FloatingActionButton) rootView.findViewById(R.id.fab_rq2);
-        fab2.setImageResource(R.drawable.magnify);
-        fab2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        if(taskList.getStatus() == AsyncTask.Status.PENDING){
+            // My AsyncTask has not started yet
+            taskList.execute();
+        }
 
-                TextView text = (TextView) rootView.findViewById(R.id.textview_request);
-                text.setText(R.string.request_please_wait2);
-
-                if(taskList.getStatus() == AsyncTask.Status.PENDING){
-                    // My AsyncTask has not started yet
-                    taskList.execute();
-                }
-
-                if(taskList.getStatus() == AsyncTask.Status.FINISHED){
-                    // My AsyncTask is done and onPostExecute was called
-                    new AsyncWorkerList().execute();
-                }
-            }
-        });
+        if(taskList.getStatus() == AsyncTask.Status.FINISHED){
+            // My AsyncTask is done and onPostExecute was called
+            new AsyncWorkerList().execute();
+        }
 
         return rootView;
     }
@@ -175,9 +175,7 @@ public class FragmentRequest extends Fragment {
             populateView(list_activities_final);
             //Switch from loading screen to the main view
             switcherLoad.showNext();
-
-            fab.setVisibility(View.VISIBLE);
-            fab2.setVisibility(View.GONE);
+            sharedPref.edit().putString("canClose", "true").apply();
 
             super.onPostExecute(result);
         }
@@ -191,30 +189,22 @@ public class FragmentRequest extends Fragment {
 
     // Handler for sending messages out of separate Threads
     @SuppressLint("HandlerLeak")
-    private final Handler handler = new Handler()
-    {
+    private final Handler handler = new Handler() {
         @Override
-        public void handleMessage(Message msg)
-        {
-            switch(msg.what)
-            {
+        public void handleMessage(Message msg) {
+            switch(msg.what) {
                 case 0:
                     if(DEBUG)Log.v(TAG,"Handler case 0");
-
                     Snackbar.make(switcherLoad, R.string.request_toast_no_apps_selected, Snackbar.LENGTH_LONG).show();
                     return;
 
                 case 1:
                     if(DEBUG)Log.v(TAG,"Handler case 1");
-
-                    Snackbar snackbar = Snackbar
-                            .make(switcherLoad, getString(R.string.request_toast_apps_selected), Snackbar.LENGTH_LONG);
-                    snackbar.show();
+                    Snackbar.make(switcherLoad, getString(R.string.request_toast_apps_selected), Snackbar.LENGTH_LONG).show();
                     return;
 
                 case 2:
                     if(DEBUG)Log.v(TAG,"Handler case 1");
-
                     Snackbar.make(switcherLoad, "Make sure you copied appfilter.xml in assets folder!", Snackbar.LENGTH_LONG).show();
                     return;
 
@@ -423,105 +413,37 @@ public class FragmentRequest extends Fragment {
         }
     }
 
-    @SuppressWarnings("deprecation")
-    private int getDisplaySize(String which){
-        Display display =((WindowManager) getActivity().getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
-        if(which.equals("height")){
-            return display.getHeight();
-        }
-        if(which.equals("width"))
-        {
-            return display.getWidth();
-        }
-        if(DEBUG)Log.v(TAG, "Normally unreachable. Line. What happened??");
-        return 1000;
-    }
-    private boolean isPortrait() {
-        return (getDisplaySize("height") > getDisplaySize("width"));
-    }
-    private static boolean isTablet(Context context) {
-        return (context.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
-    }
-    private static boolean isXLargeTablet(Context context) {
-        return (context.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_XLARGE;
-    }
-
-
     @SuppressWarnings("unchecked")
     private void populateView(ArrayList arrayListFinal){
         ArrayList<AppInfo> local_arrayList;
         local_arrayList = arrayListFinal;
 
-        GridView grid = (GridView)rootView.findViewById(R.id.appgrid);
+        ListView grid = (ListView) rootView.findViewById(R.id.appgrid);
 
         assert grid != null;
-        grid.setVerticalSpacing(GridView.AUTO_FIT);
-        grid.setHorizontalSpacing(GridView.AUTO_FIT);
-        grid.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
-        grid.setFastScrollEnabled(true);
-        grid.setFastScrollAlwaysVisible(false);
-
-        if(DEBUG)Log.v(TAG,"height: "+getDisplaySize("height")+"; width: "+getDisplaySize("width"));
 
         AppAdapter appInfoAdapter;
-        if(isPortrait())
-        {
-            grid.setNumColumns(numCol_Portrait);
 
-            if(isTablet(context)) {
-                grid.setNumColumns(numCol_Portrait); //Here you can change the number of columns for Tablets
-                if(DEBUG)Log.v(TAG,"isTablet");
-            }
-            if(isXLargeTablet(context)) {
-                grid.setNumColumns(numCol_Portrait); //Here you can change the number of columns for Large Tablets
-                if(DEBUG)Log.v(TAG,"isXLargeTablet");
-            }
 
-            appInfoAdapter = new AppAdapter(getActivity(), R.layout.request_item_list, local_arrayList);
-        }
-
-        else {
-            grid.setNumColumns(numCol_Landscape);
-
-            if(isTablet(context)) {
-                grid.setNumColumns(numCol_Landscape); //Here you can change the number of columns for Tablets
-                if(DEBUG)Log.v(TAG,"isTablet");
-            }
-            if(isXLargeTablet(context)) {
-                grid.setNumColumns(numCol_Landscape); //Here you can change the number of columns for Large Tablets
-                if(DEBUG)Log.v(TAG,"isXLargeTablet");
-            }
-
-            appInfoAdapter = new AppAdapter(getActivity(), R.layout.request_item_grid, local_arrayList);
-        }
-
+        appInfoAdapter = new AppAdapter(getActivity(), local_arrayList);
         grid.setAdapter(appInfoAdapter);
-        grid.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
-            public void onItemClick(AdapterView<?> AdapterView, View view, int position, long row)
-            {
+        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> AdapterView, View view, int position, long row) {
+
                 AppInfo appInfo = (AppInfo)AdapterView.getItemAtPosition(position);
                 CheckBox checker = (CheckBox)view.findViewById(R.id.CBappSelect);
                 ViewSwitcher icon = (ViewSwitcher)view.findViewById(R.id.viewSwitcherChecked);
-                LinearLayout localBackground = (LinearLayout)view.findViewById(R.id.card_bg);
-                Animation aniIn = AnimationUtils.loadAnimation(context, R.anim.request_flip_in_half_1);
-                Animation aniOut = AnimationUtils.loadAnimation(context, R.anim.request_flip_in_half_2);
 
                 checker.toggle();
                 appInfo.setSelected(checker.isChecked());
 
-                icon.setInAnimation(aniIn);
-                icon.setOutAnimation(aniOut);
-
                 if(appInfo.isSelected()) {
                     if(DEBUG)Log.v(TAG,"Selected App: "+appInfo.getName());
-                    localBackground.setBackgroundColor(ContextCompat.getColor(context, R.color.request_card_pressed));
                     if(icon.getDisplayedChild() == 0){
                         icon.showNext();
                     }
                 } else {
                     if(DEBUG)Log.v(TAG,"Deselected App: "+appInfo.getName());
-                    localBackground.setBackgroundColor(ContextCompat.getColor(context, R.color.request_card_unpressed));
                     if(icon.getDisplayedChild() == 1){
                         icon.showPrevious();
                     }
@@ -534,30 +456,21 @@ public class FragmentRequest extends Fragment {
         @SuppressWarnings("unchecked")
         private final ArrayList<AppInfo> appList = new ArrayList();
 
-        public AppAdapter(Context context, int position, ArrayList<AppInfo> adapterArrayList) {
-            super(context, position, adapterArrayList);
+        public AppAdapter(Context context, ArrayList<AppInfo> adapterArrayList) {
+            super(context, R.layout.request_item_list, adapterArrayList);
             appList.addAll(adapterArrayList);
         }
         @NonNull
         public View getView(int position, View convertView, @NonNull ViewGroup parent) {
-            if(tf == null){
-                tf = Typeface.createFromAsset(context.getAssets(), font);
-            }
 
             ViewHolder holder;
             if (convertView == null) {
-                if(isPortrait())
-                {
-                    convertView = ((LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.request_item_list, parent, false);
-                } else {
-                    convertView = ((LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.request_item_grid, parent, false);
-                }
+                convertView = ((LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.request_item_list, parent, false);
                 holder = new ViewHolder();
                 holder.apkIcon = (ImageView) convertView.findViewById(R.id.IVappIcon);
                 holder.apkName = (TextView) convertView.findViewById(R.id.TVappName);
                 holder.apkPackage = (TextView) convertView.findViewById(R.id.TVappPackage);
                 holder.checker = (CheckBox) convertView.findViewById(R.id.CBappSelect);
-                holder.cardBack = (LinearLayout) convertView.findViewById(R.id.card_bg);
                 holder.switcherChecked = (ViewSwitcher)convertView.findViewById(R.id.viewSwitcherChecked);
                 convertView.setTag(holder);
             } else {
@@ -566,32 +479,15 @@ public class FragmentRequest extends Fragment {
 
             AppInfo appInfo = appList.get(position);
 
-            if(isPortrait()) {
-                holder.apkPackage.setText(String.valueOf(appInfo.getCode().split("/")[0]+"/"+appInfo.getCode().split("/")[1]));
-                holder.apkPackage.setTypeface(tf);
-            } else {
-                holder.apkPackage.setVisibility(View.GONE);
-            }
-
+            holder.apkPackage.setText(String.valueOf(appInfo.getCode().split("/")[0]+"/"+appInfo.getCode().split("/")[1]));
             holder.apkName.setText(appInfo.getName());
-
             holder.apkIcon.setImageDrawable(appInfo.getImage());
 
             holder.switcherChecked.setInAnimation(null);
             holder.switcherChecked.setOutAnimation(null);
 
             holder.checker.setChecked(appInfo.isSelected());
-            if(appInfo.isSelected()) {
-                holder.cardBack.setBackgroundColor(ContextCompat.getColor(context, R.color.request_card_pressed));
-                if(holder.switcherChecked.getDisplayedChild() == 0){
-                    holder.switcherChecked.showNext();
-                }
-            } else {
-                holder.cardBack.setBackgroundColor(ContextCompat.getColor(context, R.color.request_card_unpressed));
-                if(holder.switcherChecked.getDisplayedChild() == 1){
-                    holder.switcherChecked.showPrevious();
-                }
-            }
+
             return convertView;
         }
     }
@@ -601,7 +497,6 @@ public class FragmentRequest extends Fragment {
         TextView apkPackage;
         ImageView apkIcon;
         CheckBox checker;
-        LinearLayout cardBack;
         ViewSwitcher switcherChecked;
     }
 

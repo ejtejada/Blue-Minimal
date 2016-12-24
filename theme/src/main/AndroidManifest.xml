@@ -46,6 +46,8 @@
         android:supportsRtl="false"
         android:label="@string/title_app"
         android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity

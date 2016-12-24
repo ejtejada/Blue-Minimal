@@ -31,7 +31,7 @@ import java.io.OutputStream;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import de.baumann.thema.helpers.CustomListAdapter;
+import de.baumann.thema.helpers.CustomListAdapter_Sound;
 
 
 @SuppressWarnings("ResultOfMethodCallIgnored")
@@ -82,7 +82,7 @@ public class FragmentSound extends Fragment {
                 "wet.mp3",
         };
 
-        CustomListAdapter adapter=new CustomListAdapter(getActivity(), itemTITLE, itemURL, itemDES, itemDES);
+        CustomListAdapter_Sound adapter=new CustomListAdapter_Sound(getActivity(), itemTITLE, itemURL, itemDES, itemDES);
         listView = (ListView)rootView.findViewById(R.id.bookmarks);
         listView.setAdapter(adapter);
 
@@ -265,6 +265,13 @@ public class FragmentSound extends Fragment {
                                             .setPositiveButton(R.string.cancel, new DialogInterface.OnClickListener() {
 
                                                 public void onClick(DialogInterface dialog, int whichButton) {
+                                                    mp.stop();
+                                                    dialog.cancel();
+                                                }
+                                            })
+                                            .setOnCancelListener(new DialogInterface.OnCancelListener() {
+                                                @Override
+                                                public void onCancel(DialogInterface dialog) {
                                                     mp.stop();
                                                     dialog.cancel();
                                                 }

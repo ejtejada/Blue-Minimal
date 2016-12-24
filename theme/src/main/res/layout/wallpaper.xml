@@ -3,219 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="196dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginTop="4dp"
-            tools:ignore="ContentDescription"
-            android:id="@+id/horizontalScrollView">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp13"
-                    android:src="@drawable/wp_lp_amber"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground" />
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp14"
-                    android:src="@drawable/wp_lp_blue"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp15"
-                    android:src="@drawable/wp_lp_green"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp16"
-                    android:src="@drawable/wp_lp_grey"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp17"
-                    android:src="@drawable/wp_lp_red"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp18"
-                    android:src="@drawable/wp_lp_teal"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp7"
-                    android:src="@drawable/wp_mm_amber"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp8"
-                    android:src="@drawable/wp_mm_blue"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp9"
-                    android:src="@drawable/wp_mm_green"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp10"
-                    android:src="@drawable/wp_mm_grey"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp11"
-                    android:src="@drawable/wp_mm_red"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp12"
-                    android:src="@drawable/wp_mm_teal"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp1"
-                    android:src="@drawable/wp_n_amber"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp2"
-                    android:src="@drawable/wp_n_blue"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp3"
-                    android:src="@drawable/wp_n_green"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp4"
-                    android:src="@drawable/wp_n_grey"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:id="@+id/wp5"
-                    android:src="@drawable/wp_n_red"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-                <ImageButton
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/wp6"
-                    android:src="@drawable/wp_n_teal"
-                    android:scaleType="centerCrop"
-                    android:background="?android:selectableItemBackground"/>
-
-            </LinearLayout>
-
-        </HorizontalScrollView>
-
-        <TextView
-            android:id="@+id/textview_request"
+        <ListView android:id="@+id/bookmarks"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/horizontalScrollView"
-            android:text="@string/hint_wallpaper"
-            android:fontFamily="sans-serif-condensed"
-            android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_marginRight="@dimen/fab_margin"
-            android:layout_marginLeft="@dimen/fab_margin"
-            android:layout_centerHorizontal="true" />
-
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView_header" />
 
         <ImageView
-            android:id="@+id/wallpaperPreview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/horizontalScrollView"
-            android:layout_margin="16dp"
-            android:scaleType="centerCrop"/>
+            android:layout_height="200dp"
+            android:id="@+id/imageView_header"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/wp_lp_amber"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription" />
 
     </RelativeLayout>
-
-
-
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_wp"

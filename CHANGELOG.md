@@ -4,8 +4,13 @@
 
 - added: icons (thanks to @thomas31415 on xda thread)
 - added: new wallpapers
+- added: new app icon
+- added: new boot animation
+- removed: some wallpapers
 - improved: wallpaper fragment layout
+- improved: icon request fragment layout
 - fixed: fab behavior
+- fixed: some force closes on Marshmallow+
 
 
 ### 4.4

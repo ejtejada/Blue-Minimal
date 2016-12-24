@@ -6,37 +6,13 @@
     android:gravity="center"
     tools:ignore="ContentDescription">
 
-    <CheckBox
-        android:id="@+id/CBappSelect"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:clickable="false"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:includeFontPadding="false"
-        android:longClickable="false"
-        android:visibility="gone" />
-
-    <ViewSwitcher
-        android:id="@+id/viewSwitcherChecked"
+    <ImageView
+        android:id="@+id/preview"
         android:layout_width="46dp"
-        android:layout_height="46dp" >
-
-        <ImageView
-            android:id="@+id/IVappIcon"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="12dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_launcher" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="12dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/check" />
-    </ViewSwitcher>
+        android:layout_height="46dp"
+        android:layout_marginStart="12dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/wp_lp_amber" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,7 +21,7 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/TVappName"
+            android:id="@+id/textView_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
@@ -59,7 +35,7 @@
             android:text="@string/request_dummy_text" />
 
         <TextView
-            android:id="@+id/TVappPackage"
+            android:id="@+id/textView_des"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"

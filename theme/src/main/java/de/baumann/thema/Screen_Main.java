@@ -4,10 +4,14 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.preference.PreferenceManager;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -23,6 +27,7 @@ import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
@@ -37,11 +42,15 @@ import java.util.List;
 public class Screen_Main extends AppCompatActivity {
 
     final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
+    private SharedPreferences sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_main);
+
+        sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPref.edit().putString("canClose", "false").apply();
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
@@ -232,9 +241,9 @@ public class Screen_Main extends AppCompatActivity {
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-        adapter.addFragment(new FragmentSound(), String.valueOf(getString(R.string.sound)));
         adapter.addFragment(new FragmentWallpaper(), String.valueOf(getString(R.string.title_wallpaper)));
         adapter.addFragment(new FragmentRequest(), String.valueOf(getString(R.string.title_iconrequest)));
+        adapter.addFragment(new FragmentSound(), String.valueOf(getString(R.string.sound)));
 
         viewPager.setAdapter(adapter);
     }
@@ -243,7 +252,7 @@ public class Screen_Main extends AppCompatActivity {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
 
-        public ViewPagerAdapter(FragmentManager manager) {
+        private ViewPagerAdapter(FragmentManager manager) {
             super(manager);
         }
 
@@ -257,7 +266,7 @@ public class Screen_Main extends AppCompatActivity {
             return mFragmentList.size();
         }
 
-        public void addFragment(Fragment fragment, String title) {
+        private void addFragment(Fragment fragment, String title) {
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
         }
@@ -266,6 +275,28 @@ public class Screen_Main extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);// add return null; to display only icons
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (sharedPref.getString("canClose", "false").equals("true")) {
+            finishAffinity();
+        } else {
+            waitClose();
+        }
+    }
+
+    private void waitClose () {
+        new Handler().postDelayed(new Runnable() {
+            public void run() {
+
+                if (sharedPref.getString("canClose", "false").equals("true")) {
+                    finishAffinity();
+                } else {
+                    waitClose();
+                }
+            }
+        }, 500);
     }
 
     @Override
