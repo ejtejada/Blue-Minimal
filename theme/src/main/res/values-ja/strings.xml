@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program. If not, see <http://www.gnu.org/licenses/>
+*
+* For more license informations look at LICENSE.md file.
+*
+-->
+
+<resources>
+
+    //App
+
+    <string name="permissions">カスタムサウンドを設定し、アイコンのリクエストを行うには、\"ストレージのアクセス許可\"
+        を付与する必要があります。 その後、アプリを完全に終了して、電話を再起動する必要があります。
+        ストレージのアクセスを許可しないで、後で機能を使用したい場合は、後でアクセス許可を付与することができます。
+        その場合: システム設定 - アプリ - Blue Minimal を開いてください。
+        アクセス許可のセクションで、\"ストレージの書き込み許可\" を付与することができます。</string>
+
+    <string name="yes">OK</string>
+    <string name="no">いいえ</string>
+    <string name="cancel">キャンセル</string>
+    <string name="permissions_granted">アクセス許可を付与しますか? アプリの設定を開きますか?</string>
+
+    //Wallpaper
+
+    <string name="title_wallpaper">壁紙</string>
+    <string name="title_iconrequest">アイコンのリクエスト</string>
+
+    <string name="red">赤</string>
+    <string name="green">緑</string>
+    <string name="blue">青</string>
+    <string name="amber">アンバー</string>
+    <string name="teal">ティール</string>
+    <string name="grey">グレー</string>
+    <string name="custom">カスタム色</string>
+    <string name="applying">選択した壁紙を適用しています。</string>
+    <string name="check_wallpaper">上から壁紙を選択してください。</string>
+
+    //Menu
+
+    <string name="menu_license">ライセンス</string>
+    <string name="menu_color">色の壁紙</string>
+    <string name="menu_help">ヘルプ</string>
+    <string name="menu_donate">寄付</string>
+    <string name="menu_changelog">変更履歴</string>
+
+
+    //Icon request
+
+    <string name="request_dummy_text">Hello world!</string>
+    <string name="request_please_wait2">インストールされたアプリを検索中。しばらくお待ちください。</string>
+    <string name="request_toast_no_apps_selected">アプリが選択されていません。少なくとも 1 つアプリを選択してください。</string>
+    <string name="request_toast_apps_selected">ZIP ファイルを作成して、SD カードに保存しました。</string>
+
+
+    //Sound
+
+    <string name="set_notification">通知として設定</string>
+    <string name="set_ringtone">着信音として設定</string>
+    <string name="set_alarm">アラームとして設定</string>
+
+    <string name="duration">時間</string>
+    <string name="sound">サウンド</string>
+    <string name="play">トラック全体を再生</string>
+    <string name="open">オープンソース Webサイト</string>
+
+    <string name="set_alarm_suc">\"アラーム フォルダー\" にコピーしました。</string>
+
+    <!-- Just leave this in here. If someone is clever enough to decompile the app he can see this -->
+
+    //License
+
+    // Help
+
+    <string name="help_sound">リスト項目をクリックすると、5 秒間のプレビューを聞くことができます。 長く押すとメニューが開きます。
+    トラック全体を聞くことができます。 着信音、通知、またはアラームとしてサウンドを設定することができます。&lt;br>&lt;br>
+
+    選択したサウンドは、SD カードの \"アラーム、着信音、または通知フォルダー\" にコピーされます。
+    その後、システム設定が開き、サウンドを着信音や通知音として設定できます。
+    システム設定ではアラーム音を設定できないため、アラームアプリの設定でアラーム音を設定する必要があります。</string>
+
+    <string name="help_wallpaper">ここで壁紙を設定することができます。 長押しするとでブラウザで壁紙のソースが開きます。
+    壁紙として色を設定することもできます。 メニュー項目をクリックするだけです。</string>
+
+    <string name="help_request">ここで、あなたがテーマにしたいアプリアイコンに関する情報を含む ZIP ファイルを作成することができます。
+    作成した ZIP ファイルをテーマの開発者に送信してください。</string>
+
+</resources>
