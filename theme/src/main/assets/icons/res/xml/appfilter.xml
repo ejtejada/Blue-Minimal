@@ -149,6 +149,7 @@
     <item component="ComponentInfo{com.ghostflying.nfmxposed/com.ghostflying.nfmxposed.ui.MainActivity}" drawable="a040" />
     <item component="ComponentInfo{com.github.dfa.diaspora_android/com.github.dfa.diaspora_android.activity.MainActivity}" drawable="a179" />
     <item component="ComponentInfo{com.github.mobile/com.github.mobile.ui.user.HomeActivity}" drawable="a083" />
+    <item component="ComponentInfo{com.github.yeriomin.yalpstore/com.github.yeriomin.yalpstore.UpdatableAppsActivity}" drawable="a086" />
     <item component="ComponentInfo{com.grarak.kerneladiutor/com.grarak.kerneladiutor.MainActivity}" drawable="a070" />
     <item component="ComponentInfo{com.grupet.web.app/com.untis.mobile.activities.PreLoadDataActivity}" drawable="a114"/>
     <item component="ComponentInfo{com.hamzah.holothemer/com.hamzah.holothemer.MainActivity}" drawable="a040" />
@@ -385,7 +386,7 @@
     <item component="ComponentInfo{org.isoron.uhabits/org.isoron.uhabits.MainActivity}" drawable="a175" />
     <item component="ComponentInfo{org.jfedor.frozenbubble/com.efortin.frozenbubble.HomeScreen}" drawable="a216"/>
     <item component="ComponentInfo{org.kde.kdeconnect_tp/org.kde.kdeconnect.UserInterface.MaterialActivity}" drawable="a133" />
-    <item component="ComponentInfo{org.kiwix.kiwixmobile/org.kiwix.kiwixmobile.KiwixMobileActivity}" drawable="a074" />
+    <item component="ComponentInfo{org.kiwix.kiwixmobile/org.kiwix.kiwixmobile.utils.SplashActivity}" drawable="a074" />
     <item component="ComponentInfo{org.kontalk/org.kontalk.ui.ConversationsActivity}" drawable="a174" />
     <item component="ComponentInfo{org.mariotaku.twidere/org.mariotaku.twidere.activity.MainActivity}" drawable="a112" />
     <item component="ComponentInfo{org.mozilla.fennec_fdroid/org.mozilla.fennec_fdroid.App}" drawable="a051" />

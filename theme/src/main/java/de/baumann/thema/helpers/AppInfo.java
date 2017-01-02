@@ -2,15 +2,13 @@ package de.baumann.thema.helpers;
 
 import android.graphics.drawable.Drawable;
 
-public class AppInfo
-{
+public class AppInfo {
 	private String code = null;
 	private String name = null;
 	private final Drawable icon;
 	private boolean selected = false;
 
-	public AppInfo(String paramString1, String paramString2, Drawable paramDrawable)
-	{
+	public AppInfo(String paramString1, String paramString2, Drawable paramDrawable) {
 		code = paramString1;
 		name = paramString2;
 		icon = paramDrawable;

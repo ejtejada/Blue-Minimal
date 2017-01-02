@@ -1,17 +1,21 @@
 package de.baumann.thema;
 
 import android.Manifest;
+import android.animation.AnimatorInflater;
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.AssetManager;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -20,25 +24,31 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.text.Html;
 import android.text.SpannableString;
 import android.text.util.Linkify;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
@@ -82,27 +92,29 @@ public class FragmentRequest extends Fragment {
     private static Context context;
     private ViewSwitcher switcherLoad;
     private final FragmentRequest.AsyncWorkerList taskList = new AsyncWorkerList();
+    private Typeface tf;
     private static final int BUFFER = 2048;
     private static final String SD = Environment.getExternalStorageDirectory().getAbsolutePath();
 
+    private static final String font = "fonts/Roboto-Condensed.ttf"; //TODO Set Path to font relative to assets folder
     private static final String SAVE_LOC = SD + "/BM_Icon-Request/files"; //TODO Set own file path.
     private static final String SAVE_LOC2 = SD + "/BM_Icon-Request"; //TODO Change also this one.
     private static final String appfilter_path = "empty_appfilter.xml"; //TODO Define path to appfilter.xml in assets folder.
 
+    private static final int numCol_Portrait = 1; //For Portrait orientation. Tablets have +1 and LargeTablets +2 Columns.
+    private static final int numCol_Landscape = 5; //For Landscape orientation. Tablets have +1 and LargeTablets +2 Columns.
+
     private static final String TAG = "RequestActivity";
     private static final boolean DEBUG = true; //TODO Set to false for PlayStore Release
 
-    private View rootView;
-    private SharedPreferences sharedPref;
+    @SuppressWarnings("unused")
+    private ViewSwitcher viewSwitcher;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.request, container, false);
+        final View rootView = inflater.inflate(R.layout.request, container, false);
         switcherLoad = (ViewSwitcher)rootView.findViewById(R.id.viewSwitcherLoadingMain);
         context = getActivity();
-
-        sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        sharedPref.edit().putString("canClose", "false").apply();
 
         setHasOptionsMenu(true);
 
@@ -147,6 +159,8 @@ public class FragmentRequest extends Fragment {
             new AsyncWorkerList().execute();
         }
 
+
+
         return rootView;
     }
 
@@ -175,7 +189,6 @@ public class FragmentRequest extends Fragment {
             populateView(list_activities_final);
             //Switch from loading screen to the main view
             switcherLoad.showNext();
-            sharedPref.edit().putString("canClose", "true").apply();
 
             super.onPostExecute(result);
         }
@@ -189,22 +202,30 @@ public class FragmentRequest extends Fragment {
 
     // Handler for sending messages out of separate Threads
     @SuppressLint("HandlerLeak")
-    private final Handler handler = new Handler() {
+    private final Handler handler = new Handler()
+    {
         @Override
-        public void handleMessage(Message msg) {
-            switch(msg.what) {
+        public void handleMessage(Message msg)
+        {
+            switch(msg.what)
+            {
                 case 0:
                     if(DEBUG)Log.v(TAG,"Handler case 0");
+
                     Snackbar.make(switcherLoad, R.string.request_toast_no_apps_selected, Snackbar.LENGTH_LONG).show();
                     return;
 
                 case 1:
                     if(DEBUG)Log.v(TAG,"Handler case 1");
-                    Snackbar.make(switcherLoad, getString(R.string.request_toast_apps_selected), Snackbar.LENGTH_LONG).show();
+
+                    Snackbar snackbar = Snackbar
+                            .make(switcherLoad, getString(R.string.request_toast_apps_selected), Snackbar.LENGTH_LONG);
+                    snackbar.show();
                     return;
 
                 case 2:
                     if(DEBUG)Log.v(TAG,"Handler case 1");
+
                     Snackbar.make(switcherLoad, "Make sure you copied appfilter.xml in assets folder!", Snackbar.LENGTH_LONG).show();
                     return;
 
@@ -413,29 +434,59 @@ public class FragmentRequest extends Fragment {
         }
     }
 
+    @SuppressWarnings("deprecation")
+    private int getDisplaySize(String which){
+        Display display =((WindowManager) getActivity().getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+        if(which.equals("height")){
+            return display.getHeight();
+        }
+        if(which.equals("width"))
+        {
+            return display.getWidth();
+        }
+        if(DEBUG)Log.v(TAG, "Normally unreachable. Line. What happened??");
+        return 1000;
+    }
+    private boolean isPortrait() {
+        return (getDisplaySize("height") > getDisplaySize("width"));
+    }
+    private static boolean isTablet(Context context) {
+        return (context.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
+    }
+    private static boolean isXLargeTablet(Context context) {
+        return (context.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_XLARGE;
+    }
+
+
     @SuppressWarnings("unchecked")
     private void populateView(ArrayList arrayListFinal){
         ArrayList<AppInfo> local_arrayList;
         local_arrayList = arrayListFinal;
 
-        ListView grid = (ListView) rootView.findViewById(R.id.appgrid);
+        ListView grid = (ListView) getActivity().findViewById(R.id.appgrid);
 
         assert grid != null;
+        grid.setFastScrollEnabled(true);
+        grid.setFastScrollAlwaysVisible(false);
+
+        if(DEBUG)Log.v(TAG,"height: "+getDisplaySize("height")+"; width: "+getDisplaySize("width"));
 
         AppAdapter appInfoAdapter;
+        appInfoAdapter = new AppAdapter(getActivity(), R.layout.request_item_list, local_arrayList);
 
 
-        appInfoAdapter = new AppAdapter(getActivity(), local_arrayList);
         grid.setAdapter(appInfoAdapter);
-        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> AdapterView, View view, int position, long row) {
-
+        grid.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            public void onItemClick(AdapterView<?> AdapterView, View view, int position, long row)
+            {
                 AppInfo appInfo = (AppInfo)AdapterView.getItemAtPosition(position);
                 CheckBox checker = (CheckBox)view.findViewById(R.id.CBappSelect);
                 ViewSwitcher icon = (ViewSwitcher)view.findViewById(R.id.viewSwitcherChecked);
 
                 checker.toggle();
                 appInfo.setSelected(checker.isChecked());
+
 
                 if(appInfo.isSelected()) {
                     if(DEBUG)Log.v(TAG,"Selected App: "+appInfo.getName());
@@ -456,16 +507,23 @@ public class FragmentRequest extends Fragment {
         @SuppressWarnings("unchecked")
         private final ArrayList<AppInfo> appList = new ArrayList();
 
-        public AppAdapter(Context context, ArrayList<AppInfo> adapterArrayList) {
-            super(context, R.layout.request_item_list, adapterArrayList);
+        public AppAdapter(Context context, int position, ArrayList<AppInfo> adapterArrayList) {
+            super(context, position, adapterArrayList);
             appList.addAll(adapterArrayList);
         }
         @NonNull
         public View getView(int position, View convertView, @NonNull ViewGroup parent) {
+            if(tf == null){
+                tf = Typeface.createFromAsset(context.getAssets(), font);
+            }
 
             ViewHolder holder;
             if (convertView == null) {
-                convertView = ((LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.request_item_list, parent, false);
+                if(isPortrait()) {
+                    convertView = ((LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.request_item_list, parent, false);
+                } else {
+                    convertView = ((LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.request_item_list, parent, false);
+                }
                 holder = new ViewHolder();
                 holder.apkIcon = (ImageView) convertView.findViewById(R.id.IVappIcon);
                 holder.apkName = (TextView) convertView.findViewById(R.id.TVappName);
@@ -479,15 +537,30 @@ public class FragmentRequest extends Fragment {
 
             AppInfo appInfo = appList.get(position);
 
-            holder.apkPackage.setText(String.valueOf(appInfo.getCode().split("/")[0]+"/"+appInfo.getCode().split("/")[1]));
+            if(isPortrait()) {
+                holder.apkPackage.setText(String.valueOf(appInfo.getCode().split("/")[0]+"/"+appInfo.getCode().split("/")[1]));
+                holder.apkPackage.setTypeface(tf);
+            } else {
+                holder.apkPackage.setVisibility(View.GONE);
+            }
+
             holder.apkName.setText(appInfo.getName());
+
             holder.apkIcon.setImageDrawable(appInfo.getImage());
 
             holder.switcherChecked.setInAnimation(null);
             holder.switcherChecked.setOutAnimation(null);
 
             holder.checker.setChecked(appInfo.isSelected());
-
+            if(appInfo.isSelected()) {
+                if(holder.switcherChecked.getDisplayedChild() == 0){
+                    holder.switcherChecked.showNext();
+                }
+            } else {
+                if(holder.switcherChecked.getDisplayedChild() == 1){
+                    holder.switcherChecked.showPrevious();
+                }
+            }
             return convertView;
         }
     }
@@ -497,6 +570,7 @@ public class FragmentRequest extends Fragment {
         TextView apkPackage;
         ImageView apkIcon;
         CheckBox checker;
+        LinearLayout cardBack;
         ViewSwitcher switcherChecked;
     }
 
