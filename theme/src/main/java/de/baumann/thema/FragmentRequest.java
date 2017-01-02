@@ -1,14 +1,12 @@
 package de.baumann.thema;
 
 import android.Manifest;
-import android.animation.AnimatorInflater;
-import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.AssetManager;
@@ -24,12 +22,12 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
 import android.text.Html;
 import android.text.SpannableString;
 import android.text.util.Linkify;
@@ -41,14 +39,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
-import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
@@ -101,20 +95,21 @@ public class FragmentRequest extends Fragment {
     private static final String SAVE_LOC2 = SD + "/BM_Icon-Request"; //TODO Change also this one.
     private static final String appfilter_path = "empty_appfilter.xml"; //TODO Define path to appfilter.xml in assets folder.
 
-    private static final int numCol_Portrait = 1; //For Portrait orientation. Tablets have +1 and LargeTablets +2 Columns.
-    private static final int numCol_Landscape = 5; //For Landscape orientation. Tablets have +1 and LargeTablets +2 Columns.
-
     private static final String TAG = "RequestActivity";
     private static final boolean DEBUG = true; //TODO Set to false for PlayStore Release
 
     @SuppressWarnings("unused")
     private ViewSwitcher viewSwitcher;
+    private SharedPreferences sharedPref;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.request, container, false);
         switcherLoad = (ViewSwitcher)rootView.findViewById(R.id.viewSwitcherLoadingMain);
         context = getActivity();
+
+        sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        sharedPref.edit().putString("canClose", "false").apply();
 
         setHasOptionsMenu(true);
 
@@ -166,7 +161,7 @@ public class FragmentRequest extends Fragment {
 
     public class AsyncWorkerList extends AsyncTask<String, Integer, String>{
 
-        public AsyncWorkerList(){}
+        private AsyncWorkerList(){}
 
         @Override
         protected String doInBackground(String... arg0) {
@@ -189,6 +184,7 @@ public class FragmentRequest extends Fragment {
             populateView(list_activities_final);
             //Switch from loading screen to the main view
             switcherLoad.showNext();
+            sharedPref.edit().putString("canClose", "true").apply();
 
             super.onPostExecute(result);
         }
@@ -472,7 +468,7 @@ public class FragmentRequest extends Fragment {
         if(DEBUG)Log.v(TAG,"height: "+getDisplaySize("height")+"; width: "+getDisplaySize("width"));
 
         AppAdapter appInfoAdapter;
-        appInfoAdapter = new AppAdapter(getActivity(), R.layout.request_item_list, local_arrayList);
+        appInfoAdapter = new AppAdapter(getActivity(), local_arrayList);
 
 
         grid.setAdapter(appInfoAdapter);
@@ -507,8 +503,8 @@ public class FragmentRequest extends Fragment {
         @SuppressWarnings("unchecked")
         private final ArrayList<AppInfo> appList = new ArrayList();
 
-        public AppAdapter(Context context, int position, ArrayList<AppInfo> adapterArrayList) {
-            super(context, position, adapterArrayList);
+        private AppAdapter(Context context, ArrayList<AppInfo> adapterArrayList) {
+            super(context, R.layout.request_item_list, adapterArrayList);
             appList.addAll(adapterArrayList);
         }
         @NonNull
@@ -570,7 +566,6 @@ public class FragmentRequest extends Fragment {
         TextView apkPackage;
         ImageView apkIcon;
         CheckBox checker;
-        LinearLayout cardBack;
         ViewSwitcher switcherChecked;
     }
 
@@ -673,5 +668,4 @@ public class FragmentRequest extends Fragment {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }
