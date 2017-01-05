@@ -5,7 +5,7 @@
 
     <item
         android:id="@+id/color"
-        android:icon="@drawable/format_color_fill"
+        android:icon="@drawable/format_color"
         android:title="@string/menu_color"
         app:showAsAction="ifRoom" />
 

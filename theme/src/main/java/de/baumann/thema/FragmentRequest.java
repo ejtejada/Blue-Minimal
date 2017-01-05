@@ -1,13 +1,12 @@
 package de.baumann.thema;
 
-import android.animation.AnimatorInflater;
-import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.AssetManager;
@@ -17,16 +16,18 @@ import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
 import android.text.Html;
 import android.text.SpannableString;
 import android.text.util.Linkify;
@@ -38,14 +39,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
-import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
@@ -97,60 +95,64 @@ public class FragmentRequest extends Fragment {
     private static final String SAVE_LOC2 = SD + "/BM_Icon-Request"; //TODO Change also this one.
     private static final String appfilter_path = "empty_appfilter.xml"; //TODO Define path to appfilter.xml in assets folder.
 
-    private static final int numCol_Portrait = 1; //For Portrait orientation. Tablets have +1 and LargeTablets +2 Columns.
-    private static final int numCol_Landscape = 5; //For Landscape orientation. Tablets have +1 and LargeTablets +2 Columns.
-
     private static final String TAG = "RequestActivity";
     private static final boolean DEBUG = true; //TODO Set to false for PlayStore Release
 
     @SuppressWarnings("unused")
     private ViewSwitcher viewSwitcher;
+    private SharedPreferences sharedPref;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View rootView = inflater.inflate(R.layout.request_grid, container, false);
+        final View rootView = inflater.inflate(R.layout.request, container, false);
         switcherLoad = (ViewSwitcher)rootView.findViewById(R.id.viewSwitcherLoadingMain);
         context = getActivity();
 
+        sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        sharedPref.edit().putString("canClose", "false").apply();
+
         setHasOptionsMenu(true);
 
-        FloatingActionButton fab = (FloatingActionButton) getActivity().findViewById(R.id.fab_rq);
-        fab.setImageResource(R.drawable.ic_zip_box_white_48dp);
+        FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fab_rq);
+        fab.setImageResource(R.drawable.zip_box);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                actionSend();
-            }
-        });
-
-        ImageView but = (ImageView) rootView.findViewById(R.id.imageViewLogo);
-        but.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                TextView text = (TextView) rootView.findViewById(R.id.textview_request);
-                text.setText(R.string.request_please_wait2);
-                //Loading Logo Animation
-                ImageView logo = (ImageView)rootView.findViewById(R.id.imageViewLogo);
-                ObjectAnimator logoAni = (ObjectAnimator) AnimatorInflater.loadAnimator(context, R.animator.request_flip);
-                logoAni.setRepeatCount(Animation.INFINITE);
-                logoAni.setRepeatMode(ValueAnimator.RESTART);
-                logoAni.setTarget(logo);
-                logoAni.setDuration(2000);
-                logoAni.start();
-
-                if(taskList.getStatus() == AsyncTask.Status.PENDING){
-                    // My AsyncTask has not started yet
-                    taskList.execute();
-                }
-
-                if(taskList.getStatus() == AsyncTask.Status.FINISHED){
-                    // My AsyncTask is done and onPostExecute was called
-                    new AsyncWorkerList().execute();
+                if (android.os.Build.VERSION.SDK_INT >= 23) {
+                    int hasWRITE_EXTERNAL_STORAGE = getActivity().checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                    if (hasWRITE_EXTERNAL_STORAGE != PackageManager.PERMISSION_GRANTED) {
+                        Snackbar snackbar = Snackbar
+                                .make(switcherLoad, getString(R.string.permissions_granted), Snackbar.LENGTH_LONG)
+                                .setAction(getString(R.string.yes), new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Intent intent = new Intent();
+                                        intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                                        Uri uri = Uri.fromParts("package", getActivity().getPackageName(), null);
+                                        intent.setData(uri);
+                                        getActivity().startActivity(intent);
+                                    }
+                                });
+                        snackbar.show();
+                    } else {
+                        actionSend();
+                    }
+                } else {
+                    actionSend();
                 }
             }
         });
+
+        if(taskList.getStatus() == AsyncTask.Status.PENDING){
+            // My AsyncTask has not started yet
+            taskList.execute();
+        }
+
+        if(taskList.getStatus() == AsyncTask.Status.FINISHED){
+            // My AsyncTask is done and onPostExecute was called
+            new AsyncWorkerList().execute();
+        }
 
 
 
@@ -159,7 +161,7 @@ public class FragmentRequest extends Fragment {
 
     public class AsyncWorkerList extends AsyncTask<String, Integer, String>{
 
-        public AsyncWorkerList(){}
+        private AsyncWorkerList(){}
 
         @Override
         protected String doInBackground(String... arg0) {
@@ -182,6 +184,7 @@ public class FragmentRequest extends Fragment {
             populateView(list_activities_final);
             //Switch from loading screen to the main view
             switcherLoad.showNext();
+            sharedPref.edit().putString("canClose", "true").apply();
 
             super.onPostExecute(result);
         }
@@ -456,48 +459,17 @@ public class FragmentRequest extends Fragment {
         ArrayList<AppInfo> local_arrayList;
         local_arrayList = arrayListFinal;
 
-        GridView grid = (GridView)getActivity().findViewById(R.id.appgrid);
+        ListView grid = (ListView) getActivity().findViewById(R.id.appgrid);
 
         assert grid != null;
-        grid.setVerticalSpacing(GridView.AUTO_FIT);
-        grid.setHorizontalSpacing(GridView.AUTO_FIT);
-        grid.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
         grid.setFastScrollEnabled(true);
         grid.setFastScrollAlwaysVisible(false);
 
         if(DEBUG)Log.v(TAG,"height: "+getDisplaySize("height")+"; width: "+getDisplaySize("width"));
 
         AppAdapter appInfoAdapter;
-        if(isPortrait())
-        {
-            grid.setNumColumns(numCol_Portrait);
+        appInfoAdapter = new AppAdapter(getActivity(), local_arrayList);
 
-            if(isTablet(context)) {
-                grid.setNumColumns(numCol_Portrait); //Here you can change the number of columns for Tablets
-                if(DEBUG)Log.v(TAG,"isTablet");
-            }
-            if(isXLargeTablet(context)) {
-                grid.setNumColumns(numCol_Portrait); //Here you can change the number of columns for Large Tablets
-                if(DEBUG)Log.v(TAG,"isXLargeTablet");
-            }
-
-            appInfoAdapter = new AppAdapter(getActivity(), R.layout.request_item_list, local_arrayList);
-        }
-
-        else {
-            grid.setNumColumns(numCol_Landscape);
-
-            if(isTablet(context)) {
-                grid.setNumColumns(numCol_Landscape); //Here you can change the number of columns for Tablets
-                if(DEBUG)Log.v(TAG,"isTablet");
-            }
-            if(isXLargeTablet(context)) {
-                grid.setNumColumns(numCol_Landscape); //Here you can change the number of columns for Large Tablets
-                if(DEBUG)Log.v(TAG,"isXLargeTablet");
-            }
-
-            appInfoAdapter = new AppAdapter(getActivity(), R.layout.request_item_grid, local_arrayList);
-        }
 
         grid.setAdapter(appInfoAdapter);
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -507,25 +479,18 @@ public class FragmentRequest extends Fragment {
                 AppInfo appInfo = (AppInfo)AdapterView.getItemAtPosition(position);
                 CheckBox checker = (CheckBox)view.findViewById(R.id.CBappSelect);
                 ViewSwitcher icon = (ViewSwitcher)view.findViewById(R.id.viewSwitcherChecked);
-                LinearLayout localBackground = (LinearLayout)view.findViewById(R.id.card_bg);
-                Animation aniIn = AnimationUtils.loadAnimation(context, R.anim.request_flip_in_half_1);
-                Animation aniOut = AnimationUtils.loadAnimation(context, R.anim.request_flip_in_half_2);
 
                 checker.toggle();
                 appInfo.setSelected(checker.isChecked());
 
-                icon.setInAnimation(aniIn);
-                icon.setOutAnimation(aniOut);
 
                 if(appInfo.isSelected()) {
                     if(DEBUG)Log.v(TAG,"Selected App: "+appInfo.getName());
-                    localBackground.setBackgroundColor(ContextCompat.getColor(context, R.color.request_card_pressed));
                     if(icon.getDisplayedChild() == 0){
                         icon.showNext();
                     }
                 } else {
                     if(DEBUG)Log.v(TAG,"Deselected App: "+appInfo.getName());
-                    localBackground.setBackgroundColor(ContextCompat.getColor(context, R.color.request_card_unpressed));
                     if(icon.getDisplayedChild() == 1){
                         icon.showPrevious();
                     }
@@ -538,8 +503,8 @@ public class FragmentRequest extends Fragment {
         @SuppressWarnings("unchecked")
         private final ArrayList<AppInfo> appList = new ArrayList();
 
-        public AppAdapter(Context context, int position, ArrayList<AppInfo> adapterArrayList) {
-            super(context, position, adapterArrayList);
+        private AppAdapter(Context context, ArrayList<AppInfo> adapterArrayList) {
+            super(context, R.layout.request_item_list, adapterArrayList);
             appList.addAll(adapterArrayList);
         }
         @NonNull
@@ -550,18 +515,16 @@ public class FragmentRequest extends Fragment {
 
             ViewHolder holder;
             if (convertView == null) {
-                if(isPortrait())
-                {
+                if(isPortrait()) {
                     convertView = ((LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.request_item_list, parent, false);
                 } else {
-                    convertView = ((LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.request_item_grid, parent, false);
+                    convertView = ((LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.request_item_list, parent, false);
                 }
                 holder = new ViewHolder();
                 holder.apkIcon = (ImageView) convertView.findViewById(R.id.IVappIcon);
                 holder.apkName = (TextView) convertView.findViewById(R.id.TVappName);
                 holder.apkPackage = (TextView) convertView.findViewById(R.id.TVappPackage);
                 holder.checker = (CheckBox) convertView.findViewById(R.id.CBappSelect);
-                holder.cardBack = (LinearLayout) convertView.findViewById(R.id.card_bg);
                 holder.switcherChecked = (ViewSwitcher)convertView.findViewById(R.id.viewSwitcherChecked);
                 convertView.setTag(holder);
             } else {
@@ -586,12 +549,10 @@ public class FragmentRequest extends Fragment {
 
             holder.checker.setChecked(appInfo.isSelected());
             if(appInfo.isSelected()) {
-                holder.cardBack.setBackgroundColor(ContextCompat.getColor(context, R.color.request_card_pressed));
                 if(holder.switcherChecked.getDisplayedChild() == 0){
                     holder.switcherChecked.showNext();
                 }
             } else {
-                holder.cardBack.setBackgroundColor(ContextCompat.getColor(context, R.color.request_card_unpressed));
                 if(holder.switcherChecked.getDisplayedChild() == 1){
                     holder.switcherChecked.showPrevious();
                 }
@@ -605,7 +566,6 @@ public class FragmentRequest extends Fragment {
         TextView apkPackage;
         ImageView apkIcon;
         CheckBox checker;
-        LinearLayout cardBack;
         ViewSwitcher switcherChecked;
     }
 
@@ -708,5 +668,4 @@ public class FragmentRequest extends Fragment {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

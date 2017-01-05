@@ -33,7 +33,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 [Numix application icon requests](https://github.com/numixproject/numix-application-icon-requests)
 
-[material-colorpicker](https://github.com/minto5050/material-colorpicker)
+[colorpicker](https://github.com/QuadFlask/colorpicker)
 
 
 ### Sounds
@@ -48,8 +48,3 @@ You can see all sound sources in the ["sound fragment"](https://github.com/scout
 [Material Design Icons](https://materialdesignicons.com/)
 
 [Flaticon](http://www.flaticon.com/)
-
-
-### Wallpapers
-
-[blowball wallpapers by Lydia on flickr](https://www.flickr.com/photos/129581906@N06/albums/72157651933980136)

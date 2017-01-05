@@ -29,23 +29,23 @@
 
     <string name="yes">OK</string>
     <string name="no">No</string>
+    <string name="cancel">Cancel</string>
+    <string name="permissions_granted">Permissions granted? Open App settings?</string>
 
     //Wallpaper
 
     <string name="title_wallpaper">Wallpaper</string>
     <string name="title_iconrequest">Icon Request</string>
 
-    <string name="pick_color">Pick a color</string>
-    <string name="red">Red 900</string>
-    <string name="green">Green 900</string>
-    <string name="blue">Blue 900</string>
-    <string name="purple">Purple 900</string>
-    <string name="orange">Orange 900</string>
-    <string name="teal">Teal 900</string>
-    <string name="white">White</string>
-    <string name="black">Black</string>
+    <string name="red">Red</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="amber">Amber</string>
+    <string name="teal">Teal</string>
+    <string name="grey">Grey</string>
     <string name="custom">Custom color</string>
     <string name="applying">Applying selected wallpaper.</string>
+    <string name="check_wallpaper">Please select wallpaper from above.</string>
 
     //Menu
 
@@ -59,8 +59,7 @@
     //Icon request
 
     <string name="request_dummy_text">Hello world!</string>
-    <string name="request_please_wait">Click the logo to search for installed apps.</string>
-    <string name="request_please_wait2">Searching for installed apps. Just for you :)</string>
+    <string name="request_please_wait2">Searching for installed apps. Please wait.</string>
     <string name="request_toast_no_apps_selected">No Apps selected. Select at least one App.</string>
     <string name="request_toast_apps_selected">ZIP-file created and saved on SD card.</string>
 
@@ -90,15 +89,15 @@
         &lt;i>For more information about used projects and resources: &lt;br>
         https://github.com/scoute-dich/Blue-Minimal/blob/master/LICENSE.md&lt;/i>&lt;br>&lt;br>
 
-        &lt;b>Contributors: &lt;/b>&lt;br>
+        &lt;b>Contributors:&lt;/b>&lt;br>
         &lt;i>Gaukler Faun: development, icons&lt;br>
         https://github.com/scoute-dich&lt;br>
 
         thomas31415: icons&lt;br>
-        https://github.com/thomas31415&lt;/i>&lt;br>
+        https://github.com/thomas31415&lt;/i>&lt;br>&lt;br>
 
-
-        &lt;/i>&lt;br>&lt;br>
+        &lt;b>Translation:&lt;/b>&lt;br>
+        &lt;i>Japanese: naofum https://github.com/naofum&lt;/i>&lt;br>&lt;br>
 
         This program is free software: you can redistribute it and/or modify
         it under the terms of the GNU General Public License as published by
@@ -114,9 +113,6 @@
         along with this program.  If not, see http://www.gnu.org/licenses.
     </string>
 
-    <string name="materialcolorpicker__errHex" >Hex Code Format incorrect</string>
-
-
     // Help
 
     <string name="help_sound">Click on a list entry to hear a five seconds preview of the sound. By long pressing you can open
@@ -126,8 +122,8 @@
     settings will open where you can set the sound as ring or notification sound. The Alarm sound must be configured in the
     settings of your alarm app, since you can not configure this in the system settings.</string>
 
-    <string name="help_wallpaper">Here you can set a wallpaper. You can also set a color as wallpaper.
-        Just click the menu entry.</string>
+    <string name="help_wallpaper">Here you can set a wallpaper. A long click will open the wallpaper source in your browser.
+        You can also set a color as wallpaper. Just click the menu entry.</string>
 
     <string name="help_request">Here you can create a ZIP-file with informations, concerning app icons you want to be
     themed. Send the created ZIP-file to the developer of your theme.</string>

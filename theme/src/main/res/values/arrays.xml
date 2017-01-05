@@ -9,16 +9,27 @@
 
 <resources>
 
-    <string-array name="colors">
-        <item>@string/red</item>
-        <item>@string/green</item>
-        <item>@string/blue</item>
-        <item>@string/purple</item>
-        <item>@string/orange</item>
-        <item>@string/teal</item>
-        <item>@string/white</item>
-        <item>@string/black</item>
-        <item>@string/custom</item>
-    </string-array>
+    <array name="splash_images">
+        <item>@drawable/wp_lp_amber</item>
+        <item>@drawable/wp_lp_blue</item>
+        <item>@drawable/wp_lp_green</item>
+        <item>@drawable/wp_lp_grey</item>
+        <item>@drawable/wp_lp_red</item>
+        <item>@drawable/wp_lp_teal</item>
+
+        <item>@drawable/wp_mm_amber</item>
+        <item>@drawable/wp_mm_blue</item>
+        <item>@drawable/wp_mm_green</item>
+        <item>@drawable/wp_mm_grey</item>
+        <item>@drawable/wp_mm_red</item>
+        <item>@drawable/wp_mm_teal</item>
+
+        <item>@drawable/wp_n_amber</item>
+        <item>@drawable/wp_n_blue</item>
+        <item>@drawable/wp_n_green</item>
+        <item>@drawable/wp_n_grey</item>
+        <item>@drawable/wp_n_red</item>
+        <item>@drawable/wp_n_teal</item>
+    </array>
 
 </resources>
