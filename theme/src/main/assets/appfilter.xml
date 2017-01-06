@@ -17,6 +17,7 @@
 
 	<!-- at -->
 	<item component="ComponentInfo{at.bitfire.davdroid/at.bitfire.davdroid.ui.AccountsActivity}" drawable="a050" />
+	<item component="ComponentInfo{at.bitfire.icsdroid/at.bitfire.icsdroid.ui.CalendarListActivity}" drawable="a061"/>
 
 	<!-- cgeo -->
 	<item component="ComponentInfo{cgeo.geocaching/cgeo.geocaching.MainActivity}" drawable="a021" />
@@ -400,6 +401,7 @@
 	<item component="ComponentInfo{org.videolan.vlc/org.videolan.vlc.StartActivity}" drawable="a054" />
 	<item component="ComponentInfo{org.wikipedia/org.wikipedia.page.PageActivity}" drawable="a074" />
 	<item component="ComponentInfo{org.wordpress.android/org.wordpress.android.ui.posts.PostsActivity}" drawable="a141" />
+	<item component="ComponentInfo{org.xbmc.kodi/org.xbmc.kodi.Splash}" drawable="a223"/>
 	<item component="ComponentInfo{org.xbmc.kore/org.xbmc.kore.ui.RemoteActivity}" drawable="a202"/>
 	<item component="ComponentInfo{org.xphnx.iconsubmit/org.xphnx.iconsubmit.MainActivity}" drawable="a049" />
 
