@@ -332,6 +332,7 @@
 	<item component="ComponentInfo{name.boyle.chris.sgtpuzzles/name.boyle.chris.sgtpuzzles.SGTPuzzles}" drawable="a075" />
 
 	<!-- net -->
+	<item component="ComponentInfo{net.artificialworlds.rabbitescape/rabbitescape.ui.android.AndroidMenuActivity}" drawable="a182" />
 	<item component="ComponentInfo{net.bible.android.activity/net.bible.android.activity.StartupActivity}" drawable="a055" />
 	<item component="ComponentInfo{net.cactii.flash2/net.cactii.flash2.MainActivity}" drawable="a046" />
 	<item component="ComponentInfo{net.damsy.soupeaucaillou.heriswap/net.damsy.soupeaucaillou.heriswap.HeriswapActivity}" drawable="a147" />
