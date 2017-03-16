@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="5.6444445mm"
+   height="5.6444445mm"
+   viewBox="0 0 20 20"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="Metronom.svg"
+   inkscape:export-filename="/home/juergen/Projekte/Android/Android_Studio/Baumann_Theme/theme/src/main/assets/icons/res/drawable-xxhdpi/a100.png"
+   inkscape:export-xdpi="648"
+   inkscape:export-ydpi="648">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="22.4"
+     inkscape:cx="10.522175"
+     inkscape:cy="7.3011506"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:snap-grids="true"
+     inkscape:snap-to-guides="false"
+     inkscape:snap-page="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4138" />
+    <sodipodi:guide
+       position="10,18"
+       orientation="0,1"
+       id="guide4140"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="10,2"
+       orientation="0,1"
+       id="guide4142"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="2,10"
+       orientation="1,0"
+       id="guide4144"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,20"
+       id="guide4146"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="20,0"
+       orientation="-20,0"
+       id="guide4148"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="20,20"
+       orientation="0,-20"
+       id="guide4150"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,20"
+       orientation="20,0"
+       id="guide4152"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="18,10"
+       orientation="1,0"
+       id="guide4154"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="10,10"
+       orientation="-0.70710678,0.70710678"
+       id="guide4156"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="4,10"
+       orientation="1,0"
+       id="guide4160"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="16,10"
+       orientation="1,0"
+       id="guide4162"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="10,4"
+       orientation="0,1"
+       id="guide4166"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="10,15"
+       orientation="0,1"
+       id="guide4168"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="10,5"
+       orientation="0,1"
+       id="guide4170"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="5,10"
+       orientation="1,0"
+       id="guide4172"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="15,10"
+       orientation="1,0"
+       id="guide4174"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4792">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.2"
+         offset="0"
+         id="stop4788" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0"
+         offset="1"
+         id="stop4790" />
+    </linearGradient>
+    <clipPath
+       id="clipPath12478"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle12480"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5790">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle5792"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath5055"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle5057"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5119">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle5121"
+         style="opacity:1;fill:#2196f3;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath5194"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle5196"
+         style="opacity:1;fill:#cddc39;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath6175">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle6177"
+         style="opacity:1;fill:#f44336;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath7176"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle7178"
+         style="opacity:1;fill:#9c27b0;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8165">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle8167"
+         style="opacity:1;fill:#ffc107;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath9162"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle9164"
+         style="opacity:1;fill:#ff9800;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5147">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle5149"
+         style="opacity:1;fill:#ff9800;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath6144"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle6146"
+         style="opacity:1;fill:#e91e63;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath7143">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle7145"
+         style="opacity:1;fill:#ffeb3b;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath8148"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle8150"
+         style="opacity:1;fill:#9c27b0;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5332">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle5334"
+         style="opacity:1;fill:#f44336;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath6341"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle6343"
+         style="opacity:1;fill:#4caf50;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath7354">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle7356"
+         style="opacity:1;fill:#f44336;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath8344"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle8346"
+         style="opacity:1;fill:#673ab7;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath9436">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle9438"
+         style="opacity:1;fill:#9e9e9e;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath10432"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle10434"
+         style="opacity:1;fill:#795548;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath11433">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle11435"
+         style="opacity:1;fill:#03a9f4;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath12452"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle12454"
+         style="opacity:1;fill:#ffc107;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath13465">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle13467"
+         style="opacity:1;fill:#e91e63;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       id="clipPath14480"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle14482"
+         style="opacity:1;fill:#607d8b;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath15501">
+      <circle
+         r="10"
+         cy="10.000005"
+         cx="9.9999781"
+         id="circle15503"
+         style="opacity:1;fill:#4caf50;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
+         inkscape:export-xdpi="648"
+         inkscape:export-ydpi="648" />
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4792"
+       id="linearGradient4803"
+       x1="10.606937"
+       y1="10.736947"
+       x2="21.333334"
+       y2="21.333334"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Hintergrund"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(1058.1428,-861.93365)">
+    <circle
+       inkscape:export-ydpi="648"
+       inkscape:export-xdpi="648"
+       inkscape:export-filename="/home/thomas/Programme/android/BlueIconsMinimal/app/src/main/res/drawable-xxhdpi/a226.png"
+       style="opacity:1;fill:#8b8b8b;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4136-3"
+       cx="-1048.1428"
+       cy="871.93365"
+       r="10" />
+    <path
+       style="opacity:1;fill:url(#linearGradient4803);fill-opacity:1;stroke:none;stroke-width:0.05407786;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 16.447266 4.8867188 C 15.601186 5.0221214 15.373047 7.2226562 15.373047 7.2226562 C 15.373047 7.2226562 15.248675 7.1626953 13.542969 5.4570312 C 9.2512353 6.0029939 8.4128114 12.176962 5.0195312 15.947266 C 11.014343 21.342751 9.5077151 19.983037 11 21.322266 A 10.666667 10.666667 0 0 0 21.333984 10.666016 A 10.666667 10.666667 0 0 0 21.285156 9.7421875 C 19.774632 8.2253093 19.207377 7.6468159 16.447266 4.8867188 z "
+       transform="matrix(0.93749997,0,0,0.93749997,-1058.1428,861.93365)"
+       id="path4136"
+       inkscape:export-filename="/home/thomas/Programme/android/BlueIconsMinimal/app/src/main/res/drawable-xxhdpi/a226.png"
+       inkscape:export-xdpi="648"
+       inkscape:export-ydpi="648" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path12456"
+       d="m -1050.6874,868.40686 0.1339,3.79465 0.2678,0.89285 1.1161,0.75893 1.5179,0.0446 1.6071,-0.40178 0.5357,-1.25 -0.1339,-3.83929 -4.9107,0 z"
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/home/thomas/Programme/android/BlueIconsMinimal/app/src/main/res/drawable-xxhdpi/a226.png"
+       inkscape:export-xdpi="648"
+       inkscape:export-ydpi="648" />
+    <path
+       style="display:inline;fill:#fb5000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.0629921;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -1051.8712,872.55621 1.6299,-5.16083 4.5281,-0.0203 2.6043,9.17851 -10.0029,-0.054 z"
+       id="path4731"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="/home/thomas/Programme/android/BlueIconsMinimal/app/src/main/res/drawable-xxhdpi/a226.png"
+       inkscape:export-xdpi="648"
+       inkscape:export-ydpi="648" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.0629921;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m -1048.1399,877.99761 c 5.031,-11.09787 5.0606,-11.12747 5.0606,-11.12747"
+       id="path4743"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/thomas/Programme/android/BlueIconsMinimal/app/src/main/res/drawable-xxhdpi/a226.png"
+       inkscape:export-xdpi="648"
+       inkscape:export-ydpi="648" />
+  </g>
+  <g
+     style="display:inline"
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Icon">
+    <path
+       d="m 3.9999777,4.0333382 12.0000003,0 0,11.9333328 -12.0000003,0 z"
+       id="path4"
+       inkscape:connector-curvature="0"
+       style="fill:none"
+       inkscape:export-filename="/home/thomas/Programme/android/BlueIconsMinimal/app/src/main/res/drawable-xxhdpi/a226.png"
+       inkscape:export-xdpi="648"
+       inkscape:export-ydpi="648" />
+    <path
+       style="fill:none"
+       inkscape:connector-curvature="0"
+       id="path9956"
+       d="m 18.999978,19.033339 12,0 0,11.933333 -12,0 z" />
+  </g>
+</svg>
