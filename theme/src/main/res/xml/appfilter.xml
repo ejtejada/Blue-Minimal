@@ -102,6 +102,7 @@
 	<item component="ComponentInfo{com.artifex.mupdfdemo/com.artifex.mupdfdemo.ChoosePDFActivity}" drawable="a098" />
 	<item component="ComponentInfo{com.asksven.betterbatterystats_xdaedition/com.asksven.betterbatterystats.StatsActivity}" drawable="a069" />
 	<item component="ComponentInfo{com.babbel.mobile.android.en/com.babbel.mobile.android.en.BabbelAppStartPage}" drawable="a102" />
+	<item component="ComponentInfo{com.benny.openlauncher/com.benny.openlauncher.activity.Init}" drawable="a047"/>
 	<item component="ComponentInfo{com.bluefirereader/com.bluefirereader.SplashActivity}" drawable="a218"/>
 	<item component="ComponentInfo{com.bocharov.xposed.fscb/com.bocharov.xposed.fscb.settings.ModuleSettings}" drawable="a040" />
 	<item component="ComponentInfo{com.better.alarm/com.better.alarm.presenter.AlarmsListActivity}" drawable="a044" />
@@ -413,6 +414,7 @@
 	<item component="ComponentInfo{org.wordpress.android/org.wordpress.android.ui.posts.PostsActivity}" drawable="a141" />
 	<item component="ComponentInfo{org.xbmc.kodi/org.xbmc.kodi.Splash}" drawable="a223"/>
 	<item component="ComponentInfo{org.xbmc.kore/org.xbmc.kore.ui.RemoteActivity}" drawable="a202"/>
+	<item component="ComponentInfo{org.xbmc.kore/org.xbmc.kore.ui.sections.remote.RemoteActivity}" drawable="a202"/>
 	<item component="ComponentInfo{org.xphnx.iconsubmit/org.xphnx.iconsubmit.MainActivity}" drawable="a049" />
 
 	<!-- ovh -->
