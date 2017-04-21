@@ -15,7 +15,7 @@
    viewBox="0 0 20 20"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.1 r15371"
    sodipodi:docname="Worktime.svg"
    inkscape:export-filename="/home/juergen/Schreibtisch/Icons/Email.svg.png"
    inkscape:export-xdpi="648"
@@ -28,10 +28,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.2"
-     inkscape:cx="15.669643"
-     inkscape:cy="13.777748"
+     inkscape:cx="10.803447"
+     inkscape:cy="13.863053"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -40,9 +40,9 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1366"
-     inkscape:window-height="726"
+     inkscape:window-height="700"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="32"
      inkscape:window-maximized="1"
      inkscape:snap-grids="false"
      inkscape:snap-to-guides="false"
@@ -53,71 +53,88 @@
     <sodipodi:guide
        position="10,18"
        orientation="0,1"
-       id="guide4140" />
+       id="guide4140"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="10,2"
        orientation="0,1"
-       id="guide4142" />
+       id="guide4142"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2,10"
        orientation="1,0"
-       id="guide4144" />
+       id="guide4144"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="0,0"
        orientation="0,20"
-       id="guide4146" />
+       id="guide4146"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="20,0"
        orientation="-20,0"
-       id="guide4148" />
+       id="guide4148"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="20,20"
        orientation="0,-20"
-       id="guide4150" />
+       id="guide4150"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="0,20"
        orientation="20,0"
-       id="guide4152" />
+       id="guide4152"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="18,10"
        orientation="1,0"
-       id="guide4154" />
+       id="guide4154"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="10,10"
        orientation="-0.70710678,0.70710678"
-       id="guide4156" />
+       id="guide4156"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="4,10"
        orientation="1,0"
-       id="guide4160" />
+       id="guide4160"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="16,10"
        orientation="1,0"
-       id="guide4162" />
+       id="guide4162"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="10,16"
        orientation="0,1"
-       id="guide4164" />
+       id="guide4164"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="10,4"
        orientation="0,1"
-       id="guide4166" />
+       id="guide4166"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="10,15"
        orientation="0,1"
-       id="guide4168" />
+       id="guide4168"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="10,5"
        orientation="0,1"
-       id="guide4170" />
+       id="guide4170"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="5,10"
        orientation="1,0"
-       id="guide4172" />
+       id="guide4172"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="15,10"
        orientation="1,0"
-       id="guide4174" />
+       id="guide4174"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <defs
      id="defs4">
@@ -278,7 +295,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -288,10 +305,10 @@
      id="layer1"
      transform="translate(1058.1428,-861.93365)">
     <circle
-       inkscape:export-ydpi="648"
-       inkscape:export-xdpi="648"
-       inkscape:export-filename="/home/juergen/Schreibtisch/path4136.png"
-       style="opacity:1;fill:#e91e63;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-ydpi="2250"
+       inkscape:export-xdpi="2250"
+       inkscape:export-filename="/home/juergen/Schreibtisch/ic_launcher.png"
+       style="opacity:1;fill:#689f38;fill-opacity:1;stroke:none;stroke-width:0.05069799;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4136"
        cx="-1048.1428"
        cy="871.93365"
@@ -318,7 +335,7 @@
        id="path9754"
        d="m 18.999978,19.033339 12,0 0,11.933333 -12,0 z" />
     <ellipse
-       style="opacity:1;fill:#009688;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path5151"
        cx="10"
        cy="10"
@@ -328,6 +345,6 @@
        inkscape:connector-curvature="0"
        d="m 9.9999777,14.000005 a 4.0000001,4.0000001 0 0 1 -4,-4 4.0000001,4.0000001 0 0 1 4,-4.0000002 4.0000001,4.0000001 0 0 1 4.0000003,4.0000002 4.0000001,4.0000001 0 0 1 -4.0000003,4 m 0,-9.0000002 a 5.0000001,5.0000001 0 0 0 -5,5.0000002 5.0000001,5.0000001 0 0 0 5,5 5.0000001,5.0000001 0 0 0 5.0000003,-5 5.0000001,5.0000001 0 0 0 -5.0000003,-5.0000002 m 2.1200003,2.8799998 c -0.585,-0.59 -1.355,-0.88 -2.1200003,-0.88 l 0,3.0000004 -2.12,2.12 c 1.17,1.17 3.0700003,1.17 4.2400003,0 1.175,-1.17 1.175,-3.0700003 0,-4.2400004 z"
        id="path4229"
-       style="fill:#ffeb3b" />
+       style="fill:#ff9800;fill-opacity:1" />
   </g>
 </svg>
