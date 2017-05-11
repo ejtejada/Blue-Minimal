@@ -3,7 +3,7 @@
 [![Donate](https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NP6TGYDYP9SHY)
 
 
-
+#### SInce LineAgeOS doesn't support theme engine anymore, I will not include any icons or something else from now on. I only will fix bugs. Im working on a new Substratum theme with the same look and feel. Feel free to visit the project site on [Github](https://github.com/scoute-dich/Minimal).
 
 
 ## Baumann Thema
