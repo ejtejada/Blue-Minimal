@@ -1,5 +1,8 @@
 **I'm using for some apps the same icons. If this is the case with your apps or if something other went wrong, just report it [here](https://github.com/scoute-dich/Baumann_Theme/issues) or on the [xda threat](http://forum.xda-developers.com/android/themes/cm12-theme-source-t3164482).**
 
+### 5.0
+- fix: force close an start
+
 ### 4.9
 - fix: monospace font
 

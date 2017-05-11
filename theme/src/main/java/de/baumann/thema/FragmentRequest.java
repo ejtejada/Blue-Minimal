@@ -86,7 +86,6 @@ public class FragmentRequest extends Fragment {
     private static Context context;
     private ViewSwitcher switcherLoad;
     private final FragmentRequest.AsyncWorkerList taskList = new AsyncWorkerList();
-    private Typeface tf;
     private static final int BUFFER = 2048;
     private static final String SD = Environment.getExternalStorageDirectory().getAbsolutePath();
 
@@ -509,9 +508,7 @@ public class FragmentRequest extends Fragment {
         }
         @NonNull
         public View getView(int position, View convertView, @NonNull ViewGroup parent) {
-            if(tf == null){
-                tf = Typeface.createFromAsset(context.getAssets(), font);
-            }
+
 
             ViewHolder holder;
             if (convertView == null) {
@@ -535,7 +532,6 @@ public class FragmentRequest extends Fragment {
 
             if(isPortrait()) {
                 holder.apkPackage.setText(String.valueOf(appInfo.getCode().split("/")[0]+"/"+appInfo.getCode().split("/")[1]));
-                holder.apkPackage.setTypeface(tf);
             } else {
                 holder.apkPackage.setVisibility(View.GONE);
             }
